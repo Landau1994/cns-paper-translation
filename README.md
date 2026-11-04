@@ -36,13 +36,13 @@
 
 ```powershell
 $skillRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME 'skills' } else { Join-Path $HOME '.codex/skills' }
-git clone https://github.com/Euler2023/cns-paper-translation.git (Join-Path $skillRoot 'cns-paper-translation')
+git clone https://github.com/Landau1994/cns-paper-translation.git (Join-Path $skillRoot 'cns-paper-translation')
 ```
 
 **macOS / Linux**
 
 ```bash
-git clone https://github.com/Euler2023/cns-paper-translation.git "${CODEX_HOME:-$HOME/.codex}/skills/cns-paper-translation"
+git clone https://github.com/Landau1994/cns-paper-translation.git "${CODEX_HOME:-$HOME/.codex}/skills/cns-paper-translation"
 ```
 
 也可以使用 GitHub 的 **Code → Download ZIP**，解压后把仓库目录改名为 `cns-paper-translation`，放入上述技能目录。若目标目录已经存在，先检查现有版本，不要直接覆盖自己的修改。
