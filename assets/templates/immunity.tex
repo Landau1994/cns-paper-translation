@@ -1,0 +1,29 @@
+% Immunity extension: one verified 2025 proof, neutral adaptation.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twoside,twocolumn,scheme=plain]{ctexart}
+\usepackage[paperwidth=602.986bp,paperheight=782.986bp,inner=59.754bp,outer=52.691bp,top=101.821bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp]{geometry}
+\input{common.tex}
+\newcommand{\JournalName}{Immunity}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\columnsep}{13.2bp}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{12.6bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\color{JournalRed}\fontsize{9.4bp}{12.6bp}\selectfont,beforeskip=10bp,afterskip=3bp},subsection={format=\sffamily\bfseries\color{JournalRed},beforeskip=7bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textsuperscript{\textcolor{JournalBlue}{\hyperlink{ref:1}{1}}}}
+\newcommand{\SampleCiteTwo}{\textsuperscript{\textcolor{JournalBlue}{\hyperlink{ref:2}{2}}}}
+\fancyhead[LO,RE]{\sffamily\color{JournalBlue}\fontsize{21bp}{24bp}\selectfont Immunity}
+\fancyhead[LE,RO]{\sffamily\color{black!45}\fontsize{10bp}{13bp}\selectfont Review}
+\fancyfoot[LO,RE]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中文译稿示例}
+\fancyfoot[LE,RO]{\sffamily\fontsize{7.5bp}{9bp}\selectfont Immunity\quad 中文译页\ \thepage}
+\begin{document}\normalsize
+\twocolumn[{\noindent{\color{black!40}\bfseries\fontsize{14bp}{18bp}\selectfont Review}\par\vspace{3bp}
+{\bfseries\fontsize{23.2bp}{29bp}\selectfont\PaperTitle\par}\vspace{9bp}
+{\bfseries\fontsize{9bp}{11bp}\selectfont\SampleAuthors\par}\vspace{4bp}
+{\fontsize{7.5bp}{10.4bp}\selectfont\SampleAffiliations\par}\vspace{10bp}
+{\bfseries\color{JournalRed}SUMMARY\quad 摘要}\par\vspace{6bp}
+{\color{JournalBlue}\fontsize{10bp}{14bp}\selectfont\SampleAbstract\par}\vspace{13bp}}]
+\balance\SampleOpening
+\clearpage
+\twocolumn[{\begin{center}\begin{minipage}{.83\textwidth}\DemoVector\end{minipage}\end{center}\vspace{3bp}
+\noindent{\sffamily\fontsize{7.5bp}{10bp}\selectfont\DemoCaption\par}\vspace{13bp}}]
+\balance\SampleClosing
+\end{document}

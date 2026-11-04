@@ -1,0 +1,35 @@
+% Nature profile: one verified 2021 review, neutral source-inspired adaptation.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twocolumn,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=40bp,right=37.276bp,top=49bp,bottom=42.866bp,headheight=20bp,headsep=4bp,footskip=23bp]{geometry}
+\input{common.tex}
+\usepackage{eso-pic}
+\newcommand{\JournalName}{Nature}
+\hypersetup{hidelinks}
+\setlength{\columnsep}{12bp}\setlength{\parindent}{0pt}
+\renewcommand{\normalsize}{\fontsize{9.05bp}{11.95bp}\selectfont}
+\ctexset{section={format=\bfseries\fontsize{10.5bp}{13bp}\selectfont,beforeskip=10bp,afterskip=3bp},subsection={format=\bfseries,beforeskip=7bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textsuperscript{\hyperlink{ref:1}{1}}}
+\newcommand{\SampleCiteTwo}{\textsuperscript{\hyperlink{ref:2}{2}}}
+\fancyhead[L]{\bfseries\fontsize{14bp}{18bp}\selectfont Review}
+\renewcommand{\headrulewidth}{.3bp}
+\fancyfoot[L]{\sffamily\fontsize{7.5bp}{9bp}\selectfont\textbf{中文译页\ \thepage}\quad |\quad Nature}
+\fancyfoot[R]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中文译稿示例}
+\AddToShipoutPictureBG{\AtPageLowerLeft{\put(34,43){\rule{.3bp}{719bp}}}}
+\begin{document}\normalsize
+\twocolumn[{\noindent{\bfseries\fontsize{25bp}{31bp}\selectfont\PaperTitle\par}\vspace{16bp}\hrule height .3bp\vspace{6bp}
+\noindent\begin{minipage}[t]{.32\textwidth}\vspace{0pt}\sffamily\fontsize{7.5bp}{10bp}\selectfont
+DOI：待核实\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+收稿日期：待填\par 接受日期：待填\par 在线发表：待填\par\vspace{8bp}
+本页所有研究信息均为占位。\par 非官方中文译稿样板。
+\end{minipage}\hfill\begin{minipage}[t]{.656\textwidth}\vspace{0pt}
+{\sffamily\bfseries\fontsize{9bp}{12bp}\selectfont\SampleAuthors\par}\vspace{8bp}
+{\fontsize{10.4bp}{14.4bp}\selectfont\SampleAbstract\par}\vspace{7bp}
+{\sffamily\fontsize{7.4bp}{10bp}\selectfont\SampleAffiliations\par}
+\end{minipage}\par\vspace{8bp}\hrule height .3bp\vspace{11bp}}]
+\balance\SampleOpening
+\clearpage
+\twocolumn[{\begin{center}\begin{minipage}{.78\textwidth}\DemoVector\end{minipage}\end{center}\vspace{3bp}
+\noindent{\sffamily\fontsize{7.7bp}{10.3bp}\selectfont\DemoCaption\par}\vspace{13bp}}]
+\balance\SampleClosing
+\end{document}

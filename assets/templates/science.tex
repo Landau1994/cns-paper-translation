@@ -1,0 +1,44 @@
+% Science profile: one verified 2026 research article, neutral adaptation.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twoside,scheme=plain]{ctexart}
+\usepackage[paperwidth=594bp,paperheight=756bp,left=37bp,right=37bp,top=39bp,bottom=38bp,headheight=13bp,headsep=8bp,footskip=22bp]{geometry}
+\input{common.tex}
+\usepackage{multicol}
+\newcommand{\JournalName}{Science}
+\hypersetup{linkcolor=CiteBlue,urlcolor=CiteBlue}
+\setlength{\columnsep}{14bp}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{11.9bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{10.2bp}{12.2bp}\selectfont,beforeskip=8bp,afterskip=2bp},subsection={format=\sffamily\bfseries,beforeskip=6bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textcolor{CiteBlue}{\textit{(\hyperlink{ref:1}{1})}}}
+\newcommand{\SampleCiteTwo}{\textcolor{CiteBlue}{\textit{(\hyperlink{ref:2}{2})}}}
+\fancyhead[LE,RO]{\sffamily\bfseries\fontsize{9bp}{10bp}\selectfont\underline{RESEARCH ARTICLE}}
+\fancyfoot[L]{\fontsize{9bp}{11bp}\selectfont Science\quad{\sffamily\fontsize{6.5bp}{9bp}\selectfont 非官方中文译稿示例}}
+\fancyfoot[R]{\sffamily\fontsize{7.5bp}{9bp}\selectfont 中文译页\ \thepage}
+\fancypagestyle{summarypage}{\fancyhead{}}
+\begin{document}\normalsize\thispagestyle{summarypage}
+\noindent{\sffamily\bfseries\colorbox{ScienceRed}{\textcolor{white}{\strut\ RESEARCH ARTICLE SUMMARY\ }}}\par\vspace{12bp}
+\noindent{\sffamily\bfseries\color{ScienceRed}DISCIPLINE / 学科占位}\par\vspace{7bp}
+\noindent{\bfseries\fontsize{22bp}{28bp}\selectfont\PaperTitle\par}\vspace{8bp}
+\noindent{\sffamily\bfseries Author A \textit{et al.}\quad（作者占位）}\par\vspace{14bp}
+\begin{multicols}{2}\setlength{\parindent}{0pt}
+\textbf{引言：}此页演示原稿所含独立研究摘要页。四个小标题属于结构占位，不表示所有Science文章都必须采用相同摘要。应先判断目标PDF是否包含这一页，再决定启用或移除此部分。独立摘要与主文章各自构成完整的信息单元；即使部分内容相近，也不能在翻译时合并。题名、作者简写和学科分类都应来自所提供的原稿，而不是由模板猜测。\par\medskip
+\textbf{研究依据：}\SampleAbstract 原文如何界定研究问题，中文就应如何界定；背景中的常识性叙述与本研究直接得到的发现，需要保持区分。针对某一模型提出的问题，也不能自行改写成已经适用于临床的判断。本示例增加中性文字，是为了展示较长摘要如何在左右两栏之间连贯阅读。\par\medskip
+\textbf{结果：}本样板不包含研究结果。实际使用时，应完整翻译摘要页报告的观察、限定条件及不确定性，不能用正文摘要替代这一独立部分，也不能从正文补写原摘要页没有的数据。段落内涉及的分组、方向和时间应与原文一致；原文没有报告的样本量、效应大小或显著性，不得为追求“完整”而推测补入。若摘要与主文出现表述差异，可保留两处文本，并在需要时做简短译注。\par\medskip
+\textbf{结论：}本段仅示范摘要的收束与双栏平衡。下方是自行绘制的矢量占位图；它没有样本量或统计意义，也不具有真实论文图像的来源属性。正式项目中的概览图应与摘要页一并核对，其图注和标签也有独立的覆盖要求。中文译稿可适当调整图与图注的相对宽度，但需要让读者清楚辨认每个分面，并避免把阅读顺序的箭头误解为实验机制。\par
+\end{multicols}\vspace{22bp}
+\noindent\begin{minipage}[t]{.29\textwidth}\vspace{0pt}\sffamily\fontsize{7.5bp}{10bp}\selectfont\DemoCaption\end{minipage}\hfill
+\begin{minipage}[t]{.68\textwidth}\vspace{0pt}\DemoVector\end{minipage}
+\vspace{16bp}
+\clearpage\twocolumn
+\noindent{\sffamily\bfseries\color{ScienceRed}DISCIPLINE / 学科占位}\par\vspace{6bp}
+\noindent{\bfseries\fontsize{18bp}{22bp}\selectfont\PaperTitle\par}\vspace{8bp}
+\noindent{\sffamily\bfseries\fontsize{8.4bp}{11bp}\selectfont\SampleAuthors\par}\vspace{6bp}
+\noindent{\sffamily\fontsize{7.3bp}{10bp}\selectfont\SampleAffiliations\par}\vspace{8bp}
+\noindent{\sffamily\fontsize{8.8bp}{11.5bp}\selectfont\SampleAbstract\par}\vspace{7bp}
+\noindent{\color{ScienceRed}\rule{.93\columnwidth}{.6bp}}\par\vspace{8bp}
+\balance\SampleOpening
+\clearpage
+\twocolumn[{\begin{center}\begin{minipage}{.80\textwidth}\DemoVector\end{minipage}\end{center}\vspace{3bp}
+\noindent{\sffamily\fontsize{7.5bp}{9.8bp}\selectfont\DemoCaption\par}\vspace{13bp}}]
+\balance\SampleClosing
+\end{document}

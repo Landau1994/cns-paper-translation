@@ -1,0 +1,75 @@
+% Shared dependencies and neutral material. Compile with XeLaTeX.
+% No publisher logos, paper text, data, figures, or download metadata are included.
+\usepackage{amsmath,amssymb,graphicx,xcolor,tikz,fancyhdr,needspace,xurl,hyperref,balance,etoolbox}
+% The legacy balance package omits the first split box's final baseline depth.
+% Reserve that measured depth rather than hiding a CJK overfull-box warning.
+\makeatletter
+\patchcmd{\@BAlancecol}{\setbox\@leftcolumn=\vbox to \@tempdima}{\advance\@tempdima by \dp1\relax\setbox\@leftcolumn=\vbox to \@tempdima}{}{\PackageWarning{cns-template}{Balance depth patch unavailable; inspect final columns}}
+\makeatother
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\IfFontExistsTF{Noto Serif CJK SC}{%
+  \setCJKmainfont{Noto Serif CJK SC}%
+}{%
+  \setCJKmainfont[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf]{FandolSong-Regular.otf}%
+}
+\IfFontExistsTF{Noto Sans CJK SC}{%
+  \setCJKsansfont{Noto Sans CJK SC}%
+}{%
+  \setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}%
+}
+\setmainfont{TeX Gyre Termes}\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\definecolor{JournalBlue}{HTML}{0097C9}
+\definecolor{JournalRed}{HTML}{B83443}
+\definecolor{ScienceRed}{HTML}{CD1021}
+\definecolor{CiteBlue}{HTML}{0000EE}
+\hypersetup{colorlinks=true,linkcolor=JournalBlue,urlcolor=JournalBlue,
+  pdftitle={CNS论文汉化：中性版式示例},pdfauthor={示例模板；非期刊官方模板},
+  pdfsubject={Neutral source-inspired Chinese layout demonstration; no real research claims}}
+\urlstyle{same}\raggedbottom
+\setlength{\parindent}{1em}\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}\tolerance=2200
+\XeTeXlinebreaklocale "zh"\XeTeXlinebreakskip=0pt plus .1pt
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+\newcommand{\PaperTitle}{中文题名占位：从组织结构到证据解释}
+\newcommand{\SampleAuthors}{Author A\textsuperscript{1}, Author B\textsuperscript{2,*}}
+\newcommand{\SampleAffiliations}{\textsuperscript{1}作者单位一（示例占位）。\quad
+  \textsuperscript{2}作者单位二（示例占位）。\par
+  *通信作者信息待填。DOI、收稿和出版日期均应从目标原文核实。}
+\newcommand{\SampleAbstract}{本段是中性摘要占位文字，不陈述任何真实研究发现。它演示中文题名、作者信息、摘要和双栏正文之间的层级关系。实际使用时，应完整替换为目标论文的忠实中文译文，并保留研究对象、方法、结果和结论的限定条件。图注、参考文献、作者声明和来源信息均属于独立的覆盖项。模板中的图形仅说明排版结构，不表示生物学机制、实验结果或统计关系。}
+\newcommand{\DemoCaption}{\textbf{图1. 中性证据链示意（占位图，无实验数据）。}
+  \textbf{A}，输入节点表示需要核对的原文材料。
+  \textbf{B}，处理节点表示逐段转换及复核。
+  \textbf{C}，输出节点表示正文、图注和书目等独立交付部分。
+  箭头仅表示本示例的阅读顺序，不代表因果关系、效应方向或数量变化。
+  该图由模板自行绘制，所有节点均为文字占位；无样本量、误差线、统计检验或比例尺。
+  实际论文图注应逐项保留原稿报告的样本量、单位、检验方法、限定及图形署名。}
+\newcommand{\DemoVector}{%
+ \resizebox{\linewidth}{!}{%
+ \begin{tikzpicture}[font=\sffamily\small,node distance=18mm,
+   box/.style={draw=black!70,rounded corners=2pt,fill=black!3,minimum width=26mm,minimum height=16mm,align=center},
+   flow/.style={-{Stealth[length=2.5mm]},line width=.7pt}]
+  \node[box] (a) {\textbf{A}\quad 输入\\原文材料};
+  \node[box,right=of a] (b) {\textbf{B}\quad 处理\\转换与复核};
+  \node[box,right=of b] (c) {\textbf{C}\quad 输出\\中文译稿};
+  \draw[flow] (a)--(b);\draw[flow] (b)--(c);
+  \node[below=11mm of a,align=center] {标题与摘要\\正文与图表};
+  \node[below=11mm of b,align=center] {保留限定\\检查单位};
+  \node[below=11mm of c,align=center] {可追溯引文\\明确原文信息};
+  \node[below=29mm of b,font=\sffamily\footnotesize,text=black!65] {示意占位；不包含真实实验数据};
+ \end{tikzpicture}}%
+}
+\newcommand{\SampleBibliography}{%
+ \section*{参考文献（示例占位）}
+ {\fontsize{7.6bp}{10bp}\selectfont\setlength{\parindent}{0pt}\interlinepenalty=10000
+ \hypertarget{ref:1}{}1. Author A. (20XX). Example reference title. \textit{Journal placeholder}. 卷、页码与DOI待填。此条仅供演示引文跳转。\par\smallskip
+ \hypertarget{ref:2}{}2. Author B. (20YY). Another example reference title. \textit{Journal placeholder}. 出版信息待填；不要把占位条目带入正式译稿。\par}
+}
+\newcommand{\SampleSourceInfo}{%
+ \section*{原文信息}
+ 以下字段全部为示例占位：作者；英文原标题；期刊；年份；卷期；页码或文章号；DOI或来源链接。实际使用时必须逐项替换并核对。\par
+ 本文件是\JournalName 风格的非官方中文译稿样板，依据一次已核验文章版式进行结构化改编，不代表该期刊所有年代或文体的统一标准，也不保证像素级复刻。无真实论文内容或期刊标识图像。\par
+}
+\input{sample-body.tex}

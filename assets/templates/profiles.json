@@ -1,0 +1,63 @@
+{
+  "scope": "Source-inspired profiles extracted from four previously verified article editions; not universal publisher standards or pixel-accurate replicas.",
+  "unit": "PDF points (bp in TeX; 1/72 inch)",
+  "font_policy": {
+    "latin_serif": "TeX Gyre Termes",
+    "latin_sans": "TeX Gyre Heros",
+    "cjk_serif": "Noto Serif CJK SC if installed; otherwise FandolSong supplied by TeX Live",
+    "cjk_sans": "Noto Sans CJK SC if installed; otherwise FandolHei supplied by TeX Live",
+    "adaptation": "The verified Windows deliveries used SimSun/Arial/Microsoft YaHei in places. Portable Noto/Fandol and TeX Gyre substitutes deliberately replace those platform dependencies, so line breaks can differ."
+  },
+  "profiles": {
+    "cell": {
+      "reference_edition": "Cell 185 (2022), Atherosclerosis: Recent developments, supplied article edition",
+      "paper_pt": [602.986, 782.986],
+      "margins_pt": {"inner": 59.754, "outer": 52.691, "top": 101.821, "bottom": 50.186},
+      "column_gap_pt": 13.2,
+      "body_size_leading_pt": [9.1, 12.6],
+      "body_family": "sans",
+      "citations": "Blue parenthetical author-year, with internal bibliography links",
+      "observed_design": "Blue journal lettering, dark red Leading Edge and headings, grey Review marker; full-width title, authors, affiliation/DOI area, grey divider, blue SUMMARY text, then two columns; wide figure on left with narrow caption on right when suitable",
+      "template_adaptation": "Plain Cell text replaces publisher logo; no volume/date fabricated; two neutral sample pages",
+      "file": "cell.tex"
+    },
+    "nature": {
+      "reference_edition": "Nature 592 (2021), The changing landscape of atherosclerosis, supplied article edition",
+      "paper_pt": [595.276, 790.866],
+      "margins_pt": {"left": 40, "right": 37.276, "top": 49, "bottom": 42.866},
+      "column_gap_pt": 12,
+      "body_size_leading_pt": [9.05, 11.95],
+      "body_family": "serif",
+      "citations": "Black numeric superscripts, with internal bibliography links",
+      "observed_design": "Black-and-white review design with thin outer vertical rule; full-width serif title; approximately 1:2 publication metadata and author/abstract panel below; two-column body; fine rules",
+      "template_adaptation": "No genuine DOI/date or publication identity used; plain Nature text in footer; metadata panel height follows neutral text rather than the full-length original abstract",
+      "file": "nature.tex"
+    },
+    "science": {
+      "reference_edition": "Science 392 (2026), Targeting modulated vascular smooth muscle cells in atherosclerosis via FAP-directed immunotherapy, supplied article edition",
+      "paper_pt": [594, 756],
+      "margins_pt": {"left": 37, "right": 37, "top": 39, "bottom": 38},
+      "column_gap_pt": 14,
+      "body_size_leading_pt": [9.1, 11.9],
+      "body_family": "serif",
+      "citations": "Blue italic parenthetical numbers, not superscripts; internal bibliography links",
+      "observed_design": "Independent research summary page with red summary band, red discipline label, serif title, four summary sections and overview illustration; main article starts on next page with left-column title/authors/sans abstract/red divider, then natural two-column text; RESEARCH ARTICLE with short underline; full-width figures and compact captions",
+      "template_adaptation": "Discipline, author names and publication details explicitly marked as placeholders; no live DOI or fabricated QR code; three pages demonstrate summary, article opening, figure/backmatter",
+      "file": "science.tex"
+    },
+    "immunity": {
+      "reference_edition": "Immunity (2025), Inflammation in atherosclerosis: Lessons and therapeutic implications, supplied corrected-proof edition",
+      "paper_pt": [602.986, 782.986],
+      "margins_pt": {"inner": 59.754, "outer": 52.691, "top": 101.821, "bottom": 50.186},
+      "column_gap_pt": 13.2,
+      "body_size_leading_pt": [9.1, 12.6],
+      "body_family": "sans",
+      "citations": "Blue numeric superscripts, with internal bibliography links",
+      "observed_design": "Cell-family blue journal heading and summary, grey Review label, dark red section hierarchy, full-width title/author/abstract area, double columns and compact full-width figure captions",
+      "template_adaptation": "Plain Immunity lettering instead of logo; no proof citation box; independent Chinese page numbers and neutral placeholders",
+      "file": "immunity.tex"
+    }
+  },
+  "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",
+  "required_customization": ["Inspect target PDF edition visually", "Replace all placeholder title/author/metadata/content/reference/source fields", "Preserve source content and citation conventions", "Adjust pagination for Chinese length", "Compile twice and render every page", "Confirm no missing glyphs, overflow, missing reference targets, or caption loss"]
+}

@@ -1,0 +1,29 @@
+% Cell profile: one verified 2022 review, neutral source-inspired adaptation.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twoside,twocolumn,scheme=plain]{ctexart}
+\usepackage[paperwidth=602.986bp,paperheight=782.986bp,inner=59.754bp,outer=52.691bp,top=101.821bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp]{geometry}
+\input{common.tex}
+\newcommand{\JournalName}{Cell}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\columnsep}{13.2bp}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{12.6bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\color{JournalRed}\fontsize{9.4bp}{12.6bp}\selectfont,beforeskip=10bp,afterskip=3bp},subsection={format=\sffamily\bfseries\color{JournalRed},beforeskip=7bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textcolor{JournalBlue}{\hyperlink{ref:1}{(Author A, 20XX)}}}
+\newcommand{\SampleCiteTwo}{\textcolor{JournalBlue}{\hyperlink{ref:2}{(Author B, 20YY)}}}
+\fancyhead[LO,RE]{\sffamily\color{JournalBlue}\fontsize{21bp}{24bp}\selectfont Cell}
+\fancyhead[LE,RO]{\sffamily\color{JournalRed}\fontsize{9bp}{11bp}\selectfont Leading Edge\par\color{black!45}Review}
+\fancyfoot[LO,RE]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中文译稿示例}
+\fancyfoot[LE,RO]{\sffamily\fontsize{7.5bp}{9bp}\selectfont Cell\quad 中文译页\ \thepage}
+\begin{document}\normalsize
+\twocolumn[{\noindent{\color{black!40}\bfseries\fontsize{14bp}{18bp}\selectfont Review}\par\vspace{3bp}
+{\bfseries\fontsize{23.2bp}{29bp}\selectfont\PaperTitle\par}\vspace{9bp}
+{\bfseries\fontsize{9bp}{11bp}\selectfont\SampleAuthors\par}\vspace{4bp}
+{\fontsize{7.5bp}{10.4bp}\selectfont\SampleAffiliations\par}\vspace{8bp}\hrule height .35bp\vspace{8bp}
+{\bfseries\color{JournalRed}SUMMARY\quad 摘要}\par\vspace{5bp}
+{\color{JournalBlue}\fontsize{10bp}{14bp}\selectfont\SampleAbstract\par}\vspace{13bp}}]
+\balance\SampleOpening
+\clearpage
+\twocolumn[{\noindent\begin{minipage}[t]{.64\textwidth}\vspace{0pt}\DemoVector\end{minipage}\hfill
+\begin{minipage}[t]{.335\textwidth}\vspace{0pt}\fontsize{7.5bp}{10bp}\selectfont\DemoCaption\end{minipage}\par\vspace{15bp}}]
+\balance\SampleClosing
+\end{document}
