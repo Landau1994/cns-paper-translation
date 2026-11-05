@@ -1,11 +1,11 @@
 ---
 name: cns-paper-translation
-description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Immunity扩展，保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
+description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Immunity、Nature Reviews Cardiology扩展，保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
 ---
 
 # CNS 论文汉化
 
-把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Immunity 扩展；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
+把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Immunity、Nature Reviews Cardiology 扩展；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
 
 ## 选择入口
 
@@ -26,8 +26,13 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Nature | [nature.tex](assets/templates/nature.tex) | 衬线黑白、出版信息窄栏、数字上标引文 |
 | Science | [science.tex](assets/templates/science.tex) | 独立研究摘要页、正文左栏起题名、斜体括号数字引文 |
 | Immunity | [immunity.tex](assets/templates/immunity.tex) | Cell 家族布局、蓝色刊头、数字上标引文 |
+| Nature Reviews Cardiology | [nature-reviews-cardiology.tex](assets/templates/nature-reviews-cardiology.tex) | 紫色顶线、独立摘要目录页、蓝色上标、跨页表格 |
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
+
+遇到尚未覆盖的期刊或显著不同的版本，核验并完成当前排版后，将可复用结构扩展为中性样板、来源配置和预览，更新此表及相关说明。实际论文内容、原图和下载信息留在任务工程中，不收入可分享技能。
+
+扩展验收后，更新项目维护的技能源、已安装的本地技能及已有分享包，并核对内容一致；同步前检查并保留各处已有的用户修改。若会话或项目本地规范已明确授权远程仓库与范围，继续提交、推送和创建约定的 PR，不重复请求同一授权。没有远程授权时先完成本地工作，再确认发布目标与范围；新模板本身不构成对任意仓库的发布授权。
 
 ## 从原文到译稿
 
