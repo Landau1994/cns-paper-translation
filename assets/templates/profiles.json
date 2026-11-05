@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from five verified article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from six verified article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -69,6 +69,31 @@
       "observed_design": "Purple top rule; separate opening page with full-width title and authors, roughly 3:1 abstract/section-contents panels divided by a vertical rule, affiliations at the abstract foot; later two-column serif body with sans headings and ruled key points; full-width multipage table with repeated heading and column labels; blue journal name in ruled footer",
       "template_adaptation": "Four neutral pages; plain journal lettering instead of logo; separate Chinese page numbers; placeholder metadata, abstract, vector diagram, references and source information; 20 original placeholder rows demonstrate a two-page table without copying article data; 108 bp body top is a Chinese layout adaptation",
       "file": "nature-reviews-cardiology.tex"
+    },
+    "nature-biotechnology": {
+      "reference_edition": "Nature Biotechnology 44 (June 2026), supplied Brief Communication edition published online in July 2025",
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 39.685,
+        "right": 35.716,
+        "top": 58,
+        "bottom": 43
+      },
+      "column_gap_pt": 12,
+      "body_size_leading_pt": [
+        9,
+        12.1
+      ],
+      "body_family": "serif",
+      "citations": "Blue numeric superscripts, with internal bibliography links",
+      "observed_design": "Yellow top rule on opening page only; plain journal-name substitute; manuscript type at left and DOI at right above a fine rule; full-width serif title; approximately 1:2 date and author/abstract panels; two-column body on the opening page; compact sans captions and blue ruled footer",
+      "template_adaptation": "Three neutral pages: opening and numbered equations, full-width original vector diagram and body, reporting-field table and source information. Fonts use common.tex fallbacks. Affiliations follow the abstract rather than sitting at the original page foot. Equations and ten reporting rows are demonstration material, not source research or required journal fields. The 58 bp body top and pagination are Chinese adaptations.",
+      "version_handling": "Keep online publication date, issue date and copyright year as distinct source fields; do not infer one from another.",
+      "file": "nature-biotechnology.tex",
+      "preview_pages": 3
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

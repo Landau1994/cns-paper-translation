@@ -1,10 +1,10 @@
 # 期刊配置与样板使用
 
-这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文和 Nature Reviews Cardiology 2024 综述。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
+这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述和 Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [五套样板总览](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [六套样板总览](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
 
 共享宏、长文中取消样板人工分页及字体回退提示，见随模板提供的 [编译说明](../assets/templates/README.md)。可机读的尺寸与引文配置在 [profiles.json](../assets/templates/profiles.json)。
 
@@ -15,7 +15,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 xelatex -interaction=nonstopmode -halt-on-error cell.tex
 ```
 
-另四套分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
+另五套分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
 
 实际文章的图形、表格和长书目远超演示；必须重新编译、检查浮动体、渲染全部页面。不要把首次编译页数或样板中的页码写死。
 
@@ -59,6 +59,14 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 - 全宽长表采用单栏跨页结构，重复续表标题和列头，保留分组及末尾完整缩写说明。不要用表格截图代替中文表，也不要为保持原页数缩成不可读字号。
 - 图像与长图注可分属相邻原页，提取时逐项定位。图内时间线等整句文字需在中文标签对照中完整呈现，不能只解释蛋白名。
 - 4页中性样板展示独立摘要目录、双栏图文及两页续表；普通文字刊名替代品牌图像，参考文献和原文信息均为占位，未收入真实文章内容或图形。
+
+## Nature Biotechnology：Brief Communication 扩展
+
+- 来源为一篇在线发表于2025年、编入第44卷2026年6月刊期的简讯，纸张595.276 × 790.866 bp；左右边距约39.685/35.716，栏距12。中性样板普通正文起点58 bp、正文9/12.1 bp，属于中文适配参数。
+- 黄色顶线只出现在首页；普通页面使用左侧稿件类型、右侧DOI和下方细横线。题名跨栏，下方约1:2日期窄栏与作者/摘要宽栏；随后在同一页进入双栏正文，不使用独立摘要目录页。
+- 正文衬线，稿件类型与紧凑图注为无衬线，蓝色数字上标链接英文书目。保留公式编号、数学符号、跨图续句及正文实际有无小标题，不能将短篇研究强套综述结构。
+- 3页样板展示首页、跨栏主图与数学正文、扩展材料/报告表和末尾原文信息。图、公式、表格内容均为原创占位；示例报告字段不是期刊固定要求。作者单位移至摘要后是有意适配，不宣称与原刊逐像素一致。
+- 源文件中在线日期、正式刊期和版权年份可能不同，应分别记录。正文外的方法、扩展图、报告摘要及许可说明仍需完整处理；没有提供的补充材料不算已取得。
 
 ## 新期刊或变体
 

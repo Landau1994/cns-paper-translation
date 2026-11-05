@@ -1,0 +1,110 @@
+% Nature Biotechnology Brief Communication: neutral source-inspired sample.
+% Based on a supplied edition published online in 2025 and in a 2026 issue.
+% All prose, equations, diagram labels and metadata below are demonstration content.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twocolumn,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=39.685bp,right=35.716bp,top=58bp,bottom=43bp,headheight=16bp,headsep=9bp,footskip=24bp]{geometry}
+\input{common.tex}
+\usepackage{array,booktabs,tabularx,eso-pic}
+\definecolor{BiotechYellow}{HTML}{E4DC25}
+\definecolor{BiotechBlue}{HTML}{0068A6}
+\newcommand{\JournalName}{Nature Biotechnology}
+\hypersetup{linkcolor=BiotechBlue,urlcolor=BiotechBlue,
+  pdftitle={Nature Biotechnology：简讯中性中文样板}}
+\setlength{\columnsep}{12bp}
+\renewcommand{\normalsize}{\fontsize{9bp}{12.1bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{10.5bp}{13bp}\selectfont,beforeskip=9bp,afterskip=3bp},subsection={format=\sffamily\bfseries,beforeskip=7bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textsuperscript{\hyperlink{ref:1}{\color{BiotechBlue}1}}}
+\newcommand{\SampleCiteTwo}{\textsuperscript{\hyperlink{ref:2}{\color{BiotechBlue}2}}}
+\fancyhead[L]{\sffamily\fontsize{9bp}{11bp}\selectfont 简讯\quad Brief Communication}
+\fancyhead[R]{\sffamily\fontsize{7.5bp}{10bp}\selectfont\textcolor{BiotechBlue}{DOI：待原文核实}}
+\renewcommand{\headrulewidth}{.3bp}
+\renewcommand{\footrulewidth}{.3bp}
+\fancyfoot[L]{\sffamily\fontsize{7bp}{9bp}\selectfont\textcolor{BiotechBlue}{Nature Biotechnology}\quad |\quad 非官方中文样板}
+\fancyfoot[R]{\sffamily\bfseries\fontsize{7bp}{9bp}\selectfont 中文译页\ \thepage}
+\fancypagestyle{opening}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\newcommand{\DemoParaA}{这段原创中性文字展示简讯正文的排版密度，不报告真实研究结果。实际译稿从原文首段开始，原稿没有标题时不增加“引言”标题。读者应能区分研究目的、评价对象与适用范围；译者需要保留作者限定的比较对象，并让段落顺序与原文一致。这里的数字上标仅链接本文件的演示书目，不对应任何已发表研究\SampleCiteOne。\par}
+\newcommand{\DemoParaB}{不同输出之间的比较，需要保留各自的定义与评价范围。原文若将样本、分组、标签和表示形式分别定义，中文也应逐一对应，不因词语相近而合并。某项指标的方向取决于其具体定义，分数较高是否代表更好不能从名称猜测。引用图表时，应保留原稿的面板字母及对应关系；不能用一句结论替代完整的方法说明。\par}
+\newcommand{\DemoParaC}{示例公式中的符号只用于检查数学排版。设示例值为 $q_i$、非负权重为 $w_i$，且权重之和非零，下面的表达式演示分式、求和、上下标与公式编号；它不是目标论文的公式，也不表示经过验证的评价方法。实际使用时应将公式、符号定义及编号一并替换，并检查正文中的引用位置。\par}
+\newcommand{\DemoParaD}{逐栏阅读时，页末的句子可能在下一页主图之后才继续。恢复这一顺序需要同时核对段落缩进、图注边界及后续句子，不能把图中坐标文字接入正文。对图内英文的处理遵从本次任务要求；保留英文时，应在适当位置给出完整中文释义。正文、图注和附录的覆盖清单应分别维护，避免其中一项已完成而其他部分被遗漏。\par}
+\newcommand{\DemoParaE}{研究对象和适用范围的限定同样属于正文。只有在原文明确支持时，才可以把观察结果表述为因果关系，或把特定条件下的结果推广至其他场景。转折句、例外情况、无统计学显著性的发现及作者提出的限制都应完整译出。示例不提供实验数值，真实项目中的单位、比例、置信区间和软件版本须逐项核对。\par}
+\newcommand{\DemoParaF}{简讯的篇幅较短，并不意味着方法、扩展数据、作者声明或出版许可可以省略。原文件若把这些材料排在连续页码之后，仍需识别它们属于当前 PDF 的范围。只被正文提及而没有提供的补充文件，应明确区分。这里的人工分页仅用于三页样板展示，正式文章应按照中文长度重新安排\SampleCiteTwo。\par}
+\newcommand{\DemoParaG}{来源版本还可能影响正文与附录的组织方式。在线发表版本、正式卷期版本及作者接受稿可以具有相同题名，却采用不同页码和排版。处理时应记录当前实际提供的文件版本，分别核对在线日期、卷期和版权年份。某个字段没有出现在源文中时，可以明确保留待核实状态；不应根据文件名或相邻文章补出未经证实的信息。\par}
+\newcommand{\DemoParaH}{正文中的比较关系往往需要跨越多个句子才能完整理解。前一句可能先定义评价条件，后一句才给出结论；也可能在随后一段补充反例或使用限制。为此，术语表只统一用词，不代替逐段判断。保留段落、转折和引文位置，有助于读者回到原文核查。中性样板只演示这些信息的承载方式，不能证明任何具体译稿已经准确。\par}
+\newcommand{\DemoParaI}{图形与版式之间存在实际的尺寸约束。横向长图、纵向流程图和多面板数据图可以采用不同安排，但每种安排都应保留标签的阅读顺序、刻度和完整图注。必要的文字释义可单独分组，组名与面板字母需清楚对应。缩放时首先观察最小标签能否辨认，再调整图页或图注布局；仅使外框落入栏宽并不足以完成核验。\par}
+\begin{document}\normalsize
+\thispagestyle{opening}
+\AddToShipoutPictureBG*{\AtPageUpperLeft{\put(0,0){\begin{tikzpicture}[remember picture,overlay]
+\draw[BiotechYellow,line width=3bp] ([xshift=39.685bp,yshift=-36bp]current page.north west)--([xshift=-35.716bp,yshift=-36bp]current page.north east);
+\end{tikzpicture}}}}
+\twocolumn[{%
+\noindent{\sffamily\fontsize{16bp}{20bp}\selectfont Nature Biotechnology\par}\vspace{22bp}
+\noindent{\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont 简讯\quad Brief Communication\hfill\mdseries\fontsize{7.5bp}{10bp}\selectfont\textcolor{BiotechBlue}{DOI：待原文核实}}\par
+\vspace{4bp}\hrule height .3bp\vspace{7bp}
+\noindent{\bfseries\fontsize{25bp}{31bp}\selectfont 中文简讯题名占位：评价方法、\par 证据边界与可复核说明\par}\vspace{24bp}
+\hrule height .3bp\vspace{5bp}
+\noindent\begin{minipage}[t]{.32\textwidth}\vspace{0pt}\sffamily\fontsize{8bp}{11bp}\selectfont
+收稿日期：待核实\par\vspace{5bp}\hrule height .3bp\vspace{5bp}
+接受日期：待核实\par\vspace{5bp}\hrule height .3bp\vspace{5bp}
+在线发表：待核实\par\vspace{5bp}\hrule height .3bp\vspace{5bp}
+非官方中文译稿样板\par
+\end{minipage}\hfill
+\begin{minipage}[t]{.656\textwidth}\vspace{0pt}
+{\sffamily\bfseries\fontsize{9bp}{12bp}\selectfont\SampleAuthors\par}\vspace{6bp}\hrule height .3bp\vspace{6bp}
+{\fontsize{10.5bp}{14.4bp}\selectfont\SampleAbstract\par}
+\end{minipage}\par\vspace{8bp}
+{\sffamily\fontsize{7.1bp}{9.4bp}\selectfont\SampleAffiliations\par}\vspace{12bp}
+}]
+\balance
+\DemoParaA\DemoParaB\DemoParaC
+\begin{equation}Q=\frac{\sum_{i=1}^{m}w_iq_i}{\sum_{i=1}^{m}w_i}\label{eq:demo}\end{equation}
+式（\ref{eq:demo}）中的所有字母均为排版占位变量。引文上标与公式编号承担不同功能，不应相互替换。若原文另有符号约定，应保留原约定及适用条件。\par
+\DemoParaD\DemoParaE\DemoParaG\DemoParaH
+\clearpage
+\twocolumn[{%
+\begin{center}\begin{minipage}{.84\textwidth}\DemoVector\end{minipage}\end{center}
+\vspace{3bp}\noindent{\sffamily\fontsize{7.7bp}{10.3bp}\selectfont\DemoCaption\par}\vspace{10bp}\hrule height .3bp\vspace{11bp}
+}]
+\balance
+\DemoParaD\DemoParaB\DemoParaE\DemoParaF
+图注和图像作为一个完整信息单元在本页呈现。实际图注若超过一页可容纳的高度，应改用清楚的延续标记或专门图页，并核对所有面板说明。模板中的图没有任何科学观测值；其色块、箭头和节点仅帮助检查宽度、对齐与可读性，不应被解释为真实数据。\par
+数学符号可与中文段落共同排版，但不能根据图示外观重建不存在的数值。这里再用一个完全中性的恒等关系演示第二个编号：\par
+\begin{equation}\bar q=\frac{1}{m}\sum_{i=1}^{m}q_i,\qquad m\ge1.\end{equation}
+本式仅用于测试字号、基线和编号对齐，不能替代实际研究方法。若公式包含分段条件、向量或矩阵，应依据原稿扩展环境，并重新检查双栏边界。较长公式可以合理断行，但不可删除项、改变括号作用范围或移走条件。\par
+\DemoParaI\DemoParaH
+\section*{扩展材料的衔接示例}
+此处演示从主文转入扩展材料的逻辑连接。扩展图、报告摘要与数据声明是否存在，取决于实际提供的源文件；模板不会自动生成这些内容。附录中的选择框、表格字段和自由文本答案都属于独立信息，不能只保留表题或栏目名。\par
+\clearpage
+\twocolumn[{%
+\section*{扩展材料与报告表（中性示例）}
+\noindent 此表只演示报告类附录的字段和值，不填写真实研究结论。正式译稿应逐项保留源表字段、状态、说明及未适用项。\par\vspace{8bp}
+\begingroup\sffamily\fontsize{8bp}{11bp}\selectfont
+\setlength{\tabcolsep}{6bp}\renewcommand{\arraystretch}{1.3}
+\noindent\begin{tabularx}{\textwidth}{@{}p{89bp}p{87bp}X@{}}
+\toprule\textbf{字段（示例）}&\textbf{状态占位}&\textbf{原文说明占位}\\\midrule
+资料范围&待原文核实&列出本次实际提供的主文、扩展图、表格及报告摘要，不推定另有文件。\\
+样本与分组&待原文核实&保留样本定义、分组依据和排除说明；没有原始数值时不补写。\\
+统计说明&待原文核实&分别记录检验名称、比较对象及适用条件，不使用模板默认阈值。\\
+数据可用性&待原文核实&填写源文提供的访问说明与标识；示例不提供真实数据链接。\\
+代码可用性&待原文核实&填写版本、获取方式和限制；代码未提供时不宣称已经复现。\\
+报告字段&$\square$ 状态待核实&空方框只演示符号字形，不代表作者作出的选择；使用时按原稿替换。\\
+材料获取&待原文核实&保留源文给出的获取条件、通信对象和使用限制，不用模板许可替代。\\
+分析边界&待原文核实&区分预先设定的分析与探索性分析，原文未说明时不替作者推定。\\
+作者声明&待原文核实&分别对应贡献、资助和利益冲突字段，不合并不同主体的声明。\\
+附录定位&待原文核实&保留原附录编号与主文引用关系；未提供的文件不能列作已译内容。\\
+\bottomrule
+\end{tabularx}\par\endgroup\vspace{14bp}
+}]
+\balance
+\section*{方法与声明占位}
+附录中的方法并非主文结果的摘要。操作步骤、参数设置、检验假设和数据访问条件都应在正式译稿中完整呈现。若原文明确说明某项分析未进行，不能因为报告表留有该字段而补出一项分析。\par
+报告字段的中文长度可能超过原文，因此本表允许单元格自然换行。字段及其回答应作为一个整体保留，不能因原版留白较窄而截去说明。若完整表格跨页，应为续页重复栏目名，并在末尾保留缩写和脚注。此页仅展示短表，不预设真实论文需要多少行或多少个选项。\par
+原作者、出版者和图像权利信息应按目标原文保留；中性模板的许可不改变用户另行提供材料的权利归属。本文档仅演示排版，不授予对任何原刊 logo、图像或文字的额外使用权。\par
+\section*{版式与版本说明}
+本样板提炼一篇简讯的观察结果：首页使用黄色顶线、左日期窄栏与右作者摘要宽栏，普通页面使用细横线与稿件类型/DOI 占位。它不是 Nature Reviews Cardiology 的独立摘要目录首页，也不规定其他文体必须采用相同结构。\par
+\begin{samepage}在线发表日期与卷期日期可能不同。真实稿件应分别记录来源中的日期字段，页脚使用独立中文译页；不将样板页数或示例日期冒充原刊信息。\par\end{samepage}
+\section*{完整覆盖说明占位}
+正式交付时，可以在此说明已包含哪些源材料，并对确实缺失的补充文件作出简短界定。覆盖说明应与实际文件一致，不以“全文”一词掩盖未处理的图注或附录。本示例没有原始论文，也没有对任何科学内容作出翻译完成的声明。\par
+\SampleBibliography
+\SampleSourceInfo
+\end{document}
