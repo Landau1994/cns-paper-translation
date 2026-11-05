@@ -74,7 +74,7 @@ By default, the skill favors retaining the original scientific figures, translat
 
 After completing and checking a translation for a new journal or a substantially different layout, extract a reusable neutral template and update its profile, previews, and Chinese and English documentation. Then synchronize the maintained skill source, local installation, and any existing distribution package, inspecting and preserving local changes first.
 
-When the conversation or local project instructions already authorize a specific remote repository and scope, continue with the agreed branch and pull-request workflow without asking for the same authorization again. Otherwise, confirm the publication target first. Full papers, original figures, and download information stay out of the shared skill repository.
+When the conversation or local project instructions already authorize a specific remote repository and scope, complete the agreed commits, pushes, and merges without asking for the same authorization again. For a single-maintainer repository with explicit authorization to update `main` automatically, complete that update after validation; a draft pull request or another confirmation is not required. Otherwise, confirm the publication target first. Full papers, original figures, and download information stay out of the shared skill repository.
 
 ## Files and dependencies
 
