@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from four previously verified article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from five verified article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -56,6 +56,19 @@
       "observed_design": "Cell-family blue journal heading and summary, grey Review label, dark red section hierarchy, full-width title/author/abstract area, double columns and compact full-width figure captions",
       "template_adaptation": "Plain Immunity lettering instead of logo; no proof citation box; independent Chinese page numbers and neutral placeholders",
       "file": "immunity.tex"
+    },
+    "nature-reviews-cardiology": {
+      "reference_edition": "Nature Reviews Cardiology 21 (2024), Efferocytosis in atherosclerosis, supplied published review edition",
+      "paper_pt": [595.276, 790.866],
+      "margins_pt": {"left": 39.685, "right": 35.716, "top": 108, "bottom": 43},
+      "source_body_top_pt_approx": 114,
+      "column_gap_pt": 12,
+      "body_size_leading_pt": [9, 12.1],
+      "body_family": "serif",
+      "citations": "Blue numeric superscripts, with internal bibliography links",
+      "observed_design": "Purple top rule; separate opening page with full-width title and authors, roughly 3:1 abstract/section-contents panels divided by a vertical rule, affiliations at the abstract foot; later two-column serif body with sans headings and ruled key points; full-width multipage table with repeated heading and column labels; blue journal name in ruled footer",
+      "template_adaptation": "Four neutral pages; plain journal lettering instead of logo; separate Chinese page numbers; placeholder metadata, abstract, vector diagram, references and source information; 20 original placeholder rows demonstrate a two-page table without copying article data; 108 bp body top is a Chinese layout adaptation",
+      "file": "nature-reviews-cardiology.tex"
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

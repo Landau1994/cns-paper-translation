@@ -6,9 +6,9 @@
 
 一个面向 Codex 的可复用技能：将用户提供的英文论文、综述或指南译成中文，保留内容、数据与引文，并参照原刊结构生成可编辑稿和 PDF。
 
-以 **Cell、Nature、Science 三套可编译样板**为特色，附 **Immunity 扩展**。不只关注首页效果，也覆盖方法、图注、书目、声明和文末原文信息。
+以 **Cell、Nature、Science 三套可编译样板**为特色，附 **Immunity 与 Nature Reviews Cardiology 扩展**。不只关注首页效果，也覆盖方法、图注、书目、声明和文末原文信息。
 
-![Cell、Nature、Science 与 Immunity 样板总览](assets/previews/overview.png)
+![Cell、Nature、Science、Immunity 与 Nature Reviews Cardiology 样板总览](assets/previews/overview.png)
 
 ## 有什么不同
 
@@ -19,7 +19,7 @@
 - **局部修改保持范围**：只删引用框时，不重译正文或顺带删除正常页眉页脚。
 - **便于继续修改**：交付中文 PDF、可编辑源文件，并在全文末尾附原文引用与 DOI。
 
-## 四套样板
+## 五套样板
 
 | 样板 | 主要视觉结构 | 引文 | 演示 |
 |---|---|---|---|
@@ -27,6 +27,7 @@
 | Nature | 黑白衬线、细线、出版信息窄栏与摘要宽栏 | 数字上标 | [PDF](assets/previews/nature.pdf) · [源文件](assets/templates/nature.tex) |
 | Science | 独立研究摘要页、红色学科标签、正文左栏起题名 | 蓝色斜体括号数字 | [PDF](assets/previews/science.pdf) · [源文件](assets/templates/science.tex) |
 | Immunity | Cell 家族结构、蓝色刊头与摘要 | 数字上标 | [PDF](assets/previews/immunity.pdf) · [源文件](assets/templates/immunity.tex) |
+| Nature Reviews Cardiology | 紫色顶线、独立摘要目录页、双栏正文、跨页表重复标题与列头 | 蓝色数字上标 | [PDF](assets/previews/nature-reviews-cardiology.pdf) · [源文件](assets/templates/nature-reviews-cardiology.tex) |
 
 样板来自已核验文章的版式提炼，使用中性文字和原创示意占位图。它们不是期刊官方模板；不同年代、文体和版本仍需以实际原稿为准。中文长度会改变分页。
 
@@ -69,6 +70,12 @@ $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除右
 
 默认优先保留科学原图，翻译图注并附图内文字的中文释义。若希望直接替换图内英文，请明确说明。未提供的补充材料不会被当作已翻译内容。
 
+## 新期刊扩展
+
+新期刊或明显不同的版式完成汉化并通过核对后，将可复用结构整理为中性模板，更新配置、预览和中英文说明，再同步项目技能源、本地安装及已有分享包。已有修改先检查并合并。
+
+若会话或项目本地规范已授权具体远程仓库与范围，继续按约定完成提交、推送与合并，无需重复确认。对于已授权自动更新 `main` 的单人维护仓库，检查通过后完成主分支同步，不强制草稿 PR 或额外确认；没有授权时先确认发布目标。论文全文、原图与下载信息不进入共享技能仓库。
+
 ## 文件与依赖
 
 | 路径 | 用途 |
@@ -76,7 +83,7 @@ $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除右
 | [SKILL.md](SKILL.md) | 技能入口、工作流程与范围 |
 | [agents/openai.yaml](agents/openai.yaml) | 显示名称与默认调用提示 |
 | [references/](references/) | 期刊配置、内容组织和验收方法 |
-| [assets/templates/](assets/templates/) | 四套 XeLaTeX 样板及共享文件 |
+| [assets/templates/](assets/templates/) | 五套 XeLaTeX 样板及共享文件 |
 | [assets/previews/](assets/previews/) | 演示 PDF、页面 PNG 与样板总览 |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | 只读检查 PDF 下载词条、内部链接和编译日志 |
 
@@ -93,7 +100,7 @@ python scripts/audit_pdf.py translated.pdf --forbidden-text "Downloaded from" --
 
 ## 验证与边界
 
-四套样板共 9 页已编译并完成视觉检查，无缺字、越界和未定义引用。检查工具已用真实译稿，以及隐藏在裁剪区域外的嵌套下载标记、失效链接等合成样本验证。
+五套样板共 13 页已编译并完成视觉检查，无缺字、越界和未定义引用。Nature Reviews Cardiology 扩展用 4 页展示摘要目录、双栏及跨页表格；它不沿用普通 Nature 综述的首页结构。检查工具已用真实译稿，以及隐藏在裁剪区域外的嵌套下载标记、失效链接等合成样本验证。
 
 这是一套帮助 Codex 执行任务的技能与样板，不是无需校对的独立自动翻译服务。仓库不包含原论文全文、原图、官方 logo、个人下载信息或真实实验数据；也不代表期刊官方授权或认可。
 

@@ -1,0 +1,73 @@
+% Nature Reviews Cardiology: source-inspired 2024 review profile, neutral sample.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=39.685bp,right=35.716bp,top=108bp,bottom=43bp,headheight=28bp,headsep=44bp,footskip=24bp]{geometry}
+\input{common.tex}
+\usepackage{longtable,array,colortbl,booktabs}
+\definecolor{ReviewPurple}{HTML}{654B9C}
+\definecolor{ReviewBlue}{HTML}{0068A6}
+\newcommand{\JournalName}{Nature Reviews Cardiology}
+\hypersetup{linkcolor=ReviewBlue,urlcolor=ReviewBlue}
+\setlength{\columnsep}{12bp}
+\renewcommand{\normalsize}{\fontsize{9bp}{12.1bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{11bp}{14bp}\selectfont,beforeskip=10bp,afterskip=2bp},subsection={format=\sffamily\bfseries,beforeskip=7bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textsuperscript{\hyperlink{ref:1}{\color{ReviewBlue}1}}}
+\newcommand{\SampleCiteTwo}{\textsuperscript{\hyperlink{ref:2}{\color{ReviewBlue}2}}}
+\fancyhead[L]{\begin{minipage}{\textwidth}\color{ReviewPurple}\rule{\linewidth}{3bp}\par\vspace{3bp}\color{black}\sffamily\bfseries\fontsize{16bp}{19bp}\selectfont 综述文章\end{minipage}}
+\fancyfoot[L]{\sffamily\fontsize{7bp}{9bp}\selectfont\textcolor{ReviewBlue}{Nature Reviews Cardiology}\quad |\quad 非官方中文样板}
+\fancyfoot[R]{\sffamily\bfseries\fontsize{7bp}{9bp}\selectfont 中文译页\ \thepage}
+\renewcommand{\footrulewidth}{.3bp}
+\fancypagestyle{opening}{\fancyhead[L]{\begin{minipage}{\textwidth}\color{ReviewPurple}\rule{\linewidth}{3bp}\par\vspace{3bp}\color{black}\sffamily\fontsize{13bp}{17bp}\selectfont nature reviews cardiology\hfill\fontsize{7bp}{9bp}\selectfont DOI：待核实\end{minipage}}}
+\newcommand{\TableSampleRow}[1]{指标占位 #1 & 类别占位 & 此处说明该条目的作用，并逐项保留原文的限定、对象和比较方向。 & 配体或受体占位 & 此处放入原文报告的相关性、观察结果或实验结论，不能把关联改成因果。 & 证据值待原文核对；包括统计量、单位和阈值。 & \SampleCiteOne\\\hline}
+\begin{document}\normalsize
+\thispagestyle{opening}
+\noindent{\sffamily\bfseries 综述文章}\par\vspace{4bp}\hrule height .3bp\vspace{10bp}
+{\noindent\fontsize{25bp}{32bp}\selectfont 中文综述题名占位：证据、机制与研究方向\par}\vspace{20bp}
+{\noindent\sffamily\bfseries\SampleAuthors\par}\vspace{5bp}\hrule height .3bp\vspace{6bp}
+\noindent\begin{minipage}[t][480bp][t]{.745\textwidth}\vspace{0pt}
+{\sffamily\bfseries 摘要\par}\vspace{18bp}\hrule height .3bp\vspace{6bp}
+{\fontsize{13bp}{19bp}\selectfont\SampleAbstract\par}
+\vfill\hrule height .3bp\vspace{5bp}
+{\sffamily\fontsize{7.4bp}{10bp}\selectfont\SampleAffiliations\par}
+\end{minipage}\hfill\vrule width .3bp\hfill
+\begin{minipage}[t][480bp][t]{.23\textwidth}\vspace{0pt}\sffamily
+{\bfseries 章节目录\par}\vspace{18bp}\hrule height .3bp\vspace{6bp}
+引言\par\vspace{6bp}\hrule\vspace{6bp}
+证据与机制\par\vspace{6bp}\hrule\vspace{6bp}
+跨页表格\par\vspace{6bp}\hrule\vspace{6bp}
+原文信息\par\vspace{6bp}\hrule
+\end{minipage}
+\clearpage\twocolumn\balance
+\section*{要点}
+{\sffamily\fontsize{8.5bp}{12bp}\selectfont
+\noindent\hrule\vspace{5bp}• 每条要点独立翻译并保留对应关系。\par\vspace{5bp}\hrule\vspace{5bp}
+• 数字上标引文仍指向原编号条目。\par\vspace{5bp}\hrule\vspace{5bp}
+• 表格列名、分组、注释和续表标题均属于正文内容。\par\vspace{5bp}\hrule}
+\SampleOpening
+\section*{机制图示例}
+\DemoVector\par\vspace{6bp}
+{\sffamily\fontsize{7.6bp}{10.2bp}\selectfont\DemoCaption\par}
+\section*{版式边界}
+这是从一个已核验的综述版本提取的版式扩展。独立摘要与目录页、紫色顶线、两栏正文、蓝色数字上标以及跨页表格不能直接从普通 Nature 样板推定。正式译稿需要按中文长度重新分页。\par
+\clearpage\onecolumn
+\section*{表1｜跨页表格演示（中性占位）}
+\begingroup\sffamily\fontsize{7.3bp}{10.2bp}\selectfont
+\setlength{\tabcolsep}{3bp}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|p{43bp}|p{42bp}|p{100bp}|p{65bp}|p{111bp}|p{87bp}|p{26bp}|}
+\hline\rowcolor{ReviewPurple!12}分子/指标 & 类别 & 功能 & 对应配体/受体 & 相关证据 & 人类遗传证据 & 文献\\\hline\endfirsthead
+\multicolumn{7}{l}{\bfseries 表1（续）｜跨页表格演示}\\[4bp]
+\hline\rowcolor{ReviewPurple!12}分子/指标 & 类别 & 功能 & 对应配体/受体 & 相关证据 & 人类遗传证据 & 文献\\\hline\endhead
+\multicolumn{7}{r}{下页续表}\\\endfoot
+\endlastfoot
+\rowcolor{black!5}\multicolumn{7}{|l|}{\bfseries 分类一：所有条目均为排版占位}\\\hline
+\TableSampleRow{A}\TableSampleRow{B}\TableSampleRow{C}\TableSampleRow{D}\TableSampleRow{E}
+\rowcolor{black!5}\multicolumn{7}{|l|}{\bfseries 分类二：续页重复列头，不拆断单行}\\\hline
+\TableSampleRow{F}\TableSampleRow{G}\TableSampleRow{H}\TableSampleRow{I}\TableSampleRow{J}
+\TableSampleRow{K}\TableSampleRow{L}\TableSampleRow{M}\TableSampleRow{N}\TableSampleRow{O}
+\TableSampleRow{P}\TableSampleRow{Q}\TableSampleRow{R}\TableSampleRow{S}\TableSampleRow{T}
+\end{longtable}
+\noindent 表注占位：缩写、证据阈值与统计符号须从目标原文核实。示例没有真实生物学数据。\par\endgroup
+\SampleBibliography
+仅供学术交流。出版物版权归原作者及出版商所有；模板的许可不授予对原出版物的额外使用权。\par
+\SampleSourceInfo
+\end{document}
