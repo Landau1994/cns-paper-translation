@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from seven verified journal configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from nine verified journal configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -11,10 +11,21 @@
   "profiles": {
     "cell": {
       "reference_edition": "Cell 185 (2022), Atherosclerosis: Recent developments, supplied article edition",
-      "paper_pt": [602.986, 782.986],
-      "margins_pt": {"inner": 59.754, "outer": 52.691, "top": 101.821, "bottom": 50.186},
+      "paper_pt": [
+        602.986,
+        782.986
+      ],
+      "margins_pt": {
+        "inner": 59.754,
+        "outer": 52.691,
+        "top": 101.821,
+        "bottom": 50.186
+      },
       "column_gap_pt": 13.2,
-      "body_size_leading_pt": [9.1, 12.6],
+      "body_size_leading_pt": [
+        9.1,
+        12.6
+      ],
       "body_family": "sans",
       "citations": "Blue parenthetical author-year, with internal bibliography links",
       "observed_design": "Blue journal lettering, dark red Leading Edge and headings, grey Review marker; full-width title, authors, affiliation/DOI area, grey divider, blue SUMMARY text, then two columns; wide figure on left with narrow caption on right when suitable",
@@ -23,10 +34,21 @@
     },
     "nature": {
       "reference_edition": "Nature 592 (2021), The changing landscape of atherosclerosis, supplied article edition",
-      "paper_pt": [595.276, 790.866],
-      "margins_pt": {"left": 40, "right": 37.276, "top": 49, "bottom": 42.866},
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 40,
+        "right": 37.276,
+        "top": 49,
+        "bottom": 42.866
+      },
       "column_gap_pt": 12,
-      "body_size_leading_pt": [9.05, 11.95],
+      "body_size_leading_pt": [
+        9.05,
+        11.95
+      ],
       "body_family": "serif",
       "citations": "Black numeric superscripts, with internal bibliography links",
       "observed_design": "Black-and-white review design with thin outer vertical rule; full-width serif title; approximately 1:2 publication metadata and author/abstract panel below; two-column body; fine rules",
@@ -35,10 +57,21 @@
     },
     "science": {
       "reference_edition": "Science 392 (2026), Targeting modulated vascular smooth muscle cells in atherosclerosis via FAP-directed immunotherapy, supplied article edition",
-      "paper_pt": [594, 756],
-      "margins_pt": {"left": 37, "right": 37, "top": 39, "bottom": 38},
+      "paper_pt": [
+        594,
+        756
+      ],
+      "margins_pt": {
+        "left": 37,
+        "right": 37,
+        "top": 39,
+        "bottom": 38
+      },
       "column_gap_pt": 14,
-      "body_size_leading_pt": [9.1, 11.9],
+      "body_size_leading_pt": [
+        9.1,
+        11.9
+      ],
       "body_family": "serif",
       "citations": "Blue italic parenthetical numbers, not superscripts; internal bibliography links",
       "observed_design": "Independent research summary page with red summary band, red discipline label, serif title, four summary sections and overview illustration; main article starts on next page with left-column title/authors/sans abstract/red divider, then natural two-column text; RESEARCH ARTICLE with short underline; full-width figures and compact captions",
@@ -47,10 +80,21 @@
     },
     "immunity": {
       "reference_edition": "Immunity (2025), Inflammation in atherosclerosis: Lessons and therapeutic implications, supplied corrected-proof edition",
-      "paper_pt": [602.986, 782.986],
-      "margins_pt": {"inner": 59.754, "outer": 52.691, "top": 101.821, "bottom": 50.186},
+      "paper_pt": [
+        602.986,
+        782.986
+      ],
+      "margins_pt": {
+        "inner": 59.754,
+        "outer": 52.691,
+        "top": 101.821,
+        "bottom": 50.186
+      },
       "column_gap_pt": 13.2,
-      "body_size_leading_pt": [9.1, 12.6],
+      "body_size_leading_pt": [
+        9.1,
+        12.6
+      ],
       "body_family": "sans",
       "citations": "Blue numeric superscripts, with internal bibliography links",
       "observed_design": "Cell-family blue journal heading and summary, grey Review label, dark red section hierarchy, full-width title/author/abstract area, double columns and compact full-width figure captions",
@@ -59,11 +103,22 @@
     },
     "nature-reviews-cardiology": {
       "reference_edition": "Nature Reviews Cardiology 21 (2024), Efferocytosis in atherosclerosis, supplied published review edition",
-      "paper_pt": [595.276, 790.866],
-      "margins_pt": {"left": 39.685, "right": 35.716, "top": 108, "bottom": 43},
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 39.685,
+        "right": 35.716,
+        "top": 108,
+        "bottom": 43
+      },
       "source_body_top_pt_approx": 114,
       "column_gap_pt": 12,
-      "body_size_leading_pt": [9, 12.1],
+      "body_size_leading_pt": [
+        9,
+        12.1
+      ],
       "body_family": "serif",
       "citations": "Blue numeric superscripts, with internal bibliography links",
       "observed_design": "Purple top rule; separate opening page with full-width title and authors, roughly 3:1 abstract/section-contents panels divided by a vertical rule, affiliations at the abstract foot; later two-column serif body with sans headings and ruled key points; full-width multipage table with repeated heading and column labels; blue journal name in ruled footer",
@@ -119,8 +174,89 @@
       "version_handling": "Do not infer online publication dates, year, issue, volume or page ranges from filenames, DOI years or acceptance dates when absent from the supplied edition.",
       "file": "nature-methods.tex",
       "preview_pages": 3
+    },
+    "circulation": {
+      "reference_edition": "Circulation, supplied published 2025 Original Research Article edition",
+      "paper_pt": [
+        585,
+        783
+      ],
+      "margins_pt": {
+        "left": 49.5,
+        "right": 49.5,
+        "top": 58,
+        "bottom": 47
+      },
+      "source_column_width_pt_approx": 236.7,
+      "source_column_gap_pt_approx": 15.3,
+      "column_gap_pt": 15,
+      "body_size_leading_pt": [
+        9.1,
+        12.6
+      ],
+      "body_family": "sans",
+      "citations": "Black numeric superscripts, with internal bibliography links",
+      "observed_design": "Green research-type label and rule; full-width sans title/authors and structured abstract with red labels, conclusions may continue on the next page; independent red clinical-perspective and abbreviation boxes beside body; full-width figures with red caption labels",
+      "template_adaptation": "Three neutral pages showing structured abstract, clinical-perspective/abbreviation boxes, two-column body, original vector figure, complete caption, linked placeholder references, declarations and ending source information. Plain journal lettering replaces the logo; official side tabs and update badges are omitted. Body size, baseline, margins and pagination are Chinese adaptations. All abbreviations are original layout placeholders, not medical terminology. No source authors, DOI, text, data or figures.",
+      "version_handling": "Record both article number and printed page range when present; preserve explicit publication dates rather than inferring from the DOI or filename.",
+      "shared_file": "aha-common.tex",
+      "file": "circulation.tex",
+      "preview_pages": 3,
+      "colors_html": {
+        "title": "#231F20",
+        "article_type_and_rule": "#66952D",
+        "abstract_labels_and_box_accents": "#CE171E",
+        "figure_label": "#CE171E",
+        "citation": "#000000"
+      },
+      "color_provenance": "Exact RGB values read from text spans in the supplied source PDF; shared only as journal layout parameters.",
+      "figure_placement": "Place each main figure near its first substantive discussion in the body, preserving the source reading sequence. Do not collect all main figures at the end of the article; all main figures must precede the bibliography. Pagination may change for Chinese length."
+    },
+    "circulation-research": {
+      "reference_edition": "Circulation Research, supplied published 2026 Review edition",
+      "paper_pt": [
+        585,
+        783
+      ],
+      "margins_pt": {
+        "left": 49.5,
+        "right": 49.5,
+        "top": 58,
+        "bottom": 47
+      },
+      "source_column_width_pt_approx": 236.7,
+      "source_column_gap_pt_approx": 15.3,
+      "column_gap_pt": 15,
+      "body_size_leading_pt": [
+        9.1,
+        12.6
+      ],
+      "body_family": "sans",
+      "citations": "Black numeric superscripts, with internal bibliography links",
+      "observed_design": "Blue review-type label and rule; full-width sans title/authors and unstructured abstract, keywords and grey rule before two-column body on the same page; extended abbreviation boxes across columns; blue sans headings and full-width figure captions",
+      "template_adaptation": "Three neutral pages showing same-page abstract/body opening, an extended abbreviation box, two-column text, original vector figure, complete caption, linked placeholder references, declarations and ending source information. Plain journal lettering replaces the logo; official side tabs and update badges are omitted. Body size, baseline, margins and pagination are Chinese adaptations. All abbreviations are original layout placeholders, not medical terminology. No source authors, DOI, text, data or figures.",
+      "version_handling": "Record both article number and printed page range when present; preserve explicit publication dates rather than inferring from the DOI or filename.",
+      "shared_file": "aha-common.tex",
+      "file": "circulation-research.tex",
+      "preview_pages": 3,
+      "colors_html": {
+        "title": "#231F20",
+        "article_type_and_rule": "#00598A",
+        "headings_and_abstract_label": "#00598A",
+        "figure_label": "#00598A",
+        "citation": "#000000"
+      },
+      "color_provenance": "Exact RGB values read from text spans in the supplied source PDF; shared only as journal layout parameters.",
+      "figure_placement": "Place each main figure near its first substantive discussion in the body, preserving the source reading sequence. Do not collect all main figures at the end of the article; all main figures must precede the bibliography. Pagination may change for Chinese length."
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",
-  "required_customization": ["Inspect target PDF edition visually", "Replace all placeholder title/author/metadata/content/reference/source fields", "Preserve source content and citation conventions", "Adjust pagination for Chinese length", "Compile twice and render every page", "Confirm no missing glyphs, overflow, missing reference targets, or caption loss"]
+  "required_customization": [
+    "Inspect target PDF edition visually",
+    "Replace all placeholder title/author/metadata/content/reference/source fields",
+    "Preserve source content and citation conventions",
+    "Adjust pagination for Chinese length",
+    "Compile twice and render every page",
+    "Confirm no missing glyphs, overflow, missing reference targets, or caption loss"
+  ]
 }

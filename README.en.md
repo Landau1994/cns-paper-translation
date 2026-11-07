@@ -6,11 +6,11 @@
 
 A reusable Codex skill for translating user-provided English research papers, reviews, and guidelines into Chinese. It preserves content, data, and citations while producing editable source files and a PDF based on the original publication's layout.
 
-It includes **three compilable templates for Cell, Nature, and Science**, plus **Immunity, Nature Reviews Cardiology, Nature Biotechnology, and Nature Methods extensions**. Coverage goes beyond the opening page to include methods, figure captions, references, declarations, and full source information at the end.
+It includes **three compilable templates for Cell, Nature, and Science**, plus **Immunity, Nature Reviews Cardiology, Nature Biotechnology, Nature Methods, Circulation, and Circulation Research extensions**. Coverage goes beyond the opening page to include methods, figure captions, references, declarations, and full source information at the end.
 
-![Seven journal templates in a 3 by 3 overview, with CNS first](assets/previews/overview.png)
+![Nine journal templates in a 3 by 3 overview, with CNS first](assets/previews/overview.png)
 
-The 3 × 3 overview shows nine pages from seven templates. Cell, Nature, and Science occupy the first row; extra detail panels are labelled by page type.
+The 3 × 3 overview shows one page from each of nine templates. Cell, Nature, and Science occupy the first row; the six journal extensions follow.
 
 ## What sets it apart
 
@@ -21,7 +21,7 @@ The 3 × 3 overview shows nine pages from seven templates. Cell, Nature, and Sci
 - **Scoped edits**: Removing a citation box does not trigger a new translation or removal of normal headers and footers.
 - **Editable deliverables**: Produce a Chinese PDF and editable source files, with the original article citation and DOI at the end of a full translation.
 
-## Seven templates
+## Nine templates
 
 | Template | Main layout features | Citations | Preview |
 |---|---|---|---|
@@ -32,6 +32,8 @@ The 3 × 3 overview shows nine pages from seven templates. Cell, Nature, and Sci
 | Nature Reviews Cardiology | Purple top rule, separate abstract-and-contents page, two-column body, multipage tables with repeated titles and column headings | Blue superscript numbers | [PDF](assets/previews/nature-reviews-cardiology.pdf) · [Source](assets/templates/nature-reviews-cardiology.tex) |
 | Nature Biotechnology | Brief Communication opening with a yellow rule, approximately 1:2 date/author-and-abstract panels, two-column equations, figure and reporting table | Blue superscript numbers | [PDF](assets/previews/nature-biotechnology.pdf) · [Source](assets/templates/nature-biotechnology.tex) |
 | Nature Methods | Orange rule on opening page, approximately 1:2 date/author-and-abstract panels, two-column body, full-width table, box and figure | Blue superscript numbers | [PDF](assets/previews/nature-methods.pdf) · [Source](assets/templates/nature-methods.tex) |
+| Circulation | Green research-type rule, full-width structured abstract, clinical-perspective and abbreviation boxes, sans-serif two-column body | Black superscript numbers | [PDF](assets/previews/circulation.pdf) · [Source](assets/templates/circulation.tex) |
+| Circulation Research | Blue review-type rule, full-width abstract followed by two columns on the same page, extended abbreviation box, full-width figures and captions | Black superscript numbers | [PDF](assets/previews/circulation-research.pdf) · [Source](assets/templates/circulation-research.tex) |
 
 The templates are based on previously checked article layouts and contain neutral text and original placeholder diagrams. They are not official journal templates: the supplied article remains the reference for its year, article type, and version. Chinese text will change pagination.
 
@@ -87,7 +89,7 @@ When the conversation or local project instructions already authorize a specific
 | [SKILL.md](SKILL.md) | Skill entry point, workflow, and scope |
 | [agents/openai.yaml](agents/openai.yaml) | Display name and default invocation prompt |
 | [references/](references/) | Journal profiles, content organization, and acceptance checks |
-| [assets/templates/](assets/templates/) | Seven XeLaTeX templates and shared files |
+| [assets/templates/](assets/templates/) | Nine XeLaTeX templates and shared files |
 | [assets/previews/](assets/previews/) | Sample PDFs, page PNGs, and template overview |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | Read-only checks for specified download text, internal PDF links, and compilation logs |
 | [scripts/make_overview.py](scripts/make_overview.py) | Rebuild the 3 × 3 overview with CNS in the first row |
@@ -105,7 +107,7 @@ For checks on bibliography link targets or TeX logs, see `python scripts/audit_p
 
 ## Validation and limitations
 
-All seven templates—19 pages in total—have been compiled and visually checked, with no missing glyphs, overflow, or undefined references. The four-page Nature Reviews Cardiology extension demonstrates a separate abstract-and-contents page, a two-column body, and a multipage table; it has its own opening-page structure. The three-page Nature Biotechnology extension demonstrates a Brief Communication opening, two-column equations and a main figure, an extended reporting table, and source information; its yellow rule appears only on the opening page. The three-page Nature Methods extension covers Perspective/Analysis openings, full-width tables and boxes, and a figure with a complete caption; its orange rule appears only on the opening page. Missing online dates are retained as missing rather than inferred. The audit tool has been checked against completed translations and synthetic cases, including nested download notices hidden outside the crop area and broken links.
+All nine templates—25 pages in total—have been compiled and visually checked, with no missing glyphs, overflow, or undefined references. The four-page Nature Reviews Cardiology extension demonstrates a separate abstract-and-contents page, a two-column body, and a multipage table; it has its own opening-page structure. The three-page Nature Biotechnology extension demonstrates a Brief Communication opening, two-column equations and a main figure, an extended reporting table, and source information; its yellow rule appears only on the opening page. The three-page Nature Methods extension covers Perspective/Analysis openings, full-width tables and boxes, and a figure with a complete caption; its orange rule appears only on the opening page. Missing online dates are retained as missing rather than inferred. Circulation and Circulation Research each use three neutral pages to demonstrate a sans-serif two-column body, full-width abstract and figure captions. Circulation adds a green research-type rule and red abstract labels and clinical-perspective box; Circulation Research uses blue review headings and an extended abbreviation box. Both use black numeric superscripts. The audit tool has been checked against completed translations and synthetic cases, including nested download notices hidden outside the crop area and broken links.
 
 This repository provides a skill and templates to help Codex carry out the task; it is not a standalone translation service that requires no review. It contains no full texts or original figures from source papers, official logos, personal download information, or real experimental data. It does not imply official journal authorization or endorsement.
 

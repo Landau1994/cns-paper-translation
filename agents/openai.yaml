@@ -1,6 +1,6 @@
 interface:
   display_name: "CNS 论文汉化"
-  short_description: "以 Cell、Nature、Science 样板完成论文全文翻译、原刊排版与校对"
+  short_description: "用 CNS 及 Circulation 等九套样板完成论文全文翻译、原刊排版与校对"
   default_prompt: "使用 $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除下载来源信息，并在文末附上原文引用和 DOI。"
 policy:
   allow_implicit_invocation: true

@@ -1,0 +1,69 @@
+% Circulation: neutral adaptation of an inspected 2025 original research edition.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=585bp,paperheight=783bp,left=49.5bp,right=49.5bp,top=58bp,bottom=47bp,headheight=12bp,headsep=14bp,footskip=26bp]{geometry}
+\usepackage{xcolor}
+\definecolor{AhaCategory}{HTML}{66952D}
+\definecolor{AhaHeading}{HTML}{CE171E}
+\newcommand{\JournalName}{Circulation}
+\input{aha-common.tex}
+\newcommand{\ResearchPart}[2]{\noindent\textbf{\color{AhaHeading}#1：}#2\par\vspace{7bp}}
+\begin{document}\sffamily\normalsize
+\fancypagestyle{ahafirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{ahafirst}
+\AhaOpening{原创研究（中性示例）}
+\ResearchPart{背景}{本段是中性结构化摘要的背景占位，用来演示通栏摘要与红色标签的层级关系，不陈述任何真实研究发现。正式稿应保留研究问题及其限定；不能将论文全文缩成摘要，也不能把旧文章中的研究目标带入新译稿。}
+\ResearchPart{方法}{本段演示方法摘要。真实译稿应逐项对应原文报告的研究对象、样本量、纳入时段、分组、处理、测量与统计方法。提取文字时应注意上下标、单位、基因和细胞标签的完整性，跨页句子先恢复顺序再翻译。模板不预置任何真实实验、剂量、时间轴或统计阈值。}
+\ResearchPart{结果}{本段演示结果摘要的版面。正式稿应保留比较方向、关联与因果强度、否定关系以及数值的不确定性。图文存在实质矛盾时应区分原文表述与译者核订，不通过常识静默改写。图表及完整图注应与正文有明确对应，英文图内标签保留时需另附完整中文释义。此处仅为原创排版示例，不提供真实数据或研究结论。}
+\ResearchPart{结论}{本段演示结论摘要。真实结论应保持原稿的适用范围和谨慎程度，不把潜在用途写成已验证的临床效益。中文长度改变时摘要可以自然续页；本样板的人工分页只服务于结构展示。}
+\begin{center}{\fontsize{8bp}{10bp}\selectfont\textbf{\color{AhaHeading}关键词：}中性样板；结构化摘要；内容核对；可追溯出处}\end{center}
+\vfill\AhaOpeningNotes
+
+\clearpage
+\noindent\begin{minipage}[t]{.481\textwidth}\vspace{0pt}
+\begingroup\setlength{\fboxsep}{7bp}\setlength{\fboxrule}{.5bp}
+\noindent\fcolorbox{AhaHeading}{black!2}{\begin{minipage}{\dimexpr\linewidth-15bp\relax}
+{\centering\bfseries\color{AhaHeading}临床展望（中性占位）\par}\smallskip\hrule\smallskip
+\textbf{\color{AhaHeading}有何新发现？}\par
+\begin{itemize}\setlength{\itemsep}{3bp}\setlength{\parskip}{0pt}
+\item 此框只演示研究文章中的独立展望区，不陈述真实研究发现。
+\item 正式稿逐项保留原文要点及其证据范围，不把正文摘要移来替代。
+\end{itemize}
+\textbf{\color{AhaHeading}有哪些临床意义？}\par
+\begin{itemize}\setlength{\itemsep}{3bp}\setlength{\parskip}{0pt}
+\item 保留原文对转化用途的条件与不确定性。
+\item 正文之外的框文仍属于完整内容清单。
+\end{itemize}
+\end{minipage}}\par\vspace{12bp}
+\noindent\fcolorbox{AhaHeading}{black!2}{\begin{minipage}{\dimexpr\linewidth-15bp\relax}
+\textbf{\color{AhaHeading}非标准缩写（中性占位）}\par\smallskip\hrule\smallskip
+{\fontsize{8bp}{11bp}\selectfont\begin{tabular}{@{}p{.20\linewidth}p{.72\linewidth}@{}}
+TXT & 正文内容（示例缩写）\\[4bp]
+FIG & 图像对象（示例缩写）\\[4bp]
+CAP & 完整图注（示例缩写）\\[4bp]
+REF & 参考条目（示例缩写）\\[4bp]
+SRC & 出处信息（示例缩写）\\
+\end{tabular}}
+\end{minipage}}
+\endgroup
+\end{minipage}\hfill\begin{minipage}[t]{.481\textwidth}\vspace{0pt}
+\section*{正文与独立框文}
+\AhaBody
+\subsection*{从原文到译稿}
+独立框文与右栏正文应分别抽取，不能按水平位置交错拼接。缩写表中每个条目均需保留；表格较长时可以另页或续栏排版，不为保持原页数而压缩到不可读字号。
+\end{minipage}\par\vspace{14bp}
+\begin{ahacols}
+\section*{方法与结果的内容边界}
+正文层级采用无衬线标题和黑色数字上标引文。全宽摘要、双栏正文、临床展望与缩写框分别展示不同内容单元；实际文章中的框文数量、位置和长短仍由原稿决定。此处的示例缩写均由模板原创，不是学术术语。
+
+图像应逐幅检查边界和全部面板。只修改裁剪框不能证明删除了下载标记；复用素材和最终文件须检查可见内容、提取文字及嵌套对象。模板不包含任何真实下载信息。\AhaCite{2}
+\end{ahacols}
+
+\clearpage
+\AhaFigure
+\begin{ahacols}
+\section*{讨论与交付示例}
+\AhaBody
+\AhaBackmatter
+\end{ahacols}
+\end{document}

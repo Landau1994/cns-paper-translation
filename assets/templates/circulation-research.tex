@@ -1,0 +1,60 @@
+% Circulation Research: neutral adaptation of an inspected 2026 review edition.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=585bp,paperheight=783bp,left=49.5bp,right=49.5bp,top=58bp,bottom=47bp,headheight=12bp,headsep=14bp,footskip=26bp]{geometry}
+\usepackage{xcolor}
+\definecolor{AhaCategory}{HTML}{00598A}
+\definecolor{AhaHeading}{HTML}{00598A}
+\newcommand{\JournalName}{Circulation Research}
+\input{aha-common.tex}
+\begin{document}\sffamily\normalsize
+\fancypagestyle{ahafirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{ahafirst}
+\AhaOpening{综述（中性示例）}
+\noindent\textbf{\color{AhaHeading}摘要：}本段是原创中性摘要占位，用于演示全宽摘要与蓝色标签的层级关系，不描述真实研究。正式译稿应完整对应所给原文的论述顺序、关键概念、限定条件及结论，不把全文汉化改为内容总结。综述涉及不同证据来源时，应保持比较对象和论证强度，不能把相关性改写成因果。基因、蛋白和细胞群名称须可追溯到原文；图表、脚注、文献评注和声明均应单独列入覆盖清单。版面中通栏题名、作者、摘要和关键词之后，在同一页接入双栏正文。中文长度改变时应重新分页，而不是缩小到难以阅读。此处内容仅用于检验中文行距、段落和栏结构，不构成研究发现或临床建议。
+\begin{center}{\fontsize{8bp}{10bp}\selectfont\textbf{\color{AhaHeading}关键词：}中性样板；综述结构；双栏正文；图文核对}\end{center}
+\noindent\rule{\textwidth}{.5bp}\par\vspace{8bp}
+\begin{ahacols}
+\section*{正文结构示例}
+\AhaBody
+\end{ahacols}
+\vfill\AhaOpeningNotes
+
+\clearpage
+\section*{非标准缩写与专有名词（中性占位）}
+\begingroup\setlength{\fboxsep}{8bp}\setlength{\fboxrule}{.5bp}
+\noindent\fcolorbox{AhaHeading}{black!2}{\begin{minipage}{\dimexpr\textwidth-17bp\relax}
+\begin{multicols}{2}
+{\fontsize{8.5bp}{12bp}\selectfont\setlength{\parindent}{0pt}
+\textbf{TXT}\quad 正文内容（示例缩写）\par\smallskip
+\textbf{ABS}\quad 摘要单元（示例缩写）\par\smallskip
+\textbf{FIG}\quad 图像对象（示例缩写）\par\smallskip
+\textbf{CAP}\quad 完整图注（示例缩写）\par\smallskip
+\textbf{TAB}\quad 表格对象（示例缩写）\par\smallskip
+\textbf{REF}\quad 参考条目（示例缩写）\par\smallskip
+\textbf{NOTE}\quad 独立声明（示例缩写）\par\smallskip
+\textbf{SRC}\quad 出处信息（示例缩写）\par\smallskip
+\textbf{PAGE}\quad 页面记录（示例缩写）\par\smallskip
+\textbf{LINK}\quad 内部跳转（示例缩写）\par}
+\end{multicols}
+{\fontsize{7.5bp}{10bp}\selectfont 本框全部缩写均为模板自定义的排版占位，不是医学术语表。真实长表应逐条翻译、保持次序，按内容自然续栏或跨页；原文未提供的解释不得编造。}
+\end{minipage}}\endgroup\par\vspace{12bp}
+\begin{ahacols}
+\section*{综述正文与内容层级}
+\AhaBody
+\subsection*{多来源证据的表达}
+综述经常在相邻段落比较不同模型、组织与人群。译文应保留证据来自何处、研究对象有何差异以及作者如何限定结论。对相同术语保持一致，并区别原稿明确陈述、推测与尚待验证的方向。
+
+章节标题采用蓝色无衬线层级，正文保留黑色数字上标引文\AhaCite{2}。图注与书目可以使用紧凑字号，但仍需保证易读。示范中的原文信息保持在全部正文、参考文献和声明之后。
+\subsection*{双栏阅读顺序}
+全宽图、长图注和缩写表可能打断原稿连续段落。抽取时应跟踪跨页续句，不能将图注尾句拼入正文，也不能遗漏续表或说明。每幅图必须使用当前原稿的实际边界，不沿用前一幅图或其他论文的坐标。
+\end{ahacols}
+
+\clearpage
+\AhaFigure
+\begin{ahacols}
+\section*{讨论与交付示例}
+\AhaBody
+\AhaBackmatter
+\end{ahacols}
+\end{document}

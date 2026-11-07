@@ -1,0 +1,60 @@
+% Shared neutral building blocks for inspected AHA journal editions.
+% No source article text, data, figures, authors, or publication metadata.
+\input{common.tex}
+\usepackage{multicol,booktabs,array}
+\definecolor{AhaTitle}{HTML}{231F20}
+\setlength{\columnsep}{15bp}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{12.6bp}\selectfont}
+\setlength{\parindent}{1em}\setlength{\parskip}{2bp}
+\ctexset{section={format=\sffamily\bfseries\color{AhaHeading}\fontsize{11bp}{14bp}\selectfont,beforeskip=10bp,afterskip=4bp},
+ subsection={format=\sffamily\bfseries\color{AhaHeading}\fontsize{9.6bp}{12.6bp}\selectfont,beforeskip=8bp,afterskip=3bp}}
+\fancyhead[L]{\sffamily\fontsize{8bp}{10bp}\selectfont 示例作者等}
+\fancyhead[R]{\sffamily\fontsize{8bp}{10bp}\selectfont 中性样板：内容与证据}
+\renewcommand{\headrulewidth}{.4bp}
+\fancyfoot[L]{\sffamily\fontsize{6.7bp}{8.5bp}\selectfont\JournalName｜原刊卷期、页码与DOI按稿核验}
+\fancyfoot[R]{\sffamily\fontsize{6.7bp}{8.5bp}\selectfont 非官方中性样板｜中文译页\ \thepage}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=AhaHeading,
+ pdftitle={AHA期刊风格中性中文样板},pdfauthor={非官方中性样板},
+ pdfsubject={Original neutral layout demonstration without source paper content}}
+\newcommand{\AhaCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newenvironment{ahacols}{\begin{multicols}{2}}{\end{multicols}}
+\newcommand{\AhaOpening}[1]{%
+ \noindent{\sffamily\fontsize{18bp}{22bp}\selectfont\underline{\JournalName}\par}\vspace{22bp}
+ \noindent{\sffamily\bfseries\color{AhaCategory}\fontsize{14bp}{18bp}\selectfont #1\par}\vspace{-2bp}
+ {\color{AhaCategory}\hrule height .6bp}\vspace{9bp}
+ \noindent{\sffamily\color{AhaTitle}\fontsize{23bp}{28bp}\selectfont 中文题名占位：从内容结构到证据的完整呈现\par}\vspace{8bp}
+ \noindent{\sffamily\fontsize{8.5bp}{11bp}\selectfont 示例作者甲\textsuperscript{1,*}；示例作者乙\textsuperscript{2}；示例作者丙\textsuperscript{1}\par}\vspace{16bp}}
+\newcommand{\AhaBody}{%
+本段是原创中性文字，仅用于检查中文双栏的行距、缩进及阅读顺序，不描述任何真实研究。正式译稿应以所提供原文为事实来源，逐段保留研究对象、比较关系、数值、方法、引文和不确定性；版式相似不意味着可以沿用其他文章的出版字段。\AhaCite{1}
+
+跨栏和跨页的句子应先恢复完整，再组织中文表达。段落中的否定、条件与范围限定属于科学内容，不能为压缩版面而省去。原稿中的图表、图注和声明各有独立边界，图像位置变化不能成为漏译说明的理由。原文提到但未提供的附件，应明确记为未取得。
+
+中文长度可能改变页数。页面应保持可读的文字尺寸和清楚的层级，并使图、表与完整说明相互对应。纯文本抽取可以帮助检查覆盖，但仍需渲染全部页面，观察文字是否重叠、图像是否完整以及页眉页脚是否越界。}
+\newcommand{\AhaOpeningNotes}{%
+ \par\vspace{7bp}\noindent\rule{\textwidth}{.3bp}\par\vspace{4bp}
+ {\sffamily\fontsize{7bp}{9.5bp}\selectfont
+ \textsuperscript{1}作者单位一（示例占位）。\textsuperscript{2}作者单位二（示例占位）。
+ *同等贡献与通信信息按原稿填写。收稿、接受与在线日期不得推断补全。\par
+ 补充材料信息须按实际文件记录；仅有链接不代表已取得或已翻译。\par
+ 非官方中文译稿样板，仅供学术交流。出版物版权归原作者及出版商所有。\par}}
+\newcommand{\AhaFigure}{%
+ \begin{center}\begin{minipage}{.83\textwidth}\DemoVector\end{minipage}\end{center}
+ {\sffamily\fontsize{7.7bp}{10.3bp}\selectfont
+ \textbf{\color{AhaHeading}图1. 原创内容处理流程（中性示例）。}
+ \textbf{A}，输入节点表示需要逐项核对的原文材料，包括标题、摘要、正文、方法、图表及声明。
+ \textbf{B}，处理节点表示检查单位、阅读顺序、图注边界和限定条件。
+ \textbf{C}，输出节点表示具有完整图注、可追溯引文和出处信息的中文译稿。
+ 箭头仅示范阅读与处理顺序，不代表实验结果、因果效应或数量变化。该图为模板自行绘制的矢量占位图，无真实数据或原文素材；完整图注置于通栏图下，正文图应在参考文献之前排完。}\par\vspace{10bp}}
+\newcommand{\AhaBackmatter}{%
+ \par\noindent\begin{minipage}{\linewidth}
+ \section*{参考文献（中性占位）}
+ {\fontsize{7.5bp}{10bp}\selectfont\setlength{\parindent}{0pt}\interlinepenalty=10000
+ \hypertarget{ref:1}{}1. Example author. Example source title. Publication details must be replaced from the supplied source. （示例占位，非真实文献。）\par\smallskip
+ \hypertarget{ref:2}{}2. Example author. Another example source title. Publication details to be verified. （示例占位，非真实文献。）\par}
+ \end{minipage}\par
+ \section*{声明（中性占位）}
+ 致谢、作者单位、资助、作者贡献、利益冲突、数据及许可说明，均应按原稿的实际内容完整翻译。此模板无真实研究、作者或资助；不把样板字段当作目标期刊固定要求。
+ \section*{原文信息}
+ 以下字段均为占位：作者；英文原标题；期刊；年份；卷期；页码或文章号；DOI；原稿明确列出的出版日期。使用时应从目标文件逐项核实，缺项不得编造。
+
+ 本文件为\JournalName 风格的非官方中性样板。普通刊名代替官方标识，颜色和栏结构参考已核验版本并作中文适配，不代表该刊全部年代和文体，也不承诺逐页相同。仅供学术交流；出版物版权归原作者及出版商所有。}
