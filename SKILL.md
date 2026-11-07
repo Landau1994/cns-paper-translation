@@ -1,11 +1,11 @@
 ---
 name: cns-paper-translation
-description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research扩展，保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
+description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
 ---
 
 # CNS 论文汉化
 
-把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research 扩展；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
+把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
 
 ## 选择入口
 
@@ -31,8 +31,9 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Nature Methods | [nature-methods.tex](assets/templates/nature-methods.tex) | 橙色首页顶线、约1:2日期/摘要区、双栏正文、通栏表/框/图、蓝色上标 |
 | Circulation | [circulation.tex](assets/templates/circulation.tex) | 绿色研究类型线、全宽结构化摘要、临床展望与缩写框、无衬线双栏、黑色上标 |
 | Circulation Research | [circulation-research.tex](assets/templates/circulation-research.tex) | 蓝色综述类型线、全宽摘要同页接双栏、长缩写框、通栏图注、黑色上标 |
+| European Heart Journal | [european-heart-journal.tex](assets/templates/european-heart-journal.tex) | 红色转化研究层级、浅米底结构化摘要、独立结构化图形摘要与转化展望、双栏图文混排 |
 
-总览预览采用 **3×3 分面**，九套样板各占一格；首行依次为 **Cell、Nature、Science**，六种扩展样板随后排列。新增第十种及后续样板时，需扩展分面并同步脚本与说明，不把不同页型计为新样板。使用 `scripts/make_overview.py` 从已核验的页面预览重建总览。
+总览预览采用 **3列×4行分面**：十套样板各有一格，另外两格明确标为结构化图形摘要或图文混排详情。首行依次为 **Cell、Nature、Science**，七种扩展样板随后排列；不把详情页计为新样板。新增样板时同步分面脚本、计数与说明。使用 `scripts/make_overview.py` 从已核验的页面预览重建总览。
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 

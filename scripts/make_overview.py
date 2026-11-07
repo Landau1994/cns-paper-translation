@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Rebuild the 3 x 3 overview from existing neutral template page previews.
+"""Rebuild the three-column, four-row neutral-template overview.
 
 Cell, Nature and Science occupy the first row. One representative page from
-each of nine templates fills the nine panels. No paper content
-or newly generated illustrations are introduced.
+each of ten templates is followed by two explicitly labelled detail pages.
+Details are not counted as additional templates. No paper content or newly
+generated illustrations are introduced.
 """
 from pathlib import Path
 import argparse
@@ -21,6 +22,9 @@ PANELS = [
     ('nature-methods', 1, 'Nature Methods', 'Perspective / Analysis opening'),
     ('circulation', 1, 'Circulation', 'Original Research opening'),
     ('circulation-research', 1, 'Circulation Research', 'Review opening'),
+    ('european-heart-journal', 1, 'European Heart Journal', 'Translational Research opening'),
+    ('european-heart-journal', 2, 'European Heart Journal', 'Detail: structured graphical abstract'),
+    ('circulation-research', 3, 'Circulation Research', 'Detail: full-width figure and text'),
 ]
 
 
@@ -38,11 +42,11 @@ def build(root, output):
     previews = root / 'assets' / 'previews'
     margin, gap, card_w, card_h, top = 48, 30, 548, 740, 172
     width = 2 * margin + 3 * card_w + 2 * gap
-    height = top + 3 * card_h + 2 * gap + 110
+    height = top + 4 * card_h + 3 * gap + 110
     canvas = Image.new('RGB', (width, height), '#edf0f3')
     draw = ImageDraw.Draw(canvas)
     draw.text((margin, 34), 'CNS Paper Translation', font=font(44, True), fill='#1b2733')
-    draw.text((margin, 94), '9 neutral journal templates / 9 page previews / 3 x 3 panels', font=font(25), fill='#526273')
+    draw.text((margin, 94), '10 neutral templates / 12 previews / 3 columns x 4 rows', font=font(25), fill='#526273')
     page_boxes = []
     for index, (key, page, name, kind) in enumerate(PANELS):
         x = margin + index % 3 * (card_w + gap)
@@ -66,7 +70,7 @@ def build(root, output):
     draw.text((margin, height - 41), 'Original neutral examples; not official publisher templates.', font=font(21), fill='#667585')
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, optimize=True)
-    return {'size': canvas.size, 'rows': 3, 'columns': 3, 'template_count': 9, 'panels': page_boxes}
+    return {'size': canvas.size, 'rows': 4, 'columns': 3, 'template_count': 10, 'panels': page_boxes}
 
 
 if __name__ == '__main__':

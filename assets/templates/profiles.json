@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from nine verified journal configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from ten verified journal configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -248,6 +248,54 @@
       },
       "color_provenance": "Exact RGB values read from text spans in the supplied source PDF; shared only as journal layout parameters.",
       "figure_placement": "Place each main figure near its first substantive discussion in the body, preserving the source reading sequence. Do not collect all main figures at the end of the article; all main figures must precede the bibliography. Pagination may change for Chinese length."
+    },
+    "european-heart-journal": {
+      "reference_edition": "European Heart Journal, supplied 2023 advance-article Translational Research edition",
+      "paper_pt": [
+        595.276,
+        793.701
+      ],
+      "margins_pt": {
+        "left": 42.52,
+        "right": 36.851,
+        "top": 57,
+        "bottom": 45
+      },
+      "source_column_width_pt_approx": 251.5,
+      "source_column_gap_pt_approx": 15.5,
+      "column_gap_pt": 15.5,
+      "body_size_leading_pt": [
+        9,
+        12.1
+      ],
+      "body_family": "sans",
+      "source_font_and_hierarchy": "Gill Sans Nova; bold title 23/28 bp, bold authors 13/16 bp, main headings red bold 15 bp, subheadings black bold 12.5 bp, body 9 bp.",
+      "citations": "Black numeric superscripts with internal bibliography links; external URLs blue",
+      "colors_html": {
+        "theme_red": "#D6143D",
+        "title_and_body": "#000000",
+        "citation": "#000000",
+        "external_link": "#0000FF"
+      },
+      "colors_rgb": {
+        "abstract_and_graphical_abstract": [
+          0.945,
+          0.945,
+          0.89
+        ],
+        "translational_perspective": [
+          0.9,
+          0.905,
+          0.905
+        ]
+      },
+      "color_provenance": "Theme from source PDF text spans and panel colors from drawing objects; shared only as reusable layout parameters.",
+      "observed_design": "Red translational-research label and rule; full-width bold title/authors, affiliations and dates; pale-beige structured abstract with narrow label and wide text columns and dotted separators; separate structured graphical abstract with three question/finding/message blocks, figure, caption, keywords and grey translational-perspective box; later two-column sans body with integrated full-width figures and captions.",
+      "template_adaptation": "Three neutral pages; ordinary journal name replaces ESC branding; TeX Gyre Heros plus Noto/Fandol sans substitutes for commercial Gill Sans Nova. Body size, baseline, page breaks and title length are Chinese adaptations. Pale panels stay within the text block rather than bleeding to page edges. Short demo panels use minipages; real long panels/captions require a breakable layout and fresh rendering. All text and TikZ diagrams are original neutral placeholders, with no real source authors, DOI, data or figures.",
+      "figure_placement": "Interleave main figures near their first substantive discussion and follow source order. Smaller full-width figures may share a page with two-column prose above or below. Do not collect all figures at the end; all main figures precede the bibliography.",
+      "version_handling": "Retain supplied advance-article year, provisional volume/page fields and explicit dates. Do not silently replace them with later issue metadata or infer missing publication dates.",
+      "file": "european-heart-journal.tex",
+      "preview_pages": 3
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

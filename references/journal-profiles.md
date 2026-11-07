@@ -1,10 +1,10 @@
 # 期刊配置与样板使用
 
-这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
+这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [九套样板总览](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [十套样板总览（3列×4行）](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
 
 共享宏、长文中取消样板人工分页及字体回退提示，见随模板提供的 [编译说明](../assets/templates/README.md)。可机读的尺寸与引文配置在 [profiles.json](../assets/templates/profiles.json)。
 
@@ -15,7 +15,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 xelatex -interaction=nonstopmode -halt-on-error cell.tex
 ```
 
-其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`、`nature-methods.tex`、`circulation.tex`、`circulation-research.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
+其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`、`nature-methods.tex`、`circulation.tex`、`circulation-research.tex`、`european-heart-journal.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
 
 实际文章的图形、表格和长书目远超演示；必须重新编译、检查浮动体、渲染全部页面。不要把首次编译页数或样板中的页码写死。
 
@@ -94,6 +94,16 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 - 3页样板展示同页摘要/双栏开篇、长缩写框、双栏层级、原创矢量图与完整图注，以及书目/声明/末尾原文信息。共享 `aha-common.tex`，采用中性原创缩写占位；实际长缩写表可拆分续栏或跨页。未复制蓝色侧边类型签、品牌图标或更新按钮，纸张/颜色/结构均只是核验版本的起点。
 - 每幅主图须贴近其首次实质讨论位置并按原文顺序穿插正文；不得将全篇主图集中到末尾。图注长时可跨相邻页面，仍需保持图、完整图注与正文引用的对应关系，且全部正文图须在书目前排完。
 - 原刊连续页码和文章号可能同时存在；按所给版本分别记录，不把页脚页码擅改为文章号，也不由DOI推断日期或卷期。页脚的原刊身份信息与“中文译页”必须区分。
+
+## European Heart Journal：Translational Research扩展
+
+- 已核验2023年Advance article版本，纸张595.276×793.701bp；版心左42.5197bp、右558.425bp（右边距36.851bp），两栏起点约42.52/309.49bp、栏距约15.5bp，普通正文y≈60–747.5bp。样板正文9/12.1bp、常规页起点57bp、下边距45bp属于中文适配。
+- 源稿使用Gill Sans Nova无衬线字体；题名23/28bp粗体，作者13/16bp粗体，主节15bp红粗体、次节12.5bp黑粗体，正文9bp。不能沿用Circulation轻字重题名；样板以TeX Gyre Heros与可用中文无衬线回退代替商业字体。
+- PDF文字span的精确主题红为 `#D6143D`，用于转化研究类型、Abstract、结构化图形摘要、Keywords、展望标题和主节；正文与题名黑 `#000000`，正文引文黑色数字上标，外部链接蓝色。浅米底RGB `(0.945, 0.945, 0.89)` 与展望灰RGB `(0.9, 0.905, 0.905)` 从PDF绘制对象核实。
+- 首页全宽题名/作者/单位与日期，下方浅米底结构化摘要，标签窄栏与正文宽栏约1:5，以点线分隔各段。次页独立结构化图形摘要包括关键问题、关键发现、核心启示及完整示意/图注，另有关键词与灰底转化展望；这些内容不能只翻其中一份。
+- 后续正文双栏，通栏图及完整图注应穿插于对应实质讨论附近，较小图可与双栏文字同页；长图、长注单独适配。正文图须在书目前排完，不集中后附。原稿可能有跨页续图注，应恢复全部面板、统计定义及尾句。
+- 三页中性样板演示首页结构、独立图形摘要/展望、双栏图文混排及出处。原生矢量图与全部文字由样板原创；无真实论文作者、数据、DOI或原图。普通刊名替代ESC标识，米底限制于版心而非纸边；人工分页、字号与字体回退是明确适配。
+- Advance article与后续正式卷期不能混用。以用户所给版本的年份、临时卷/页码及明确日期为依据；缺失在线日期、期号或最终页码不推造。可单独说明版本，不用后续出版信息静默替换输入来源。
 
 ## 新期刊或变体
 

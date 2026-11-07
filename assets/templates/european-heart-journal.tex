@@ -1,0 +1,110 @@
+% European Heart Journal: neutral adaptation of an inspected advance article.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=793.701bp,left=42.52bp,right=36.851bp,top=57bp,bottom=45bp,headheight=20bp,headsep=14bp,footskip=24bp]{geometry}
+\newcommand{\JournalName}{European Heart Journal}
+\input{common.tex}
+\usepackage{multicol,tabularx,array}
+\definecolor{EHJRed}{HTML}{D6143D}
+\definecolor{EHJBeige}{rgb}{.945,.945,.89}
+\definecolor{EHJGrey}{rgb}{.9,.905,.905}
+\setlength{\columnsep}{15.5bp}\raggedcolumns
+\setlength{\parindent}{1em}\setlength{\parskip}{2bp}
+\renewcommand{\normalsize}{\fontsize{9bp}{12.1bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\color{EHJRed}\fontsize{15bp}{18bp}\selectfont,beforeskip=11bp,afterskip=5bp},
+ subsection={format=\sffamily\bfseries\fontsize{12.5bp}{15bp}\selectfont,beforeskip=9bp,afterskip=4bp}}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,
+ pdftitle={European Heart Journal风格中性中文样板},pdfauthor={非官方中性样板},
+ pdfsubject={Original neutral layout example; no source article text or figures}}
+\fancyhead[L]{\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont\thepage}
+\fancyhead[R]{\sffamily\fontsize{8bp}{10bp}\selectfont 示例作者等｜中性排版演示}
+\renewcommand{\headrulewidth}{.5bp}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{EHJRed}\leaders\hrule height\headrulewidth\hfill}}
+\fancyfoot[L]{\sffamily\fontsize{6.8bp}{9bp}\selectfont European Heart Journal｜原刊年份、卷期与页码按稿核验}
+\fancyfoot[R]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中性样板｜中文译页\thepage}
+\newcommand{\EHJCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newcommand{\EHJDotRule}{\par\vspace{3bp}\noindent\leaders\hbox{\kern1bp.\kern1bp}\hfill\kern0pt\par\vspace{4bp}}
+\newsavebox{\EHJPanelBox}
+\newenvironment{ehjpanel}{\par\noindent\begingroup\setlength{\fboxsep}{8bp}\begin{lrbox}{\EHJPanelBox}\begin{minipage}{\dimexpr\linewidth-16bp\relax}\sffamily}{\end{minipage}\end{lrbox}\colorbox{EHJBeige}{\usebox{\EHJPanelBox}}\endgroup\par}
+\newcommand{\EHJRow}[2]{\noindent\begin{tabularx}{\linewidth}{@{}>{\bfseries\raggedright\arraybackslash}p{.15\linewidth}X@{}}#1 & #2\end{tabularx}\par}
+\newcommand{\EHJBody}{%
+本段为原创中性排版文字，不陈述任何真实研究结论。正式全文译稿应把每个原文段落、方法、图注、表格、框文和声明分别列入内容清单，逐项保留比较对象、否定、数量、单位及证据范围。数字上标引文应连接到对应的英文条目，而非仅作为视觉装饰。\EHJCite{1}
+
+图像和完整图注应接近其首次实质讨论的位置，沿原稿顺序与正文穿插。通栏图较小时，可以在图下或图上保留双栏文字；长图与长图注应重新适配，不能把全部主图集中到文章末尾，也不能为了维持英文页数而删减中文说明。
+
+双栏阅读应先恢复跨栏、跨页续句，再组织中文段落。标题颜色、字体层级、浅色背景和点线只能辅助呈现，不能替代内容复核。中文长度改变分页后，仍须检查图表编号、书目目标和页眉页脚，确认没有遮挡、缺字或遗漏。}
+\begin{document}\sffamily\normalsize
+\fancypagestyle{ehjfirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{ehjfirst}
+\noindent\begin{minipage}[b]{.57\textwidth}
+{\fontsize{14bp}{17bp}\selectfont European Heart Journal\par}
+{\fontsize{8bp}{10bp}\selectfont 原刊年份、卷期、页码和DOI按稿核验\par}
+\end{minipage}\hfill\begin{minipage}[b]{.40\textwidth}\raggedleft
+{\bfseries\color{EHJRed}\fontsize{13bp}{16bp}\selectfont 转化研究（中性示例）\par}
+{\fontsize{10bp}{12bp}\selectfont 学科信息占位\par}
+\end{minipage}\par\vspace{9bp}
+{\color{EHJRed}\hrule height .5bp}\vspace{20bp}
+\noindent{\bfseries\fontsize{23bp}{28bp}\selectfont 中文题名占位：从内容清单到可追溯的完整译稿\par}\vspace{13bp}
+\noindent{\bfseries\fontsize{13bp}{16bp}\selectfont 示例作者甲\textsuperscript{1,\ensuremath{\dagger}}；示例作者乙\textsuperscript{2,\ensuremath{\dagger}}；示例作者丙\textsuperscript{1,*}\par}\vspace{9bp}
+{\fontsize{7.5bp}{10bp}\selectfont\noindent\textsuperscript{1}作者单位一（示例占位）；\textsuperscript{2}作者单位二（示例占位）。通信信息按原稿填写，不继承先前文章的地址或联系字段。\par}
+\vspace{7bp}{\fontsize{8bp}{10bp}\selectfont 收稿、修回和接受日期：按所给版本逐项核验。\par}\vspace{16bp}
+\begin{ehjpanel}
+\textbf{\color{EHJRed}摘要（中性示例）}\par\vspace{8bp}
+\EHJRow{背景与目的}{本段只演示结构化摘要的背景与目的，不报告真实研究。正式译稿应完整保留研究问题、对象、病理或理论语境和知识空白。不能根据题名补出原稿没有的动机，也不能用一段概括取代全文。正文、图注和补充材料实际是否提供，应分别记录；仅有链接不代表已经取得或完成翻译。}
+\EHJDotRule
+\EHJRow{方法}{本段演示方法摘要的标签窄栏与正文宽栏。实际稿应保留纳入范围、时间、样本量、实验模型、干预、测量、分析和统计方法。单位、上下标、缩写及基因符号均需核对；若源文存在实质矛盾，应区分忠实转述与译者说明。此处没有真实样本、数据或实验操作。}
+\EHJDotRule
+\EHJRow{结果}{本段演示结果摘要。中文表述应保留原文的比较方向、相关与因果强度、否定及不确定性。数值相同并不证明语义一致，还需核对分母、组别、观察时点和适用范围。图注中的统计定义和面板标记须完整呈现；本样板的图形及文字只是原创占位，不构成研究发现。}
+\EHJDotRule
+\EHJRow{结论}{本段演示结论摘要。真实结论应保持原稿的条件和谨慎程度，不把潜在用途写成已经验证的临床效益。排版以清楚可读为先；中文长度改变时可以自然续页，不能删去结论尾句。首页与后续结构化图形摘要可能内容相近，仍应作为不同内容单元完整保留。}
+\end{ehjpanel}
+\vfill\noindent\rule{\textwidth}{.4bp}\par
+{\fontsize{7bp}{9bp}\selectfont *通信作者信息按原稿填写。\textsuperscript{\ensuremath{\dagger}}共同贡献关系按原稿核验。\par
+非官方中文译稿样板，仅供学术交流。出版物版权归原作者及出版商所有。普通刊名替代品牌标识；无真实论文内容或原图。\par}
+
+\clearpage
+\begin{ehjpanel}
+\textbf{\color{EHJRed}结构化图形摘要（中性示例）}\par\vspace{14bp}
+\textbf{关键问题}\par
+本段是问题陈述占位。正式稿应保留原文提出的核心问题、已有证据的局限和目标范围，不以译者自己的研究问题替换。\EHJDotRule
+\textbf{关键发现}\par
+本段是发现陈述占位。真实研究的实验对象、分析方法和比较方向均应逐项核对；不能将关联写成因果，也不能将图形摘要当成全部正文的替代品。\EHJDotRule
+\textbf{核心启示}\par
+本段是转化或解释意义占位。实际稿须保持潜在用途、适用范围与验证需求，不额外提供原文没有的建议。\par\vspace{12bp}
+\begin{center}\colorbox{white}{\begin{minipage}{.91\linewidth}\vspace{7bp}\DemoVector\vspace{7bp}\end{minipage}}\end{center}
+{\fontsize{8bp}{10.8bp}\selectfont 图形摘要为模板自绘的中性示意。输入、核对与输出只代表内容处理次序，不表示生物机制或实验结果；真实图形摘要的全部图内标签、箭头和完整图注均需核对。}\par
+\EHJDotRule
+\textbf{\color{EHJRed}关键词}\quad 中性示例；内容覆盖；图文对应；可追溯引文
+\end{ehjpanel}\vspace{15bp}
+\begingroup\setlength{\fboxsep}{7bp}\noindent\fcolorbox{black}{EHJGrey}{\begin{minipage}{\dimexpr\linewidth-15bp\relax}
+{\bfseries\color{EHJRed}\fontsize{12.5bp}{15bp}\selectfont 转化展望（中性示例）\par}\smallskip
+本框为独立内容单元的版面演示，不陈述任何真实治疗效果。实际稿须完整保留原文阐述的机制、干预对象、证据级别及临床转化所需的限定条件。正文以外的展望、编辑摘要和声明同样应列入覆盖清单，不能因其视觉上属于框文而遗漏。
+\end{minipage}}\endgroup
+
+\clearpage
+\begin{multicols}{2}
+\section*{正文与图文对应}
+\EHJBody
+\subsection*{层级与证据表达}
+主节使用红色无衬线粗体，次节使用黑色无衬线粗体。正式稿应依原文层级组织，而不是为了视觉统一改写章节边界。\EHJCite{2}
+\end{multicols}\vspace{5bp}
+\noindent\begin{minipage}{\textwidth}
+\begin{center}\begin{minipage}{.61\textwidth}\DemoVector\end{minipage}\end{center}
+{\fontsize{8bp}{10.8bp}\selectfont\textbf{\color{EHJRed}图1．}\textbf{原创内容核对流程（中性示例，无实验数据）。}
+\textbf{A}，输入节点表示标题、摘要、正文、图表与声明等需要核对的单元。\textbf{B}，处理节点表示恢复阅读顺序并逐项核对数据和范围。\textbf{C}，输出节点表示具有完整图注、可追溯书目和出处信息的译稿。箭头只演示处理次序，不代表因果效应、数量或生物机制。该图由模板自行绘制，未使用任何真实论文原图。}\par
+\end{minipage}\vspace{8bp}
+\begin{multicols}{2}
+\subsection*{混排后的正文}
+本段在通栏图注下恢复双栏，展示图与正文同页的阅读节奏。正式论文每幅主图都应靠近相应讨论，长图可独立安排，但不能把所有主图统一后附。原图中保留英文时，完整中文标签释义可单独附在文末。
+\section*{参考文献（占位）}
+{\fontsize{7.5bp}{10bp}\selectfont\setlength{\parindent}{0pt}\interlinepenalty=10000
+\hypertarget{ref:1}{}1. Example author. Example source title. Journal and publication details to be verified. （中性占位，非真实文献。）\par\smallskip
+\hypertarget{ref:2}{}2. Example author. Another example source title. DOI and source information to be verified. （中性占位，非真实文献。）\par}
+\section*{声明（占位）}
+致谢、资助、作者贡献、利益冲突、数据和许可说明均按原稿实际内容填写。本样板没有真实作者、研究数据或资助。
+\section*{原文信息}
+占位字段：作者、英文原题、期刊、年份、卷期、页码或文章号、DOI及明确列出的出版日期。Advance article与后续正式卷期可能不同；应以用户提供版本为依据，缺失字段不编造。
+
+本文件为European Heart Journal风格的非官方中性样板。普通刊名、字体回退和中文分页为有意适配，不代表该刊所有文体，也不承诺逐像素一致。仅供学术交流，出版物版权归原作者及出版商所有。
+\end{multicols}
+\end{document}
