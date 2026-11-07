@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from ten verified journal configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from twelve verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -296,6 +296,160 @@
       "version_handling": "Retain supplied advance-article year, provisional volume/page fields and explicit dates. Do not silently replace them with later issue metadata or infer missing publication dates.",
       "file": "european-heart-journal.tex",
       "preview_pages": 3
+    },
+    "circulation-guideline": {
+      "body_family": "sans",
+      "body_size_leading_pt": [
+        9.2,
+        12.2
+      ],
+      "template_adaptation": "Three original neutral pages: full-width committee opening, two-column prose and recommendation-color table, original vector figure and compact caption, linked placeholder references, declarations and ending source information. Commercial journal fonts are replaced by portable TeX Gyre and Noto/Fandol fonts. The Chinese body, 7.6/9.2bp captions and demonstration page breaks are adaptations. No source authors, real clinical recommendations, thresholds, figures, DOI or download information.",
+      "shared_file": "guideline-common.tex",
+      "preview_pages": 3,
+      "figure_placement": "Interleave figures with the continuing source-order prose. Measure the combined height of figures, complete captions and surrounding text; use adjacent continuation captions when needed rather than collecting figures at the end or forcing short text pages.",
+      "content_reuse": "Retain verified prose, recommendation codes and bibliography; record and compare content fingerprints. A typography change must not change the recommendation system, negation, conditions or scientific content.",
+      "reference_edition": "Circulation, supplied 2022 and 2026 clinical-practice guideline editions",
+      "paper_pt": [
+        585,
+        783
+      ],
+      "margins_pt": {
+        "left": 49.5,
+        "right": 49.5,
+        "top": 58,
+        "bottom": 47
+      },
+      "column_gap_pt": 15.3,
+      "source_font_and_hierarchy": "Akzidenz Grotesk; light title about24.67bp, body10bp, red main headings about12.33bp, source captions8bp.",
+      "colors_html": {
+        "theme_red": "#CE171E",
+        "title_2022": "#000000",
+        "title_2026": "#231F20"
+      },
+      "observed_design": "Red clinical-practice guideline banner and line, light black full-width title, endorsed-organizations and writing-committee lists. Structured abstract can begin on the 2022 first page but follows the longer 2026 committee opening. Two-column sans body with red headings and separate COR/LOE columns; distinct no-benefit and harm categories.",
+      "citations": "Retain source numeric conventions and knowledge-unit bibliography resets. Use section plus number for targets rather than treating repeated numbers as globally unique.",
+      "recommendation_system": "ACC/AHA: COR1/2a/2b/3(no benefit)/3(harm); LOE A/B-R/B-NR/C-LD/C-EO. Do not convert to ESC classes.",
+      "colors_rgb": {
+        "cor1": [
+          0.4144,
+          0.6531,
+          0.5442
+        ],
+        "cor2a": [
+          1,
+          0.853,
+          0.4999
+        ],
+        "cor2b": [
+          0.9655,
+          0.6886,
+          0.3759
+        ],
+        "cor3_no_benefit": [
+          0.9539,
+          0.4904,
+          0.4976
+        ],
+        "cor3_harm": [
+          0.6918,
+          0.2195,
+          0.1115
+        ],
+        "loe_a": [
+          0,
+          0.3328,
+          0.5244
+        ],
+        "loe_b": [
+          0.4058,
+          0.5594,
+          0.7052
+        ],
+        "loe_c": [
+          0.7535,
+          0.8051,
+          0.8869
+        ]
+      },
+      "color_provenance": "Header RGB from source text spans; recommendation colors from source drawing objects. Neutral table uses rounded colors and simplified evidence shades.",
+      "file": "circulation-guideline.tex",
+      "colors_rgb_2022": {
+        "cor1": [
+          0.432,
+          0.762,
+          0.518
+        ],
+        "cor2a": [
+          1,
+          0.837,
+          0.309
+        ],
+        "cor2b": [
+          0.98,
+          0.655,
+          0.296
+        ],
+        "cor3_no_benefit": [
+          0.945,
+          0.368,
+          0.303
+        ],
+        "loe_a": [
+          0.248,
+          0.436,
+          0.716
+        ],
+        "loe_b_nr": [
+          0.392,
+          0.616,
+          0.832
+        ],
+        "loe_c_eo": [
+          0.634,
+          0.755,
+          0.899
+        ]
+      },
+      "palette_version_handling": "The default neutral preview follows2026 fills. Define GuideEditionTwentyTwo before loading circulation-guideline.tex to select the observed2022 COR/B-level palette. The two editions do not share identical recommendation colors; verify each source. Neutral C-level shades and placeholder harm row remain schematic."
+    },
+    "european-heart-journal-guideline": {
+      "body_family": "sans",
+      "body_size_leading_pt": [
+        9.2,
+        12.2
+      ],
+      "template_adaptation": "Three original neutral pages: full-width committee opening, two-column prose and recommendation-color table, original vector figure and compact caption, linked placeholder references, declarations and ending source information. Commercial journal fonts are replaced by portable TeX Gyre and Noto/Fandol fonts. The Chinese body, 7.6/9.2bp captions and demonstration page breaks are adaptations. No source authors, real clinical recommendations, thresholds, figures, DOI or download information.",
+      "shared_file": "guideline-common.tex",
+      "preview_pages": 3,
+      "figure_placement": "Interleave figures with the continuing source-order prose. Measure the combined height of figures, complete captions and surrounding text; use adjacent continuation captions when needed rather than collecting figures at the end or forcing short text pages.",
+      "content_reuse": "Retain verified prose, recommendation codes and bibliography; record and compare content fingerprints. A typography change must not change the recommendation system, negation, conditions or scientific content.",
+      "reference_edition": "European Heart Journal, supplied2024 ESC guideline edition",
+      "paper_pt": [
+        595.276,
+        793.701
+      ],
+      "margins_pt": {
+        "left": 42.52,
+        "right": 36.851,
+        "top": 57,
+        "bottom": 45
+      },
+      "column_gap_pt": 15.5,
+      "source_font_and_hierarchy": "Gill Sans Nova; body8.5bp, bold black title, dark-red main headings and recommendation headings.",
+      "colors_html": {
+        "theme_red": "#AD0F21",
+        "cor_i": "#54BE8E",
+        "cor_iia": "#FBCC09",
+        "cor_iib": "#F69325",
+        "cor_iii": "#CD4553",
+        "evidence": "#65B5C2",
+        "row_grey": "#EDEEEE"
+      },
+      "color_provenance": "Theme from source text spans, recommendation fills from source drawing objects. The neutral demo simplifies evidence shades.",
+      "observed_design": "Red ESC GUIDELINES label and line, full-width bold black title, task-force and endorsed-organization information, two-column sans body. Recommendation content precedes separate Class and LOE columns. No translational-research beige structured abstract or separate graphical-summary page.",
+      "citations": "Source numeric superscripts with corresponding English bibliography targets.",
+      "recommendation_system": "ESC classes I/IIa/IIb/III and levels A/B/C, preserved independently of ACC/AHA codes.",
+      "file": "european-heart-journal-guideline.tex"
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

@@ -6,11 +6,11 @@
 
 A reusable Codex skill for translating user-provided English research papers, reviews, and guidelines into Chinese. It preserves content, data, and citations while producing editable source files and a PDF based on the original publication's layout.
 
-It includes **three compilable templates for Cell, Nature, and Science**, plus **Immunity, Nature Reviews Cardiology, Nature Biotechnology, Nature Methods, Circulation, Circulation Research, and European Heart Journal extensions**. Coverage goes beyond the opening page to include methods, figure captions, references, declarations, and full source information at the end.
+It includes **three compilable templates for Cell, Nature, and Science**, with **Immunity, Nature Reviews Cardiology, Nature Biotechnology, Nature Methods, Circulation, Circulation Research, and European Heart Journal extensions and two guideline variants**. Coverage goes beyond the opening page to include methods, figure captions, references, declarations, and full source information at the end.
 
-![Ten journal templates in a three-column, four-row overview, with CNS first](assets/previews/overview.png)
+![Twelve layout templates in a three-column, four-row overview, with CNS first](assets/previews/overview.png)
 
-The three-column, four-row overview shows ten templates and two explicitly labelled detail pages. Cell, Nature, and Science occupy the first row; the seven journal extensions follow. Detail pages are not counted as new templates.
+The three-column, four-row overview shows twelve templates. Cell, Nature, and Science occupy the first row; the seven journal extensions and two guideline variants follow. A variant is not a new journal.
 
 ## What sets it apart
 
@@ -21,7 +21,7 @@ The three-column, four-row overview shows ten templates and two explicitly label
 - **Scoped edits**: Removing a citation box does not trigger a new translation or removal of normal headers and footers.
 - **Editable deliverables**: Produce a Chinese PDF and editable source files, with the original article citation and DOI at the end of a full translation.
 
-## Ten templates
+## Twelve templates
 
 | Template | Main layout features | Citations | Preview |
 |---|---|---|---|
@@ -35,6 +35,10 @@ The three-column, four-row overview shows ten templates and two explicitly label
 | Circulation | Green research-type rule, full-width structured abstract, clinical-perspective and abbreviation boxes, sans-serif two-column body | Black superscript numbers | [PDF](assets/previews/circulation.pdf) · [Source](assets/templates/circulation.tex) |
 | Circulation Research | Blue review-type rule, full-width abstract followed by two columns on the same page, extended abbreviation box, full-width figures and captions | Black superscript numbers | [PDF](assets/previews/circulation-research.pdf) · [Source](assets/templates/circulation-research.tex) |
 | European Heart Journal | Red translational-research headings, pale-beige structured abstract, separate structured graphical abstract, grey translational-perspective box, two-column figure/text integration | Black superscript numbers | [PDF](assets/previews/european-heart-journal.pdf) · [Source](assets/templates/european-heart-journal.tex) |
+| Circulation guideline | Red guideline banner, light black title, committee opening, separate COR/LOE color columns | Section-scoped numeric citations | [PDF](assets/previews/circulation-guideline.pdf) · [Source](assets/templates/circulation-guideline.tex) |
+| EHJ / ESC guideline | Bold black title and task-force opening, dark-red headings, recommendation/Class/LOE columns | Superscript numbers | [PDF](assets/previews/european-heart-journal-guideline.pdf) · [Source](assets/templates/european-heart-journal-guideline.tex) |
+
+The guideline variants preserve the separate ACC/AHA and ESC recommendation/evidence systems. Restyling reuses verified translations and checks content fingerprints rather than translating them again.
 
 The templates are based on previously checked article layouts and contain neutral text and original placeholder diagrams. They are not official journal templates: the supplied article remains the reference for its year, article type, and version. Chinese text will change pagination.
 
@@ -90,7 +94,7 @@ When the conversation or local project instructions already authorize a specific
 | [SKILL.md](SKILL.md) | Skill entry point, workflow, and scope |
 | [agents/openai.yaml](agents/openai.yaml) | Display name and default invocation prompt |
 | [references/](references/) | Journal profiles, content organization, and acceptance checks |
-| [assets/templates/](assets/templates/) | Ten XeLaTeX templates and shared files |
+| [assets/templates/](assets/templates/) | Twelve XeLaTeX templates and shared files |
 | [assets/previews/](assets/previews/) | Sample PDFs, page PNGs, and template overview |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | Read-only checks for specified download text, internal PDF links, and compilation logs |
 | [scripts/make_overview.py](scripts/make_overview.py) | Rebuild the three-column, four-row overview with CNS in the first row |
@@ -108,7 +112,7 @@ For checks on bibliography link targets or TeX logs, see `python scripts/audit_p
 
 ## Validation and limitations
 
-All ten templates—28 pages in total—have been compiled and visually checked, with no missing glyphs, overflow, or undefined references. The four-page Nature Reviews Cardiology extension demonstrates a separate abstract-and-contents page, a two-column body, and a multipage table; it has its own opening-page structure. The three-page Nature Biotechnology extension demonstrates a Brief Communication opening, two-column equations and a main figure, an extended reporting table, and source information; its yellow rule appears only on the opening page. The three-page Nature Methods extension covers Perspective/Analysis openings, full-width tables and boxes, and a figure with a complete caption; its orange rule appears only on the opening page. Missing online dates are retained as missing rather than inferred. Circulation and Circulation Research each use three neutral pages to demonstrate a sans-serif two-column body, full-width abstract and figure captions. Circulation adds a green research-type rule and red abstract labels and clinical-perspective box; Circulation Research uses blue review headings and an extended abbreviation box. Both use black numeric superscripts. The three-page European Heart Journal template adds a pale-beige structured abstract with label/text columns, a separate structured graphical abstract, a translational-perspective box, integrated two-column figures, and ending source information. Its exact theme red is `#D6143D`; advance-article metadata are retained rather than replaced by a later issue. The audit tool has been checked against completed translations and synthetic cases, including nested download notices hidden outside the crop area and broken links.
+All twelve templates—34 pages in total—have been compiled and visually checked, with no missing glyphs, overflow, or undefined references. The four-page Nature Reviews Cardiology extension demonstrates a separate abstract-and-contents page, a two-column body, and a multipage table; it has its own opening-page structure. The three-page Nature Biotechnology extension demonstrates a Brief Communication opening, two-column equations and a main figure, an extended reporting table, and source information; its yellow rule appears only on the opening page. The three-page Nature Methods extension covers Perspective/Analysis openings, full-width tables and boxes, and a figure with a complete caption; its orange rule appears only on the opening page. Missing online dates are retained as missing rather than inferred. Circulation and Circulation Research each use three neutral pages to demonstrate a sans-serif two-column body, full-width abstract and figure captions. Circulation adds a green research-type rule and red abstract labels and clinical-perspective box; Circulation Research uses blue review headings and an extended abbreviation box. Both use black numeric superscripts. The three-page European Heart Journal template adds a pale-beige structured abstract with label/text columns, a separate structured graphical abstract, a translational-perspective box, integrated two-column figures, and ending source information. Its exact theme red is `#D6143D`; advance-article metadata are retained rather than replaced by a later issue. The audit tool has been checked against completed translations and synthetic cases, including nested download notices hidden outside the crop area and broken links.
 
 This repository provides a skill and templates to help Codex carry out the task; it is not a standalone translation service that requires no review. It contains no full texts or original figures from source papers, official logos, personal download information, or real experimental data. It does not imply official journal authorization or endorsement.
 

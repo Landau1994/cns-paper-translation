@@ -1,0 +1,48 @@
+% Neutral guideline variant, inspected against supplied 2022 and 2026 editions.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=585bp,paperheight=783bp,left=49.5bp,right=49.5bp,top=58bp,bottom=47bp,headheight=16bp,headsep=12bp,footskip=24bp]{geometry}
+\newcommand{\JournalName}{Circulation}
+\usepackage{xcolor}
+\definecolor{GuideRed}{HTML}{CE171E}
+\input{guideline-common.tex}
+% Default recommendation palette follows the inspected2026 edition.
+% Define GuideEditionTwentyTwo before input to select the inspected2022 fills.
+\ifdefined\GuideEditionTwentyTwo
+ \definecolor{GuideGreen}{rgb}{.432,.762,.518}
+ \definecolor{GuideYellow}{rgb}{1,.837,.309}
+ \definecolor{GuideOrange}{rgb}{.980,.655,.296}
+ \definecolor{GuideHarm}{rgb}{.945,.368,.303}
+ \definecolor{GuideEvidence}{rgb}{.392,.616,.832}
+\fi
+\definecolor{GuideTitle}{HTML}{231F20}
+\begin{document}\sffamily\normalsize
+\fancypagestyle{guidefirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{guidefirst}
+\noindent{\fontsize{18bp}{22bp}\selectfont\underline{Circulation}\par}\vspace{24bp}
+\noindent{\bfseries\color{GuideRed}\fontsize{14bp}{18bp}\selectfont 临床实践指南｜中性版式演示}\vspace{-2bp}
+{\color{GuideRed}\hrule height .6bp}\vspace{10bp}
+\noindent{\color{GuideTitle}\fontsize{24bp}{29bp}\selectfont 指南题名占位：结构完整、内容可复用的中文排版\par}\vspace{9bp}
+\noindent{\fontsize{9bp}{12bp}\selectfont 由示例工作组编写，协作单位与认可机构按原文完整列出。真实机构名、期刊卷期及DOI不得沿用旧论文字段。\par}\vspace{12bp}
+\noindent{\bfseries\color{GuideRed}编写委员会成员（示例）}\par
+\noindent{\fontsize{9bp}{12bp}\selectfont Example Author A（示例主席）；Example Author B（示例副主席）；Example Author C；Example Author D。全部姓名均为占位。\par}\vspace{14bp}
+\noindent{\bfseries\color{GuideRed}目的：}\SampleAbstract\par\medskip
+\noindent{\bfseries\color{GuideRed}范围：}此样板演示临床实践指南的红色类型线、轻字重黑色大题、全宽委员会信息及后续无衬线双栏；不采用普通原创研究的绿色类型线。2022版可在首页容纳结构化摘要，2026版的长作者列表会把摘要续到后页，真实稿应按长度重排。\par
+\vfill\noindent\rule{\textwidth}{.3bp}\par
+{\fontsize{7.6bp}{9.2bp}\selectfont 编写组脚注、回避规则、许可及出版声明按原稿完整保留。这里均为中性说明；未复制真实作者、指南正文、官方logo或下载来源。仅供学术交流，出版物版权归原作者及出版商所有。\par}
+\clearpage
+\begin{multicols}{2}
+\section*{1．范围与阅读结构}
+\GuideBody
+\subsection*{1.1 推荐表与支持性说明}
+\GuideBody
+\end{multicols}
+\AhaGuideTable
+\clearpage
+\begin{multicols}{2}
+\section*{2．图文与出处}
+\GuideBody
+\end{multicols}
+\GuideFigure
+\begin{multicols}{2}\GuideEnd\end{multicols}
+\end{document}

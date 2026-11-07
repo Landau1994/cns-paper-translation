@@ -4,7 +4,7 @@
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [十套样板总览（3列×4行）](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [十二套样板总览（3列×4行）](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
 
 共享宏、长文中取消样板人工分页及字体回退提示，见随模板提供的 [编译说明](../assets/templates/README.md)。可机读的尺寸与引文配置在 [profiles.json](../assets/templates/profiles.json)。
 
@@ -15,7 +15,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 xelatex -interaction=nonstopmode -halt-on-error cell.tex
 ```
 
-其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`、`nature-methods.tex`、`circulation.tex`、`circulation-research.tex`、`european-heart-journal.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
+其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`、`nature-methods.tex`、`circulation.tex`、`circulation-research.tex`、`european-heart-journal.tex`、`circulation-guideline.tex`、`european-heart-journal-guideline.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
 
 实际文章的图形、表格和长书目远超演示；必须重新编译、检查浮动体、渲染全部页面。不要把首次编译页数或样板中的页码写死。
 
@@ -110,3 +110,20 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 至少观察首页、普通正文、图表页和末页。记录纸张/边距/栏距、题名与摘要结构、字体层级、引文制式、图注位置、页眉页脚与出处字段。正文数据与样式分离；只增加改变排版决策的参数，不把具体论文的图号、表格或实验名写进通用配置。
 
 新增配置时同步入口表、机器可读配置、模板编译说明、预览及中英文 README；用原创中性内容编译并逐页检查。验证后同步项目技能源、本地安装和已有分享包。远程同步沿用会话或项目规范中已明确的仓库、范围及合并授权；已授权单人维护自动更新 `main` 的，继续完成主分支同步，不强制草稿 PR。没有授权时再确认，不因新增模板推定任意发布权限，也不重复确认已有授权。
+
+
+## Circulation：Clinical Practice Guideline变体
+
+- 核验来源为所给2022/2026指南，均585×783bp、正文边界约49.5–535.5bp，栏距约15.3bp。原刊Akzidenz Grotesk无衬线正文10bp、轻字重题名约24.67bp；指南类型线与章节红`#CE171E`，2022题名黑`#000000`、2026黑`#231F20`。不能套用2025原创研究的绿色类型线。
+- 首页全宽题名、协作/认可单位和委员会成员；2022首页容纳目的/方法/结构摘要，2026长委员会名单后在后页接摘要，不能因分页省略。中性样板采用9.2/12.2bp正文与7.6/9.2bp图注，属于中文适配，不要求保持原页数。
+- COR与LOE独立色栏，保留1、2a、2b、3（无获益/有害）及A、B-R、B-NR、C-LD、C-EO。精确源色保存在`profiles.json`；浅黄与浅橙不应误用ESC更鲜艳的类别色。真实长推荐逐项续页，示例短表仅展示结构。
+- 书目按知识单元重新编号时，以章节加编号作为目标；保留原英文书目页时，可按章节/原刊页跳转并恢复其外部链接。不能把数百个不同章节的[1]全链到一个条目。
+
+## European Heart Journal：ESC Guideline变体
+
+- 核验所给2024指南：595.276×793.701bp、左右约42.52/36.851bp、栏距约15.5bp；源刊Gill Sans Nova无衬线正文8.5bp、黑色粗体大题与任务组首页。主题红`#AD0F21`与2023转化研究的`#D6143D`不同；本变体没有米底结构化摘要或独立结构化图形摘要。
+- 推荐内容、Class、LOE依序分列。I/IIa/IIb/III色块依次为源绘图对象核实的绿`#54BE8E`、黄`#FBCC09`、橙`#F69325`、红`#CD4553`，证据列青色`#65B5C2`，正文行灰`#EDEEEE`。A/B/C等级保持来源，不转为ACC/AHA分类。
+- 两种指南样板各3页，合用`guideline-common.tex`，均为原创非临床占位文字与示意图；没有真实推荐、阈值、作者、DOI、原图或下载信息。商业字体以Noto/Fandol及TeX Gyre替代；中文粗体支持优先于模拟不可用的轻体/粗斜体。旧译文换版保存指纹，修订完成后确认推荐、图注、书目和科学数值不变。
+
+
+Circulation指南2022与2026的推荐色块并不完全相同，`profiles.json`分别记录原始RGB。默认中性预览使用2026配色；在加载入口前定义`\GuideEditionTwentyTwo`可切换至核验的2022 COR/B级色组。C级浅色与示例有害行仍属中性示意，正式稿须核对当前来源版本。

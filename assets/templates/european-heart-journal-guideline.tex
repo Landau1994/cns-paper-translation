@@ -1,0 +1,44 @@
+% Neutral ESC guideline variant, inspected against the supplied 2024 edition.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=793.701bp,left=42.52bp,right=36.851bp,top=57bp,bottom=45bp,headheight=22bp,headsep=14bp,footskip=24bp]{geometry}
+\newcommand{\JournalName}{European Heart Journal}
+\usepackage{xcolor}
+\definecolor{GuideRed}{HTML}{AD0F21}
+\input{guideline-common.tex}
+\definecolor{GuideGreen}{HTML}{54BE8E}
+\definecolor{GuideEvidence}{HTML}{65B5C2}
+\definecolor{GuideYellow}{HTML}{FBCC09}
+\definecolor{GuideOrange}{HTML}{F69325}
+\definecolor{GuideHarm}{HTML}{CD4553}
+\setlength{\columnsep}{15.5bp}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{GuideRed}\leaders\hrule height .4bp\hfill}}
+\begin{document}\sffamily\normalsize
+\fancypagestyle{guidefirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\headrule}{}}
+\thispagestyle{guidefirst}
+\noindent{\fontsize{12bp}{15bp}\selectfont European Heart Journal}\hfill{\bfseries\color{GuideRed}ESC GUIDELINES}\par\vspace{8bp}
+{\color{GuideRed}\hrule height .5bp}\vspace{20bp}
+\noindent{\bfseries\fontsize{23bp}{28bp}\selectfont 指南题名占位：保留推荐体系与原刊结构的中文重排\par}\vspace{12bp}
+\noindent{\bfseries\fontsize{14bp}{18bp}\selectfont 由示例任务组编写；协作机构、认可组织和来源版本均待替换。\par}\vspace{8bp}
+\noindent{\bfseries\fontsize{12bp}{16bp}\selectfont 机构信息以目标文件为准。本样板未采用真实作者名单或学会徽标。\par}\vspace{14bp}
+\noindent{\bfseries\fontsize{11bp}{15bp}\selectfont 作者／任务组成员（中性占位）：Example Author A（示例主席），Example Author B（示例协调人），Example Author C，Example Author D及示例文件组。\par}\vspace{15bp}
+\noindent\SampleAbstract\par\medskip
+本指南变体采用黑色粗体题名、红色主节及推荐标题，不照搬2023年转化研究的浅米底结构化摘要或独立图形摘要页。正文与推荐表按原稿阅读顺序衔接；中文长度改变页数时，译页与原刊页码分别标识。
+\vfill\noindent\rule{\textwidth}{.3bp}\par
+{\fontsize{7.6bp}{9.2bp}\selectfont 通信信息、共同贡献、利益披露、任务组声明、许可与版权信息须按来源完整处理。所有说明和出版字段在此均为占位。仅供学术交流，出版物版权归原作者及出版商所有。\par}
+\clearpage
+\begin{multicols}{2}
+\section*{1．适用范围与证据结构}
+\GuideBody
+\subsection*{1.1 术语、类别及跨页关系}
+\GuideBody
+\end{multicols}
+\EscGuideTable
+\clearpage
+\begin{multicols}{2}
+\section*{2．正文与图表穿插}
+\GuideBody
+\end{multicols}
+\GuideFigure
+\begin{multicols}{2}\GuideEnd\end{multicols}
+\end{document}

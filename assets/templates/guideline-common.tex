@@ -1,0 +1,72 @@
+% Neutral guideline modules. No clinical recommendations or source-paper content.
+\input{common.tex}
+\usepackage{multicol,tabularx,array,colortbl,booktabs}
+\setlength{\columnsep}{15.3bp}
+\setlength{\parindent}{1em}\setlength{\parskip}{2bp}
+\renewcommand{\normalsize}{\fontsize{9.2bp}{12.2bp}\selectfont}
+\definecolor{GuideGrey}{HTML}{EDEEEE}
+\definecolor{GuideGreen}{HTML}{6AA78B}
+\definecolor{GuideEvidence}{HTML}{678FB4}
+\definecolor{GuideYellow}{rgb}{1,.853,.4999}
+\definecolor{GuideOrange}{rgb}{.9655,.6886,.3759}
+\definecolor{GuideHarm}{rgb}{.9539,.4904,.4976}
+\definecolor{GuideHarmDeep}{rgb}{.6918,.2195,.1115}
+\ctexset{section={format=\sffamily\bfseries\color{GuideRed}\fontsize{12.4bp}{15bp}\selectfont,beforeskip=10bp,afterskip=4bp},
+ subsection={format=\sffamily\bfseries\color{GuideRed}\fontsize{10.4bp}{13bp}\selectfont,beforeskip=8bp,afterskip=3bp}}
+\fancyhead[L]{\sffamily\fontsize{8bp}{10bp}\selectfont 示例编写组}
+\fancyhead[R]{\sffamily\fontsize{8bp}{10bp}\selectfont 指南文体中性样板}
+\renewcommand{\headrulewidth}{.4bp}
+\fancyfoot[L]{\sffamily\fontsize{6.7bp}{8.5bp}\selectfont\JournalName｜出版字段按所给版本核实}
+\fancyfoot[R]{\sffamily\fontsize{6.7bp}{8.5bp}\selectfont 非官方样板｜中文译页\thepage}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=GuideRed,
+ pdftitle={指南文体中性中文排版样板},pdfauthor={非官方中性样板}}
+\newcommand{\GuideCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newcommand{\GuideBody}{%
+本段是原创中性排版文字，不包含真实诊疗建议。指南翻译需要分别核对解释性正文、定义、推荐表、推荐类别、证据等级、算法、普通表格及全部脚注。相同数字在不同章节可能属于不同书目分组，引用目标应随原稿的编号体系保存。\GuideCite{1}
+
+复用已经核对的译文时，应把内容与样式分开维护，保存段落、推荐标记和书目的内容指纹。纸张、字体、色彩、栏结构或分页的变化不应改变否定、条件、范围、推荐强度或证据级别。不能把另一学会的分类体系替换进原表。
+
+图片可按实际大小在通栏或单栏排放，并穿插于正文。图注过长时可在面板或句子边界续页，注明相邻续注；不要把短段单独留在一页，也不要为了填空删掉科学说明。图像保留英文时，还应提供完整的中文标签释义。}
+\newcommand{\GuideTableIntro}{%
+\noindent{\bfseries\color{GuideRed}表1．推荐类别与证据栏的中性排版示例}\par
+{\fontsize{7.6bp}{9.2bp}\selectfont 以下行只描述翻译核对工作，不是真实临床推荐。类别和证据符号仅示范排版，不赋予这些示例文字医学含义。}\par\vspace{4bp}}
+\newcommand{\AhaGuideTable}{%
+\GuideTableIntro
+{\fontsize{8.2bp}{10.5bp}\selectfont\setlength{\tabcolsep}{5bp}\renewcommand{\arraystretch}{1.25}
+\noindent\begin{tabularx}{\linewidth}{@{}>{\centering\arraybackslash}p{50bp}>{\centering\arraybackslash}p{42bp}X@{}}
+\rowcolor{black!20}\textbf{COR}&\textbf{LOE}&\textbf{推荐内容（中性占位）}\\
+\cellcolor{GuideGreen}1&\cellcolor{GuideEvidence}B-R&逐项保留来源中的条件、对象及证据标记，不把此行用于医疗决策。\\
+\cellcolor{GuideYellow}2a&\cellcolor{GuideEvidence!60}B-NR&在有数据支持的情况下逐条核对；本行仅展示多行文字与色块对齐。\\
+\cellcolor{GuideOrange}2b&\cellcolor{GuideEvidence!35}C-LD&来源不完整时明确说明，不推造缺失等级或改变“可考虑”的强度。\\
+\cellcolor{GuideHarm}3（无获益）&\cellcolor{GuideEvidence!20}C-EO&保留来源中“无获益”的原始类别，不把它改写成“有害”。\\
+\cellcolor{GuideHarmDeep}\color{white}3（有害）&\cellcolor{GuideEvidence!20}C-EO&有害类别独立显示；本表只示范色彩、换行及类别关系。\\
+\end{tabularx}\par}
+{\fontsize{7.6bp}{9.2bp}\selectfont COR：推荐类别；LOE：证据等级。ACC/AHA的A、B-R、B-NR、C-LD、C-EO按来源保留；表中五行是原创示例，不是固定推荐数量。}\par}
+\newcommand{\EscGuideTable}{%
+\GuideTableIntro
+{\fontsize{8.2bp}{10.5bp}\selectfont\setlength{\tabcolsep}{5bp}\renewcommand{\arraystretch}{1.25}
+\noindent\begin{tabularx}{\linewidth}{@{}X>{\centering\arraybackslash}p{38bp}>{\centering\arraybackslash}p{38bp}@{}}
+\rowcolor{black!20}\textbf{推荐内容（中性占位）}&\textbf{Class}&\textbf{LOE}\\
+\rowcolor{GuideGrey}完整保留每条推荐的内容和脚注，不把此示例当作诊疗建议。&\cellcolor{GuideGreen}I&\cellcolor{GuideEvidence}A\\
+\rowcolor{GuideGrey}根据来源检查限定词和比较方向，等级字段独立核验。&\cellcolor{GuideYellow}IIa&\cellcolor{GuideEvidence!65}B\\
+\rowcolor{GuideGrey}原文缺少字段时明确标注，不能用其他体系补齐。&\cellcolor{GuideOrange}IIb&\cellcolor{GuideEvidence!35}C\\
+\rowcolor{GuideGrey}否定性推荐保留原意，色彩只帮助识别对应类别。&\cellcolor{GuideHarm}III&\cellcolor{GuideEvidence!35}C\\
+\end{tabularx}\par}
+{\fontsize{7.6bp}{9.2bp}\selectfont 本表只示范ESC的I、IIa、IIb、III与A、B、C列。真实指南的续表应重复标题、列头及分组关系，并完整保留脚注。}\par}
+\newcommand{\GuideFigure}{%
+\par\vspace{6bp}\begin{center}\begin{minipage}{.86\linewidth}\DemoVector\end{minipage}\end{center}
+{\fontsize{7.6bp}{9.2bp}\selectfont\textbf{\color{GuideRed}图1．内容复用与排版核对（原创占位）。}
+\textbf{A}，输入已核对译文、推荐字段及英文书目。
+\textbf{B}，更换原刊纸张、题名、栏结构和图注样式，保留内容顺序。
+\textbf{C}，编译并逐页检查，验证内容指纹与引文跳转。
+箭头只表示本示例的处理顺序，不代表临床路径、诊断或治疗关系。本图无真实数据、患者信息或原刊图形；真实指南须按各图面板完整核对。}\par\vspace{8bp}}
+\newcommand{\GuideEnd}{%
+\section*{参考文献（中性占位）}
+{\fontsize{7.6bp}{9.2bp}\selectfont\setlength{\parindent}{0pt}
+\hypertarget{ref:1}{}1. Example author. Example source. All publication fields are placeholders. 非真实文献。\par}
+\section*{声明与范围}
+推荐示例仅供排版演示，不构成医疗建议。正文、图、表及作者信息均为原创中性占位；正式稿应以用户提供版本为事实来源。未取得的补充材料不能标为已翻译。
+\section*{原文信息}
+作者、英文原题、期刊、年份、卷期、页码或文章号、DOI及明确出版日期均待按目标文件替换。当前文件为\JournalName 风格的非官方样板，无真实论文全文、原图或下载信息。
+
+仅供学术交流；出版物版权归原作者及出版商所有。}
