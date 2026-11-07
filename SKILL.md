@@ -30,6 +30,8 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Nature Biotechnology | [nature-biotechnology.tex](assets/templates/nature-biotechnology.tex) | 简讯首页黄色顶线、约1:2日期/摘要区、双栏数学正文、蓝色上标 |
 | Nature Methods | [nature-methods.tex](assets/templates/nature-methods.tex) | 橙色首页顶线、约1:2日期/摘要区、双栏正文、通栏表/框/图、蓝色上标 |
 
+总览预览采用 **3×3 分面**，首行依次为 **Cell、Nature、Science**，扩展样板随后排列。未满九种样板时，可补充现有样板的正文或图表页，并明确标注页型，不将补充页计为新样板。使用 `scripts/make_overview.py` 从已核验的页面预览重建总览。
+
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 
 遇到尚未覆盖的期刊或显著不同的版本，核验并完成当前排版后，将可复用结构扩展为中性样板、来源配置和预览，更新此表及相关说明。实际论文内容、原图和下载信息留在任务工程中，不收入可分享技能。

@@ -8,7 +8,9 @@ A reusable Codex skill for translating user-provided English research papers, re
 
 It includes **three compilable templates for Cell, Nature, and Science**, plus **Immunity, Nature Reviews Cardiology, Nature Biotechnology, and Nature Methods extensions**. Coverage goes beyond the opening page to include methods, figure captions, references, declarations, and full source information at the end.
 
-![Overview of seven journal templates](assets/previews/overview.png)
+![Seven journal templates in a 3 by 3 overview, with CNS first](assets/previews/overview.png)
+
+The 3 × 3 overview shows nine pages from seven templates. Cell, Nature, and Science occupy the first row; extra detail panels are labelled by page type.
 
 ## What sets it apart
 
@@ -88,6 +90,7 @@ When the conversation or local project instructions already authorize a specific
 | [assets/templates/](assets/templates/) | Seven XeLaTeX templates and shared files |
 | [assets/previews/](assets/previews/) | Sample PDFs, page PNGs, and template overview |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | Read-only checks for specified download text, internal PDF links, and compilation logs |
+| [scripts/make_overview.py](scripts/make_overview.py) | Rebuild the 3 × 3 overview with CNS in the first row |
 
 Compiling the templates requires **XeLaTeX** and common TeX packages, including ctex and TikZ. The templates use Noto CJK when available and fall back to TeX Live's Fandol. Render and check the output again when moving to another machine. Copy the entire template directory before making changes; see the [template compilation instructions](assets/templates/README.md).
 

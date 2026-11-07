@@ -8,7 +8,9 @@
 
 以 **Cell、Nature、Science 三套可编译样板**为特色，附 **Immunity、Nature Reviews Cardiology、Nature Biotechnology 与 Nature Methods 扩展**。不只关注首页效果，也覆盖方法、图注、书目、声明和文末原文信息。
 
-![七套期刊样板总览](assets/previews/overview.png)
+![七套期刊样板总览：3×3分面，CNS位于首行](assets/previews/overview.png)
+
+总览按3×3分面呈现7套样板的9页预览；首行依次为Cell、Nature、Science，补充页明确标注正文或图表页型。
 
 ## 有什么不同
 
@@ -88,6 +90,7 @@ $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除右
 | [assets/templates/](assets/templates/) | 七套 XeLaTeX 样板及共享文件 |
 | [assets/previews/](assets/previews/) | 演示 PDF、页面 PNG 与样板总览 |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | 只读检查 PDF 下载词条、内部链接和编译日志 |
+| [scripts/make_overview.py](scripts/make_overview.py) | 重建3×3总览，CNS固定置于首行 |
 
 编译样板需要 **XeLaTeX** 及 ctex、TikZ 等常见 TeX 包。字体优先使用 Noto CJK，缺少时回退至 TeX Live 的 Fandol；换机后需重新渲染核对。请复制整个模板目录后再修改，具体见 [模板编译说明](assets/templates/README.md)。
 
