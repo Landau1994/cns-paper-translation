@@ -1,0 +1,120 @@
+% Nature Methods: neutral adaptation of inspected Perspective/Analysis editions.
+% No source article text, data, authors, DOI, logo, or original figures.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=39.685bp,right=35.716bp,top=49bp,bottom=43bp,headheight=20bp,headsep=8bp,footskip=24bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,booktabs,array}
+\definecolor{MethodsOrange}{HTML}{F2652E}
+\definecolor{MethodsBlue}{HTML}{006AA7}
+\definecolor{MethodsBox}{HTML}{EFEEE5}
+\hypersetup{colorlinks=true,linkcolor=MethodsBlue,urlcolor=MethodsBlue,
+  pdftitle={Nature Methods风格中性中文样板},pdfauthor={非官方中性样板},
+  pdfsubject={Original neutral layout demonstration, no source research claims}}
+\setlength{\columnsep}{12bp}
+\setlength{\parindent}{1em}\setlength{\parskip}{2bp}
+\renewcommand{\normalsize}{\fontsize{9.05bp}{12.1bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{11bp}{14bp}\selectfont,beforeskip=10bp,afterskip=4bp},
+  subsection={format=\sffamily\bfseries\fontsize{9.6bp}{12.1bp}\selectfont,beforeskip=8bp,afterskip=3bp}}
+\fancyhead[L]{\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont 观点文章／分析文章（示例）}
+\fancyhead[R]{\sffamily\fontsize{8bp}{10bp}\selectfont DOI：按原稿核验}
+\renewcommand{\headrulewidth}{.3bp}\renewcommand{\footrulewidth}{.3bp}
+\fancyfoot[L]{\sffamily\fontsize{7bp}{9bp}\selectfont Nature Methods｜卷期与原刊页码待核验}
+\fancyfoot[R]{\sffamily\fontsize{7bp}{9bp}\selectfont 非官方中性样板｜中文译页\ \thepage}
+\newcommand{\MethodsCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newenvironment{methodscols}{\begin{multicols}{2}}{\end{multicols}}
+\newcommand{\NeutralBody}{%
+本段为原创版式演示文字，不陈述研究结论。正式译稿应逐段对应原文，保留比较对象、限定条件、数字、引文与否定关系。若原文跨栏或跨页续句，应先恢复阅读顺序，再组织中文段落。
+
+版面与内容应分别维护。中文长度可以改变分页，但不应改变内容边界。方法、图注、表格脚注和声明各有独立作用，不能因文字相似而合并，也不能把未取得的附件算入已完成范围。
+
+此处仅示范蓝色数字上标及书目跳转\MethodsCite{1}。参考条目是明确标识的中性占位，使用样板时必须以目标原稿中的完整条目替换，不沿用示例作者、出版日期或条目数量。
+}
+\begin{document}\normalsize
+\fancypagestyle{methodsfirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{methodsfirst}
+{\color{MethodsOrange}\hrule height 3bp}\vspace{3bp}
+{\bfseries\fontsize{23bp}{27bp}\selectfont nature methods\par}\vspace{23bp}
+\noindent\sffamily\textbf{观点文章／分析文章（示例）}\hfill
+{\fontsize{8bp}{10bp}\selectfont DOI：按原稿核验}\par
+\vspace{4bp}\hrule height .3bp\vspace{7bp}
+{\normalfont\bfseries\fontsize{25bp}{31bp}\selectfont 中文题名占位：从内容边界到完整呈现\par}\vspace{17bp}
+\noindent\begin{minipage}[t]{.318\textwidth}\vspace{0pt}\sffamily\fontsize{8bp}{11bp}\selectfont
+\hrule\vspace{5bp}收稿：按原稿填写\par\vspace{5bp}\hrule\vspace{5bp}
+接受：按原稿填写\par\vspace{5bp}\hrule\vspace{5bp}
+在线发表：按原稿填写\par\vspace{5bp}\hrule\vspace{8bp}
+非官方中文译稿样板。\par 仅供学术交流。\par 出版物版权归原作者及出版商所有。
+\end{minipage}\hfill\begin{minipage}[t]{.658\textwidth}\vspace{0pt}
+{\sffamily\bfseries\fontsize{9bp}{12bp}\selectfont 示例作者甲\textsuperscript{1}、示例作者乙\textsuperscript{2}\par}
+\vspace{8bp}\hrule\vspace{7bp}\normalfont\fontsize{10.2bp}{14bp}\selectfont
+本段为中性摘要占位，演示题名、日期窄栏与作者摘要宽栏的层级关系，不陈述真实研究发现。正式译稿应完整呈现原文的问题、方法、结果及限定条件，而不是用内容总结替代全文翻译。原稿未填写的在线日期应如实标注，不能从文件名、接受日期或标识符推断。摘要下方接入双栏正文；全文中的表格、框文和图注，应按实际尺寸安排。中文长度会改变分页，本样板不承诺与英文逐页相同。
+\end{minipage}\par\vspace{12bp}
+\noindent{\sffamily\fontsize{7.2bp}{9.6bp}\selectfont
+\textsuperscript{1}示例作者单位一（中性占位）。
+\textsuperscript{2}示例作者单位二（中性占位）。通信信息按原稿填写。}\par
+\vspace{8bp}\hrule\vspace{8bp}\normalfont\normalsize
+\begin{methodscols}
+\section*{正文结构示例}
+\NeutralBody
+\subsection*{版本与出处}
+已出版版本和未填写在线日期的稿件，可使用同一结构，但出版字段必须依各自来源核对。书目信息缺失时明确缺项，不能以相似论文的信息补齐。此处文字仅用于展示层级与正常中文断行。
+\end{methodscols}
+
+\clearpage
+\section*{通栏表格与框文}
+\noindent{\sffamily\bfseries 表1｜内容对象与校核动作（原创中性示例）}\par\vspace{4bp}
+{\sffamily\fontsize{8.3bp}{11.3bp}\selectfont\setlength{\tabcolsep}{7bp}
+\noindent\begin{tabular}{@{}p{.23\textwidth}p{.35\textwidth}p{.35\textwidth}@{}}
+\toprule
+对象 & 需要保留的内容 & 校核动作\\\midrule
+摘要 & 原文问题、结果与限定 & 与对应原段逐句核对\\[5bp]
+正文 & 连续论述及引文关系 & 检查跨栏、跨页续句\\[5bp]
+表格 & 每一行、分组与脚注 & 核对列名、单位和说明\\[5bp]
+图像 & 完整面板及图注 & 逐幅检查边界与清晰度\\[5bp]
+声明 & 作者、资助与许可信息 & 检查内容边界与缺项\\[5bp]
+出处 & 版本所载出版字段 & 区分未知字段与已核实字段\\
+\bottomrule
+\end{tabular}}
+\par\vspace{4bp}{\sffamily\fontsize{7.7bp}{10.3bp}\selectfont
+本表只演示通栏中文表及表脚注，不是特定期刊的固定报告要求。行数和字段均为原创占位；正式长表应按需要使用跨页表格并重复列头。}\par\vspace{15bp}
+\begingroup\setlength{\fboxsep}{10bp}
+\noindent\colorbox{MethodsBox}{\begin{minipage}{\dimexpr\textwidth-20bp\relax}
+\sffamily{\bfseries 框1｜独立内容单元（原创中性示例）}\par\smallskip
+\normalfont\fontsize{8.6bp}{11.6bp}\selectfont
+框文可能承担定义、讨论或方法说明，其位置与正文不同，但仍属于全文覆盖范围。应先确认框内阅读顺序，并把它与框外的续段区分开。框文在双栏页面上方跨越两栏时，可以独立排成全宽模块；不要将正文中断于框边的句子误拼入框内。
+
+这里演示浅灰底色、紧凑标题与可读正文。正式文稿应根据框文长度重新计算高度；过长内容可以另页呈现，不能为维持原页数而缩小到难以阅读的字号。
+\end{minipage}}
+\endgroup\par\vspace{13bp}
+\begin{methodscols}
+\subsection*{双栏正文的衔接}
+\NeutralBody
+\subsection*{版面校核}
+宽表和框文之后可以继续双栏正文。实际任务应按原文安排位置，不将样板人工分页当成固定规则。图、表与对应说明应保持可追溯关系。检查提取文字不能代替逐页渲染，因为重叠、截断或图像模糊可能无法从纯文本发现。
+\end{methodscols}
+
+\clearpage
+\begin{center}\begin{minipage}{.78\textwidth}\DemoVector\end{minipage}\end{center}
+\noindent{\sffamily\fontsize{7.7bp}{10.3bp}\selectfont
+\textbf{图1｜内容处理流程（原创中性示例）。}
+\textbf{A}，输入节点表示原文的题名、摘要、正文和图表。
+\textbf{B}，处理节点表示保留限定条件，并检查单位、阅读顺序及内容边界。
+\textbf{C}，输出节点表示具备可追溯引文与完整出处的中文译稿。
+箭头仅表示本示例的处理顺序，不代表因果效应或数量变化。图由TikZ原生绘制，无真实数据、原图或期刊标识；图和完整图注均采用通栏。}\par\vspace{11bp}
+\begin{methodscols}
+\section*{讨论与交付示例}
+完整译稿需要同时核对内容和呈现。图内英文若保留，应附中文标签释义，并如实说明处理范围。原始输入应保留不变；源文件包只收入复现最终版面所需的干净素材及可编辑内容\MethodsCite{2}。
+
+真实文稿中的正文图应在参考文献之前排完。下列两条文献仅示范数字上标的内部跳转，不对应真实论文。原文信息置于全部正文、书目和声明之后，作为可追溯的结束部分。
+\section*{参考文献（中性占位）}
+{\fontsize{7.6bp}{10bp}\selectfont\setlength{\parindent}{0pt}\interlinepenalty=10000
+\hypertarget{ref:1}{}1. Example author. Example source title. Publication details to be replaced from the supplied source. （示例占位，非真实文献。）\par\smallskip
+\hypertarget{ref:2}{}2. Example author. Another example source title. Publication details to be verified. （示例占位，非真实文献。）\par}
+\section*{声明（中性占位）}
+致谢、资助、作者贡献、利益冲突、数据及许可等声明，应逐项按原稿翻译。本文无真实研究、实验或资助；此处仅示范声明区的位置。
+\section*{原文信息}
+作者、英文题名、期刊、年份、卷期、页码或文章号、DOI及明确载明的在线日期，均须从目标原稿核实并填写。以上字段在本样板中均为占位，缺项不得编造。
+
+本文件为Nature Methods风格的非官方中性样板。刊名以普通文字显示，版面依据已核验版本作中文适配，不代表官方授权，也不承诺逐页相同。仅供学术交流；出版物版权归原作者及出版商所有。
+\end{methodscols}
+\end{document}

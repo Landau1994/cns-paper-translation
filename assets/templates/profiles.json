@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from six verified article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from seven verified journal configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -93,6 +93,31 @@
       "template_adaptation": "Three neutral pages: opening and numbered equations, full-width original vector diagram and body, reporting-field table and source information. Fonts use common.tex fallbacks. Affiliations follow the abstract rather than sitting at the original page foot. Equations and ten reporting rows are demonstration material, not source research or required journal fields. The 58 bp body top and pagination are Chinese adaptations.",
       "version_handling": "Keep online publication date, issue date and copyright year as distinct source fields; do not infer one from another.",
       "file": "nature-biotechnology.tex",
+      "preview_pages": 3
+    },
+    "nature-methods": {
+      "reference_edition": "Nature Methods, supplied 2026 Perspective and supplied Analysis edition with unfilled online-publication date",
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 39.685,
+        "right": 35.716,
+        "top": 49,
+        "bottom": 43
+      },
+      "column_gap_pt": 12,
+      "body_size_leading_pt": [
+        9.05,
+        12.1
+      ],
+      "body_family": "serif",
+      "citations": "Blue numeric superscripts, with internal bibliography links",
+      "observed_design": "Orange top rule on opening page only; journal name above manuscript-type/DOI line; full-width serif title; approximately 1:2 dates and author/abstract panels; body begins in two columns on same page; full-width tables, independent grey-backed box text, figures and compact sans captions; ruled running heads and feet",
+      "template_adaptation": "Three original neutral pages showing opening, two-column text, a full-width Chinese table and grey box, original vector figure and complete caption, bibliography, declarations and ending source information. Plain journal lettering replaces the logo. Continuous columns use multicol so full-width modules can interrupt the body. Body top, fonts and pagination are Chinese adaptations. No source article authors, DOI, text, figures or real data.",
+      "version_handling": "Do not infer online publication dates, year, issue, volume or page ranges from filenames, DOI years or acceptance dates when absent from the supplied edition.",
+      "file": "nature-methods.tex",
       "preview_pages": 3
     }
   },

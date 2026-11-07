@@ -1,10 +1,10 @@
 # 期刊配置与样板使用
 
-这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述和 Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
+这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，以及 Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [六套样板总览](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [七套样板总览](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
 
 共享宏、长文中取消样板人工分页及字体回退提示，见随模板提供的 [编译说明](../assets/templates/README.md)。可机读的尺寸与引文配置在 [profiles.json](../assets/templates/profiles.json)。
 
@@ -15,7 +15,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 xelatex -interaction=nonstopmode -halt-on-error cell.tex
 ```
 
-另五套分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
+其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`、`nature-methods.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
 
 实际文章的图形、表格和长书目远超演示；必须重新编译、检查浮动体、渲染全部页面。不要把首次编译页数或样板中的页码写死。
 
@@ -67,6 +67,14 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 - 正文衬线，稿件类型与紧凑图注为无衬线，蓝色数字上标链接英文书目。保留公式编号、数学符号、跨图续句及正文实际有无小标题，不能将短篇研究强套综述结构。
 - 3页样板展示首页、跨栏主图与数学正文、扩展材料/报告表和末尾原文信息。图、公式、表格内容均为原创占位；示例报告字段不是期刊固定要求。作者单位移至摘要后是有意适配，不宣称与原刊逐像素一致。
 - 源文件中在线日期、正式刊期和版权年份可能不同，应分别记录。正文外的方法、扩展图、报告摘要及许可说明仍需完整处理；没有提供的补充材料不算已取得。
+
+## Nature Methods：Perspective / Analysis 扩展
+
+- 已核验两个版本：2026年观点文章，以及在线发表日期仍为 `xx xx xxxx` 的分析文章。纸张均为595.276 × 790.866 bp，左右边距约39.685/35.716，栏距12。源文首页橙色顶线下为刊名、稿件类型与DOI行、通栏题名，再接约1:2的日期窄栏与作者/摘要宽栏；同页进入双栏正文。
+- 中文样板采用正文9.05/12.1 bp、常规页顶部49 bp，属于中文重排适配；普通文字刊名替代官方标识。橙色顶线仅首页出现；常规页保留稿件类型、DOI占位、细线页眉与带独立中文译页的细线页脚。引文为蓝色数字上标，连接对应书目。
+- 3页中性演示覆盖首页、双栏文字、全宽中文表、浅灰底框文、原创矢量图和完整图注、书目、声明及文末原文信息。表、框、图均独立于正文，真实长表或长框需按内容重新分页；图页可能插在跨页续段中，抽取时应恢复完整句。
+- 出版字段按所给版本保留。在线日期未填时如实标注；不能据DOI年份、文件名或接受日期推断正式刊期、卷期和页码。图内英文保留时仍需完整标签释义；分析文章附带的扩展图、方法、报告表等均需按实际提供范围处理。
+- 样板无真实论文作者、DOI、原文图形、实验数据或下载来源信息；人工分页仅用于展示，不能直接作为目标论文页数约束。
 
 ## 新期刊或变体
 
