@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from seventeen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from eighteen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -113,7 +113,7 @@
         "3": "Article / advance-online opening with affiliation footnote",
         "4": "Article figure/text, Methods and extended-content coverage, declarations, placeholder references and ending source"
       },
-      "overview_policy": "Use only the existing page 1 Nature cover in the one-opening-per-journal overview; the Article variant is available within the individual four-page PDF. Still one Nature profile; total profiles17, journals15, individual demo pages52.",
+      "overview_policy": "Page 1 is included in the selected nine-journal 3x3 overview. All four individual demonstration pages are retained; Nature remains a single profile.",
       "figure_integrity_policy": "Crop each source figure using its measured bounds; actually purge excluded text and objects. Compare source-clip text and pixels after object processing; avoid a generic sanitizer when it changes embedded text metrics. Retain original raster data where the supplied source figure is raster.",
       "caption_size_leading_pt": [
         7.6,
@@ -189,6 +189,117 @@
       "observed_design": "Purple top rule; separate opening page with full-width title and authors, roughly 3:1 abstract/section-contents panels divided by a vertical rule, affiliations at the abstract foot; later two-column serif body with sans headings and ruled key points; full-width multipage table with repeated heading and column labels; blue journal name in ruled footer",
       "template_adaptation": "Four neutral pages; plain journal lettering instead of logo; separate Chinese page numbers; placeholder metadata, abstract, vector diagram, references and source information; 20 original placeholder rows demonstrate a two-page table without copying article data; 108 bp body top is a Chinese layout adaptation",
       "file": "nature-reviews-cardiology.tex"
+    },
+    "nature-reviews-neuroscience": {
+      "file": "nature-reviews-neuroscience.tex",
+      "journal": "Nature Reviews Neuroscience",
+      "reference_edition": "An inspected 2026 Review article advance-online edition, with an opening abstract/contents page, three scientific diagrams, a study-summary table, boxed texts and a glossary. No formal issue/page assignment was shown.",
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 39.685,
+        "right": 34.016,
+        "top": 114,
+        "bottom": 43
+      },
+      "column_gap_pt": 12,
+      "body_family": "serif",
+      "body_size_leading_pt": [
+        9.05,
+        12.1
+      ],
+      "caption_size_leading_pt": [
+        7.6,
+        9.2
+      ],
+      "citations": "Blue numeric superscripts linked to English bibliography targets",
+      "preview_pages": 4,
+      "dependencies": [
+        "common.tex",
+        "sample-body.tex"
+      ],
+      "source_observations": {
+        "status": "measured",
+        "paper_bp": [
+          595.276,
+          790.866
+        ],
+        "source_journal": "Nature Reviews Neuroscience",
+        "edition": "2026 Review article; no formal issue/page assignment shown",
+        "margins_bp": {
+          "left": 39.685,
+          "right": 34.016
+        },
+        "column_gap_bp": 12,
+        "second_column_x_bp": 306.1417,
+        "green_rule": {
+          "rgb": [
+            0.2539864182472229,
+            0.6789959669113159,
+            0.2859998345375061
+          ],
+          "nearest_hex": "#41AD49",
+          "x1_bp": 39.685,
+          "x2_bp": 561.26,
+          "cover_y_bp": 35.765625,
+          "width_bp": 3.5,
+          "appears_on_all_pages": true,
+          "regular_page_note": "The inspected ordinary pages have small source placement variations around y35.8–36.1bp; template uses the measured opening-page position consistently."
+        },
+        "link_footer_blue": {
+          "rgb": [
+            0,
+            0.409,
+            0.649
+          ],
+          "nearest_hex": "#0068A5"
+        },
+        "cover": {
+          "type_baseline_bp": 102.7108,
+          "type_font": "GraphikNaturel-Semibold 10bp",
+          "title_font": "Harding-Light 25bp",
+          "title_baselines_bp": [
+            139.8148,
+            166.8148
+          ],
+          "author_baseline_bp": 210.2147,
+          "author_font": "GraphikNaturel-Semibold9.25bp",
+          "abstract_font": "HardingText-Regular12bp",
+          "abstract_column_x_bp": 39.685,
+          "abstract_column_width_bp": 388.0,
+          "contents_x_bp": 438.3701,
+          "contents_width_bp": 122.89,
+          "abstract_label_baseline_bp": 228.2147,
+          "contents_label_baseline_bp": 229.1946,
+          "affiliations": "Under abstract, bottom of opening page, with 6pt source sans-serif."
+        },
+        "regular_pages": {
+          "type": "Review article, 14bp sans bold",
+          "type_baseline_approx_bp": 54,
+          "upper_content_rule_y_bp": 109.1748,
+          "upper_content_rule_width_bp": 0.35,
+          "body_font": "HardingText-Regular8.25bp",
+          "body_leading_bp": 10.75,
+          "footer_rule_y_approx_bp": 754.4,
+          "footer_journal_blue": true
+        },
+        "table_box_glossary": "Full-width summary table; pale-grey boxed text; a definition glossary can occupy the left column while prose continues on the right. All contents remain independently covered."
+      },
+      "observed_design": "Green rule on every page, regular-weight/light serif cover title, full-width authors followed by a separate abstract/contents opening page, affiliations at abstract foot, sans-serif type and section headings, serif two-column body, blue citations and journal footer, full-width study table, pale-grey boxes and a glossary.",
+      "template_adaptation": "Four original neutral pages demonstrate opening abstract/contents, full-width vector figure with two-column prose, study-summary table and box, and glossary/declarations/English placeholder references/final source information. Source commercial fonts are replaced by TeX Gyre and Noto/Fandol. Regular-weight Chinese title25/29bp, abstract11.5/16bp, body9.05/12.1bp and caption7.6/9.2bp are explicit Chinese adaptations. The all-page top rule uses the exact measured green RGB. Plain journal lettering replaces the official logo. Short demonstrations use manual pagination; full papers repaginate by actual content.",
+      "preview_roles": {
+        "1": "Opening abstract and contents",
+        "2": "Figure and prose",
+        "3": "Summary table and boxed text",
+        "4": "Glossary, declarations, bibliography and final source information"
+      },
+      "scope": "All prose, fictional author/affiliation placeholders, diagram and table are original neutral examples. No actual paper title, authors, DOI, data, original figures, download information, institutional identifiers or official logo are included.",
+      "edition_policy": "Retain missing publication dates, issue, volume or final page assignment as missing. Verify visible page layers against extracted text; do not infer values from PDF generation date, filename or DOI year.",
+      "figure_integrity_policy": "Measure each diagram independently, retain complete panels/legends and actually purge crop-excluded text and master-page objects. Preserve vector text metrics and compare source-clip text and pixels. Remove deleted resource entries themselves, rather than leaving null XObject dictionary keys.",
+      "overview_policy": "Not included in the selected nine-journal 3x3 overview. All four individual demonstration pages and the template remain available as a single Nature Reviews Neuroscience profile.",
+      "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     },
     "nature-biotechnology": {
       "reference_edition": "Nature Biotechnology 44 (June 2026), supplied Brief Communication edition published online in July 2025",

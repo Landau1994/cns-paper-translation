@@ -1,10 +1,10 @@
 # 期刊配置与样板使用
 
-这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
+这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Reviews Neuroscience 2026 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供17套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留共52页单独演示 PDF 与对应页面预览，也可先查看 [15本期刊各一张首页的总览（3列×5行）](../assets/previews/overview.png)。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。总览共15格，综述首页、图文、长表及框文等细节见各期刊单独PDF。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供18套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留全部16本期刊、共56页单独演示PDF及对应页面预览，也可先查看[九本期刊各一张首页的总览（3列×3行）](../assets/previews/overview.png)。第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。其余7本期刊、其他首页、图文、长表及框文均保留在各期刊单独PDF，不进入总览。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方logo。共享文件须与入口文件一起复制到工作目录。
 
 指南变体另见 [Circulation指南PDF](../assets/previews/circulation-guideline.pdf) 和 [EHJ／ESC指南PDF](../assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
@@ -17,7 +17,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 xelatex -interaction=nonstopmode -halt-on-error cell.tex
 ```
 
-其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-biotechnology.tex`、`nature-methods.tex`、`circulation.tex`、`circulation-research.tex`、`european-heart-journal.tex`、`circulation-guideline.tex`、`european-heart-journal-guideline.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
+其余样板分别使用 `nature.tex`、`science.tex`、`immunity.tex`、`nature-reviews-cardiology.tex`、`nature-reviews-neuroscience.tex`、`nature-biotechnology.tex`、`nature-methods.tex`、`circulation.tex`、`circulation-research.tex`、`european-heart-journal.tex`、`circulation-guideline.tex`、`european-heart-journal-guideline.tex`。需要 XeLaTeX 及相应 TeX 包；字体优先使用本机可用的中文字体并提供 TeX 字体回退。不要将某台机器的 TeX/Python 绝对路径写入通用模板。
 
 实际文章的图形、表格和长书目远超演示；必须重新编译、检查浮动体、渲染全部页面。不要把首次编译页数或样板中的页码写死。
 
@@ -39,7 +39,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 
 ## Nature：2026年提前在线Article补充
 
-Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，模板总数17、期刊15；演示总页数为52。总览仍只使用原第1页，不重复增加Nature封面。
+Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，当前模板总数18、期刊16；演示总页数为56。总览仍只使用原第1页，不重复增加Nature封面。
 
 新观察来自2026年提前在线Article版本，纸型595.276×790.866bp，左版心39.685bp、右侧规则线x561.26bp；元数据窄栏166.3bp，作者摘要区x217.3238bp、宽343.936bp。源左竖线x34.1033bp、y28.3463至743.5153bp，线宽0.35bp，黑色#000000；源类型字14bp、题名26bp、摘要9bp、普通正文8.25/10.75bp。新增两页用独立Article版心，原Review源码段与前两页可见内容、文字及216dpi像素保持不变。字体回退、25/31bp中文题名、10.2/14bp摘要、9.05/11.95bp正文与7.6/9.2bp图注是中文适配。
 
@@ -73,6 +73,17 @@ Nature保留原有两页Review演示，并新增两页研究论文Article变体�
 - 全宽长表采用单栏跨页结构，重复续表标题和列头，保留分组及末尾完整缩写说明。不要用表格截图代替中文表，也不要为保持原页数缩成不可读字号。
 - 图像与长图注可分属相邻原页，提取时逐项定位。图内时间线等整句文字需在中文标签对照中完整呈现，不能只解释蛋白名。
 - 4页中性样板展示独立摘要目录、双栏图文及两页续表；普通文字刊名替代品牌图像，参考文献和原文信息均为占位，未收入真实文章内容或图形。
+
+## Nature Reviews Neuroscience：Review article 扩展
+
+- 来源为核验的2026年提前在线综述版本，纸型595.276×790.866bp；左右边距39.685/34.016bp，双栏距12bp、第二栏起点x306.1417bp。普通源文为HardingText 8.25/10.75bp；中性样板正文起点114bp、下边距43bp、正文9.05/12.1bp、图注7.6/9.2bp，属于中文适配。
+- 绿色顶线每页均保留，不只用于首页。源RGB精确为`(0.2539864182472229,0.6789959669113159,0.2859998345375061)`，最接近8位色为`#41AD49`；入口使用原RGB。线宽3.5bp，x39.685至561.26bp，首页y35.765625bp。普通源页有约35.8至36.1bp的小幅位置变化，样板统一采用核验的首页位置。引文、DOI及页脚刊名蓝源RGB为`(0,0.409,0.649)`，最接近8位色为`#0068A5`。
+- 首页为轻字重衬线题名、通栏作者、独立摘要与章节目录；左摘要约388bp，右目录约122.89bp，以细竖线分隔，作者单位置于摘要底部。源题名Harding-Light 25bp不能替换成粗题名；中性入口以可移植常规字重中文字体保留其层级，题名25/29bp、摘要11.5/16bp是明确适配。普通页文章类型为无衬线，正文区上方与页脚均有细线。普通文字刊名替代官方字标，不复制商业字体或标识。
+- 4页原创中性演示依次为摘要目录首页、双栏正文与通栏矢量图、汇总表与浅灰框文、术语表及声明/英文示例书目/文末原文信息。入口为[nature-reviews-neuroscience.tex](../assets/templates/nature-reviews-neuroscience.tex)，另有[4页PDF](../assets/previews/nature-reviews-neuroscience.pdf)；使用共享`common.tex`与`sample-body.tex`，复制整个模板目录以保留依赖。汇总表采用可重复列头的`longtable`；演示人工分页不限制真实全文的页数。
+- 图、完整图注、表、框、术语表及重点书目评注独立核对。图可能位于完整图注的下一页，先恢复实际阅读顺序；竖图与长图注可采用左右并排。图内整句、侧栏与图例都需提供完整中文释义。逐幅测量真实裁区并比较源裁区的文字与像素；实际移除裁区外文本及对象，删除的资源键也应真正清除，不能留下null项或仅改CropBox。保留矢量字体宽度，避免通用清理改变图内文字排布。
+- 源版本缺少在线日期、正式卷期、原刊页码时如实保留缺项，不根据文件名、PDF生成日期或DOI年份补造。样板仅含原创中性文字、虚构作者单位、占位书目和TikZ示意图，不含真实论文全文、作者、DOI、科学数据、原图或下载信息。本刊不进入九刊3×3总览，四页单独预览与模板完整保留。
+
+仅供学术交流、出版物版权归原作者及出版商所有。
 
 ## Nature Biotechnology：Brief Communication 扩展
 

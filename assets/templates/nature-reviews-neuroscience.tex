@@ -1,0 +1,142 @@
+% Nature Reviews Neuroscience: source-inspired original neutral demonstration.
+% No real article text, scientific data, author list, DOI, or original figures.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=39.685bp,right=34.016bp,top=114bp,bottom=43bp,headheight=20bp,headsep=42bp,footskip=24bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,longtable,array,booktabs,tabularx}
+\newcommand{\JournalName}{Nature Reviews Neuroscience}
+% Source stroke RGB retained, rather than rounding to #41AD49.
+\definecolor{NRGreen}{rgb}{.2539864182472229,.6789959669113159,.2859998345375061}
+\definecolor{NRBlue}{HTML}{0068A5}
+\definecolor{NRBox}{HTML}{F0F0F5}
+\hypersetup{linkcolor=NRBlue,urlcolor=NRBlue,pdftitle={Nature Reviews Neuroscience风格中文中性样板},pdfauthor={原创中性示例；非期刊官方模板}}
+\setlength{\columnsep}{12bp}\setlength{\parindent}{1em}\setlength{\parskip}{1.5bp}\setlength{\multicolsep}{6bp}
+\renewcommand{\normalsize}{\fontsize{9.05bp}{12.1bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{11bp}{13.5bp}\selectfont,beforeskip=8bp,afterskip=3bp},subsection={format=\sffamily\bfseries\fontsize{9.7bp}{12.1bp}\selectfont,beforeskip=6bp,afterskip=2bp}}
+\newcommand{\NRCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newenvironment{NRColumns}{\begin{multicols}{2}\normalsize}{\end{multicols}}
+\fancyhf{}
+\AddToHook{shipout/foreground}{\begin{tikzpicture}[remember picture,overlay]
+\draw[NRGreen,line width=3.5bp]([xshift=39.685bp,yshift=-35.765625bp]current page.north west)--([xshift=561.26bp,yshift=-35.765625bp]current page.north west);
+\ifnum\value{page}=1
+\node[anchor=base west,inner sep=0,font=\sffamily\fontsize{13.5bp}{17bp}\selectfont]at([xshift=39.685bp,yshift=-52.5bp]current page.north west){nature reviews neuroscience};
+\node[anchor=base east,inner sep=0,text=NRBlue,font=\sffamily\fontsize{7.4bp}{9bp}\selectfont]at([xshift=561.26bp,yshift=-48.8bp]current page.north west){DOI：按目标来源核实};
+\node[anchor=base west,inner sep=0,font=\sffamily\bfseries\fontsize{10bp}{12bp}\selectfont]at([xshift=39.685bp,yshift=-102.7108bp]current page.north west){Review article};
+\draw[black,line width=.35bp]([xshift=39.685bp,yshift=-109.0905bp]current page.north west)--([xshift=561.26bp,yshift=-109.0905bp]current page.north west);
+\else
+\node[anchor=base west,inner sep=0,font=\sffamily\bfseries\fontsize{14bp}{17bp}\selectfont]at([xshift=39.685bp,yshift=-53.8bp]current page.north west){Review article};
+\draw[black,line width=.35bp]([xshift=39.685bp,yshift=-109.1748bp]current page.north west)--([xshift=561.26bp,yshift=-109.1748bp]current page.north west);
+\fi
+\draw[black,line width=.35bp]([xshift=39.685bp,yshift=-754.4bp]current page.north west)--([xshift=561.26bp,yshift=-754.4bp]current page.north west);
+\node[anchor=base west,inner sep=0,text=NRBlue,font=\sffamily\fontsize{7.4bp}{9bp}\selectfont]at([xshift=39.685bp,yshift=-769bp]current page.north west){Nature Reviews Neuroscience};
+\node[anchor=base east,inner sep=0,font=\sffamily\fontsize{7bp}{9bp}\selectfont]at([xshift=561.26bp,yshift=-769bp]current page.north west){非官方中性样板\quad 中文译页\ \thepage};
+\end{tikzpicture}}
+\newcommand{\NeutralParagraph}{本段用于检查中文综述的连续阅读，不报告实际科学发现。正式译稿需要保留每个论点的对象、证据、比较方向和限定条件，分别核对正文、图注、表格和框文的完整范围。字体与行距可以适配中文，但不能以固定示例页数代替内容核对。\par}
+\begin{document}\normalsize
+% Regular-weight serif title intentionally follows the source's light hierarchy.
+{\noindent\mdseries\fontsize{25bp}{29bp}\selectfont 中文综述题名占位：从完整材料\\到可追溯的研究论述\par}\vspace{35bp}
+{\noindent\sffamily\bfseries\fontsize{9bp}{11.5bp}\selectfont 示例作者甲\textsuperscript{1,2}，示例作者乙\textsuperscript{1,3}，示例作者丙\textsuperscript{2,3}与示例作者丁\textsuperscript{1,*}\par}
+\vspace{4bp}\hrule height .35bp\vspace{4bp}
+\noindent\begin{minipage}[t][519bp][t]{388.0bp}\vspace{0pt}
+{\sffamily\bfseries\fontsize{10bp}{12bp}\selectfont 摘要\par}\vspace{17bp}\hrule height .3bp\vspace{5bp}
+{\fontsize{11.5bp}{16bp}\selectfont\setlength{\parindent}{0pt}
+本页展示一套综述首页的结构，全部文字均为原创中性占位，不包含实际研究结果或临床建议。题名采用常规字重衬线体，作者区位于其下方，摘要与章节目录并列，以细线清楚区分。正式译稿必须完整替换题名、作者、单位、摘要和出版信息；本例的字数、段数与署名数量不构成期刊要求。\par\smallskip
+综述中的概念、数据、证据与推论各有独立作用。翻译应沿用原作者的论证顺序，区分观察、关联、实验验证和未来设想，不把探索性框架写成已经建立的结论。原文中的否定、比较方向、不确定性及物种范围都需要保留；词句相近的段落也不能擅自合并。\par\smallskip
+完整内容不只包括连续正文。图表、完整图注、框文、术语表、书目评注以及作者和出版声明，都有各自的来源位置和信息范围。重排中文时可以改变分页，原来的图号、文献号、术语对应和内容边界仍应可追溯。正文中仅提及、但未随文件提供的附件，不能算作已经取得或翻译。\par\smallskip
+排版应保留来源的纸型、栏结构、层级和色彩关系。首页与普通正文页的题名、页眉及留白并不相同，不能用同一段固定高度替代实际测量。图像应在相应论述附近出现，长图注和中文表格按真实长度处理。所有文字仅用于检验本中性示例的阅读与版面，不对应任何疾病、实验或生物学主张。\par\smallskip
+同一期刊的不同年代或文体，可能共享部分外观，同时采用不同的内容组织方式。应先检查所给首页、正文、图表页和末页，再决定哪些结构可以复用。完整性核对与视觉核对各有作用：前者确认材料没有漏译、重译或串接，后者检查图像边界、字形、层级与分页。两类核验通过以后，才形成可编辑源文件与最终阅读版本。\par}
+\vfill\hrule height .3bp\vspace{4bp}
+{\sffamily\fontsize{7.2bp}{9.4bp}\selectfont\noindent
+\textsuperscript{1}作者单位一（原创中性占位）：机构、城市与国家按所给原文填写。
+\textsuperscript{2}作者单位二（中性占位）。\textsuperscript{3}作者单位三（中性占位）。
+*通信作者与联系方式按来源填写；本页无真实姓名、机构或邮箱。
+仅供学术交流、出版物版权归原作者及出版商所有。\par}
+\end{minipage}\hfill\vrule width .3bp\hfill
+\begin{minipage}[t][519bp][t]{122.0bp}\vspace{0pt}\sffamily\fontsize{8.6bp}{11.5bp}\selectfont
+{\bfseries\fontsize{10bp}{12bp}\selectfont 章节目录\par}\vspace{17bp}\hrule height .3bp\vspace{5bp}
+引言\par\vspace{5bp}\hrule\vspace{5bp}
+证据与概念的对应\par\vspace{5bp}\hrule\vspace{5bp}
+图文与完整图注\par\vspace{5bp}\hrule\vspace{5bp}
+研究汇总表与框文\par\vspace{5bp}\hrule\vspace{5bp}
+术语、声明与书目\par\vspace{5bp}\hrule\vspace{5bp}
+原文信息\par\vspace{5bp}\hrule
+\end{minipage}
+\clearpage
+\begin{NRColumns}
+\section*{正文与图文的衔接}
+\NeutralParagraph
+\subsection*{证据与描述范围}
+不同材料可能反映不同层级的证据。原文将技术能力、观察发现和拟议机制分别陈述时，译文也应保持这一层次。一个示意图中的箭头不应被自动解释成已经获得因果验证\NRCite{1}。\par
+\subsection*{完整段落的对应}
+图像可能位于跨页续段之间，图注也可能出现在图像前一页。应先恢复原文的连续阅读顺序，再确定译文图文位置，避免丢失续句、重复图注或遗漏缩写。
+\end{NRColumns}
+\vspace{5bp}\noindent\begin{minipage}{\linewidth}\centering
+\begin{tikzpicture}[font=\sffamily\fontsize{9bp}{12bp}\selectfont,node distance=20bp,
+box/.style={draw=black!55,fill=black!3,minimum width=125bp,minimum height=60bp,align=center}]
+\node[box](a){\textbf{A}\quad 来源材料\\原编号与内容范围};
+\node[box,right=of a](b){\textbf{B}\quad 转写与翻译\\保留限定与比较};
+\node[box,right=of b](c){\textbf{C}\quad 核验与交付\\完整正文及出处};
+\draw[-{Stealth[length=2.2mm]},line width=.7bp](a)--(b);\draw[-{Stealth[length=2.2mm]},line width=.7bp](b)--(c);
+\end{tikzpicture}\par\vspace{6bp}
+{\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\raggedright\textbf{图1｜材料转换的对应关系（原创中性占位，无实验数据）。}A，输入材料按实际所给版本记录。B，转写与翻译分别保留原编号、概念和限定。C，输出需要核对正文、图注、表格、框文和文末信息的完整性。箭头只示意阅读顺序，不表示因果关系、效应方向、时间长度或数量变化。本图没有样本、数据点、误差线、统计检验或比例尺。\par}
+\end{minipage}\vspace{7bp}
+\begin{NRColumns}
+\subsection*{科学原图与标签释义}
+保留原图时应完整翻译图注，并提供非专有英文标签、整句说明、图例和流程节点的中文对应。基因、蛋白、数字及科学坐标不能因排版需要而改写。长标签释义可独立附于文末，并清楚标明图号\NRCite{2}。\par
+\NeutralParagraph
+\subsection*{裁图与颜色核验}
+图像边界应逐幅测量，不沿用其他文章的固定坐标。处理下载来源时须定位实际对象，确认科学图的全部面板、边缘和尺度均被保留。只改变裁区并不能证明裁区外的文字已从文件中移除。\par
+对照来源渲染图检查文字和像素，可以识别通用清理造成的字体宽度、面板位置或颜色变化。检查记录应区分科学内容变化与纯版式适配。
+\end{NRColumns}
+\clearpage
+\section*{表1｜汇总材料的独立记录（原创占位）}
+{\sffamily\fontsize{8bp}{10.5bp}\selectfont\setlength{\tabcolsep}{5bp}
+\begin{longtable}{@{}p{70bp}p{105bp}p{\dimexpr\linewidth-195bp\relax}@{}}
+\toprule 材料类别 & 需要核对的字段 & 中性记录说明\\\midrule\endfirsthead
+\multicolumn{3}{l}{\bfseries 表1（续）｜汇总材料的独立记录}\\[4bp]
+\toprule 材料类别 & 需要核对的字段 & 中性记录说明\\\midrule\endhead
+正文 & 论点、对象与限定 & 对应来源的完整段落；表中摘要不代替正文。\\[6bp]
+图像 & 面板、图例与尺度 & 图形全部为演示占位；实际图像按目标来源核对。\\[6bp]
+图注 & 样本、比较与缩写 & 实际源文报告的数值和统计限定不因图中已有标记而省略。\\[6bp]
+框文 & 所有标题与条目 & 框文独立于正文维护，不把中性示例改写成研究发现。\\[6bp]
+术语 & 缩写、定义与范围 & 定义需依照当前文章，不能从另一篇文章直接继承。\\[6bp]
+书目 & 原文条目与编号 & 保留英文书目，中文评注另行呈现；链接对应原编号。\\[6bp]
+声明 & 贡献、利益与许可 & 来源实际提供的每项声明均应完整覆盖；缺失字段不编造。\\[6bp]
+\bottomrule\end{longtable}
+\noindent 表注：本表无真实论文、队列、平台性能或实验数据。所有条目只记录材料层级，不是正式研究的固定纳入标准。\par}
+\vspace{8bp}\noindent\colorbox{NRBox}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+\sffamily\fontsize{8.5bp}{11.5bp}\selectfont
+\textbf{框1｜完整内容的覆盖边界（原创中性占位）}\par\smallskip
+\textbf{实际取得的材料。}正文、图表、框文、术语表、作者声明和原文信息需分别登记。原文仅引用某个独立补充文件，并不意味着该文件已随输入提供。\par\smallskip
+\textbf{翻译与摘要的区别。}全文转换应保留全部论述、定义、条件和编号。中性样板只用于演示结构，不能用模板的短文字代替实际文章的完整内容。\par\smallskip
+\textbf{版式与科学内容。}字体回退、中文行距和分页可以调整；作者给出的比较方向、因果强度、物种及适用范围应保持不变。\par\smallskip
+\textbf{发现来源差异时。}可见页面、底层文本和出版字段出现差异时，先回到原页核对，再明确说明依据；不从文件名推填缺失的在线日期、卷期或页码。\par
+\end{minipage}}\par\vspace{8bp}
+\begin{NRColumns}\subsection*{表格与框文的复核}
+\NeutralParagraph
+多页表格可使用重复列头，保持分组与表注归属。框文可在清楚的边界处分段续排，但不能截去末尾项目。字体和行距的紧凑处理不能替代对每一行的完整翻译。
+\end{NRColumns}
+\clearpage
+\noindent\begin{minipage}[t]{254.7bp}\vspace{0pt}
+\section*{术语表（原创中性占位）}
+{\sffamily\fontsize{8.1bp}{10.7bp}\selectfont
+\textbf{来源版本}\par 实际提供的文件及其出版身份，不用文件名推断后续版本。\par\smallskip
+\textbf{内容覆盖}\par 能逐项映射到输出的实际材料范围，不包括未取得的独立附件。\par\smallskip
+\textbf{图注}\par 解释原图面板、限定、缩写及统计信息的独立文字，不是可省略的装饰。\par\smallskip
+\textbf{术语对应}\par 当前文章中概念、缩写与定义的可追溯关系。\par\smallskip
+\textbf{书目目标}\par 供原编号引文跳转的对应条目。\par\smallskip
+\textbf{版式适配}\par 因中文长度和字体回退作出的阅读调整，不改变科学内容。\par\smallskip
+\textbf{原文信息}\par 文末对作者、英文原题、期刊、日期、卷期页码和DOI的完整来源记录。\par}
+\section*{核验记录}
+\NeutralParagraph
+逐段检查与逐页渲染应分别保留记录。文本提取完整不等于图像边界完整，页面看起来整齐也不证明内部引文链接都有效。\par
+\end{minipage}\hfill\begin{minipage}[t]{254.7bp}\vspace{0pt}
+\section*{声明（原创占位）}
+本样板无真实研究、实验对象、资助、作者贡献或利益冲突。实际文章中的这些声明应按源文分别处理，不因它们位于书目后而遗漏。\par
+本例以普通文字刊名与可移植字体展示已核验结构，不含期刊官方标识图像、真实论文题名、作者、DOI或原图，不代表期刊官方模板或出版认可。\par
+\SampleBibliography
+\SampleSourceInfo
+仅供学术交流、出版物版权归原作者及出版商所有。\par
+\end{minipage}
+\end{document}

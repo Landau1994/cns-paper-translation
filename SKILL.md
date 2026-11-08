@@ -1,11 +1,11 @@
 ---
 name: cns-paper-translation
-description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，另含Circulation及EHJ指南变体；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
+description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，另含Circulation及EHJ指南变体；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
 ---
 
 # CNS 论文汉化
 
-把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展及两种指南变体；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
+把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展及两种指南变体；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
 
 ## 选择入口
 
@@ -34,17 +34,20 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Nature Genetics | [nature-genetics.tex](assets/templates/nature-genetics.tex) | 绿色首页顶线、黑色大题名、约1:2日期与作者摘要区、Article/Review首页结构、双栏图文及方法扩展 |
 | Immunity | [immunity.tex](assets/templates/immunity.tex) | Cell 家族布局、蓝色刊头、数字上标引文 |
 | Nature Reviews Cardiology | [nature-reviews-cardiology.tex](assets/templates/nature-reviews-cardiology.tex) | 紫色顶线、独立摘要目录页、蓝色上标、跨页表格 |
+| Nature Reviews Neuroscience | [nature-reviews-neuroscience.tex](assets/templates/nature-reviews-neuroscience.tex) | 每页绿色顶线、轻字重题名、独立摘要目录页、蓝色上标、汇总表/框文/术语表 |
 | Nature Biotechnology | [nature-biotechnology.tex](assets/templates/nature-biotechnology.tex) | 简讯首页黄色顶线、约1:2日期/摘要区、双栏数学正文、蓝色上标 |
 | Nature Methods | [nature-methods.tex](assets/templates/nature-methods.tex) | 橙色首页顶线、约1:2日期/摘要区、双栏正文、通栏表/框/图、蓝色上标 |
 | Circulation Research | [circulation-research.tex](assets/templates/circulation-research.tex) | 蓝色综述类型线、全宽摘要同页接双栏、长缩写框、通栏图注、黑色上标 |
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览为3列×5行，每本期刊仅展示一张首页，共15本期刊、15格。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。完整的17套样板、52页单独演示均保留，其他首页与图文、长表、框文等细节见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
+总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部16本期刊、18套样板和56页单独演示仍完整保留；其余7本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
 
 指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
 Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年提前在线Article结构的两页中性演示，展示研究首页、通栏作者单位脚注、图文和方法／扩展内容。Nature仍只计一套样板，总览继续仅采用原第1页。
+
+Nature Reviews Neuroscience的4页中性演示覆盖独立摘要目录、双栏图文、汇总表与框文、术语表及文末资料。绿色顶线采用核验的原RGB，每页均保留；轻字重衬线题名以常规字重中文字体适配，不直接套用Nature Reviews Cardiology的紫色主题或粗题名。图注字号与行距为7.6/9.2bp；完整译稿仍按实际图文自然重排。
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 
@@ -87,3 +90,5 @@ Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年
 - 可运行 [audit_pdf.py](scripts/audit_pdf.py) 检查明确的下载词条、内部链接、预期引文目标数量及编译日志。先读 `--help`；该脚本只读 PDF，不负责删除，也不能证明未知水印或图内文字全部无误。
 - 默认交付最终 PDF 与可编辑源文件包。源包用明确文件清单，只收正文数据、书目、TeX、干净素材和复现所需脚本/检查记录，排除原始全文、下载信息、旧版本、临时抽取与机器专属路径。
 - 回复说明产物、版式和有意义的范围限制。不要把样板 PDF 当作已完成的真实论文，也不要把本技能描述成期刊官方授权产品。
+
+仅供学术交流、出版物版权归原作者及出版商所有。
