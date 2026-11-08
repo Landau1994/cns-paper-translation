@@ -23,7 +23,7 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | 样板 | 入口 | 主要区别 |
 |---|---|---|
 | Cell | [cell.tex](assets/templates/cell.tex) | 通栏题名摘要、双栏、红色层级、作者—年份引文 |
-| Nature | [nature.tex](assets/templates/nature.tex) | 衬线黑白、出版信息窄栏、数字上标引文 |
+| Nature | [nature.tex](assets/templates/nature.tex) | Review与提前在线Article、黑白衬线、元数据窄栏与作者摘要宽栏、首页单位脚注、数字上标引文 |
 | Science | [science.tex](assets/templates/science.tex) | 独立研究摘要页、正文左栏起题名、斜体括号数字引文 |
 | NEJM | [nejm.tex](assets/templates/nejm.tex) | 红色刊名、米底研究类型与摘要横栏、灰作者、右侧出版信息及米底图注 |
 | The Lancet | [lancet.tex](assets/templates/lancet.tex) | 绿色外侧页签与细线、黑色题名、绿色作者、外侧单位栏、衬线双栏及检索框 |
@@ -40,9 +40,11 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览为3列×5行，每本期刊仅展示一张首页，共15本期刊、15格。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。完整的17套样板、50页单独演示均保留，其他首页与图文、长表、框文等细节见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
+总览为3列×5行，每本期刊仅展示一张首页，共15本期刊、15格。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。完整的17套样板、52页单独演示均保留，其他首页与图文、长表、框文等细节见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
 
 指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
+
+Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年提前在线Article结构的两页中性演示，展示研究首页、通栏作者单位脚注、图文和方法／扩展内容。Nature仍只计一套样板，总览继续仅采用原第1页。
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 

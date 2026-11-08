@@ -4,7 +4,7 @@
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供17套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留共50页单独演示 PDF 与对应页面预览，也可先查看 [15本期刊各一张首页的总览（3列×5行）](../assets/previews/overview.png)。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。总览共15格，综述首页、图文、长表及框文等细节见各期刊单独PDF。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供17套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留共52页单独演示 PDF 与对应页面预览，也可先查看 [15本期刊各一张首页的总览（3列×5行）](../assets/previews/overview.png)。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。总览共15格，综述首页、图文、长表及框文等细节见各期刊单独PDF。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
 
 指南变体另见 [Circulation指南PDF](../assets/previews/circulation-guideline.pdf) 和 [EHJ／ESC指南PDF](../assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
@@ -36,6 +36,18 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 - 首页全宽题名，出版信息窄栏与作者/摘要宽栏约 1:2。引文为数字上标。
 - 图下注可按图形选双栏排注。原文“重点文献评注”独立于英文书目，翻译后也应保留对应关系。
 - 给已有译稿补文末出处时，仅增补末页所需内容，先前页面在无重排需要时保持不变。
+
+## Nature：2026年提前在线Article补充
+
+Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，模板总数17、期刊15；演示总页数为52。总览仍只使用原第1页，不重复增加Nature封面。
+
+新观察来自2026年提前在线Article版本，纸型595.276×790.866bp，左版心39.685bp、右侧规则线x561.26bp；元数据窄栏166.3bp，作者摘要区x217.3238bp、宽343.936bp。源左竖线x34.1033bp、y28.3463至743.5153bp，线宽0.35bp，黑色#000000；源类型字14bp、题名26bp、摘要9bp、普通正文8.25/10.75bp。新增两页用独立Article版心，原Review源码段与前两页可见内容、文字及216dpi像素保持不变。字体回退、25/31bp中文题名、10.2/14bp摘要、9.05/11.95bp正文与7.6/9.2bp图注是中文适配。
+
+提前在线版本没有正式卷期页码时，须记录未分配，不根据文件名或DOI年份补造。收稿、接受、在线发表、PDF生成时间与正式刊期是不同字段；若可见页面的日期覆盖层与底层提取占位文字不同，以核对后的可见版本为依据并说明来源差异。全文实际提供的Methods、扩展图与Reporting Summary各为独立覆盖项；后者保留原研究回答与未填提示的区别。
+
+新图、作者、单位、文字和书目全部为原创中性占位，不含真实论文题名、DOI、研究数据、原图、邮箱、下载标记或官方标识。原论文素材仅留于任务工程。复制整个模板目录以保留common.tex和sample-body.tex；人工分页仅用于短演示，真实全文需按完整图注与正文重新排版。
+
+仅供学术交流、出版物版权归原作者及出版商所有。
 
 ## Science：Research Article 参考配置
 

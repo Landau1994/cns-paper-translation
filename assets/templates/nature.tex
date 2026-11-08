@@ -15,7 +15,7 @@
 \renewcommand{\headrulewidth}{.3bp}
 \fancyfoot[L]{\sffamily\fontsize{7.5bp}{9bp}\selectfont\textbf{中文译页\ \thepage}\quad |\quad Nature}
 \fancyfoot[R]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中文译稿示例}
-\AddToShipoutPictureBG{\AtPageLowerLeft{\put(34,43){\rule{.3bp}{719bp}}}}
+\AddToShipoutPictureBG{\AtPageLowerLeft{\ifnum\value{page}<3\put(34,43){\rule{.3bp}{719bp}}\else\put(33.9283,47.3507){\rule{.35bp}{715.169bp}}\fi}}
 \begin{document}\normalsize
 \twocolumn[{\noindent{\bfseries\fontsize{25bp}{31bp}\selectfont\PaperTitle\par}\vspace{16bp}\hrule height .3bp\vspace{6bp}
 \noindent\begin{minipage}[t]{.32\textwidth}\vspace{0pt}\sffamily\fontsize{7.5bp}{10bp}\selectfont
@@ -32,4 +32,97 @@ DOI：待核实\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
 \twocolumn[{\begin{center}\begin{minipage}{.78\textwidth}\DemoVector\end{minipage}\end{center}\vspace{3bp}
 \noindent{\sffamily\fontsize{7.7bp}{10.3bp}\selectfont\DemoCaption\par}\vspace{13bp}}]
 \balance\SampleClosing
+
+% Additional Article / advance-online demonstration. The Review pages above
+% retain identical text and page pixels; all new material below is neutral prose.
+\clearpage\nobalance
+\newgeometry{left=39.685bp,right=34.016bp,top=49bp,bottom=42.866bp,headheight=20bp,headsep=4bp,footskip=23bp}
+\onecolumn
+\fancyhead[L]{\bfseries\fontsize{14bp}{18bp}\selectfont Article}
+\fancyfoot[L]{\sffamily\fontsize{7.5bp}{9bp}\selectfont\textbf{中文译页\ \thepage}\quad |\quad Nature}
+\newcommand{\ArticleCite}[1]{\textsuperscript{\hyperlink{article-ref:#1}{#1}}}
+\noindent{\bfseries\fontsize{25bp}{31bp}\selectfont 中文研究题名占位：从完整资料的连续记录\\到研究内容的可核验表达\par}
+\vspace{16bp}\hrule height .3bp\vspace{6bp}
+\noindent\begin{minipage}[t]{166.3bp}\vspace{0pt}\sffamily\fontsize{7.8bp}{10.5bp}\selectfont
+DOI：按所给原稿核实\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+收稿日期：按原稿填写\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+接受日期：按原稿填写\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+在线发表：按页面核对\par\vspace{4bp}\hrule height .3bp\vspace{7bp}
+提前在线版无卷期页码时，明确记录当前版本，不自行补造。\par\smallskip
+可见页面与提取文字不同时，需对照图像；若仍无法确定，应说明来源差异。
+\end{minipage}\hfill\begin{minipage}[t]{343.9bp}\vspace{0pt}
+{\sffamily\bfseries\fontsize{8.7bp}{11.5bp}\selectfont
+示例作者甲\textsuperscript{1,7}，示例作者乙\textsuperscript{1,7,*}，示例作者丙\textsuperscript{2,7}，示例作者丁\textsuperscript{3}，示例作者戊\textsuperscript{4}，示例作者己\textsuperscript{5}，示例作者庚\textsuperscript{6}与示例作者辛\textsuperscript{1,*}\par}
+\vspace{11bp}\hrule height .3bp\vspace{6bp}
+{\fontsize{10.2bp}{14bp}\selectfont\setlength{\parindent}{0pt}
+本页展示研究论文与提前在线版本的首页结构。题名、作者、日期、摘要和单位均为原创中性占位，不报告真实发现。不同文体可以共享期刊的黑白层级与栏宽，但出版字段及实际内容仍须按所给文章独立核对。正式译稿应完整保留研究问题、分析方法、结果及其限定，不能为了适配本例篇幅缩成摘要。\par\smallskip
+日期与出处应具有明确依据。文件名、接受日期、PDF生成日期和DOI中的年份，均不能直接代替在线发表时间；未分配正式卷期页码时，也不应按另一篇文章补写。页面显示日期与底层提取文字不一致时，需要检查可见页面及其版本，记录判断所依据的信息。\par\smallskip
+作者单位在本页以通栏脚注示意。实际机构名称、单位序号、共同贡献和通信作者对应关系，均应保持完整。前两页的综述演示与本页研究论文演示属于同一期刊的文体差异，不在总览中重复计为新期刊。\par\smallskip
+正文、方法、扩展图表和报告摘要有各自的覆盖范围。只有实际收到的材料才能计为已翻译；正文中引到的独立附件若未提供，应如实说明。图内英文保留时，完整图注及标签释义仍应译成中文。此页全部内容只用于测试版面，不构成科研结果或实验建议。
+\par}
+\end{minipage}\par\vspace{10bp}\hrule height .3bp\vspace{9bp}
+\noindent\begin{minipage}[t]{\dimexpr\linewidth/2-6bp\relax}\vspace{0pt}\normalsize
+\section*{研究论文开篇（原创占位）}
+实际论文常在摘要下接入双栏正文。译文应保留作者的论证顺序，不因标题或摘要长度变化而省去开篇段落。正文第一次实质讨论某幅图时，应能找到相应图像与完整图注\ArticleCite{1}。\par
+本页短段落只演示栏结构，不预设完整文章的段数。科学原图中的坐标、单位、误差线、统计说明与颜色对应均需分别核对。
+\par 科学叙述包含比较、否定和不确定性。原作者若把观察结果与可能解释分别陈述，译文也应保持这一层次，不把相关性改写成因果关系。段落在图表附近中断时，先恢复跨栏或跨页的完整句子，再决定译文分页。
+\par 图注有独立的信息范围。即使图中已有刻度或统计符号，图注中的样本量、检验、区间、误差定义、缩写和署名也不能省略。保留科学原图时，可将中文标签释义放在文末，避免改写密集的数据图。
+\par 此处全部文字为原创排版说明，不引用真实研究结果。替换为正式内容后，仍需逐段比对来源，并渲染检查所有页面；示例中的段数与长度并不是期刊限制。
+\end{minipage}\hfill\begin{minipage}[t]{\dimexpr\linewidth/2-6bp\relax}\vspace{0pt}\normalsize
+\section*{版本与内容的分别维护}
+论文类型为Article时，页眉文字应随之改变；提前在线版与正式刊期版的出版身份也应分开记录。仅用同一期刊的既有模板，不能替代对目标版本的观察\ArticleCite{2}。\par
+实际全文重新分页时，图文应按阅读顺序交替安排。不同纸型、字体与中文长度会改变页数，但不能改变研究数值、引文编号或声明的归属。
+\par 出版信息与研究内容应分别维护。原文件可能包含已更新的可见日期，同时保留旧的底层文字；译稿需要说明所依据的页面版本。未报告的卷期、文章号或日期应保持缺失，不把文件生成时间当作发表时间。
+\par 方法、数据与代码可用性以及版权许可等声明可能位于正式页码之后。只有逐页清点实际提供的内容，才能避免因主文结束而漏译这些部分。正文仅提到但没有随文件提供的附件，应明确列出范围限制。
+\par 字体回退和中文行距属于版式适配。它们可以改变分页，但不应改变来源身份、科学内容或署名关系。任何局部样式调整之后，都要检查受影响页面，确认没有隐藏的截断和重叠。
+\end{minipage}
+\vfill\noindent\hrule height .3bp\vspace{5bp}
+{\sffamily\fontsize{7.1bp}{9.2bp}\selectfont\noindent
+\textsuperscript{1}作者单位一（原创中性占位）：正式稿填写完整机构与地点，不沿用本页示例。
+\textsuperscript{2}作者单位二（中性占位）。\textsuperscript{3}作者单位三（中性占位）。
+\textsuperscript{4}作者单位四（中性占位）。\textsuperscript{5}作者单位五（中性占位）。
+\textsuperscript{6}作者单位六（中性占位）。\textsuperscript{7}共同贡献作者关系按来源填写。
+*通信作者及联系方式按原文填写。本页无真实作者、机构、邮箱或研究数据。
+仅供学术交流、出版物版权归原作者及出版商所有。\par}
+\clearpage
+\twocolumn[{\noindent\begin{center}
+\begin{tikzpicture}[font=\sffamily\fontsize{9bp}{12bp}\selectfont,node distance=15bp,
+ box/.style={draw=black!70,rounded corners=2bp,fill=black!3,minimum width=102bp,minimum height=46bp,align=center},
+ flow/.style={-{Stealth[length=2.5mm]},line width=.7bp}]
+\node[box] (a) {\textbf{A}\quad 主文\\论点与图表};
+\node[box,right=of a] (b) {\textbf{B}\quad 方法\\定义与参数};
+\node[box,right=of b] (c) {\textbf{C}\quad 扩展内容\\原始编号};
+\node[box,right=of c] (d) {\textbf{D}\quad 报告摘要\\已填与未填};
+\draw[flow] (a)--(b);\draw[flow] (b)--(c);\draw[flow] (c)--(d);
+\end{tikzpicture}\end{center}\vspace{3bp}
+{\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\noindent
+\textbf{图2｜材料层级与范围记录（原创中性占位，无实验数据）。}
+\textbf{A}，主文包含完整论述、图像与图注。\textbf{B}，方法中的定义、参数与限定具有独立内容范围。
+\textbf{C}，实际提供的扩展内容沿用原编号。\textbf{D}，报告摘要需区分作者已填答案、勾选状态和未填写的模板提示。
+箭头只示意本例阅读顺序，不表示实验流程、因果关系或数量变化；本图不含真实结果、样本量、误差线或比例尺。\par}\vspace{12bp}}]
+\balance
+\section*{方法与扩展内容（中性示例）}
+方法段落中的定义、软件版本、比较对象、阈值及单位需对应所给来源。具体步骤和数值的翻译不由模板生成，也不按另一篇论文补齐。正文与方法中同一术语如果作用范围不同，应保留各自限定\ArticleCite{1}。\par
+数据与代码可用性、伦理、经费、作者贡献、利益冲突和出版许可等声明属于独立内容范围。未提供的材料应如实记录，不把未填写的表格提示改写成已实施的研究。\par
+\subsection*{扩展图与报告摘要}
+扩展图可能是原生矢量，也可能已经是栅格图。保留原图时须检查全部面板、边界、图例、尺度和署名；放大并不会使原始栅格图获得额外信息。长图注可跨相邻页面续排，但应标明续注并完整保留尾句。\par
+报告摘要可作为研究者填写时的中文参考。原研究的回答、不适用、确认勾选和空白提示需分别标注；不得将本页中性示例直接作为任何研究的填写答案。
+\subsection*{原图清理的复核}
+真正删除下载来源需检查实际承载对象。只改变裁区或在页面上遮白，不能证明隐藏对象已经移除。处理后还应比较科学图的可见文字与像素，确认没有意外改变字符宽度、面板顺序或颜色。\par
+若某种通用清理方法使原有矢量文字改变，应采用更精确的对象处理并重新核验，不以肉眼近似代替记录\ArticleCite{2}。
+\subsection*{可编辑工程与检查记录}
+正文、图注、书目、图像及标签释义应具有清楚的文件边界，便于后续修订。独立源包须保留重建所需的相对路径与依赖，避免将本机目录、旧版输出、原始全文或临时提取稿一并分发。\par
+科学内容检查与版面检查应分别进行。逐段对照确认无漏译或重复，并不等于图像边界完整；同样，页面看起来整齐，也不能证明引文链接、隐藏资源或书目编号都正确。内容变化、裁图变化与字体变化应有可区分的记录。
+\subsection*{长文分页的调整}
+人工分页仅用于本例展示。实际文章需按题名、摘要、图表高度及完整图注自然重排，尽量将图像放在相应论述附近；不能为了保留原页数而缩小到不可读字号。编译、渲染和源包独立重建通过后，才形成最终交付版本。
+\section*{声明（原创占位）}
+本样板没有实际研究、患者、实验对象、资助或作者声明。实际翻译按原文完整保留各项声明及其限定。本示例的图文和表述均为原创中性内容，不代表期刊官方模板或出版认可。
+\section*{研究论文示例书目}
+{\fontsize{7.6bp}{9.6bp}\selectfont
+\noindent\hypertarget{article-ref:1}{1.} Author Placeholder. Source coverage and traceable content. Original neutral reference placeholder; no real publication.\par
+\noindent\hypertarget{article-ref:2}{2.} Editorial Placeholder. Version-aware figure and layout checking. Original neutral reference placeholder; no DOI assigned.\par}
+\section*{原文信息（研究论文占位）}
+作者、英文原题、在线发表日期、卷期、原刊页码与DOI均应按目标来源填写。当前为原创中性排版示例，不对应真实论文；提前在线版尚无的正式出版字段不编造。\par
+仅供学术交流、出版物版权归原作者及出版商所有。此页与前述综述演示分开示意内容范围，四页合计仍为一套Nature期刊样板。
+
 \end{document}

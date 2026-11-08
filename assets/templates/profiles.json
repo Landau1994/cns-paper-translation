@@ -33,7 +33,7 @@
       "file": "cell.tex"
     },
     "nature": {
-      "reference_edition": "Nature 592 (2021), The changing landscape of atherosclerosis, supplied article edition",
+      "reference_edition": "Nature 592 (2021), The changing landscape of atherosclerosis, supplied article edition; additionally an inspected 2026 Article advance-online edition with separate complete methods, extended figures and Reporting Summary",
       "paper_pt": [
         595.276,
         790.866
@@ -51,9 +51,74 @@
       ],
       "body_family": "serif",
       "citations": "Black numeric superscripts, with internal bibliography links",
-      "observed_design": "Black-and-white review design with thin outer vertical rule; full-width serif title; approximately 1:2 publication metadata and author/abstract panel below; two-column body; fine rules",
-      "template_adaptation": "No genuine DOI/date or publication identity used; plain Nature text in footer; metadata panel height follows neutral text rather than the full-length original abstract",
-      "file": "nature.tex"
+      "observed_design": "Black-and-white serif Review and Article structures with fine header and outer vertical rules, full-width title, approximately 1:2 publication-metadata and author/abstract panels, and two-column body. Article affiliation notes can occupy the opening-page footer; the inspected advance-online edition has no final volume/issue/page assignment.",
+      "template_adaptation": "Existing Review pages 1–2 are preserved with identical extracted text and 216dpi page pixels. New pages 3–4 demonstrate a neutral Article/advance-online cover with extended full-width affiliation note and a separate figure/text, Methods/extended-content and ending-source page. Source-specific Article margins are applied only after the Review pages. Portable TeX Gyre and CJK fallback fonts replace commercial fonts; CJK title 25/31bp, abstract10.2/14bp, body9.05/11.95bp and caption7.6/9.2bp are explicit Chinese adaptations. Diagram and all prose are original placeholders.",
+      "file": "nature.tex",
+      "preview_pages": 4,
+      "source_observations_article_2026": {
+        "paper_pt": [
+          595.276,
+          790.866
+        ],
+        "left_x_pt": 39.685,
+        "right_rule_x_pt": 561.26,
+        "metadata_panel_width_pt": 166.3,
+        "author_abstract_x_pt": 217.3238,
+        "author_abstract_width_pt": 343.936,
+        "outer_rule": {
+          "x_pt": 34.1033,
+          "y_top_pt": 28.3463,
+          "y_bottom_pt": 743.5153,
+          "width_pt": 0.35,
+          "rgb": [
+            0,
+            0,
+            0
+          ]
+        },
+        "header_rule_y_pt": 44.7655,
+        "source_fonts": {
+          "type": [
+            "Harding-Extrabold",
+            14
+          ],
+          "title": [
+            "Harding-Bold",
+            26
+          ],
+          "abstract": [
+            "HardingText-Regular",
+            9
+          ],
+          "body": [
+            "HardingText-Regular",
+            8.25
+          ],
+          "nominal_body_leading_pt": 10.75,
+          "author": [
+            "GraphikNaturel-Semibold",
+            8
+          ],
+          "affiliations": [
+            "GraphikNaturel-Regular",
+            6
+          ]
+        },
+        "layout_ink": "#000000",
+        "edition_policy": "Treat received, accepted, visible online date, PDF generation date and final issue fields independently. Check the visible page if an added date layer differs from underlying extracted placeholder text; do not infer a missing issue from the filename or DOI year."
+      },
+      "preview_roles": {
+        "1": "Original Review opening (unchanged)",
+        "2": "Original Review figure/text and ending (unchanged)",
+        "3": "Article / advance-online opening with affiliation footnote",
+        "4": "Article figure/text, Methods and extended-content coverage, declarations, placeholder references and ending source"
+      },
+      "overview_policy": "Use only the existing page 1 Nature cover in the one-opening-per-journal overview; the Article variant is available within the individual four-page PDF. Still one Nature profile; total profiles17, journals15, individual demo pages52.",
+      "figure_integrity_policy": "Crop each source figure using its measured bounds; actually purge excluded text and objects. Compare source-clip text and pixels after object processing; avoid a generic sanitizer when it changes embedded text metrics. Retain original raster data where the supplied source figure is raster.",
+      "caption_size_leading_pt": [
+        7.6,
+        9.2
+      ]
     },
     "science": {
       "reference_edition": "Science 392 (2026), Targeting modulated vascular smooth muscle cells in atherosclerosis via FAP-directed immunotherapy, supplied article edition",
