@@ -1,0 +1,81 @@
+% Original neutral adaptation of an inspected Lancet Therapeutic Review online edition.
+% No article text, authors, clinical data, figures, real DOI, or publisher logo.
+\documentclass[twoside]{article}
+\usepackage[paperwidth=595.276bp,paperheight=799.37bp,inner=36.85bp,outer=118bp,top=128bp,bottom=43bp,twoside]{geometry}
+\usepackage{fontspec,xeCJK,graphicx,xcolor,tikz,multicol,booktabs,needspace,xurl,hyperref,titlesec}
+\usetikzlibrary{arrows.meta,positioning}
+\setmainfont{TeX Gyre Termes}\setsansfont{TeX Gyre Heros}
+\IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{\setCJKmainfont[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolKai-Regular.otf]{FandolSong-Regular.otf}}
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKsansfont{Noto Sans CJK SC}}{\setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}}
+\definecolor{LancetGreen}{HTML}{00703C}\definecolor{Ink}{HTML}{231F20}\definecolor{PaleGreen}{HTML}{E6EFEB}
+\color{Ink}\pagestyle{empty}\raggedbottom
+\hypersetup{colorlinks=true,linkcolor=LancetGreen,urlcolor=LancetGreen,pdftitle={Lancet风格中性中文排版示例},pdfauthor={Neutral template; unofficial},pdfsubject={Original layout sample, no real research content}}
+\setlength{\columnsep}{10bp}\setlength{\multicolsep}{5bp}\setlength{\parindent}{1em}\setlength{\parskip}{0pt}\setlength{\emergencystretch}{2em}
+\XeTeXlinebreaklocale "zh"\XeTeXlinebreakskip=0pt plus .1pt
+\titleformat{\section}{\sffamily\bfseries\color{LancetGreen}\fontsize{9.1bp}{11.5bp}\selectfont}{}{0pt}{}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{8.8bp}{11bp}\selectfont}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8bp}{2bp}\titlespacing*{\subsection}{0pt}{6bp}{2bp}
+\newcommand{\LCite}[1]{\textsuperscript{\hypersetup{linkcolor=Ink}\hyperlink{ref:#1}{#1}}}
+\newcommand{\LCols}[1]{\begin{multicols}{2}#1\end{multicols}}
+\newcommand{\LBody}{这段原创占位文字用于说明中文正文的连续阅读方式，不陈述实验结果或医学建议。译稿应依次保留论点、证据、比较对象和限定条件；标题、图注、表格脚注、参考文献与作者声明同样属于全文的一部分。文本长度变化时，应重新安排图文相邻关系，并检查每一页的实际阅读顺序\LCite{1}。\par
+原文中的数字、单位、上标引文和专有名词应逐项核对。可编辑文本与最终文件应表达同一内容；换栏和分页不能改变一段话所限定的对象。遇到原稿内在疑点时，应保留原文并明确标注，不能以排版方便为由改写科学结论\LCite{2}。\par}
+\AddToHook{shipout/foreground}{\begin{tikzpicture}[remember picture,overlay]
+\ifodd\value{page}
+\fill[LancetGreen] ([xshift=555bp]current page.north west) rectangle ++(11bp,-47bp);
+\node[anchor=north east,font=\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont] at ([xshift=550bp,yshift=-39bp]current page.north west){Therapeutic Review};
+\else
+\fill[LancetGreen] ([xshift=28bp]current page.north west) rectangle ++(11bp,-47bp);
+\node[anchor=north west,font=\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont] at ([xshift=47bp,yshift=-39bp]current page.north west){Therapeutic Review};
+\fi
+\draw[LancetGreen,line width=.75bp] ([xshift=28bp,yshift=-102bp]current page.north west)--([xshift=558.5bp,yshift=-102bp]current page.north west);
+\node[anchor=south west,font=\sffamily\fontsize{6.2bp}{7.4bp}\selectfont] at ([xshift=28bp,yshift=-775bp]current page.north west){Lancet风格中性示例\quad 非期刊官方模板\quad 仅供学术交流};
+\node[anchor=south east,font=\sffamily\fontsize{7bp}{8.4bp}\selectfont] at ([xshift=558.5bp,yshift=-775bp]current page.north west){\thepage};
+\end{tikzpicture}}
+\begin{document}\fontsize{9.1bp}{12bp}\selectfont
+\vspace*{-5bp}
+{\sffamily\bfseries\fontsize{18bp}{21bp}\selectfont 中文综述题名占位：从材料到证据\par}
+\vspace{5bp}{\sffamily\color{LancetGreen}\fontsize{7.4bp}{9.2bp}\selectfont Author A, Author B, Author C\par}\vspace{12bp}
+\noindent\makebox[\textwidth][l]{\begin{minipage}[t]{\textwidth}
+{\bfseries 本段为原创中性摘要，演示通栏摘要与首面单位侧栏的配合。正文保留衬线字体，题名、图注与侧栏采用无衬线字体，绿色仅用于主题层级和页眉标记。正式使用时，必须替换全部占位内容，并依据实际论文核实文体、版本、题名、作者、单位、引文与出版信息。此处没有研究对象、真实数据或可用于临床决策的结论。\par}
+\LCols{\section*{引言示例}\LBody\LBody\subsection*{内容覆盖与阅读顺序}\LBody}
+\noindent\colorbox{PaleGreen}{\parbox{\dimexpr\linewidth-12bp}{\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\vspace{4bp}\textbf{检索策略与选择标准（中性占位）}\par
+真实综述若包含检索范围、日期、数据库、检索词或筛选规则，应完整译出。此框只演示浅色底纹、无衬线小字和紧凑行距，不声称实施过任何检索；不得把占位文字当作论文方法。\par\vspace{4bp}}}
+\end{minipage}\hspace{8.5bp}\begin{minipage}[t]{72bp}\sffamily\fontsize{6.5bp}{8.3bp}\selectfont\raggedright
+\textbf{出版信息占位}\par 在线日期待核实；卷期与页码待填。\par\medskip
+\textbf{作者单位}\par Author A：单位一（示例）。Author B：单位二（示例）。Author C：单位三（示例）。\par\medskip
+\textbf{通信作者}\par 通信作者姓名、机构、邮政地址与邮箱均待依据原稿填写。\par\medskip
+本示例是结构化适配，商业字体由开源字体替代。实际译稿须逐页核对，不能仅按期刊名称套用版式。
+\end{minipage}}
+\clearpage
+\section*{图文穿插与中性示意图}
+\noindent\begin{minipage}{\linewidth}\centering
+\resizebox{\linewidth}{!}{\begin{tikzpicture}[font=\sffamily\small,node distance=16mm,
+box/.style={draw=LancetGreen,fill=PaleGreen,minimum width=28mm,minimum height=18mm,align=center},flow/.style={-{Stealth[length=2mm]},line width=.7pt}]
+\node[box](a){\textbf{A}\quad 来源\\原始材料};\node[box,right=of a](b){\textbf{B}\quad 内容\\逐项核对};\node[box,right=of b](c){\textbf{C}\quad 输出\\中文译稿};
+\draw[flow](a)--(b);\draw[flow](b)--(c);\node[below=7mm of b,align=center,text=Ink]{箭头只表示本示例的阅读顺序\\无研究数据，无因果关系};
+\end{tikzpicture}}\par\vspace{4bp}
+{\raggedright\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\textbf{图1．中性内容链（原创占位）。}A，来源节点；B，内容核对节点；C，中文输出节点。箭头表示阅读顺序，不表示生物学机制、干预效果或统计关系。图内全部标签已为中文，没有真实研究数据；正式稿应使用经核验的原图并完整翻译图注及图内英文释义。\par}
+\end{minipage}
+\LCols{\section*{正文继续}\LBody\subsection*{表格字段与注释}\LBody}
+\section*{表1．中性字段示范}
+{\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\setlength{\tabcolsep}{5bp}
+\begin{tabular}{@{}p{.22\linewidth}p{.32\linewidth}p{.38\linewidth}@{}}\toprule
+\textbf{项目} & \textbf{来源字段} & \textbf{核对要求}\\\midrule
+示例甲 & 标题与限定 & 顺序与比较对象对应，不省略否定。\\[4bp]
+示例乙 & 图注与标签 & 保留面板、单位及全部缩写释义。\\[4bp]
+示例丙 & 声明与书目 & 引用目标存在，原文信息置于文末。\\\bottomrule
+\end{tabular}\par\vspace{3bp}本表全部为原创文字占位，无样本量、治疗方案或真实研究记录。}
+\LCols{\section*{连续阅读}\LBody}
+\clearpage
+\LCols{\section*{讨论示例}\LBody\LBody\subsection*{排版与核对}\LBody
+\section*{作者贡献（占位）}此处应完整对应原稿贡献声明。没有声明时，不应虚构作者分工。
+\section*{利益冲突与资助（占位）}声明、基金编号与资助方角色应分别核对。此中性样板未接受真实研究资助。
+\section*{参考文献（占位）}
+{\fontsize{7.6bp}{9.2bp}\selectfont\setlength{\parindent}{0pt}
+\hypertarget{ref:1}{}1. Author A. Example title. Journal placeholder 20XX; volume and pages to be verified. 此条仅供演示。\par\smallskip
+\hypertarget{ref:2}{}2. Author B. Another example title. Journal placeholder 20YY; DOI to be verified. 此条不是真实书目。\par}
+\section*{原文信息}
+作者、英文原标题、期刊、文体、版本、出版日期、卷期、页码或文章号、DOI或来源链接均待依据目标原文填写。此处没有真实论文元数据。
+\par 本模板依据已观察的Lancet治疗学综述在线版结构进行中文适配，不代表该刊所有文体，也不保证像素级复刻。绿色、页眉、侧栏、双栏、紧凑图注和参考文献层级可复用；图表位置与页数须随中文内容重新检查。
+\par 仅供学术交流、出版物版权归原作者及出版商所有。本中性示例无真实论文全文、原图、下载信息或官方标识。}
+\end{document}

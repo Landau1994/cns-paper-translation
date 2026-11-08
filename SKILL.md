@@ -1,11 +1,11 @@
 ---
 name: cns-paper-translation
-description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，另含Circulation及EHJ指南变体；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
+description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及NEJM、The Lancet、JAMA、The BMJ、Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，另含Circulation及EHJ指南变体；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
 ---
 
 # CNS 论文汉化
 
-把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展及两种指南变体；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
+把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 NEJM、The Lancet、JAMA、The BMJ、Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展及两种指南变体；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
 
 ## 选择入口
 
@@ -25,17 +25,21 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Cell | [cell.tex](assets/templates/cell.tex) | 通栏题名摘要、双栏、红色层级、作者—年份引文 |
 | Nature | [nature.tex](assets/templates/nature.tex) | 衬线黑白、出版信息窄栏、数字上标引文 |
 | Science | [science.tex](assets/templates/science.tex) | 独立研究摘要页、正文左栏起题名、斜体括号数字引文 |
+| NEJM | [nejm.tex](assets/templates/nejm.tex) | 红色刊名、米底研究类型与摘要横栏、灰作者、右侧出版信息及米底图注 |
+| The Lancet | [lancet.tex](assets/templates/lancet.tex) | 绿色外侧页签与细线、黑色题名、绿色作者、外侧单位栏、衬线双栏及检索框 |
+| JAMA | [jama.tex](assets/templates/jama.tex) | 深红Research整幅顶栏、亮红标签、米底结构化摘要、侧栏、要点及淡米色表格行带 |
+| The BMJ | [bmj.tex](assets/templates/bmj.tex) | 蓝色RESEARCH栏、元数据窄栏、结构摘要与左伸认识框、宽左留白及全宽图表 |
+| Circulation | [circulation.tex](assets/templates/circulation.tex) | 绿色研究类型线、全宽结构化摘要、临床展望与缩写框、无衬线双栏、黑色上标 |
+| European Heart Journal | [european-heart-journal.tex](assets/templates/european-heart-journal.tex) | 红色转化研究层级、浅米底结构化摘要、独立结构化图形摘要与转化展望、双栏图文混排 |
 | Immunity | [immunity.tex](assets/templates/immunity.tex) | Cell 家族布局、蓝色刊头、数字上标引文 |
 | Nature Reviews Cardiology | [nature-reviews-cardiology.tex](assets/templates/nature-reviews-cardiology.tex) | 紫色顶线、独立摘要目录页、蓝色上标、跨页表格 |
 | Nature Biotechnology | [nature-biotechnology.tex](assets/templates/nature-biotechnology.tex) | 简讯首页黄色顶线、约1:2日期/摘要区、双栏数学正文、蓝色上标 |
 | Nature Methods | [nature-methods.tex](assets/templates/nature-methods.tex) | 橙色首页顶线、约1:2日期/摘要区、双栏正文、通栏表/框/图、蓝色上标 |
-| Circulation | [circulation.tex](assets/templates/circulation.tex) | 绿色研究类型线、全宽结构化摘要、临床展望与缩写框、无衬线双栏、黑色上标 |
 | Circulation Research | [circulation-research.tex](assets/templates/circulation-research.tex) | 蓝色综述类型线、全宽摘要同页接双栏、长缩写框、通栏图注、黑色上标 |
-| European Heart Journal | [european-heart-journal.tex](assets/templates/european-heart-journal.tex) | 红色转化研究层级、浅米底结构化摘要、独立结构化图形摘要与转化展望、双栏图文混排 |
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览预览采用 **3列×4行分面**：十二套样板各有一格。首行依次为 **Cell、Nature、Science**，七种期刊扩展与两种指南变体随后排列。指南变体属于文体扩展，不计为新增期刊。新增样板时同步分面脚本、计数与说明。使用 `scripts/make_overview.py` 从已核验的页面预览重建总览。
+总览预览采用 **3列×6行分面**：16套样板加2格细节。第一行为 **Cell、Nature、Science**；第二行为 **NEJM、The Lancet、JAMA**；第三行为 **The BMJ、Circulation、European Heart Journal**；随后为CNS子刊扩展和指南，最后两格分别展示EHJ图形摘要与Circulation Research图文细节。指南变体属于文体扩展，不计为新增期刊。使用 `scripts/make_overview.py` 从已核验页面重建总览，同步计数与说明。
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 

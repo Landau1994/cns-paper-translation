@@ -1,0 +1,72 @@
+% Neutral JAMA-inspired Chinese template, checked against a supplied issue layout.
+% No publisher logo, real paper text, authors, DOI, figures, data or download marks.
+\documentclass[UTF8,fontset=none]{ctexart}
+\usepackage[paperwidth=612bp,paperheight=792bp,left=72.312bp,right=72.72bp,top=67bp,bottom=51bp,headheight=18bp,headsep=14bp,footskip=27bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,tabularx,colortbl,titlesec}
+\newcommand{\JournalName}{JAMA}
+\linespread{1}
+\definecolor{JAMARed}{HTML}{D71635}\definecolor{JAMABlack}{HTML}{231F20}
+\definecolor{JAMABanner}{rgb}{.5947966576,.1058670953,.1181658655}
+\definecolor{JAMABeige}{rgb}{.9454795122,.9452658892,.9072098732}
+\color{JAMABlack}\setlength{\columnsep}{15.5bp}
+\hypersetup{linkcolor=JAMABlack,urlcolor=JAMARed,pdftitle={JAMA风格中文中性样板},pdfauthor={中性示例；非期刊官方模板}}
+\titleformat{\section}{\sffamily\bfseries\fontsize{11bp}{13bp}\selectfont}{}{0pt}{}[{\vspace{2bp}\titlerule[.3bp]}]
+\titlespacing*{\section}{0pt}{10bp}{6bp}
+\titleformat{\subsection}{\sffamily\bfseries\color{JAMARed}\fontsize{9bp}{11bp}\selectfont}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{8bp}{3bp}
+\fancyhead[L]{\sffamily\fontsize{7.8bp}{9bp}\selectfont 原创研究\enspace|\enspace 中性中文排版示例}
+\fancyhead[R]{\sffamily\fontsize{7.8bp}{9bp}\selectfont Research}
+\fancyfoot[L]{\sffamily\fontsize{6.6bp}{8bp}\selectfont 非官方中文样板｜仅供学术交流；出版物版权归原作者及出版商所有。}
+\fancyfoot[R]{\sffamily\fontsize{7bp}{8bp}\selectfont\thepage}
+\fancypagestyle{first}{\fancyhead{}}
+\AddToHook{shipout/background}{\begin{tikzpicture}[remember picture,overlay]\ifnum\value{page}=1\fill[JAMABanner]([xshift=72.312bp,yshift=-11.933bp]current page.north west)rectangle([xshift=539.28bp,yshift=-47.854bp]current page.north west);\draw[white,line width=.4bp]([xshift=126bp,yshift=-11.933bp]current page.north west)--([xshift=126bp,yshift=-47.854bp]current page.north west);\node[anchor=west,text=white,font=\sffamily\bfseries\fontsize{8bp}{10bp}\selectfont]at([xshift=79bp,yshift=-30bp]current page.north west){Research};\else\fill[JAMABanner]([xshift=72.312bp,yshift=-12bp]current page.north west)rectangle([xshift=539.28bp,yshift=-24bp]current page.north west);\fi\end{tikzpicture}}
+\newcommand{\absrow}[2]{\noindent\textcolor{JAMARed}{\sffamily\bfseries #1}\enspace #2\par\smallskip\textcolor{white}{\rule{\linewidth}{.35bp}}\par\smallskip}
+\newcommand{\neutralpara}{本段为中性排版占位，不陈述真实研究结果。实际译稿须按原文完整替换，保留研究范围、方法条件、统计含义及不确定性。图表与正文应交替安排，使读者在首次讨论结果附近即可查阅对应证据。段落长度、行宽和图文位置可随中文内容调整，不应为填满版面删去限定或虚构数据。}
+\begin{document}\thispagestyle{first}\fontsize{8.8bp}{11.6bp}\selectfont
+\noindent{\sffamily\bfseries\fontsize{8.5bp}{10bp}\selectfont JAMA\enspace|\enspace\textcolor{JAMARed}{原创研究}}\par\vspace{5bp}
+{\sffamily\bfseries\fontsize{14.5bp}{17.2bp}\selectfont\noindent 中文题名占位：研究问题、评价方法与证据解释在目标人群中的应用及其限定条件\par}
+\vspace{3bp}{\sffamily\fontsize{13bp}{16bp}\selectfont\noindent 随机临床试验文体样板\par}
+\vspace{9bp}{\sffamily\fontsize{6.8bp}{8.8bp}\selectfont\noindent Author A, Degree；Author B, Degree；Author C, Degree\par}
+\vspace{12bp}\noindent\begin{minipage}[t]{347.2bp}\vspace{0pt}\setlength{\fboxsep}{11bp}\colorbox{JAMABeige}{\begin{minipage}{325.2bp}\sffamily\fontsize{8.8bp}{11.7bp}\selectfont\setlength{\parindent}{0pt}
+\absrow{重要性}{\neutralpara}
+\absrow{目的}{说明原文所要回答的研究问题、适用人群与比较对象。此处仅演示结构化摘要的红色标签与黑色正文，不构成临床建议。}
+\absrow{设计、场所与参与者}{按目标原文填写研究设计、中心与地区、研究时间、入排标准及参与者构成。对观察性研究、试验或综述，应使用其实际报告的摘要标签。}
+\absrow{干预}{填写干预、对照、给药或观察程序及随访长度，保留剂量、单位、分配比例和治疗条件。未报告的信息不得推断补齐。}
+\absrow{主要结局与测量}{说明预先规定的主要及次要结局，区分估计目标、观测值、插补值与模型估计，不将统计相关改写成因果效应。}
+\absrow{结果}{\neutralpara\par 所有样本量、百分比、置信区间及显著性指标应与原文逐项核对。此中性样板仅保留叙述位置，不提供任何模拟数值，也不放置真实研究图。}
+\absrow{结论}{结论应忠实保留适用范围与限制。版式还原不能替代医学审阅；文献翻译不等于个体诊疗建议。}
+\absrow{试验注册}{如原文有注册平台与编号，逐项填写并核对链接；此处为占位。}
+{\fontsize{6.6bp}{8.3bp}\selectfont 年份、卷期、页码及DOI均待按目标原文填写。\par 在线发表与更正信息不得由文件名推断。\par}
+\end{minipage}}\end{minipage}\hfill\begin{minipage}[t]{108bp}\vspace{0pt}\sffamily\fontsize{7.1bp}{9.5bp}\selectfont
+\textcolor{JAMARed}{\textbf{+}}\enspace 相关资源位置\par\medskip
+\textcolor{JAMARed}{\textbf{←}}\enspace 同期内容位置\par\medskip
+\textcolor{JAMARed}{\textbf{+}}\enspace 多媒体位置\par\medskip
+\textcolor{JAMARed}{\textbf{←}}\enspace 相关文章位置\par\medskip
+\textcolor{JAMARed}{\textbf{+}}\enspace 补充材料位置\par\medskip
+\textcolor{JAMARed}{\textbf{+}}\enspace 教育资源位置\par
+\vspace{374bp}\textbf{作者单位：}示例单位占位，正式稿应完整保留。\par\medskip
+\textbf{通信作者：}姓名、地址、电子邮箱均按原文填写。\par\medskip
+\end{minipage}
+\clearpage
+\noindent\colorbox{JAMABeige}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep}\sffamily\fontsize{8.5bp}{11.1bp}\selectfont\textbf{要点}\par\smallskip\textbf{问题}\quad 在此填写研究问题。\par\smallskip\textbf{发现}\quad 在此填写主要发现，并保留原文的证据层级。\par\smallskip\textbf{意义}\quad 在此填写适用范围及临床或学术含义。\end{minipage}}\par
+\begin{multicols}{2}\fontsize{8.8bp}{11.6bp}\selectfont
+\section*{背景}\neutralpara\par\neutralpara
+\section*{方法}\subsection*{研究设计}\neutralpara\par\subsection*{结局与统计}\neutralpara
+\section*{结果}\neutralpara\par 本文采用黑色上标引文\textsuperscript{\hyperlink{ref:1}{1}}；图表保留独立标题、缩写说明及完整脚注。原刊使用细小无衬线标签，中文样板适度扩大正文字号以兼顾阅读。
+\end{multicols}
+\vspace{5bp}{\sffamily\fontsize{8bp}{10.2bp}\selectfont\noindent\textbf{表1．可编辑中文表格的中性结构}\par\smallskip
+\setlength{\tabcolsep}{5bp}\renewcommand{\arraystretch}{1.1}\noindent\begin{tabularx}{\linewidth}{@{}Xll@{}}\hline\rowcolor{JAMABeige}字段&组别A&组别B\\\hline
+研究人群&待核对&待核对\\主要结局&待核对&待核对\\次要结局&待核对&待核对\\不良事件&待核对&待核对\\\hline\end{tabularx}\par\smallskip
+{\fontsize{7.6bp}{9.2bp}\selectfont 脚注：此表仅演示文字与行带样式，无研究数值；真实中文表须完整保留原表全部列、单位、统计值与脚注。}\par}
+\begin{multicols}{2}\fontsize{8.8bp}{11.6bp}\selectfont\subsection*{图表位置}\neutralpara\par\subsection*{可复用范围}此样板依据一次已核验的原创研究版式制作。其他年份、文章类型或显著版式变体须重新查看目标PDF，不能机械套用。
+\end{multicols}
+\clearpage
+\noindent\begin{minipage}[t]{347bp}\vspace{0pt}\DemoVector\end{minipage}\hfill\begin{minipage}[t]{108bp}\vspace{0pt}\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\DemoCaption\end{minipage}\par\vspace{12bp}
+\begin{multicols}{2}\fontsize{8.8bp}{11.6bp}\selectfont\section*{讨论}\neutralpara\par\neutralpara
+\subsection*{局限性}正式译稿应完整保留局限性，并区分本文直接证据、前人研究及作者推测。图内英文若保留，需附完整中文对照。
+\section*{文章信息}作者单位、贡献、利益冲突、基金、资助方角色、致谢及数据共享均按原文核对。样板不提供真实声明或基金编号。
+\SampleBibliography
+\SampleSourceInfo
+\end{multicols}
+\end{document}

@@ -1,0 +1,81 @@
+% The BMJ: verified 2022 Research layout, neutral Chinese adaptation.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=793.701bp,left=34bp,right=34bp,top=64bp,bottom=40bp,headheight=17bp,headsep=15bp,footskip=18bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,changepage,booktabs,array}
+\newcommand{\JournalName}{The BMJ}
+\definecolor{BMJBlue}{HTML}{0070B9}
+\hypersetup{linkcolor=black,urlcolor=BMJBlue}
+\setlength{\columnsep}{13bp}
+\renewcommand{\normalsize}{\fontsize{8.8bp}{11.6bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{10.5bp}{13bp}\selectfont,beforeskip=8bp,afterskip=3bp},subsection={format=\sffamily\bfseries,beforeskip=6bp,afterskip=2bp}}
+\newcommand{\SampleCiteOne}{\textsuperscript{\hyperlink{ref:1}{1}}}
+\newcommand{\SampleCiteTwo}{\textsuperscript{\hyperlink{ref:2}{2}}}
+\fancyhead[C]{\colorbox{BMJBlue}{\makebox[\dimexpr\textwidth-2\fboxsep\relax][r]{\color{white}\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont RESEARCH}}}
+\fancyfoot[L]{\fontsize{6.5bp}{8bp}\selectfont\textcolor{BMJBlue}{\textbf{the bmj}}\,|\,年份、卷及文章号待填\,|\,非官方中性样板}
+\fancyfoot[R]{\sffamily\fontsize{6.8bp}{8bp}\selectfont 中文译页\quad\textbf{\thepage}}
+\newcommand{\BMJLabel}[1]{\par\smallskip\noindent\textcolor{BMJBlue}{\sffamily\bfseries #1}\par\nobreak\noindent}
+\newenvironment{BMJColumns}{\begin{adjustwidth}{107bp}{0bp}\begin{multicols}{2}\normalsize}{\end{multicols}\end{adjustwidth}}
+\begin{document}\normalsize
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0,text width=96bp] at ([xshift=34bp,yshift=-68bp]current page.north west){\sffamily\fontsize{7bp}{9bp}\selectfont
+\textbf{OPEN ACCESS}\par 开放获取占位\par\vspace{65bp}
+编号作者单位见文末。\par\smallskip 通信作者与联系方式待填。\par\smallskip
+\textcolor{BMJBlue}{引用、DOI及接受日期待核实。}\par\smallskip 本栏演示原刊首页的外侧元数据窄栏，不包含真实作者或出版记录。};
+\end{tikzpicture}
+\begin{adjustwidth}{107bp}{0bp}
+\noindent\rule{\linewidth}{.35bp}\par\vspace{3bp}
+{\sffamily\fontsize{17bp}{20.5bp}\selectfont\noindent 从原文材料到可追溯译稿：结构化证据与版式核对的中性演示\par}\vspace{7bp}
+{\sffamily\fontsize{8.5bp}{11.3bp}\selectfont\noindent\SampleAuthors\quad（作者占位）\par}\vspace{10bp}
+\noindent\begin{minipage}[t]{203bp}\sffamily\fontsize{8.1bp}{10.5bp}\selectfont\setlength{\parindent}{0pt}
+\textbf{摘要}
+\BMJLabel{目的}演示如何保留研究问题、比较方向和来源范围。本文件不含临床研究结论。
+\BMJLabel{设计}中性结构化版式占位，不对应真实试验。
+\BMJLabel{数据来源}实际翻译应以用户提供的原始文件为依据；本样板没有真实数据来源或检索结果。
+\BMJLabel{研究纳入标准}此处演示资格标准标签。目标文章的筛选条件、样本和时间范围必须完整翻译，不能从模板生成。
+\BMJLabel{主要结局指标}保留原文关于结局、统计方法和不确定性的定义。若原表用符号表达证据等级，中文版需要给出清楚的释义。本文只演示段落密度，不含效应量、置信区间或确定性评价。\par
+摘要中的研究对象、干预和比较应与源文逐项对应。实际项目需要区分相对效应与绝对效应、单药与联合用药、基线风险与观察到的事件数。仅在原文提供依据时，才记录相应统计方法和比较方向。\par\smallskip
+对于需要换样式的旧译稿，应保存原译文的内容记录，再检查题名、摘要、正文、图表脚注和书目是否保持完整。排版参数可以调整，出版字段和科学内容则必须逐项对应当前来源版本。
+\par\vspace{12bp}
+\makebox[\linewidth][l]{\hspace*{-107bp}\fcolorbox{BMJBlue!50}{white}{\begin{minipage}{\dimexpr310bp-2\fboxsep-2\fboxrule\relax}\color{BMJBlue}\fontsize{7.7bp}{10bp}\selectfont
+\textbf{本主题已有认识（占位）}\par 完整译稿包含摘要、正文、图表、脚注、声明和书目；这些内容需要分别登记并核对。\par\smallskip
+\textbf{本示例新增内容（占位）}\par 蓝色框文向左伸入元数据侧栏，演示本次核验版本的首页结构。此处文字均为原创版式说明，不可作为科学证据引用。\par
+图文应在相关讨论附近交替出现；图注变紧凑时，仍应保留所有面板和统计说明。\par\smallskip
+在正式译稿中，本框应分别完整翻译已有认识与本研究新增认识。原刊使用的项目、限定和不确定性应逐项保留；示例框的段落数量不构成固定要求。
+\end{minipage}}}
+\end{minipage}\hfill\begin{minipage}[t]{203bp}\sffamily\fontsize{8.1bp}{10.5bp}\selectfont\setlength{\parindent}{0pt}
+\BMJLabel{结果}\SampleAbstract\par\smallskip
+本段仅展示较长结果摘要在右栏中的连续阅读。源文分别报告的比较和风险层级需要逐项对应，不能为了填满版面而虚构数值，也不能把不同人群的相对与绝对效应混为一谈。\par\smallskip
+如原文存在不同位置的数值不一致，应保留各处记录并给出简短译注。可编辑表格必须能追溯到原表的行、列与脚注；表格截图不能替代需要汉化的中文表格。\par\smallskip
+图内文字保留英文时，须给出完整中文释义。原刊版权和许可属于正常出版信息；个人下载来源则不混入正文或分发素材。\par\smallskip
+长表在分页时重复表题和列头，使读者能直接辨认续页中的比较对象。原表共享的统计单元格如果在重排后重复展示，应在脚注中说明对应关系，避免将重复显示误读成新增分析。所有符号、等级和范围端点都应保留。\par\smallskip
+双栏续段、跨页图注、附录指向和作者声明具有独立的阅读顺序。首次抽取后要结合页面图像检查，确认没有把页脚插入正文，也没有把右栏提前接在左栏未完成的句子中。译文长度改变分页时，原文的逻辑顺序仍应连贯。
+\BMJLabel{结论}本页只展示一种已核验的首页结构。正式使用时应替换全部占位内容，并以当前原文核实出版年份、文章号与DOI。
+\end{minipage}
+\end{adjustwidth}
+\clearpage
+\begin{BMJColumns}\SampleOpening
+\subsection*{长表与正文的阅读衔接}
+表格宜靠近首次解释其主要结果的段落。若原表过宽，可以重组字段或分为连续部分，保留每一行的研究名称、单位、比较、随访和脚注。拆分后应保留明确的关联标识，并逐项核对，不以缩小到难以阅读的字体来维持原页数。\par
+全宽图表会中断双栏正文。恢复正文时，应让读者能够识别前后续句；必要时调整段落断点或图像尺寸。结束页可平衡两栏，普通正文页则应检查是否存在因不合理强制分页造成的大块空白。\par
+\subsection*{数字与版本字段的复核}
+数字核对需要同时关注比较方向、正负号、时间、样本量、分母和计量单位。只比较数字字符的集合不能证明对应关系正确。原文将两项比较共用一个估计时，应记录这一结构，并在中文重排中清楚表示。\par
+提前在线版本可能尚未出现最终卷期或页码。接受日期、在线日期、刊期和版权年份应分别记录；文件名中的年份不能直接替代原刊给出的出版信息。译文文末应独立列出完整原文信息，使读者能够追溯所使用的版本。
+\end{BMJColumns}
+\clearpage
+\noindent\begin{minipage}{.57\linewidth}\DemoVector\end{minipage}\hfill\begin{minipage}{.39\linewidth}\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\DemoCaption\end{minipage}\par\vspace{10bp}
+{\sffamily\fontsize{8bp}{10.2bp}\selectfont\noindent\textbf{表1．中性可编辑证据记录（无真实数据）}\par\smallskip
+\noindent\begin{tabular}{@{}p{110bp}p{170bp}p{220bp}@{}}\toprule
+材料 & 核对字段 & 来源与范围\\\midrule
+图表占位 & 标签、方向、单位、完整图注 & 原始文件中逐幅确认；不得继承旧裁区\\[4bp]
+正文占位 & 跨页续句、否定、不确定性 & 恢复正确阅读顺序后逐段核对\\[4bp]
+书目占位 & 编号、链接、英文书目信息 & 对应目标原文，非模板固定数量\\\bottomrule
+\end{tabular}\par}
+\vspace{8bp}
+\begin{BMJColumns}
+\section*{图、图注与标签释义}
+本页的矢量图由模板原创，仅说明材料与处理之间的阅读关系。其尺寸没有实验意义，箭头没有因果含义。正式使用时需替换为目标原图，并逐幅核实所有面板、坐标轴和尺度，没有沿用某个旧项目的固定裁剪区域。\par
+图注采用较小字号与行距，以保持图文紧凑。压缩前后应逐项比较面板说明、统计检验、样本量、误差线、缩写和署名；字体变小不能成为删去长注的理由。长标签对照可以接续在文末，并清楚对应图号。
+\SampleClosing\end{BMJColumns}
+\end{document}

@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from twelve verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from sixteen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -450,6 +450,323 @@
       "citations": "Source numeric superscripts with corresponding English bibliography targets.",
       "recommendation_system": "ESC classes I/IIa/IIb/III and levels A/B/C, preserved independently of ACC/AHA codes.",
       "file": "european-heart-journal-guideline.tex"
+    },
+    "nejm": {
+      "journal": "The New England Journal of Medicine",
+      "variant": "2026 research article, supplied early-online PDF",
+      "template": "nejm.tex",
+      "neutral": true,
+      "source_observations": {
+        "paper_bp": [
+          567,
+          756
+        ],
+        "header_plain_text_color": "#ED1C24",
+        "article_type_color": "#ED1C24",
+        "text_color": "#231F20",
+        "author_color": "#77787B",
+        "abstract_bar_rgb": [
+          1,
+          0.9951934218,
+          0.9428396821
+        ],
+        "caption_background_rgb": [
+          0.9596093893,
+          0.9412069917,
+          0.9188525081
+        ],
+        "cover_main_x_bp": 62,
+        "cover_main_width_bp": 336,
+        "cover_side_x_bp": 407,
+        "cover_side_width_bp": 128,
+        "source_body_font": "OTNEJMQuadraat, 10 bp",
+        "body_columns": 2,
+        "column_gap_bp": 7,
+        "source_header_y_bp": 27,
+        "source_article_type_bar_y_bp": [
+          58,
+          80
+        ],
+        "source_version_note": "Online publication version may omit final volume, issue and page range. Use only supplied version metadata.",
+        "source_body_odd_margins_bp": {
+          "left": 62,
+          "right": 100
+        },
+        "source_body_even_margins_bp": {
+          "left": 100,
+          "right": 62
+        },
+        "source_column_width_bp": 200,
+        "source_column_gap_bp": 7,
+        "source_header_box_y_bp": [
+          23.37,
+          33.86
+        ],
+        "source_cover_header_center_x_bp": 230,
+        "source_header_width_bp": 195.78,
+        "source_running_header": "Even: red journal name; odd: black short article title. Cover journal name centered over narrow main column."
+      },
+      "chinese_adaptation": {
+        "paper_bp": [
+          567,
+          756
+        ],
+        "margins_bp": {
+          "left": 31.5,
+          "right": 31.5,
+          "top": 53,
+          "bottom": 54
+        },
+        "body_bp": [
+          9.3,
+          12.4
+        ],
+        "cover_abstract_bp": [
+          10,
+          13.2
+        ],
+        "title_bp": [
+          17.5,
+          21
+        ],
+        "authors_bp": [
+          8.7,
+          10.6
+        ],
+        "captions_bp": [
+          7.6,
+          9.2
+        ],
+        "references_bp": [
+          7.6,
+          10
+        ],
+        "citation": "black numeric superscript, internal destinations",
+        "fonts": "shared common.tex CJK fallback + TeX Gyre Termes/Heros",
+        "cover": "red text journal heading, double-edged cream article-type bar, cream abstract bar, gray authors, narrow right metadata",
+        "figures": "original neutral TikZ diagram; full-width beige caption, interleaved with prose",
+        "table": "thin black rules, red table number, serif text",
+        "source_info": "independent final section with full bibliographic placeholders",
+        "running_header": "Even red journal name; odd black short title; cover journal heading aligned to narrow main column center x230; plain text only, no official logo.",
+        "cover_type_bar_outer_height_bp": 22,
+        "cover_type_bar_outer_y_bp": [
+          57,
+          79
+        ]
+      },
+      "dependencies": [
+        "common.tex",
+        "sample-body.tex"
+      ],
+      "template_scope": "Nonofficial, source-inspired neutral template; no official logo and no real article content/data/images/DOI/download metadata.",
+      "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有",
+      "verification": {
+        "template_pages": 3,
+        "all_pages_rendered_and_visually_checked": true,
+        "missing_glyphs": 0,
+        "overfull_boxes": 0,
+        "underfull_boxes": 0,
+        "internal_reference_destinations": 2,
+        "fontspec_note": "Bundled Fandol fonts report an unavailable OpenType CJK script tag. Glyph rendering is complete; this is not a missing-character warning."
+      },
+      "file": "nejm.tex",
+      "preview_pages": 3,
+      "reference_edition": "Inspected 2026 early-online research article; final volume/issue/page range absent from supplied version",
+      "paper_pt": [
+        567,
+        756
+      ],
+      "margins_pt": {
+        "left": 31.5,
+        "right": 31.5,
+        "top": 53,
+        "bottom": 54
+      },
+      "column_gap_pt": 14,
+      "body_size_leading_pt": [
+        9.3,
+        12.4
+      ],
+      "body_family": "serif",
+      "citations": "Black numeric superscripts linked to bibliography",
+      "observed_design": "red text journal heading, double-edged cream article-type bar, cream abstract bar, gray authors, narrow right metadata",
+      "template_adaptation": "Three neutral pages; commercial fonts replaced; main Chinese body widened relative to source, while cover preserves narrow main column and right metadata; source geometry and adaptation recorded separately."
+    },
+    "lancet": {
+      "file": "lancet.tex",
+      "journal": "The Lancet",
+      "reference_edition": "Inspected 2023 Therapeutic Review online edition; final volume/issue/pagination not supplied",
+      "paper_pt": [
+        595.276,
+        799.37
+      ],
+      "margins_pt": {
+        "inner": 36.85,
+        "outer": 118,
+        "top": 128,
+        "bottom": 43
+      },
+      "column_gap_pt": 10,
+      "body_family": "serif",
+      "body_size_leading_pt": [
+        9.1,
+        12
+      ],
+      "caption_size_leading_pt": [
+        7.6,
+        9.2
+      ],
+      "colors_html": {
+        "theme_green": "#00703C",
+        "ink": "#231F20",
+        "neutral_panel": "#E6EFEB"
+      },
+      "color_provenance": "Theme and ink measured from source text/drawings; neutral panel is a simplified adaptation.",
+      "source_font_and_hierarchy": "ScalaLancetPro serif body 9bp; Shaker sans title 18bp and 7/6.5bp figure captions/affiliations. Neutral template replaces commercial fonts with TeX Gyre and Noto/Fandol CJK fonts.",
+      "observed_design": "Alternating outer-edge green tab; Therapeutic Review category; green horizontal rule near y102bp. Black sans title, small green author line, bold serif opening abstract, first-page narrow affiliation sidebar, two-column serif prose, green main section headings, compact sans captions and tabular fields, pale green search-strategy panel.",
+      "template_adaptation": "Three original neutral pages: opening with sidebar/abstract/search panel; vector diagram/table interleaved with prose; discussion/declarations/placeholder references and ending source information. No real article content, authors, DOI, original figures, publisher logo or download data.",
+      "preview_pages": 3,
+      "citations": "Source numeric superscript convention; preserve English bibliography and verify targets.",
+      "figure_placement": "Interleave source-order prose and figures; measure complete caption plus image. Do not collect large figures at the end or create short text pages by forcing an oversized block. Preserve exact panel limits; purge cropped-out source streams.",
+      "content_reuse": "Reuse previously verified translations for a typography-only change, keeping content fingerprints and all references; verify source edition and marked uncertainties independently."
+    },
+    "jama": {
+      "id": "jama",
+      "journal": "JAMA",
+      "variant": "Original Investigation / Randomized Clinical Trial; corrected issue reprint supplied by user",
+      "page_bp": [
+        612,
+        792
+      ],
+      "margins_bp": {
+        "left": 72.312,
+        "right": 72.72,
+        "top": 67,
+        "bottom": 51
+      },
+      "source_text_extent_x_bp": [
+        72.312,
+        539.28
+      ],
+      "column_gap_bp": 15.5,
+      "colors": {
+        "accent_red": "#D71635",
+        "text_black": "#231F20",
+        "research_banner_rgb": [
+          0.5947966576,
+          0.1058670953,
+          0.1181658655
+        ],
+        "abstract_beige_rgb": [
+          0.9454795122,
+          0.9452658892,
+          0.9072098732
+        ]
+      },
+      "first_banner_rect_bp": [
+        72.312,
+        11.933,
+        539.28,
+        47.854
+      ],
+      "observed_fonts": {
+        "body": "Guardian Text Egyptian serif, approximately7.98bp",
+        "title_and_labels": "sans serif; source title approximately14.97bp"
+      },
+      "portable_fonts": {
+        "latin_serif": "TeX Gyre Termes",
+        "latin_sans": "TeX Gyre Heros",
+        "cjk_serif": "Noto Serif CJK SC or FandolSong",
+        "cjk_sans": "Noto Sans CJK SC or FandolHei"
+      },
+      "chinese_body_bp": [
+        8.8,
+        11.6
+      ],
+      "chinese_caption_bp": [
+        7.6,
+        9.2
+      ],
+      "structure": [
+        "Research deep-red banner",
+        "JAMA and red article type",
+        "title and authors",
+        "wide beige structured abstract with narrow related-resource sidebar",
+        "Key Points",
+        "two-column main text",
+        "editable Chinese tables with beige row bands",
+        "original scientific figure beside compact caption",
+        "article information",
+        "black superscript internally linked citations",
+        "complete bibliography",
+        "source information at end"
+      ],
+      "adaptation_notes": "Key Points may span both columns for Chinese readability. The deep-red Research banner is distinct from the brighter accent red. Chinese body and captions are optically enlarged. Figures should float near first discussion; avoid fixed page breaks that strand short text above a tall figure. All real-paper fields must come from the supplied source, including issue, online and correction dates.",
+      "scope": "Neutral3-page demonstrated layout; no real paper content, authors, DOI, scientific data, publisher logos or download information. Not a universal official JAMA template.",
+      "copyright": "仅供学术交流、出版物版权归原作者及出版商所有",
+      "file": "jama.tex",
+      "preview_pages": 3,
+      "reference_edition": "Inspected corrected 2026 issue reprint of a 2025 online randomized clinical trial; issue, online and correction dates are separate source fields",
+      "paper_pt": [
+        612,
+        792
+      ],
+      "margins_pt": {
+        "left": 72.312,
+        "right": 72.72,
+        "top": 67,
+        "bottom": 51
+      },
+      "column_gap_pt": 15.5,
+      "body_size_leading_pt": [
+        8.8,
+        11.6
+      ],
+      "body_family": "serif",
+      "citations": "Black numeric superscripts linked to bibliography",
+      "observed_design": "Research deep-red banner; JAMA and red article type; title and authors; wide beige structured abstract with narrow related-resource sidebar; Key Points; two-column main text; editable Chinese tables with beige row bands; original scientific figure beside compact caption; article information; black superscript internally linked citations; complete bibliography; source information at end",
+      "template_adaptation": "Key Points may span both columns for Chinese readability. The deep-red Research banner is distinct from the brighter accent red. Chinese body and captions are optically enlarged. Figures should float near first discussion; avoid fixed page breaks that strand short text above a tall figure. All real-paper fields must come from the supplied source, including issue, online and correction dates."
+    },
+    "bmj": {
+      "file": "bmj.tex",
+      "journal": "The BMJ",
+      "reference_edition": "Inspected 2022 Research article with structured abstract and network-meta-analysis tables",
+      "paper_pt": [
+        595.276,
+        793.701
+      ],
+      "margins_pt": {
+        "left": 34,
+        "right": 34,
+        "top": 64,
+        "bottom": 40
+      },
+      "ordinary_prose_left_inset_pt": 107,
+      "ordinary_prose_columns_x_pt": [
+        141,
+        357
+      ],
+      "column_gap_pt": 13,
+      "body_size_leading_pt": [
+        8.8,
+        11.6
+      ],
+      "caption_size_leading_pt": [
+        7.6,
+        9.2
+      ],
+      "body_family": "serif",
+      "colors_html": {
+        "blue": "#0070B9",
+        "ink": "#000000"
+      },
+      "source_font_and_hierarchy": "Source MetaSerifProBook body 8.7bp, MetaHeadline title 17bp, MetaPro sans labels; portable Chinese substitution uses TeX Gyre and Noto/Fandol.",
+      "observed_design": "Blue RESEARCH band; title/authors and two-column structured abstract to right of narrow metadata; known/new blue box extends left into gutter; later serif double columns retain broad outer-left gutter; full-width tables and small forest plots with complete captions; black numeric superscripts.",
+      "template_adaptation": "Three original neutral pages; common.tex/sample-body.tex dependencies; no real article, authors, DOI, data, figures, logo or download information. Body and captions adapted for Chinese; no requirement to reproduce source pagination.",
+      "citations": "Black numeric superscripts linked to bibliography",
+      "preview_pages": 3,
+      "table_policy": "Preserve every comparison, risk category, absolute effect, interval direction, evidence grade and footnote. If converting fewer/more to signed differences, explicitly explain signs; shared estimates repeated by row must be identified as repeated displays.",
+      "edition_policy": "DOI year and filename need not be publication year. Preserve accepted, first-published, issue and correction dates independently when supplied."
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

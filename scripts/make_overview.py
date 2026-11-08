@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild the three-column, four-row neutral-template overview.
+"""Rebuild the three-column, six-row neutral-template overview.
 
 Cell, Nature and Science occupy the first row. One representative page from
-each of twelve article and guideline templates fills one panel.
+each of sixteen article and guideline templates fills one panel, followed by
+two explicitly labelled detail pages.
 Guideline variants are not counted as new journals. No paper content or newly
 generated illustrations are introduced.
 """
@@ -16,15 +17,21 @@ PANELS = [
     ('cell', 1, 'Cell', 'Opening page'),
     ('nature', 1, 'Nature', 'Opening page'),
     ('science', 1, 'Science', 'Research summary'),
+    ('nejm', 1, 'NEJM', 'Original Article opening'),
+    ('lancet', 1, 'The Lancet', 'Therapeutic Review opening'),
+    ('jama', 1, 'JAMA', 'Original Investigation opening'),
+    ('bmj', 1, 'The BMJ', 'Research opening'),
+    ('circulation', 1, 'Circulation', 'Original Research opening'),
+    ('european-heart-journal', 1, 'European Heart Journal', 'Translational Research opening'),
     ('immunity', 1, 'Immunity', 'Opening page'),
     ('nature-reviews-cardiology', 1, 'Nature Reviews Cardiology', 'Abstract and contents'),
     ('nature-biotechnology', 1, 'Nature Biotechnology', 'Brief Communication opening'),
     ('nature-methods', 1, 'Nature Methods', 'Perspective / Analysis opening'),
-    ('circulation', 1, 'Circulation', 'Original Research opening'),
     ('circulation-research', 1, 'Circulation Research', 'Review opening'),
-    ('european-heart-journal', 1, 'European Heart Journal', 'Translational Research opening'),
     ('circulation-guideline', 1, 'Circulation guideline', 'Clinical Practice Guideline opening'),
     ('european-heart-journal-guideline', 1, 'EHJ / ESC guideline', 'Task-force guideline opening'),
+    ('european-heart-journal', 2, 'EHJ: graphical abstract', 'Detail / structured summary'),
+    ('circulation-research', 3, 'Circulation Research: figure', 'Detail / figure and text'),
 ]
 
 
@@ -42,11 +49,13 @@ def build(root, output):
     previews = root / 'assets' / 'previews'
     margin, gap, card_w, card_h, top = 48, 30, 548, 740, 172
     width = 2 * margin + 3 * card_w + 2 * gap
-    height = top + 4 * card_h + 3 * gap + 110
+    rows = (len(PANELS) + 2) // 3
+    template_count = len({p[0] for p in PANELS})
+    height = top + rows * card_h + (rows - 1) * gap + 110
     canvas = Image.new('RGB', (width, height), '#edf0f3')
     draw = ImageDraw.Draw(canvas)
     draw.text((margin, 34), 'CNS Paper Translation', font=font(44, True), fill='#1b2733')
-    draw.text((margin, 94), '12 neutral templates / 12 previews / 3 columns x 4 rows', font=font(25), fill='#526273')
+    draw.text((margin, 94), f'{template_count} neutral templates / {len(PANELS)} previews / 3 columns x {rows} rows', font=font(25), fill='#526273')
     page_boxes = []
     for index, (key, page, name, kind) in enumerate(PANELS):
         x = margin + index % 3 * (card_w + gap)
@@ -66,11 +75,11 @@ def build(root, output):
         draw.rectangle((px - 1, py - 1, px + im.width, py + im.height), outline='#d7dce3', width=1)
         assert x < px and y < py and px + im.width < x + card_w and py + im.height < y + card_h
         page_boxes.append({'row': index // 3 + 1, 'column': index % 3 + 1, 'template': key, 'page': page, 'label': name, 'kind': kind})
-    draw.text((margin, height - 77), 'Cell / Nature / Science first; journal extensions follow.', font=font(23), fill='#33465a')
+    draw.text((margin, height - 77), 'CNS / general medicine / cardiovascular / CNS family / guidelines / details', font=font(23), fill='#33465a')
     draw.text((margin, height - 41), 'Original neutral examples; not official publisher templates.', font=font(21), fill='#667585')
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, optimize=True)
-    return {'size': canvas.size, 'rows': 4, 'columns': 3, 'template_count': 12, 'panels': page_boxes}
+    return {'size': canvas.size, 'rows': rows, 'columns': 3, 'template_count': template_count, 'detail_panels': 2, 'panels': page_boxes}
 
 
 if __name__ == '__main__':
