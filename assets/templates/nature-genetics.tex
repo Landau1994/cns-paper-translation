@@ -1,0 +1,150 @@
+% Nature Genetics: original neutral Article / Review article demonstrations.
+% Measurements from inspected 2026 editions; no article text, data, figures or DOI.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=39.685bp,right=34.016bp,top=49bp,bottom=43bp,headheight=15bp,headsep=8bp,footskip=24bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,array,booktabs,tabularx}
+\newcommand{\JournalName}{Nature Genetics}
+% Exact RGB from the source stroke; nearest 8-bit hexadecimal is #359471.
+\definecolor{NGGreen}{rgb}{.2089875638,.5789883137,.4439917505}
+\definecolor{NGBlue}{HTML}{0068A5}
+\definecolor{NGGrey}{HTML}{666666}
+\definecolor{NGLight}{HTML}{F1F3F2}
+\hypersetup{linkcolor=NGBlue,urlcolor=NGBlue,pdftitle={Nature Genetics风格中文中性样板},pdfauthor={原创中性示例；非期刊官方模板}}
+\renewcommand{\normalsize}{\fontsize{9.05bp}{12.1bp}\selectfont}
+\setlength{\columnsep}{12bp}\setlength{\multicolsep}{6bp}
+\setlength{\parindent}{1em}\setlength{\parskip}{1.5bp}
+\ctexset{section={format=\bfseries\fontsize{11bp}{13.5bp}\selectfont,beforeskip=8bp,afterskip=3bp},subsection={format=\bfseries\fontsize{9.7bp}{12.1bp}\selectfont,beforeskip=6bp,afterskip=2bp}}
+\fancyhf{}
+\newcommand{\NGCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newenvironment{NGColumns}{\begin{multicols}{2}\normalsize}{\end{multicols}}
+\newcommand{\NGType}{Article / Review article}
+\AddToHook{shipout/foreground}{\begin{tikzpicture}[remember picture,overlay]
+\ifnum\value{page}<3
+ \draw[NGGreen,line width=3.5bp]([xshift=39.685bp,yshift=-36.4608bp]current page.north west)--([xshift=561.26bp,yshift=-36.4608bp]current page.north west);
+ \node[anchor=base west,inner sep=0,font=\bfseries\fontsize{18bp}{20bp}\selectfont]at([xshift=39.685bp,yshift=-54bp]current page.north west){nature genetics};
+ \node[anchor=base west,inner sep=0,font=\sffamily\bfseries\fontsize{10bp}{12bp}\selectfont]at([xshift=39.685bp,yshift=-102.711bp]current page.north west){\ifnum\value{page}=1 Article\else Review article\fi};
+ \node[anchor=base east,inner sep=0,text=NGBlue,font=\sffamily\fontsize{8bp}{10bp}\selectfont]at([xshift=561.26bp,yshift=-102.711bp]current page.north west){DOI：按目标原稿核实};
+ \draw[black,line width=.35bp]([xshift=39.685bp,yshift=-109.0905bp]current page.north west)--([xshift=561.26bp,yshift=-109.0905bp]current page.north west);
+\else
+ \node[anchor=base west,inner sep=0,font=\sffamily\bfseries\fontsize{10bp}{12bp}\selectfont]at([xshift=39.685bp,yshift=-31.5963bp]current page.north west){\NGType};
+ \node[anchor=base east,inner sep=0,text=NGBlue,font=\sffamily\fontsize{8bp}{10bp}\selectfont]at([xshift=561.26bp,yshift=-31.5963bp]current page.north west){DOI：按目标原稿核实};
+ \draw[black,line width=.35bp]([xshift=39.685bp,yshift=-38.03595bp]current page.north west)--([xshift=561.26bp,yshift=-38.03595bp]current page.north west);
+\fi
+\draw[black!45,line width=.3bp]([xshift=39.685bp,yshift=-753.4bp]current page.north west)--([xshift=561.26bp,yshift=-753.4bp]current page.north west);
+\node[anchor=base west,inner sep=0,font=\sffamily\fontsize{7.4bp}{9bp}\selectfont]at([xshift=39.685bp,yshift=-768.5bp]current page.north west){\textcolor{NGBlue}{Nature Genetics}\,|\,年份、卷期与原刊页码待填};
+\node[anchor=base east,inner sep=0,font=\sffamily\fontsize{7.2bp}{9bp}\selectfont]at([xshift=561.26bp,yshift=-768.5bp]current page.north west){非官方中性样板\quad 中文译页\ \thepage};
+\end{tikzpicture}}
+\newcommand{\NGDatePanel}{\sffamily\fontsize{8.2bp}{10.6bp}\selectfont\setlength{\parindent}{0pt}
+\hrule height .3bp\vspace{5bp}收稿：按原稿填写\par\vspace{5bp}\hrule height .3bp\vspace{5bp}
+接受：按原稿填写\par\vspace{5bp}\hrule height .3bp\vspace{5bp}在线发表：按原稿填写\par\vspace{5bp}\hrule height .3bp\vspace{7bp}
+此栏为出版信息占位。\par\smallskip 文件名、接受日期与DOI字段不能代替正式出版记录。\par\smallskip
+仅供学术交流；出版物版权归原作者及出版商所有。}
+\newcommand{\NGAuthors}{\ifnum\value{page}=1
+Example Author A\textsuperscript{1}；Example Author B\textsuperscript{2}；Example Author C\textsuperscript{1}\\
+Example Author D\textsuperscript{2}；Example Author E\textsuperscript{1}；Example Author F\textsuperscript{2}\\
+Example Author G\textsuperscript{1}；Example Author H\textsuperscript{2}；Example Author I\textsuperscript{1}\\
+Example Author J\textsuperscript{2}；Example Author K\textsuperscript{1}；Example Author L\textsuperscript{2}\\
+Example Author M\textsuperscript{1}；Example Author N\textsuperscript{2}；Example Author O\textsuperscript{1}\\
+Example Author P\textsuperscript{2}；Example Author Q\textsuperscript{1}；Example Author R\textsuperscript{2}\\
+Example Author S\textsuperscript{1}；Example Author T\textsuperscript{2}；Example Author U\textsuperscript{1}\\
+Example Author V\textsuperscript{2}；Example Author W\textsuperscript{1}；Example Author X\textsuperscript{2,*}
+\else 示例作者甲\textsuperscript{1}、示例作者乙\textsuperscript{2}、示例作者丙\textsuperscript{1}、\\示例作者丁\textsuperscript{2}、示例作者戊\textsuperscript{1,*}\fi}
+\newcommand{\NGFront}[3]{\vspace*{42bp}
+{\bfseries\fontsize{25.5bp}{29bp}\selectfont\noindent #1\par}\vspace{25bp}
+\noindent\begin{minipage}[t]{167.647bp}\vspace{0pt}\NGDatePanel\end{minipage}\hfill\begin{minipage}[t]{343.928bp}\vspace{0pt}
+\hrule height .3bp\vspace{5bp}{\sffamily\bfseries\fontsize{9.25bp}{12.75bp}\selectfont\noindent\NGAuthors\par}
+\vspace{19bp}\hrule height .3bp\vspace{7bp}{\fontsize{10.1bp}{13.5bp}\selectfont\setlength{\parindent}{0pt}#2\par}
+\end{minipage}\par\vspace{12bp}
+\begin{NGColumns}#3\end{NGColumns}
+\vspace{4bp}\noindent\rule{\linewidth}{.3bp}\par\vspace{4bp}
+{\sffamily\fontsize{7.2bp}{9.2bp}\selectfont\noindent\textsuperscript{1}作者单位一（中性占位）。\enspace\textsuperscript{2}作者单位二（中性占位）。\enspace *通信作者及联系方式按原稿填写。作者单位在首页脚注还是文末，应依目标文章决定。本页无真实作者或机构。\par}}
+\newcommand{\NGNeutral}{本段用于检查中文双栏正文的连续阅读，不报告真实研究发现。正式译稿应保留论点、证据、比较对象和限定条件；跨页续句需按正确顺序还原，图中文字与页眉页脚分别处理。方法、图注、表格脚注和作者声明均有独立的信息范围，不能因表述接近而合并。\par}
+\begin{document}\normalsize
+\NGFront{中文研究题名占位：从完整资料的连续记录\\与透明方法到研究证据的可追溯解释\\及其适用范围}{%
+本页演示研究论文的首页结构，全部文字由模板原创，不包含研究人群、实验数据或临床结论。题名下方为日期窄栏与作者摘要宽栏，摘要后在同页接入双栏正文。实际翻译应以所给原稿为依据，完整保留研究问题、分析方法、主要发现及不确定性；没有提供的材料不计为已经取得或翻译。\par\smallskip
+摘要中的数值、单位和比较方向需分别对应正文与图表。来源版本可能同时载有收稿、接受、在线发表和正式刊期；这些字段应独立记录。正文、图注、表格和书目须保持可追溯关系，中文长度可以改变分页，内容边界则应保持完整。\par\smallskip
+本页采用较长的示例作者区，展示多人署名与日期侧栏的并行关系。所有姓名均为明确的虚构占位，单位序号仅演示上标。正式文稿应完整替换作者及关联信息，不能把演示作者数量当成期刊限制。摘要的长度也应由目标论文决定，作者较少时不保留无意义的署名留白。\par\smallskip
+研究论文的摘要往往包含密集的方法和结果信息，排版时应保持完整句子及比较对象。采用较宽的摘要栏可以减少频繁换行，并使侧栏中的日期信息清楚独立。原稿没有报告的结局或统计量不能为了填满版面而补写。本文的文字均为结构说明，不对应任何研究发现；下面的正文同样只是中性阅读示例。
+}{%
+\section*{研究论文开篇（中性示例）}
+\NGNeutral
+论文的引言通常先说明已有认识与待解决的问题，再引出研究范围。译文应沿用作者的论证顺序，保留否定、转折、可能性和适用对象。此处只演示衬线正文与蓝色上标引文\NGCite{1}。模板不能替代对原文的逐段核对。
+\subsection*{图表与方法的对应}
+图表在首次实质讨论附近出现，读者能够及时核对比较对象、面板、单位及完整注释。方法和扩展数据如果随所给文件提供，也属于独立覆盖项。}
+\clearpage
+\NGFront{中文综述题名占位：从来源材料到完整论述\\的核对与呈现}{%
+本页展示同一期刊的综述首页。绿色顶线、黑色大题名、日期窄栏、作者与摘要宽栏沿用已核验的共同结构；文章类型与源文所含内容则分别核对。本样板不含真实综述的观点、案例或引文，仅用于展示层级、字形和版面关系。\par\smallskip
+综述可能包含框文、方法比较、局限与未来方向。实际译稿需逐项保留这些内容，不把全文压缩为摘要。若图内英文保留，应提供完整中文释义；译文中对来源材料的说明应与实际收到的文件一致，不将仅被提及的附件算作已提供。\par\smallskip
+综述首页的摘要区应保留作者对领域进展及尚待解决问题的限定。不同方法的用途、优点和不足不能在重排中相互混淆；技术仍处于探索阶段的表述，应与已获得直接证据的结论保持区分。这里增加的原创文字仅用于检验较长中文摘要的连续阅读，既不是原文节录，也不是对该领域的知识总结。
+}{%
+\section*{综述论证的展开（中性示例）}
+\NGNeutral
+综述中的概念和方法比较有各自的适用范围。作者若区分技术优势、实验限制和未来设想，译文也应沿用这一层次。证据尚不能支持的推论，不应因句式调整变成已建立的结论。重要文献的评注若属于源文内容，应与英文书目分别处理\NGCite{2}。
+\subsection*{框文与连续正文}
+独立框文、表格和长图注需要分别恢复阅读顺序。某句正文在图表旁中断时，应先确认其跨栏或跨页衔接，再安排中文分页。结构相近的研究与综述首页可以共享版式，作者单位的位置仍按具体来源决定。
+\subsection*{术语与证据层次}
+同一概念的中文名称应在全文保持一致，必要时首次出现保留英文或缩写。机制图、方法比较表和正文论述之间的关系需要逐项核对；方法能够观察什么、尚不能回答什么，应保持原文给出的边界。不能根据图形的直观印象扩大作者的主张。
+\subsection*{图注与文献评注}
+完整图注包括面板、缩写、比较对象与原图署名，表格脚注也有独立的限定作用。书目中的重点文献评注如果包含作者对研究意义的说明，应译成中文并与英文参考条目区分。正文中的上标仍对应原有编号，不把补充解释编成新的研究来源。}
+\clearpage
+\section*{双栏正文与图文穿插}
+\begin{NGColumns}
+\NGNeutral
+\subsection*{内容与版面的独立维护}
+可编辑正文、图注、标签释义和书目分别保存，便于修订时定位。换字号或栏宽后应比较内容记录，再检查页面；不能只凭提取文字判断图像是否截断或与图注重叠。\par
+\NGNeutral
+\subsection*{统计含义与来源限定}
+原文的数字、时间、分组和单位须保持对应。数值字符相同不代表比较方向正确；置信区间、效应方向和限定条件需要在所属行列中逐项核对。原文存在内部差异时，可保留各处表述并添加简短译注\NGCite{1}。
+\subsection*{面板顺序与完整范围}
+科学原图的边界应逐幅测量。图可能跨越多栏或在页面中部开始，不能使用上一个项目的固定坐标。每个面板的轴、图例、尺度、统计符号和署名都需要保留。清除下载来源时，也须检查其是否独立于正常科学图形。
+\end{NGColumns}
+\vspace{6bp}\noindent\begin{minipage}{\linewidth}\centering
+\begin{minipage}{.83\linewidth}\DemoVector\end{minipage}\par\vspace{5bp}
+{\sffamily\fontsize{7.6bp}{9.2bp}\selectfont\raggedright\textbf{图1｜中性证据链示意（原创占位，无实验数据）。}\textbf{A}，输入节点表示需要核对的原文材料。\textbf{B}，处理节点表示逐段转换及复核。\textbf{C}，输出节点表示正文、图注和书目等独立交付部分。箭头仅表示本示例的阅读顺序，不代表因果关系、效应方向或数量变化。该图由模板自行绘制，所有节点均为文字占位；无样本量、误差线、统计检验或比例尺。实际论文图注应逐项保留原稿报告的样本量、单位、检验方法、限定及图形署名。\par}
+\end{minipage}\par\vspace{6bp}
+\begin{NGColumns}
+\subsection*{图注、标签与正文的衔接}
+本图只有阅读顺序，没有统计意义。正式稿应保留每个面板、样本量、检验、误差定义、单位和署名。较小字号与行距可以改善长图注的紧凑度，但不能删去尾句或缩写说明。图内标签的中文释义可以放在图旁或文末，须清楚对应图号。
+\subsection*{避免不合理留白}
+图像与完整图注作为一个整体计算高度。较小图可与邻近文字同页，大图按真实面板尺寸安排；中文重新分页后，所有正文图均应在书目前完成。短示例中的人工分页只用于展示结构，不是完整论文的固定分页要求。
+\subsection*{修订后重新核验}
+换字体、行距或图像大小后，仍需检查所有受影响页面。提取文字没有改变，并不代表浮动图表的位置正确；而图像看起来完整，也不能证明隐藏在裁区外的下载信息已经移除。内容检查与实际页面检查应各自保留记录。
+\end{NGColumns}
+\clearpage
+\section*{方法与扩展内容（原创中性示例）}
+\begin{NGColumns}
+\subsection*{方法信息的覆盖}
+方法与正文具有不同密度。实际翻译应完整保留研究设计、纳入与排除规则、数据处理、模型和统计说明。软件名称、版本、数据标识和参数的归属也需对应原文；本模板不提供实验参数或可执行研究方案。
+\par 方法中的比较方向、分析范围与数据层级相互关联。原文区分不同来源、批次或观察单位时，译文也应分别保留。表格中报告的汇总量不能代替方法对数据处理的完整定义。\par
+\subsection*{材料与复现范围}
+可编辑工程应能重建最终交付文件。正文与图注文件采用清楚的内容边界，图片依赖使用可移植的相对路径。所给来源版本、实际覆盖内容和未提供的附件应分别记录。
+\subsection*{扩展数据的独立记录}
+所给文件中的扩展图、扩展表、方法和报告摘要应单独登记。主文引到一份补充附件，并不表示该附件已随文件提供。源文的编号和链接层级需保留，不沿用模板的演示编号\NGCite{2}。
+\par 扩展内容的完整图注和缩写说明同样属于译稿。报告摘要若以表单或项目方式呈现，应逐项翻译实际填写内容，并区分不适用、未报告与未提供。不能从文章正文推测表单没有写出的答案。\par
+\subsection*{版本与内部链接}
+主文、方法和扩展内容之间的引用应保持准确。书目重新编号或按章节独立编号时，应采用明确的目标名称，避免不同段落中的同号引文跳转到错误条目。
+\end{NGColumns}
+\vspace{4bp}{\sffamily\fontsize{8bp}{10.5bp}\selectfont\noindent\textbf{表1｜材料覆盖记录（原创占位；无研究数据）}\par\smallskip
+\setlength{\tabcolsep}{6bp}\noindent\begin{tabularx}{\linewidth}{@{}p{83bp}XX@{}}\toprule
+材料 & 需要核对的内容 & 覆盖记录\\\midrule
+正文方法 & 设计、处理步骤、统计定义与限定 & 按所给版本记录；不得省略续段\\[4bp]
+扩展数据 & 全部面板、完整图注、缩写及单位 & 区分主图与扩展图的编号\\[4bp]
+报告摘要 & 实际提供的字段及填写内容 & 不由模板生成不存在的答案\\[4bp]
+独立补充文件 & 实际是否提供及与主文的对应 & 未提供时明确说明范围\\\bottomrule
+\end{tabularx}\par}
+\vspace{9bp}\noindent\colorbox{NGLight}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}\sffamily\fontsize{7.6bp}{9.2bp}\selectfont
+\textbf{扩展内容示意（非真实图表）。}正文、方法、扩展数据和报告摘要是需要分别核对的材料层级。该浅灰框只演示紧凑说明区，不包含数据点、面板结果、临床推荐或官方报告要求。正式使用时以实际所给文件为准。
+\end{minipage}}\par\vspace{6bp}
+\begin{NGColumns}
+\section*{声明（中性占位）}
+作者单位、贡献、致谢、资助、利益冲突、数据与代码可用性以及版权许可，均应分别按原文处理。缺失字段不自行补造。本样板无研究、作者声明或基金资助。
+\par 在全文重排任务中，声明和英文书目不能因位于正文后而遗漏。真实图、表、框文及附录在目录中的位置可以调整，但其编号、引用和内容关系应保持可追溯。\par
+\subsection*{交付范围的说明}
+译稿应说明科学原图是否保留英文，哪些附件未随原稿提供，以及是否采用字体替代。版面有意适配与原文信息应分别记录，使后续修订能够准确理解所使用的来源版本。
+\SampleBibliography
+\SampleSourceInfo
+仅供学术交流、出版物版权归原作者及出版商所有。此文件以普通刊名字样和可移植字体演示已核验结构，不含期刊标识图像；实际稿件仍需逐页检查。
+\end{NGColumns}
+\end{document}

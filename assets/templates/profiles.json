@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from sixteen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from seventeen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -767,6 +767,124 @@
       "preview_pages": 3,
       "table_policy": "Preserve every comparison, risk category, absolute effect, interval direction, evidence grade and footnote. If converting fewer/more to signed differences, explicitly explain signs; shared estimates repeated by row must be identified as repeated displays.",
       "edition_policy": "DOI year and filename need not be publication year. Preserve accepted, first-published, issue and correction dates independently when supplied."
+    },
+    "nature-genetics": {
+      "file": "nature-genetics.tex",
+      "journal": "Nature Genetics",
+      "reference_edition": "Two inspected 2026 issue editions: an Article and a Review article. The shared opening design is represented once; source-specific content boundaries remain separate.",
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 39.685,
+        "right": 34.016,
+        "top": 49,
+        "bottom": 43
+      },
+      "column_gap_pt": 12,
+      "body_family": "serif",
+      "body_size_leading_pt": [
+        9.05,
+        12.1
+      ],
+      "caption_size_leading_pt": [
+        7.6,
+        9.2
+      ],
+      "preview_pages": 4,
+      "citations": "Blue numeric superscripts linked to English bibliography targets",
+      "source_observations": {
+        "paper_pt": [
+          595.276,
+          790.866
+        ],
+        "source_body_columns_x_pt": [
+          39.685,
+          306.4724
+        ],
+        "source_column_gap_pt": 12,
+        "cover_green_rule": {
+          "rgb": [
+            0.20898756384849548,
+            0.5789883136749268,
+            0.4439917504787445
+          ],
+          "nearest_hex": "#359471",
+          "start_x_pt": 39.685,
+          "end_x_pt": 561.26,
+          "center_y_pt": 36.4608,
+          "stroke_width_pt": 3.5,
+          "scope": "Opening pages only; the exact RGB is used instead of the rounded hex."
+        },
+        "colors_html": {
+          "ink": "#000000",
+          "citations_links_and_footer_journal_name": "#0068A5"
+        },
+        "cover_journal_name": {
+          "font": "NatureTitlepiece-Bold",
+          "size_pt": 18,
+          "origin_x_pt": 39.685
+        },
+        "cover_type_and_doi_baseline_y_pt": 102.7109,
+        "cover_type_rule_y_pt": 109.0905,
+        "cover_type_rule_width_pt": 0.35,
+        "cover_title": {
+          "font": "Harding-Bold",
+          "size_pt": 26,
+          "baseline_distance_pt": 28
+        },
+        "cover_metadata": {
+          "left_x_pt": 39.685,
+          "author_abstract_x_pt": 217.3322,
+          "date_panel_width_pt": 167.6472,
+          "panel_gap_pt": 10,
+          "author_abstract_width_pt": 343.9278,
+          "date_font_size_pt": 8.5,
+          "author_font_size_pt": 9.25,
+          "abstract_font_size_pt": 10
+        },
+        "body": {
+          "font": "HardingText-Regular",
+          "nominal_size_pt": 8.25,
+          "nominal_leading_pt": 10.75
+        },
+        "section_heading": {
+          "font": "HardingText-Bold",
+          "nominal_size_pt": 10.75
+        },
+        "captions_and_table_text": {
+          "font": "GraphikNaturel-Regular",
+          "nominal_size_pt": 8
+        },
+        "regular_header": {
+          "type_baseline_y_pt": 31.5963,
+          "rule_y_pt": 38.03595,
+          "rule_width_pt": 0.35
+        },
+        "article_review_differences": [
+          "Article versus Review article type label; title and author lengths alter the vertical positions of the metadata/abstract and body.",
+          "The inspected Article places its full affiliations at the end, while the inspected Review includes an extended affiliation footnote on its opening page.",
+          "The inspected Article includes methods, extended data and reporting content after the paginated main article; these are independent coverage units when supplied.",
+          "An open-access symbol appears in the inspected Article but is absent from the inspected Review; it is omitted from this neutral template rather than imitated as a publisher mark."
+        ]
+      },
+      "observed_design": "Exact green opening rule, plain journal-name replacement, black large serif title, Article/Review type and blue DOI line, approximately 1:2 dates/author-and-abstract panels, same-page two-column serif body, black headings, blue numeric superscripts, compact sans captions and fine rules; affiliation location follows each supplied edition.",
+      "template_adaptation": "Four original neutral pages demonstrate Article opening, Review opening, figure/text interleaving, and methods/extended-content record plus declarations, linked placeholder bibliography and final source information. CJK title 25.5/29bp, body 9.05/12.1bp, abstract 10.1/13.5bp and captions 7.6/9.2bp are Chinese adaptations. Plain TeX Gyre journal lettering and Noto/Fandol replace commercial fonts and publisher logos. The long and short author blocks are explicit fictional placeholders, not copied author lists. Pale-grey record panel is an original adaptation, not a claimed publisher form.",
+      "edition_policy": "Record received, accepted, first-published, issue, volume and page range independently from the supplied version. Article and review contents are not merged because their opening design is shared.",
+      "figure_placement": "Interleave each main figure and complete caption near its first substantive discussion; methods and supplied extended data remain separately identified. Dense original figure labels may remain English with complete Chinese glossary; source-specific crop bounds must be remeasured and cropped-out objects actually purged.",
+      "dependencies": [
+        "common.tex",
+        "sample-body.tex"
+      ],
+      "preview_roles": {
+        "1": "Article opening",
+        "2": "Review article opening",
+        "3": "Figure and text detail",
+        "4": "Methods and extended-content detail"
+      },
+      "scope": "Original neutral template; no real article text, authors, DOI, experimental data, original figures, download information, publisher logo or scientific claim. Not an official universal publisher template.",
+      "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

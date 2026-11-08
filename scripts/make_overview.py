@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild the three-column, six-row neutral-template overview.
+"""Rebuild the three-column, eight-row neutral-template overview.
 
 Cell, Nature and Science occupy the first row. One representative page from
-each of sixteen article and guideline templates fills one panel, followed by
-two explicitly labelled detail pages.
+each of seventeen article and guideline templates fills one panel, followed by
+seven explicitly labelled detail pages.
 Guideline variants are not counted as new journals. No paper content or newly
 generated illustrations are introduced.
 """
@@ -23,6 +23,8 @@ PANELS = [
     ('bmj', 1, 'The BMJ', 'Research opening'),
     ('circulation', 1, 'Circulation', 'Original Research opening'),
     ('european-heart-journal', 1, 'European Heart Journal', 'Translational Research opening'),
+    ('nature-genetics', 1, 'Nature Genetics: Article', 'Research opening'),
+    ('nature-genetics', 2, 'Nature Genetics: Review', 'Detail / Review opening'),
     ('immunity', 1, 'Immunity', 'Opening page'),
     ('nature-reviews-cardiology', 1, 'Nature Reviews Cardiology', 'Abstract and contents'),
     ('nature-biotechnology', 1, 'Nature Biotechnology', 'Brief Communication opening'),
@@ -30,6 +32,10 @@ PANELS = [
     ('circulation-research', 1, 'Circulation Research', 'Review opening'),
     ('circulation-guideline', 1, 'Circulation guideline', 'Clinical Practice Guideline opening'),
     ('european-heart-journal-guideline', 1, 'EHJ / ESC guideline', 'Task-force guideline opening'),
+    ('nature-genetics', 3, 'NG: figure and text', 'Detail / compact caption and prose'),
+    ('nature-genetics', 4, 'NG: Methods and extended data', 'Detail / Methods and source scope'),
+    ('nature-reviews-cardiology', 3, 'NRC: multipage table', 'Detail / repeated table headings'),
+    ('nature-methods', 2, 'Nature Methods: table and box', 'Detail / full-width content blocks'),
     ('european-heart-journal', 2, 'EHJ: graphical abstract', 'Detail / structured summary'),
     ('circulation-research', 3, 'Circulation Research: figure', 'Detail / figure and text'),
 ]
@@ -79,7 +85,7 @@ def build(root, output):
     draw.text((margin, height - 41), 'Original neutral examples; not official publisher templates.', font=font(21), fill='#667585')
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, optimize=True)
-    return {'size': canvas.size, 'rows': rows, 'columns': 3, 'template_count': template_count, 'detail_panels': 2, 'panels': page_boxes}
+    return {'size': canvas.size, 'rows': rows, 'columns': 3, 'template_count': template_count, 'detail_panels': len(PANELS) - template_count, 'panels': page_boxes}
 
 
 if __name__ == '__main__':

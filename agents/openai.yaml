@@ -1,6 +1,6 @@
 interface:
   display_name: "CNS 论文汉化"
-  short_description: "用 CNS 等十六套期刊与指南样板完成全文翻译、旧译文复用及原刊样式排版"
+  short_description: "用 CNS 等十七套期刊与指南样板完成全文翻译、旧译文复用及原刊样式排版"
   default_prompt: "使用 $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除下载来源信息，并在文末附上原文引用和 DOI。"
 policy:
   allow_implicit_invocation: true

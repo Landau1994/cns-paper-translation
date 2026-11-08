@@ -1,4 +1,4 @@
-# 十六套中性XeLaTeX模板
+# 十七套中性XeLaTeX模板
 
 这组模板从已核验的期刊配置、文章版本及指南文体提炼结构，不代表期刊的完整官方版式标准。模板只包含原创中性文字与TikZ矢量占位图；所有作者、出版信息和参考文献均明确标为示例。不得把示例条目直接作为真实论文信息使用。
 
@@ -13,6 +13,7 @@
 | `bmj.tex` | 蓝色RESEARCH栏、元数据窄栏、结构摘要与左伸认识框、宽左留白及全宽图表 | 黑色数字上标 | 3 |
 | `circulation.tex` | 绿色研究类型线、全宽结构化摘要、临床展望与缩写框、无衬线双栏 | 黑色数字上标 | 3 |
 | `european-heart-journal.tex` | 红色转化研究层级、米底结构化摘要、独立图形摘要与展望、双栏图文混排 | 黑色数字上标 | 3 |
+| `nature-genetics.tex` | 绿色首页顶线、黑色大题名、约1:2日期与作者摘要区、Article/Review双首页、双栏图文及方法扩展 | 蓝色数字上标 | 4 |
 | `immunity.tex` | 蓝刊头/摘要、双栏正文、跨栏图与图注 | 蓝色数字上标 | 2 |
 | `nature-reviews-cardiology.tex` | 紫顶线、独立摘要目录页、双栏、跨页表重复标题与列头 | 蓝色数字上标 | 4 |
 | `nature-biotechnology.tex` | 简讯首页黄色顶线、约1:2日期/摘要区、双栏公式、扩展报告表 | 蓝色数字上标 | 3 |
@@ -65,3 +66,9 @@ Circulation指南2022与2026的推荐色块并不完全相同，`profiles.json`�
 NEJM、The Lancet、JAMA、The BMJ各有3页中性演示。NEJM、JAMA及BMJ需要共享`common.tex`和`sample-body.tex`，Lancet为独立入口。NEJM保留窄摘要主栏及右侧元数据；Lancet使用奇偶外侧页签和首面单位栏；JAMA的Research深红条与亮红标签须区分；BMJ普通双栏保留宽左留白，全宽图表可伸入该区域。
 
 精确颜色、纸型、来源版本与中文有意适配见[期刊配置说明](../../references/journal-profiles.md)和`profiles.json`。源表共享估计、证据等级、比较标签和全部脚注应按目标文章核对；不能把模板中的占位段落或某篇文章的加药解释当作通用数据结构。四种入口不含真实作者、DOI、数据、原图、下载信息或官方标识。
+
+## Nature Genetics：两种首页与扩展内容
+
+`nature-genetics.tex`的四页分别展示Article首页、Review article首页、双栏图文及Methods/扩展材料记录。二者来自同一期刊共享结构，计为一套样板。首页绿条使用实测原RGB；日期、作者摘要区、单位位置和普通页的细线页眉按当前来源核对。精确尺寸、颜色和中文适配见[期刊配置说明](../../references/journal-profiles.md)及`profiles.json`。
+
+复制时保留`common.tex`和`sample-body.tex`。完整论文不按示例四页限制分页，实际提供的Methods、扩展数据和Reporting Summary均是独立覆盖项。报告摘要可作为附录供填写参考，但须区分作者已填答案、原表勾选、不适用及未填写的模板提示；不能把提示文字当成已实施的方法。示例无真实文章内容或原图，版权声明保留。
