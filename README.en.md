@@ -8,9 +8,11 @@ A reusable Codex skill for translating user-provided English research papers, re
 
 It includes **three compilable templates for Cell, Nature, and Science**, with **NEJM, The Lancet, JAMA, The BMJ, Nature Genetics, Immunity, Nature Reviews Cardiology, Nature Biotechnology, Nature Methods, Circulation, Circulation Research, and European Heart Journal extensions and two guideline variants**. Coverage goes beyond the opening page to include methods, figure captions, references, declarations, and full source information at the end.
 
-![Seventeen layout templates in a three-column, eight-row overview, with CNS first](assets/previews/overview.png)
+![One opening page for each of fifteen journals in a three-column, five-row overview, with CNS first](assets/previews/overview.png)
 
-The three-column, eight-row overview contains seventeen templates and seven detail panels. The first three rows retain CNS; NEJM, The Lancet, JAMA; and The BMJ, Circulation, European Heart Journal. Row 4 shows the Nature Genetics Article opening, its Review opening, and Immunity. Other CNS-family extensions and guidelines follow, then NG figure/text and Methods details, long tables, boxes and the existing graphical-abstract details. The two NG openings belong to one template.
+The three-column, five-row overview shows one opening page per journal: fifteen journals in fifteen panels. Rows 1–3 are Cell / Nature / Science; NEJM / The Lancet / JAMA; and The BMJ / Circulation / European Heart Journal. Row 4 contains Nature Genetics / Immunity / Nature Reviews Cardiology. Row 5 contains Nature Biotechnology / Nature Methods / Circulation Research. All seventeen templates and fifty individual demonstration pages remain available; review openings, figure/text layouts, long tables and boxes can be viewed in the individual journal PDFs.
+
+The two guideline variants have separate previews: [Circulation guideline PDF](assets/previews/circulation-guideline.pdf) · [EHJ / ESC guideline PDF](assets/previews/european-heart-journal-guideline.pdf). They are article-type variants, so they are not counted as additional journals or repeated in the overview.
 
 ## What sets it apart
 
@@ -102,7 +104,7 @@ When the conversation or local project instructions already authorize a specific
 | [assets/templates/](assets/templates/) | Seventeen XeLaTeX templates and shared files |
 | [assets/previews/](assets/previews/) | Sample PDFs, page PNGs, and template overview |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | Read-only checks for specified download text, internal PDF links, and compilation logs |
-| [scripts/make_overview.py](scripts/make_overview.py) | Rebuild the three-column, eight-row overview with CNS in the first row |
+| [scripts/make_overview.py](scripts/make_overview.py) | Rebuild the three-column, five-row opening-page overview for fifteen journals, with CNS in the first row |
 
 Compiling the templates requires **XeLaTeX** and common TeX packages, including ctex and TikZ. The templates use Noto CJK when available and fall back to TeX Live's Fandol. Render and check the output again when moving to another machine. Copy the entire template directory before making changes; see the [template compilation instructions](assets/templates/README.md).
 

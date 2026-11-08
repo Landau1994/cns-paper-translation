@@ -31,7 +31,7 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | The BMJ | [bmj.tex](assets/templates/bmj.tex) | 蓝色RESEARCH栏、元数据窄栏、结构摘要与左伸认识框、宽左留白及全宽图表 |
 | Circulation | [circulation.tex](assets/templates/circulation.tex) | 绿色研究类型线、全宽结构化摘要、临床展望与缩写框、无衬线双栏、黑色上标 |
 | European Heart Journal | [european-heart-journal.tex](assets/templates/european-heart-journal.tex) | 红色转化研究层级、浅米底结构化摘要、独立结构化图形摘要与转化展望、双栏图文混排 |
-| Nature Genetics | [nature-genetics.tex](assets/templates/nature-genetics.tex) | 绿色首页顶线、黑色大题名、约1:2日期与作者摘要区、Article/Review双首页、双栏图文及方法扩展 |
+| Nature Genetics | [nature-genetics.tex](assets/templates/nature-genetics.tex) | 绿色首页顶线、黑色大题名、约1:2日期与作者摘要区、Article/Review首页结构、双栏图文及方法扩展 |
 | Immunity | [immunity.tex](assets/templates/immunity.tex) | Cell 家族布局、蓝色刊头、数字上标引文 |
 | Nature Reviews Cardiology | [nature-reviews-cardiology.tex](assets/templates/nature-reviews-cardiology.tex) | 紫色顶线、独立摘要目录页、蓝色上标、跨页表格 |
 | Nature Biotechnology | [nature-biotechnology.tex](assets/templates/nature-biotechnology.tex) | 简讯首页黄色顶线、约1:2日期/摘要区、双栏数学正文、蓝色上标 |
@@ -40,7 +40,9 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览为3列×8行：17套样板加7格细节。前三行保持CNS、NEJM／Lancet／JAMA、BMJ／Circulation／EHJ；第四行为Nature Genetics研究首页、同一NG样板的综述首页、Immunity。随后排列其余CNS子刊和指南，再展示NG图文与方法、长表、框文及既有图形摘要等细节；两种NG首页不重复计为两个期刊。指南变体属于文体扩展，不计为新增期刊。使用 `scripts/make_overview.py` 从已核验页面重建总览，同步计数与说明。
+总览为3列×5行，每本期刊仅展示一张首页，共15本期刊、15格。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。完整的17套样板、50页单独演示均保留，其他首页与图文、长表、框文等细节见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
+
+指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 

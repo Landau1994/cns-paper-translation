@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Rebuild the three-column, eight-row neutral-template overview.
+"""Rebuild the three-column, five-row journal-opening overview.
 
 Cell, Nature and Science occupy the first row. One representative page from
-each of seventeen article and guideline templates fills one panel, followed by
-seven explicitly labelled detail pages.
-Guideline variants are not counted as new journals. No paper content or newly
-generated illustrations are introduced.
+each of fifteen journals fills one panel. Article/review variants, guideline
+variants and interior detail pages remain in the individual template previews.
+No paper content or newly generated illustrations are introduced.
 """
 from pathlib import Path
 import argparse
@@ -23,21 +22,12 @@ PANELS = [
     ('bmj', 1, 'The BMJ', 'Research opening'),
     ('circulation', 1, 'Circulation', 'Original Research opening'),
     ('european-heart-journal', 1, 'European Heart Journal', 'Translational Research opening'),
-    ('nature-genetics', 1, 'Nature Genetics: Article', 'Research opening'),
-    ('nature-genetics', 2, 'Nature Genetics: Review', 'Detail / Review opening'),
+    ('nature-genetics', 1, 'Nature Genetics', 'Article opening'),
     ('immunity', 1, 'Immunity', 'Opening page'),
     ('nature-reviews-cardiology', 1, 'Nature Reviews Cardiology', 'Abstract and contents'),
     ('nature-biotechnology', 1, 'Nature Biotechnology', 'Brief Communication opening'),
     ('nature-methods', 1, 'Nature Methods', 'Perspective / Analysis opening'),
     ('circulation-research', 1, 'Circulation Research', 'Review opening'),
-    ('circulation-guideline', 1, 'Circulation guideline', 'Clinical Practice Guideline opening'),
-    ('european-heart-journal-guideline', 1, 'EHJ / ESC guideline', 'Task-force guideline opening'),
-    ('nature-genetics', 3, 'NG: figure and text', 'Detail / compact caption and prose'),
-    ('nature-genetics', 4, 'NG: Methods and extended data', 'Detail / Methods and source scope'),
-    ('nature-reviews-cardiology', 3, 'NRC: multipage table', 'Detail / repeated table headings'),
-    ('nature-methods', 2, 'Nature Methods: table and box', 'Detail / full-width content blocks'),
-    ('european-heart-journal', 2, 'EHJ: graphical abstract', 'Detail / structured summary'),
-    ('circulation-research', 3, 'Circulation Research: figure', 'Detail / figure and text'),
 ]
 
 
@@ -56,12 +46,14 @@ def build(root, output):
     margin, gap, card_w, card_h, top = 48, 30, 548, 740, 172
     width = 2 * margin + 3 * card_w + 2 * gap
     rows = (len(PANELS) + 2) // 3
-    template_count = len({p[0] for p in PANELS})
+    journal_count = len({p[0] for p in PANELS})
+    assert journal_count == len(PANELS), 'Show each journal once.'
+    profiles = json.loads((root / 'assets/templates/profiles.json').read_text(encoding='utf-8'))['profiles']
     height = top + rows * card_h + (rows - 1) * gap + 110
     canvas = Image.new('RGB', (width, height), '#edf0f3')
     draw = ImageDraw.Draw(canvas)
     draw.text((margin, 34), 'CNS Paper Translation', font=font(44, True), fill='#1b2733')
-    draw.text((margin, 94), f'{template_count} neutral templates / {len(PANELS)} previews / 3 columns x {rows} rows', font=font(25), fill='#526273')
+    draw.text((margin, 94), f'{journal_count} journals / one opening page each / 3 columns x {rows} rows', font=font(25), fill='#526273')
     page_boxes = []
     for index, (key, page, name, kind) in enumerate(PANELS):
         x = margin + index % 3 * (card_w + gap)
@@ -81,11 +73,14 @@ def build(root, output):
         draw.rectangle((px - 1, py - 1, px + im.width, py + im.height), outline='#d7dce3', width=1)
         assert x < px and y < py and px + im.width < x + card_w and py + im.height < y + card_h
         page_boxes.append({'row': index // 3 + 1, 'column': index % 3 + 1, 'template': key, 'page': page, 'label': name, 'kind': kind})
-    draw.text((margin, height - 77), 'CNS / general medicine / cardiovascular / CNS family / guidelines / details', font=font(23), fill='#33465a')
+    draw.text((margin, height - 77), 'Article/review variants, guidelines and interior pages: see individual template previews.', font=font(23), fill='#33465a')
     draw.text((margin, height - 41), 'Original neutral examples; not official publisher templates.', font=font(21), fill='#667585')
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, optimize=True)
-    return {'size': canvas.size, 'rows': rows, 'columns': 3, 'template_count': template_count, 'detail_panels': len(PANELS) - template_count, 'panels': page_boxes}
+    return {'size': canvas.size, 'rows': rows, 'columns': 3,
+            'journal_count': journal_count, 'template_count': len(profiles),
+            'represented_template_count': journal_count, 'detail_panels': 0,
+            'guideline_variants': 2, 'panels': page_boxes}
 
 
 if __name__ == '__main__':

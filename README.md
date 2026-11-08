@@ -8,9 +8,11 @@
 
 以 **Cell、Nature、Science 三套可编译样板**为特色，附 **NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Biotechnology、Nature Methods、Circulation、Circulation Research 与 European Heart Journal 扩展，以及两种指南变体**。不只关注首页效果，也覆盖方法、图注、书目、声明和文末原文信息。
 
-![十七套中性样板与七格细节：3列×8行总览，CNS位于首行](assets/previews/overview.png)
+![15本期刊各一张首页：3列×5行总览，CNS位于首行](assets/previews/overview.png)
 
-总览为3列×8行：17套样板加7格细节。前三行保持CNS、NEJM／Lancet／JAMA、BMJ／Circulation／EHJ；第四行为Nature Genetics研究首页、同一NG样板的综述首页、Immunity。随后排列其余CNS子刊和指南，再展示NG图文与方法、长表、框文及既有图形摘要等细节；两种NG首页不重复计为两个期刊。
+总览为3列×5行，每本期刊仅展示一张首页，共15本期刊、15格。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。完整的17套样板、50页单独演示均保留，综述首页、图文、长表及框文等可在各期刊PDF中查看。
+
+两种指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。它们属于文体扩展，不重复计为期刊，也不占总览格位。
 
 ## 有什么不同
 
@@ -34,7 +36,7 @@
 | The BMJ | 蓝色RESEARCH栏、元数据窄栏、结构摘要与左伸认识框、宽左留白及全宽图表 | 黑色数字上标 | [PDF](assets/previews/bmj.pdf) · [源文件](assets/templates/bmj.tex) |
 | Circulation | 绿色研究类型线、全宽结构化摘要、临床展望与缩写框、双栏无衬线正文 | 黑色数字上标 | [PDF](assets/previews/circulation.pdf) · [源文件](assets/templates/circulation.tex) |
 | European Heart Journal | 红色转化研究层级、浅米底结构化摘要、独立结构化图形摘要与灰底转化展望、双栏图文混排 | 黑色数字上标 | [PDF](assets/previews/european-heart-journal.pdf) · [源文件](assets/templates/european-heart-journal.tex) |
-| Nature Genetics | 绿色首页顶线、黑色大题名、约1:2日期与作者摘要区、Article/Review双首页、双栏图文及方法扩展 | 蓝色数字上标 | [PDF](assets/previews/nature-genetics.pdf) · [源文件](assets/templates/nature-genetics.tex) |
+| Nature Genetics | 绿色首页顶线、黑色大题名、约1:2日期与作者摘要区、Article/Review首页结构、双栏图文及方法扩展 | 蓝色数字上标 | [PDF](assets/previews/nature-genetics.pdf) · [源文件](assets/templates/nature-genetics.tex) |
 | Immunity | Cell 家族结构、蓝色刊头与摘要 | 数字上标 | [PDF](assets/previews/immunity.pdf) · [源文件](assets/templates/immunity.tex) |
 | Nature Reviews Cardiology | 紫色顶线、独立摘要目录页、双栏正文、跨页表重复标题与列头 | 蓝色数字上标 | [PDF](assets/previews/nature-reviews-cardiology.pdf) · [源文件](assets/templates/nature-reviews-cardiology.tex) |
 | Nature Biotechnology | 简讯首页黄色顶线、约1:2日期/作者摘要区、双栏公式、图文与报告表 | 蓝色数字上标 | [PDF](assets/previews/nature-biotechnology.pdf) · [源文件](assets/templates/nature-biotechnology.tex) |
@@ -102,7 +104,7 @@ $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除右
 | [assets/templates/](assets/templates/) | 十七套 XeLaTeX 样板及共享文件 |
 | [assets/previews/](assets/previews/) | 演示 PDF、页面 PNG 与样板总览 |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | 只读检查 PDF 下载词条、内部链接和编译日志 |
-| [scripts/make_overview.py](scripts/make_overview.py) | 重建3列×8行总览，CNS固定置于首行 |
+| [scripts/make_overview.py](scripts/make_overview.py) | 重建15本期刊的3列×5行首页总览，CNS固定置于首行 |
 
 编译样板需要 **XeLaTeX** 及 ctex、TikZ 等常见 TeX 包。字体优先使用 Noto CJK，缺少时回退至 TeX Live 的 Fandol；换机后需重新渲染核对。请复制整个模板目录后再修改，具体见 [模板编译说明](assets/templates/README.md)。
 

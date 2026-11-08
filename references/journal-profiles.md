@@ -4,7 +4,9 @@
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 提供对应演示 PDF 与页面预览，也可先查看 [十七套样板与七格细节总览（3列×8行）](../assets/previews/overview.png)。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供17套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留共50页单独演示 PDF 与对应页面预览，也可先查看 [15本期刊各一张首页的总览（3列×5行）](../assets/previews/overview.png)。前三行依次为Cell／Nature／Science，NEJM／The Lancet／JAMA，The BMJ／Circulation／European Heart Journal；第四行为Nature Genetics／Immunity／Nature Reviews Cardiology；第五行为Nature Biotechnology／Nature Methods／Circulation Research。总览共15格，综述首页、图文、长表及框文等细节见各期刊单独PDF。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方 logo。共享文件须与入口文件一起复制到工作目录。
+
+指南变体另见 [Circulation指南PDF](../assets/previews/circulation-guideline.pdf) 和 [EHJ／ESC指南PDF](../assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
 共享宏、长文中取消样板人工分页及字体回退提示，见随模板提供的 [编译说明](../assets/templates/README.md)。可机读的尺寸与引文配置在 [profiles.json](../assets/templates/profiles.json)。
 
