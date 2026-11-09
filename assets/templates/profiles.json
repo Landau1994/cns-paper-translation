@@ -10,7 +10,7 @@
   },
   "profiles": {
     "cell": {
-      "reference_edition": "Cell 185 (2022), Atherosclerosis: Recent developments, supplied article edition",
+      "reference_edition": "Cell 185 (2022), Atherosclerosis: Recent developments, supplied article edition; additionally an inspected 2026 Article edition with a separate graphical-summary sheet and numeric superscript citations",
       "paper_pt": [
         602.986,
         782.986
@@ -27,10 +27,50 @@
         12.6
       ],
       "body_family": "sans",
-      "citations": "Blue parenthetical author-year, with internal bibliography links",
+      "citations": "Review: blue parenthetical author-year. Article: blue numeric superscripts, with separate internal bibliography namespaces.",
       "observed_design": "Blue journal lettering, dark red Leading Edge and headings, grey Review marker; full-width title, authors, affiliation/DOI area, grey divider, blue SUMMARY text, then two columns; wide figure on left with narrow caption on right when suitable",
-      "template_adaptation": "Plain Cell text replaces publisher logo; no volume/date fabricated; two neutral sample pages",
-      "file": "cell.tex"
+      "template_adaptation": "Original Review pages 1–2 preserved; pages 3–4 add original neutral graphical-summary and Article opening/body/methods/source examples. Plain journal lettering replaces publisher marks; no source-paper title, authors, DOI, experimental data or images included. Portable fonts and Chinese title 22/27bp, abstract10/14bp, body9.1/12.6bp and caption7.6/9.2bp are explicit adaptations.",
+      "file": "cell.tex",
+      "preview_pages": 4,
+      "preview_roles": {
+        "1": "Original Review opening (unchanged)",
+        "2": "Original Review figure/text and ending (unchanged)",
+        "3": "Article graphical-summary sheet with highlights and right author/contact/in-brief column",
+        "4": "Article opening with full-width blue summary, two-column body, numeric superscripts, methods/declarations, neutral bibliography and ending source"
+      },
+      "source_observations_article_2026": {
+        "paper_pt": [
+          602.986,
+          782.986
+        ],
+        "main_text_left_x_pt": 59.754,
+        "main_text_right_x_pt_approx": 552.6,
+        "graphical_summary_left_x_pt": 53.121,
+        "graphical_summary_right_column_x_pt": 354.954,
+        "column_gap_pt": 13.2,
+        "article_blue_hex": "#0097D1",
+        "article_heading_red_hex": "#AB4D4C",
+        "source_fonts": {
+          "title": [
+            "HelveticaNeue-Bold",
+            19.925
+          ],
+          "article_type": [
+            "HelveticaNeue-Heavy",
+            13.948
+          ],
+          "summary": [
+            "HelveticaNeue-Medium",
+            9.963
+          ],
+          "body": [
+            "HelveticaNeue-Medium",
+            8.468
+          ]
+        },
+        "observed_design": "Separate graphical-summary sheet with diagram/highlights on left and authors/correspondence/in-brief on right. Main Article has full-width black title, author/affiliation area and blue SUMMARY, then a sans-serif two-column body. Numeric superscript citations and STAR Methods differ from the older Review example. Main and supplemental figure/table scope must be inventoried separately."
+      },
+      "overview_policy": "Keep original Review page 1 in the existing nine-journal 3x3 overview; retain all four Cell demonstration pages; Cell remains one profile."
     },
     "nature": {
       "reference_edition": "Nature 592 (2021), The changing landscape of atherosclerosis, supplied article edition; additionally an inspected 2026 Article advance-online edition with separate complete methods, extended figures and Reporting Summary",

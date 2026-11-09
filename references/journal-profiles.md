@@ -1,10 +1,10 @@
 # 期刊配置与样板使用
 
-这些配置来自已核验的 Cell 2022 综述、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Reviews Neuroscience 2026 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
+这些配置来自已核验的 Cell 2022 综述与2026年研究论文、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Reviews Neuroscience 2026 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供18套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留全部16本期刊、共56页单独演示PDF及对应页面预览，也可先查看[九本期刊各一张首页的总览（3列×3行）](../assets/previews/overview.png)。第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。其余7本期刊、其他首页、图文、长表及框文均保留在各期刊单独PDF，不进入总览。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供18套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留全部16本期刊、共58页单独演示PDF及对应页面预览，也可先查看[九本期刊各一张首页的总览（3列×3行）](../assets/previews/overview.png)。第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。其余7本期刊、其他首页、图文、长表及框文均保留在各期刊单独PDF，不进入总览。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方logo。共享文件须与入口文件一起复制到工作目录。
 
 指南变体另见 [Circulation指南PDF](../assets/previews/circulation-guideline.pdf) 和 [EHJ／ESC指南PDF](../assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
@@ -29,6 +29,16 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 - 实际图形常用左图右注，曾使用约 65.5% 图 / 31.7% 注；竖图单独适配。比例不能代替实际图注高度测量。
 - 若用户提供并要求保留原刊品牌条带，可精确提取其局部；共享样板本身不复制该条带。
 
+## Cell：2026年Article补充
+
+Cell保留原Review两页，并新增独立图形摘要／要点页和Article正文结构页，合计4页；仍计一套Cell样板。总览继续使用原Review第1页，不改变九刊3×3安排。第3页左侧为原创图形摘要与Highlights，右侧为Authors、Correspondence和In brief；第4页为通栏题名、作者单位、蓝色SUMMARY，同页接无衬线双栏正文，并演示方法、声明、书目与最后出处。
+
+核验的Article纸型为602.986×782.986bp；图形摘要左边界53.121bp，右侧信息栏从x354.954bp起；主文从x59.754bp起，右侧正文约至552.6bp，栏距13.2bp。源蓝`#0097D1`、层级红`#AB4D4C`与旧Review分别记录。源题名HelveticaNeue-Bold约19.925bp、类型13.948bp、摘要9.963bp、正文8.468bp；中性样板以可移植字体和中文题名22/27bp、摘要10/14bp、正文9.1/12.6bp、图注7.6/9.2bp适配，不声称逐像素复刻。
+
+Article为蓝色数字上标，Review继续使用作者—年份引文；两者的书目目标使用独立命名空间。`cell-article.tex`由`cell.tex`加载，复制时需保留该文件及共享依赖。原Review源码段、内容、前两页216dpi像素与既有单页PNG保持不变；新增图文均为原创中性占位，无真实论文题名、作者、DOI、科学数据、原图或下载信息。所有其他模板与单独预览不变。
+
+研究论文可能同时提供图形摘要、要点、简介、STAR Methods、关键资源表和补充图表，这些是独立覆盖项；不能将类似摘要合并，不能把引用但未取得的附件视为已翻译。PDF物理页与可见原刊页码分开记录，文档属性中的页码范围不自动覆盖页面明确列出的出版身份。仅供学术交流、出版物版权归原作者及出版商所有。
+
 ## Nature：Review 参考配置
 
 - 原案例纸张 595.276 × 790.866 bp，左右边距 40/37.276；两栏各 253，栏距 12。
@@ -39,7 +49,7 @@ xelatex -interaction=nonstopmode -halt-on-error cell.tex
 
 ## Nature：2026年提前在线Article补充
 
-Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，当前模板总数18、期刊16；演示总页数为56。总览仍只使用原第1页，不重复增加Nature封面。
+Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，当前模板总数18、期刊16；演示总页数为58。总览仍只使用原第1页，不重复增加Nature封面。
 
 新观察来自2026年提前在线Article版本，纸型595.276×790.866bp，左版心39.685bp、右侧规则线x561.26bp；元数据窄栏166.3bp，作者摘要区x217.3238bp、宽343.936bp。源左竖线x34.1033bp、y28.3463至743.5153bp，线宽0.35bp，黑色#000000；源类型字14bp、题名26bp、摘要9bp、普通正文8.25/10.75bp。新增两页用独立Article版心，原Review源码段与前两页可见内容、文字及216dpi像素保持不变。字体回退、25/31bp中文题名、10.2/14bp摘要、9.05/11.95bp正文与7.6/9.2bp图注是中文适配。
 
@@ -61,7 +71,7 @@ Nature保留原有两页Review演示，并新增两页研究论文Article变体�
 ## Immunity：Cell 家族扩展
 
 - 原案例纸张、边距、栏距与此篇 Cell 一致，正文同为 9.1/12.6 bp；蓝色品牌刊头、灰色文章类型、红色章节、蓝色摘要。
-- 使用数字上标引文，不能照搬 Cell 的作者—年份格式。
+- 使用数字上标引文，不能照搬旧Cell Review的作者—年份格式；Cell Article需另核对其数字上标。
 - 图以通栏下置图注为主，也有左图右注例外。
 - 原案例顶部 `Please cite this article in press as...` 是用户指定删除的临时引用框。那次仅调整该区域，正常品牌条带、正文和页脚保持原样。样板不含临时框；编辑其他原稿时仍须按实际范围和用户要求处理，不复用那次的绝对裁剪坐标。
 

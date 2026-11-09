@@ -1,0 +1,78 @@
+% Neutral 2026 Article supplement to cell.tex. No source-paper content or assets.
+% Kept separate so the original Review pages remain unchanged.
+\onecolumn
+\newgeometry{left=53.121bp,right=59.754bp,top=99bp,bottom=54bp,headheight=30bp,headsep=15bp,footskip=27.4bp}
+\makeatletter\@twocolumnfalse\col@number\@ne\makeatother
+\setlength{\hsize}{\textwidth}\setlength{\linewidth}{\textwidth}\setlength{\columnwidth}{\textwidth}
+\definecolor{CellArticleBlue}{HTML}{0097D1}
+\definecolor{CellArticleRed}{HTML}{AB4D4C}
+\fancyhead[LO,RE]{\sffamily\color{CellArticleBlue}\fontsize{21bp}{24bp}\selectfont Cell}
+\fancyhead[LE,RO]{\sffamily\color{black!35}\bfseries\fontsize{14bp}{18bp}\selectfont Article}
+\newcommand{\CellArticleTitle}{研究论文示例：材料范围与结果核对}
+\newcommand{\CellArticleCite}[1]{\textsuperscript{\textcolor{CellArticleBlue}{\hyperlink{cell-article-ref:#1}{#1}}}}
+{\noindent\bfseries\fontsize{22bp}{27bp}\selectfont\CellArticleTitle\par}\vspace{12bp}
+\noindent\begin{minipage}[t]{.61\textwidth}\vspace{0pt}
+{\color{CellArticleBlue}\fontsize{12bp}{15bp}\selectfont Graphical abstract\quad 图形摘要}\par\vspace{7bp}
+\resizebox{\linewidth}{!}{\begin{tikzpicture}[
+ font=\sffamily\fontsize{10bp}{14bp}\selectfont,
+ box/.style={draw=CellArticleBlue!70,fill=CellArticleBlue!5,rounded corners=2bp,minimum width=125bp,minimum height=92bp,align=center},
+ arr/.style={-{Stealth[length=2.2mm]},line width=.8bp}]
+\node[box] (a) {\textbf{A\quad 来源材料}\\正文与方法\\图表与声明};
+\node[box,right=20bp of a] (b) {\textbf{B\quad 内容核对}\\段落与数值\\编号与限定};
+\node[box,below=26bp of a] (c) {\textbf{C\quad 中文重排}\\栏结构与图注\\独立中文译页};
+\node[box,right=20bp of c] (d) {\textbf{D\quad 可追溯交付}\\完整原文信息\\可编辑源文件};
+\draw[arr] (a)--(b);\draw[arr] (b)--(d);\draw[arr] (a)--(c);\draw[arr] (c)--(d);
+\end{tikzpicture}}\par\vspace{6bp}
+{\fontsize{7.6bp}{9.2bp}\selectfont 原创中性示意图；箭头仅表示本例阅读顺序，无研究数据、实验结果或因果关系。}\par\vspace{16bp}
+{\color{CellArticleBlue}\fontsize{12bp}{15bp}\selectfont Highlights\quad 研究要点}\par\vspace{6bp}
+\noindent\textcolor{CellArticleBlue}{\textbullet}\quad 图形摘要与正文摘要分别清点，保留各自信息。\par\vspace{7bp}
+\noindent\textcolor{CellArticleBlue}{\textbullet}\quad 多栏正文按阅读顺序核对，恢复跨栏和跨页续句。\par\vspace{7bp}
+\noindent\textcolor{CellArticleBlue}{\textbullet}\quad 数字上标引文使用独立书目目标，避免与综述误链。\par\vspace{7bp}
+\noindent\textcolor{CellArticleBlue}{\textbullet}\quad 本页全部内容仅演示版式，不报告实际研究发现。
+\end{minipage}\hfill
+\begin{minipage}[t]{.36\textwidth}\vspace{0pt}
+{\color{CellArticleBlue}\fontsize{12bp}{15bp}\selectfont Authors\quad 作者}\par\vspace{6bp}
+Author Placeholder A,\\Author Placeholder B\\（原创虚构作者占位）\par\vspace{18bp}
+{\color{CellArticleBlue}\fontsize{12bp}{15bp}\selectfont Correspondence\par 通信信息}\par\vspace{6bp}
+正式稿按来源填写通信作者及电子邮件。本例不提供真实联系方式。\par\vspace{18bp}
+{\color{CellArticleBlue}\fontsize{12bp}{15bp}\selectfont In brief\quad 简介}\par\vspace{6bp}
+本示例展示独立图形摘要页的左图与要点、右侧作者和简介结构。图中节点是排版核对项目，不是实验对象或研究结果。\par\vspace{18bp}
+{\fontsize{7.6bp}{9.2bp}\selectfont 正式论文应保留全部作者署名关系、独立研究要点与简介，不因文字相近而将其合并成一段摘要。}
+\end{minipage}\par
+\vfill\noindent{\fontsize{7.6bp}{9.2bp}\selectfont 出版身份按目标来源填写；当前为原创中性示例，无DOI、卷期或实际发表日期。\par 仅供学术交流、出版物版权归原作者及出版商所有。}
+\clearpage
+\newgeometry{left=59.754bp,right=49.754bp,top=101.821bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp}
+\ctexset{section={format=\sffamily\bfseries\color{CellArticleRed}\fontsize{9.4bp}{12.6bp}\selectfont,beforeskip=10bp,afterskip=3bp},subsection={format=\sffamily\bfseries\color{CellArticleRed},beforeskip=7bp,afterskip=2bp}}
+\twocolumn[{\noindent{\color{black!35}\bfseries\fontsize{14bp}{18bp}\selectfont Article}\par\vspace{3bp}
+{\bfseries\fontsize{22bp}{27bp}\selectfont\CellArticleTitle\par}\vspace{9bp}
+{\bfseries\fontsize{9bp}{11bp}\selectfont Author Placeholder A\textsuperscript{1,*}, Author Placeholder B\textsuperscript{2}\par}\vspace{4bp}
+{\fontsize{7.5bp}{10.4bp}\selectfont\textsuperscript{1}作者单位一（虚构中性占位）；\textsuperscript{2}作者单位二（虚构中性占位）。\par *通信信息与DOI按目标原文填写；本例不对应实际论文。\par}\vspace{15bp}
+{\bfseries\color{CellArticleRed}SUMMARY\quad 摘要}\par\vspace{7bp}
+{\color{CellArticleBlue}\fontsize{10bp}{14bp}\selectfont 本段是原创中性研究摘要，用于示范通栏蓝色摘要之后接无衬线双栏正文的结构。正式翻译应保留研究问题、方法、结果和结论的限定，不能用本段文字替代实际内容。文章类型与引文制式应从当前来源核验；同一期刊的旧综述模板并不自动适用于研究论文。图形摘要、要点、完整方法、补充图表和各类声明均需分别记录覆盖范围。\par}\vspace{15bp}}]
+\balance
+\section*{引言（中性示例）}
+研究论文的正文可以在全宽题名、作者与摘要之后从同一页转入双栏。本例采用数字上标引文\CellArticleCite{1}，与前两页综述的作者—年份引文分开；这些示例条目不对应真实出版物。
+
+\section*{结果与图表范围}
+段落、图像和完整图注需按实际阅读顺序对应。独立图形摘要页、主文图表、方法附图与随文件提供的补充材料均是独立覆盖项。引用但未提供的附件不能标记为已翻译\CellArticleCite{2}。
+
+图内英文保留时，应附完整中文标签释义。坐标、单位、统计符号、全部面板与图注尾句需要逐项核对。中文长度改变分页时，图表应安排在相关论述附近；正文图应在书目前排完。
+
+\section*{STAR方法（结构示例）}
+\subsection*{资源与方法}
+关键资源表、研究对象说明、方法详情、量化及统计分析应按原文完整处理。本页仅列出中性结构，不提供实验流程、参数、样本量或结果。
+
+\subsection*{版本与来源}
+原刊可见页码、PDF物理页和中文译页应区分。文档属性与可见出版信息存在差异时，以核验后的页面版本说明差异，不静默改写研究或书目字段。
+
+\section*{声明（原创占位）}
+真实文章的资助、作者贡献、利益冲突、数据及代码可用性和许可声明应分别保留。本例无实际研究对象、资助或利益关系，也不代表期刊官方模板。
+
+\section*{研究论文示例书目}
+{\fontsize{7.6bp}{9.6bp}\selectfont\noindent
+\hypertarget{cell-article-ref:1}{1.} Author Placeholder. Complete source coverage. Original neutral reference example; no real publication.\par\smallskip
+\noindent\hypertarget{cell-article-ref:2}{2.} Editorial Placeholder. Figure and method verification. Original neutral reference example; no DOI assigned.\par}
+
+\section*{原文信息（研究论文占位）}
+正式稿在所有正文、声明、书目及标签释义之后，按来源填写作者、英文原题、期刊、年份、卷期、页码或文章号及DOI。当前为原创中性示例，不对应真实论文。\par
+仅供学术交流、出版物版权归原作者及出版商所有。
