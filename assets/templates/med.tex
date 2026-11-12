@@ -1,0 +1,118 @@
+% Med: neutral adaptation of an inspected 2026 Resource article.
+% All prose, authors and diagrams below are original placeholders.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twoside,scheme=plain]{ctexart}
+\usepackage[paperwidth=602.986bp,paperheight=782.986bp,left=53.121bp,right=59.754bp,top=99bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp]{geometry}
+\input{common.tex}
+\usepackage{multicol}
+\newcommand{\JournalName}{Med}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{MedBlue}{HTML}{0097D1}
+\definecolor{MedRed}{HTML}{AB4D4C}
+\definecolor{MedContextGrey}{rgb}{0.9548943043,0.9550468922,0.9548637867}
+\setlength{\columnsep}{13.2bp}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{12.6bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\color{MedRed}\fontsize{9.4bp}{12.6bp}\selectfont,beforeskip=8bp,afterskip=3bp},subsection={format=\sffamily\bfseries\color{MedRed}\fontsize{9.1bp}{12.6bp}\selectfont,beforeskip=6bp,afterskip=2bp}}
+\hypersetup{linkcolor=MedBlue,urlcolor=MedBlue,pdftitle={Med风格：原创中性中文排版示例},pdfauthor={原创中性模板；非期刊官方模板},pdfsubject={Neutral source-inspired layout; no source-paper content or assets}}
+\fancyhead[LO,RE]{\sffamily\color{MedBlue}\bfseries\fontsize{23bp}{27bp}\selectfont Med}
+\fancyhead[LE,RO]{\sffamily\color{black!35}\bfseries\fontsize{14bp}{18bp}\selectfont Resource}
+\fancyfoot[LO,RE]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中文译稿样板\quad 仅供学术交流}
+\fancyfoot[LE,RO]{\sffamily\fontsize{7.5bp}{9bp}\selectfont Med\quad 中文译页\ \thepage}
+\newcommand{\MedTitle}{从材料清点到结果核对：\\样本证据的完整呈现}
+\newcommand{\MedCite}[1]{\textsuperscript{\hyperlink{med-ref:#1}{#1}}}
+\newcommand{\MedLabel}[1]{{\color{MedBlue}\fontsize{12bp}{16bp}\selectfont #1}\par\vspace{5bp}}
+\newcommand{\MedBullet}[1]{\noindent\textcolor{MedBlue}{\textbullet}\quad #1\par\vspace{7bp}}
+\newcommand{\MedSummary}[2]{\noindent\textcolor{MedRed}{\bfseries #1}\enspace\textcolor{MedBlue}{#2}\par\vspace{4bp}}
+\newcommand{\MedGraphical}{%
+ \resizebox{\linewidth}{!}{\begin{tikzpicture}[
+  font=\sffamily\fontsize{11bp}{15bp}\selectfont,
+  box/.style={draw=MedBlue!75,fill=MedBlue!6,rounded corners=2bp,minimum width=240bp,minimum height=65bp,align=center},
+  arr/.style={-{Stealth[length=2.5mm]},line width=.9bp}]
+  \node[box] (a) {\textbf{A\quad 来源材料}\\题名、正文、方法与完整图表};
+  \node[box,below=22bp of a] (b) {\textbf{B\quad 逐项核对}\\数值、限定、对应关系与声明};
+  \node[box,below=22bp of b] (c) {\textbf{C\quad 可追溯呈现}\\中文译稿、书目与原文信息};
+  \draw[arr] (a)--(b);\draw[arr] (b)--(c);
+ \end{tikzpicture}}%
+}
+\begin{document}\normalsize
+% Page 1: separate graphical abstract, highlights and right-hand information.
+{\noindent\bfseries\fontsize{22bp}{27bp}\selectfont\MedTitle\par}\vspace{13bp}
+\noindent\begin{minipage}[t]{.59\textwidth}\vspace{0pt}
+\MedLabel{Graphical abstract\quad 图形摘要}
+\setlength{\fboxsep}{8bp}\setlength{\fboxrule}{.5bp}
+\noindent\fbox{\begin{minipage}{\dimexpr\linewidth-17bp\relax}\MedGraphical\end{minipage}}\par\vspace{13bp}
+\MedLabel{Highlights\quad 研究要点}
+\MedBullet{正文、图表和方法分别清点，保留独立覆盖项。}
+\MedBullet{比较方向、单位与不确定性按来源核对。}
+\MedBullet{中文自然重排，完整图注与原图对应。}
+\MedBullet{本页仅为原创中性示意，不报告研究结果。}
+\end{minipage}\hfill
+\begin{minipage}[t]{.385\textwidth}\vspace{0pt}
+\MedLabel{Authors\quad 作者}
+Author Placeholder A,\\Author Placeholder B\\（原创虚构作者占位）\par\vspace{17bp}
+\MedLabel{Correspondence\quad 通信信息}
+按目标来源填写通信作者。当前示例没有真实邮箱或联系方式。\par\vspace{17bp}
+\MedLabel{In brief\quad 简介}
+本例展示独立图形摘要页的左图与研究要点、右作者与简介结构。示意图中的节点仅表示本例的材料核对流程，不代表实验对象、数据、效应或因果关系。\par\vspace{17bp}
+{\fontsize{7.6bp}{10bp}\selectfont 图形摘要、研究要点与正文摘要各自保留，不因文字相近而合并。正式稿的出版字段逐项从来源填写。}
+\end{minipage}\par
+\vfill\noindent\textcolor{MedBlue}{\bfseries Translation to Patients\quad 转化研究类型示意}\par\vspace{5bp}
+{\fontsize{7.6bp}{10bp}\selectfont 以上为普通文字类型标记，无官方图标；不构成临床发现。\par 仅供学术交流、出版物版权归原作者及出版商所有。}
+\clearpage
+% Page 2: Resource opening, context box and structured summary.
+{\noindent\color{black!35}\bfseries\fontsize{14bp}{18bp}\selectfont Resource\par}\vspace{3bp}
+{\noindent\bfseries\fontsize{22bp}{27bp}\selectfont\MedTitle\par}\vspace{10bp}
+{\noindent\bfseries\fontsize{9bp}{12bp}\selectfont Author Placeholder A\textsuperscript{1,*}, Author Placeholder B\textsuperscript{2}\par}\vspace{4bp}
+{\noindent\fontsize{7.5bp}{10.4bp}\selectfont\textsuperscript{1}原创中性作者单位一；\textsuperscript{2}原创中性作者单位二。\par *通信作者、DOI与出版日期按目标来源填写；此处无真实出版物对应信息。\par}\vspace{17bp}
+\begingroup\setlength{\fboxsep}{12bp}\setlength{\fboxrule}{.5bp}
+\noindent\fcolorbox{black!55}{MedContextGrey}{\begin{minipage}{\dimexpr\textwidth-25bp\relax}
+\fontsize{9.5bp}{13.2bp}\selectfont
+\textcolor{MedRed}{\bfseries CONTEXT AND SIGNIFICANCE\quad 背景与意义}\enspace
+\textcolor{MedBlue}{本段是原创中性说明，展示研究首页独立于摘要的背景与意义框。正式稿应忠实保留原作者对研究背景、现有认识、临床相关性与证据边界的说明。不得将假设或概念验证写成已证实的临床效果，也不把这一独立框文压缩并入摘要。本示例无真实病例、实验数据或医学结论。}
+\end{minipage}}\par\endgroup\vspace{16bp}
+{\noindent\color{MedRed}\bfseries SUMMARY\quad 摘要\par}\vspace{9bp}
+{\fontsize{10bp}{14bp}\selectfont
+\MedSummary{Background\quad 背景：}{研究资料通常包含多种独立内容。完整呈现这些材料，需要先区分正文、图表、方法与声明，再恢复其阅读顺序。本段仅演示结构。}
+\MedSummary{Methods\quad 方法：}{本例以原创中性文字和矢量流程图展示内容核对方法。实际研究中的对象、流程、参数和统计方法应完整替换，并与来源对应。}
+\MedSummary{Findings\quad 发现：}{演示材料区分独立图形摘要、背景与意义框、结构化摘要及双栏正文。这里不提供真实发现，也不设置任何临床阈值、效应量或实验数值。}
+\MedSummary{Conclusions\quad 结论：}{正式汉化应保留研究结论的限定和不确定性。中文长度可以改变分页，但不应改变原作者的比较方向和证据强度。}
+\MedSummary{Funding\quad 资助：}{本例无实际研究资助。真实稿应逐项保留原文基金名称、编号与受资助作者；原文续页的资助信息同样属于摘要范围。}
+}\vfill
+{\noindent\fontsize{7.6bp}{10bp}\selectfont 原创中性版式演示；结构化摘要标签来自核验文体，内容不是研究结论。\par 仅供学术交流、出版物版权归原作者及出版商所有。}
+\clearpage
+% Page 3: sans-serif two-column prose, native diagram and complete caption.
+\newgeometry{left=59.754bp,right=53.1bp,top=99bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp}
+\begin{multicols}{2}
+\section*{引言（原创中性示例）}
+此页展示无衬线双栏正文、红色层级和蓝色数字上标引文\MedCite{1}。题名、作者、段落、图注及书目均为原创示例，不能直接当作真实论文内容使用。
+\section*{结果与内容对应}
+材料核对先建立正文、完整图注、方法和声明清单，再检查跨栏与跨页续段。背景与意义框是独立内容，应与结构化摘要分别保留\MedCite{2}。
+\end{multicols}\vspace{4bp}
+\noindent\begin{minipage}{\textwidth}
+\resizebox{\textwidth}{!}{\begin{tikzpicture}[
+ font=\sffamily\fontsize{11bp}{15bp}\selectfont,
+ box/.style={draw=MedBlue!75,fill=MedBlue!5,minimum width=125bp,minimum height=42bp,align=center},
+ arr/.style={-{Stealth[length=2.5mm]},line width=.8bp}]
+ \node[box] (a) {\textbf{A\quad 原文材料}\\正文、图表与方法};
+ \node[box,right=28bp of a] (b) {\textbf{B\quad 独立核对}\\内容与编号对应};
+ \node[box,right=28bp of b] (c) {\textbf{C\quad 中文呈现}\\完整译文与出处};
+ \draw[arr] (a)--(b);\draw[arr] (b)--(c);
+\end{tikzpicture}}\par\vspace{5bp}
+{\fontsize{7.6bp}{9.2bp}\selectfont\textcolor{MedRed}{\bfseries 图1。材料与核对流程（原创中性示意）。}
+\textbf{A}，来源内容包括正文、图表与方法；\textbf{B}，检查独立内容之间的对应关系及编号；\textbf{C}，输出完整中文呈现并保留出处。箭头仅表示本示例的阅读顺序，不表示因果、效应方向或数量关系。无真实样本量、统计检验、误差线或实验数据。实际图注须保留全部面板、定义、单位和来源署名。\par}
+\end{minipage}\vspace{6bp}
+\begin{multicols}{2}
+\section*{STAR方法（结构示例）}
+\subsection*{资源与方法详情}
+真实文章的关键资源表、研究对象、实验模型、方法细节以及量化与统计分析应分别清点。只被引用但未提供的补充附件不能标记为已翻译。图内英文保留时应附完整中文释义。
+\section*{声明（原创占位）}
+资助、作者贡献、利益冲突、数据与代码可用性及许可信息各自核对。本示例没有真实研究资助或利益关系，也不代表期刊官方授权。
+\section*{参考文献（原创占位）}
+{\fontsize{7.6bp}{9.8bp}\selectfont\interlinepenalty=10000
+\noindent\hypertarget{med-ref:1}{1.} Author Placeholder A. Complete material inventory. Original neutral reference example; no publication or DOI assigned.\par\smallskip
+\noindent\hypertarget{med-ref:2}{2.} Author Placeholder B. Source and layout verification. Original neutral reference example; no publication or DOI assigned.\par}
+\section*{原文信息（占位字段）}
+正式稿按来源填写作者、英文原题、期刊、年份、卷期、页码或文章号、DOI以及明确提供的日期。此处没有对应的真实论文，字段均待替换；不能继承旧任务的出版身份。\par
+仅供学术交流、出版物版权归原作者及出版商所有。
+\end{multicols}
+\end{document}

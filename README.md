@@ -6,15 +6,17 @@
 
 一个面向 Codex 的可复用技能：将用户提供的英文论文、综述或指南译成中文，保留内容、数据与引文，并参照原刊结构生成可编辑稿和 PDF。
 
-以 **Cell、Nature、Science 三套可编译样板**为特色，附 **NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research 与 European Heart Journal 扩展，以及两种指南变体**。不只关注首页效果，也覆盖方法、图注、书目、声明和文末原文信息。
+以 **Cell、Nature、Science 三套可编译样板**为特色，附 **Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research 与 European Heart Journal 扩展，以及两种指南变体**。不只关注首页效果，也覆盖方法、图注、书目、声明和文末原文信息。
 
 ![九本期刊各一张首页的3列×3行总览：CNS、NEJM／The Lancet／JAMA、The BMJ／Circulation／European Heart Journal](assets/previews/overview.png)
 
-总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部16本期刊、18套样板和58页单独演示仍完整保留；其余7本期刊、其他首页、图文、长表及框文见各期刊PDF。
+总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部17本期刊、19套样板和61页单独演示仍完整保留；其余8本期刊、其他首页、图文、长表及框文见各期刊PDF。
 
 Cell现有单独演示PDF扩为4页：原有Review两页保持，后接2026年Article的独立图形摘要／研究要点页，以及通栏题名摘要与双栏正文页。Article采用数字上标引文；Review保留作者—年份引文。Cell仍只计一套样板，总览继续仅采用原第1页。新增内容均为原创中性占位，不含真实论文全文、数据、作者或原图。
 
 Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年提前在线Article结构的两页中性演示，展示研究首页、通栏作者单位脚注、图文和方法／扩展内容。Nature仍只计一套样板，总览继续仅采用原第1页。
+
+Med新增[3页中性演示](assets/previews/med.pdf)，覆盖独立图形摘要、背景与意义灰框、结构化SUMMARY、双栏图文及方法／声明／文末出处。采用实测蓝`#0097D1`和红`#AB4D4C`；个人高亮与官方图标不纳入模板。Med不占九刊总览格位。
 
 两种指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。它们属于文体扩展，不重复计为期刊，也不占总览格位。
 
@@ -27,13 +29,14 @@ Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年
 - **局部修改保持范围**：只删引用框时，不重译正文或顺带删除正常页眉页脚。
 - **便于继续修改**：交付中文 PDF、可编辑源文件，并在全文末尾附原文引用与 DOI。
 
-## 十八套样板
+## 十九套样板
 
 | 样板 | 主要视觉结构 | 引文 | 演示 |
 |---|---|---|---|
 | Cell | Review与Article、蓝色通栏摘要、红色层级、双栏正文；Article独立图形摘要 | Review作者—年份；Article数字上标 | [PDF](assets/previews/cell.pdf) · [源文件](assets/templates/cell.tex) |
 | Nature | Review与提前在线Article、黑白衬线、细线、元数据／摘要分栏及首页单位脚注 | 数字上标 | [PDF](assets/previews/nature.pdf) · [源文件](assets/templates/nature.tex) |
 | Science | 独立研究摘要页、红色学科标签、正文左栏起题名 | 蓝色斜体括号数字 | [PDF](assets/previews/science.pdf) · [源文件](assets/templates/science.tex) |
+| Med | 独立图形摘要、灰底背景与意义框、红标签蓝字结构化摘要、无衬线双栏图文 | 蓝色数字上标 | [PDF](assets/previews/med.pdf) · [源文件](assets/templates/med.tex) |
 | NEJM | 红色刊名、米底研究类型与摘要横栏、灰作者、右侧出版信息及米底图注 | 黑色数字上标 | [PDF](assets/previews/nejm.pdf) · [源文件](assets/templates/nejm.tex) |
 | The Lancet | 绿色外侧页签与细线、黑色题名、绿色作者、外侧单位栏、衬线双栏及检索框 | 黑色数字上标 | [PDF](assets/previews/lancet.pdf) · [源文件](assets/templates/lancet.tex) |
 | JAMA | 深红Research整幅顶栏、亮红标签、米底结构化摘要、侧栏、要点及淡米色表格行带 | 黑色数字上标 | [PDF](assets/previews/jama.pdf) · [源文件](assets/templates/jama.tex) |
@@ -106,10 +109,10 @@ $cns-paper-translation 完整汉化这篇论文，参照原刊版式，去除右
 | [SKILL.md](SKILL.md) | 技能入口、工作流程与范围 |
 | [agents/openai.yaml](agents/openai.yaml) | 显示名称与默认调用提示 |
 | [references/](references/) | 期刊配置、内容组织和验收方法 |
-| [assets/templates/](assets/templates/) | 十八套 XeLaTeX 样板及共享文件 |
+| [assets/templates/](assets/templates/) | 十九套 XeLaTeX 样板及共享文件 |
 | [assets/previews/](assets/previews/) | 演示 PDF、页面 PNG 与样板总览 |
 | [scripts/audit_pdf.py](scripts/audit_pdf.py) | 只读检查 PDF 下载词条、内部链接和编译日志 |
-| [scripts/make_overview.py](scripts/make_overview.py) | 重建九本期刊的3列×3行首页总览；全部16刊的个体预览仍保留 |
+| [scripts/make_overview.py](scripts/make_overview.py) | 重建九本期刊的3列×3行首页总览；全部17刊的个体预览仍保留 |
 
 编译样板需要 **XeLaTeX** 及 ctex、TikZ 等常见 TeX 包。字体优先使用 Noto CJK，缺少时回退至 TeX Live 的 Fandol；换机后需重新渲染核对。请复制整个模板目录后再修改，具体见 [模板编译说明](assets/templates/README.md)。
 
@@ -124,7 +127,7 @@ python scripts/audit_pdf.py translated.pdf --forbidden-text "Downloaded from" --
 
 ## 验证与边界
 
-十八套样板共 58 页已编译并完成视觉检查，无缺字、越界和未定义引用。Nature Reviews Cardiology 扩展用 4 页展示摘要目录、双栏及跨页表格；它不沿用普通 Nature 综述的首页结构。Nature Reviews Neuroscience 的4页扩展展示独立摘要目录、图文、汇总表与框文、术语表及末尾资料；每页绿色顶线使用源RGB（最接近8位色为`#41AD49`），保留轻字重题名的层级，中文常规字体及7.6/9.2bp紧凑图注是明确适配。Nature Biotechnology 扩展用 3 页展示简讯首页、双栏数学与主图、扩展报告表及原文信息；其黄色顶线仅用于首页。Nature Methods 扩展以3页展示观点／分析文章首页、通栏表格与框文、图及完整图注，橙色顶线仅用于首页；未填写的在线日期不推断补全。Circulation 与 Circulation Research 各以3页展示无衬线双栏、全宽摘要和通栏图注；前者保留绿色研究类型线、红色摘要标签与展望框，后者保留蓝色综述层级与长缩写框，均采用黑色数字上标。European Heart Journal 的3页样板覆盖浅米底标签/正文分栏摘要、独立结构化图形摘要、转化展望框、双栏图文混排及末尾出处，精确主题红为 `#D6143D`；Advance article出版字段不被后续卷期覆盖。检查工具已用真实译稿，以及隐藏在裁剪区域外的嵌套下载标记、失效链接等合成样本验证。
+十九套样板共 61 页已编译并完成视觉检查，无缺字、越界和未定义引用。Nature Reviews Cardiology 扩展用 4 页展示摘要目录、双栏及跨页表格；它不沿用普通 Nature 综述的首页结构。Nature Reviews Neuroscience 的4页扩展展示独立摘要目录、图文、汇总表与框文、术语表及末尾资料；每页绿色顶线使用源RGB（最接近8位色为`#41AD49`），保留轻字重题名的层级，中文常规字体及7.6/9.2bp紧凑图注是明确适配。Nature Biotechnology 扩展用 3 页展示简讯首页、双栏数学与主图、扩展报告表及原文信息；其黄色顶线仅用于首页。Nature Methods 扩展以3页展示观点／分析文章首页、通栏表格与框文、图及完整图注，橙色顶线仅用于首页；未填写的在线日期不推断补全。Circulation 与 Circulation Research 各以3页展示无衬线双栏、全宽摘要和通栏图注；前者保留绿色研究类型线、红色摘要标签与展望框，后者保留蓝色综述层级与长缩写框，均采用黑色数字上标。European Heart Journal 的3页样板覆盖浅米底标签/正文分栏摘要、独立结构化图形摘要、转化展望框、双栏图文混排及末尾出处，精确主题红为 `#D6143D`；Advance article出版字段不被后续卷期覆盖。检查工具已用真实译稿，以及隐藏在裁剪区域外的嵌套下载标记、失效链接等合成样本验证。
 
 这是一套帮助 Codex 执行任务的技能与样板，不是无需校对的独立自动翻译服务。仓库不包含原论文全文、原图、官方 logo、个人下载信息或真实实验数据；也不代表期刊官方授权或认可。
 

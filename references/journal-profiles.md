@@ -1,10 +1,10 @@
 # 期刊配置与样板使用
 
-这些配置来自已核验的 Cell 2022 综述与2026年研究论文、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Reviews Neuroscience 2026 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
+这些配置来自已核验的 Cell 2022 综述与2026年研究论文、Med 2026 Resource研究论文、Nature 2021 综述、Immunity 2025 校样、Science 2026 研究论文、Nature Reviews Cardiology 2024 综述、Nature Reviews Neuroscience 2026 综述、Nature Biotechnology 在线发表于2025年、编入2026年卷期的简讯，Nature Methods 的2026年观点文章与未填写在线日期的分析文章版本，以及 Circulation 的2025年原创研究与 Circulation Research 的2026年综述版本，以及 European Heart Journal 的2023年Advance article转化研究版本。它们是可验证的起点，不是全部文章通用的期刊规格。新任务先比较原文，再决定采用、调整或新增配置。尺寸下列均为 PDF point（LaTeX `bp`，不是 TeX `pt`）。
 
 ## 样板的可复用部分
 
-`assets/templates/` 提供18套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留全部16本期刊、共58页单独演示PDF及对应页面预览，也可先查看[九本期刊各一张首页的总览（3列×3行）](../assets/previews/overview.png)。第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。其余7本期刊、其他首页、图文、长表及框文均保留在各期刊单独PDF，不进入总览。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方logo。共享文件须与入口文件一起复制到工作目录。
+`assets/templates/` 提供19套中性内容的可编译 XeLaTeX 源文件；`assets/previews/` 保留全部17本期刊、共61页单独演示PDF及对应页面预览，也可先查看[九本期刊各一张首页的总览（3列×3行）](../assets/previews/overview.png)。第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。其余8本期刊、其他首页、图文、长表及框文均保留在各期刊单独PDF，不进入总览。演示使用普通刊名字样和原生示意占位图，不打包此前论文全文、原图或官方logo。共享文件须与入口文件一起复制到工作目录。
 
 指南变体另见 [Circulation指南PDF](../assets/previews/circulation-guideline.pdf) 和 [EHJ／ESC指南PDF](../assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
@@ -49,7 +49,7 @@ Article为蓝色数字上标，Review继续使用作者—年份引文；两者�
 
 ## Nature：2026年提前在线Article补充
 
-Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，当前模板总数18、期刊16；演示总页数为58。总览仍只使用原第1页，不重复增加Nature封面。
+Nature保留原有两页Review演示，并新增两页研究论文Article变体：第3页为黑白Article首页、日期窄栏与作者摘要宽栏、双栏开篇及通栏单位脚注；第4页为原创图文、方法与扩展覆盖、声明、两条独立命名空间的占位书目和文末出处。仍计一套Nature样板，当前模板总数19、期刊17；演示总页数为61。总览仍只使用原第1页，不重复增加Nature封面。
 
 新观察来自2026年提前在线Article版本，纸型595.276×790.866bp，左版心39.685bp、右侧规则线x561.26bp；元数据窄栏166.3bp，作者摘要区x217.3238bp、宽343.936bp。源左竖线x34.1033bp、y28.3463至743.5153bp，线宽0.35bp，黑色#000000；源类型字14bp、题名26bp、摘要9bp、普通正文8.25/10.75bp。新增两页用独立Article版心，原Review源码段与前两页可见内容、文字及216dpi像素保持不变。字体回退、25/31bp中文题名、10.2/14bp摘要、9.05/11.95bp正文与7.6/9.2bp图注是中文适配。
 
@@ -186,3 +186,14 @@ Circulation指南2022与2026的推荐色块并不完全相同，`profiles.json`�
 
 
 研究报告摘要可单独汉化为附录，供研究者填写时参考。需区分原作者已填答案、确认／不适用勾选和未填提示，保留原字段及来源版本；原表重复条目或与方法不同的报告字段不能静默改写。
+
+
+## Med：Resource与结构化研究摘要
+
+[med.tex](../assets/templates/med.tex)及其[3页演示PDF](../assets/previews/med.pdf)来自核验的2026年Resource版式：独立图形摘要页左图与研究要点、右侧作者／通信／简介；正文首页通栏题名与作者单位，接独立灰底CONTEXT AND SIGNIFICANCE框及结构化SUMMARY，后续为无衬线双栏。SUMMARY的Background、Methods、Findings、Conclusions、Funding是独立标签，资助续至下一页仍须完整保留。背景与意义框不能压缩并入摘要。
+
+纸型602.986×782.986bp，首页左53.121bp、右约543.263bp，常规主文左59.754bp、右约549.938bp，栏距13.2bp。实测蓝`#0097D1`、红`#AB4D4C`；背景灰原RGB为`(0.9548943043,0.9550468922,0.9548637867)`，框线约0.498bp。源商业Helvetica Neue由TeX Gyre与Noto/Fandol替代；中文题名22/27bp、摘要10/14bp、正文9.1/12.6bp及图注7.6/9.2bp为有意适配。普通文字刊名与转化研究类型标记替代官方标识，不复制个人黄色高亮。
+
+演示第三页用`multicol`穿插通栏原创矢量图及完整图注、方法、声明、独立命名空间数字引文、英文占位书目和文末原文信息。复制时保留`common.tex`与`sample-body.tex`，或复制整个目录。三页人工分页只用于短演示；完整论文应自然重排，逐项覆盖实际提供的STAR Methods、关键资源表与补充图表。Med仅增加单独预览，总览继续九本期刊、3列×3行，九个原有面板保持。
+
+所有文字、作者单位、图与书目均为原创中性占位，无真实论文全文、作者、DOI、实验数据、原图、邮箱、下载信息或官方标识。仅供学术交流、出版物版权归原作者及出版商所有。

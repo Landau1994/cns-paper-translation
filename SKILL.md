@@ -1,11 +1,11 @@
 ---
 name: cns-paper-translation
-description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，另含Circulation及EHJ指南变体；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
+description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal扩展，另含Circulation及EHJ指南变体；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
 ---
 
 # CNS 论文汉化
 
-把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展及两种指南变体；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
+把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、European Heart Journal 扩展及两种指南变体；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
 
 ## 选择入口
 
@@ -25,6 +25,7 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Cell | [cell.tex](assets/templates/cell.tex) | Review与Article、通栏题名摘要、双栏、红色层级；Article独立图形摘要与数字上标 |
 | Nature | [nature.tex](assets/templates/nature.tex) | Review与提前在线Article、黑白衬线、元数据窄栏与作者摘要宽栏、首页单位脚注、数字上标引文 |
 | Science | [science.tex](assets/templates/science.tex) | 独立研究摘要页、正文左栏起题名、斜体括号数字引文 |
+| Med | [med.tex](assets/templates/med.tex) | 独立图形摘要、灰底背景与意义框、红标签蓝字结构化摘要、无衬线双栏及数字上标 |
 | NEJM | [nejm.tex](assets/templates/nejm.tex) | 红色刊名、米底研究类型与摘要横栏、灰作者、右侧出版信息及米底图注 |
 | The Lancet | [lancet.tex](assets/templates/lancet.tex) | 绿色外侧页签与细线、黑色题名、绿色作者、外侧单位栏、衬线双栏及检索框 |
 | JAMA | [jama.tex](assets/templates/jama.tex) | 深红Research整幅顶栏、亮红标签、米底结构化摘要、侧栏、要点及淡米色表格行带 |
@@ -41,13 +42,15 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部16本期刊、18套样板和58页单独演示仍完整保留；其余7本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
+总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部17本期刊、19套样板和61页单独演示仍完整保留；其余8本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
 
 指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
 Cell现有单独演示PDF扩为4页：原有Review两页保持，后接2026年Article的独立图形摘要／研究要点页，以及通栏题名摘要与双栏正文页。Article采用数字上标引文；Review保留作者—年份引文。Cell仍只计一套样板，总览继续仅采用原第1页。新增内容均为原创中性占位，不含真实论文全文、数据、作者或原图。
 
 Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年提前在线Article结构的两页中性演示，展示研究首页、通栏作者单位脚注、图文和方法／扩展内容。Nature仍只计一套样板，总览继续仅采用原第1页。
+
+Med新增3页原创中性演示：独立图形摘要／研究要点与右侧作者简介、含灰底CONTEXT AND SIGNIFICANCE框与结构化SUMMARY的研究首页，以及双栏图文／方法／声明和文末出处。实测蓝`#0097D1`、红`#AB4D4C`；不继承个人荧光笔高亮或官方转化研究图标。Med仅保留单独预览，不增加九刊总览格位。
 
 Nature Reviews Neuroscience的4页中性演示覆盖独立摘要目录、双栏图文、汇总表与框文、术语表及文末资料。绿色顶线采用核验的原RGB，每页均保留；轻字重衬线题名以常规字重中文字体适配，不直接套用Nature Reviews Cardiology的紫色主题或粗题名。图注字号与行距为7.6/9.2bp；完整译稿仍按实际图文自然重排。
 

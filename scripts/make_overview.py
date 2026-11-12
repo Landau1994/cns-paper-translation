@@ -2,9 +2,9 @@
 """Rebuild the selected nine-journal, three-column, three-row overview.
 
 Rows are Cell / Nature / Science; NEJM / The Lancet / JAMA; and
-The BMJ / Circulation / European Heart Journal. The other seven journals,
+The BMJ / Circulation / European Heart Journal. The other eight journals,
 article/review variants, guidelines and interior detail pages remain available
-in the individual template previews. All sixteen journals are retained.
+in the individual template previews. All seventeen journals are retained.
 No paper content or newly generated illustrations are introduced.
 """
 from pathlib import Path

@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from eighteen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from nineteen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -1101,6 +1101,88 @@
       },
       "scope": "Original neutral template; no real article text, authors, DOI, experimental data, original figures, download information, publisher logo or scientific claim. Not an official universal publisher template.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
+    },
+    "med": {
+      "reference_edition": "Med, inspected 2026 Resource article edition with separate graphical abstract, context-and-significance box and structured summary; source-specific research contents are excluded from this shared profile",
+      "paper_pt": [
+        602.986,
+        782.986
+      ],
+      "margins_pt": {
+        "left": 53.121,
+        "right": 59.754,
+        "top": 99,
+        "bottom": 50.186
+      },
+      "column_gap_pt": 13.2,
+      "body_size_leading_pt": [
+        9.1,
+        12.6
+      ],
+      "body_family": "sans",
+      "citations": "Blue numeric superscripts linked to med-specific placeholder bibliography targets.",
+      "colors": {
+        "blue": "#0097D1",
+        "heading_red": "#AB4D4C",
+        "context_background_rgb": [
+          0.9548943042755127,
+          0.9550468921661377,
+          0.9548637866973877
+        ],
+        "title": "#000000"
+      },
+      "source_observations": {
+        "opening_left_x_pt": 53.1211967468,
+        "opening_right_x_pt_approx": 543.263,
+        "regular_body_left_x_pt": 59.7543067932,
+        "regular_body_right_x_pt_approx": 549.938,
+        "graphical_abstract_right_column_x_pt": 354.954,
+        "context_box_pt": [
+          53.1008987427,
+          338.5430297852,
+          543.2630004883,
+          454.2290344238
+        ],
+        "context_box_border_width_pt_approx": 0.498,
+        "source_fonts": {
+          "title": [
+            "HelveticaNeue-Bold",
+            19.9251995087
+          ],
+          "article_type": [
+            "HelveticaNeue-Heavy",
+            13.9474973679
+          ],
+          "summary": [
+            "HelveticaNeue-Medium",
+            9.9625997543
+          ],
+          "summary_label": [
+            "HelveticaNeue-Heavy",
+            9.9625997543
+          ],
+          "context_label": [
+            "HelveticaNeue-Heavy",
+            8.4682016373
+          ],
+          "body": [
+            "HelveticaNeue-Roman",
+            8.4682016373
+          ]
+        },
+        "observed_design": "Separate graphical-abstract sheet with left diagram/highlights and right authors/correspondence/in-brief; plain blue Med heading and grey Resource marker. Resource opening has full-width title and author/affiliation block, a light-grey bordered CONTEXT AND SIGNIFICANCE box with red label and blue text, then SUMMARY with red Background/Methods/Findings/Conclusions/Funding labels and blue text. Funding may continue onto the following page before the sans-serif two-column body; main headings and figure-caption labels are red, references are blue numeric superscripts.",
+        "annotation_policy": "Personal yellow highlighting observed over the context text is not a journal design element and is excluded. Official Cell Press and translation-to-patients marks are not copied."
+      },
+      "observed_design": "Blue Med heading, grey Resource type, separate graphical abstract and highlights, independent light-grey context-and-significance box, red-labelled blue structured summary, sans-serif two-column prose and full-width figure/caption modules.",
+      "template_adaptation": "Three pages of original neutral material: graphical summary, structured research opening, and two-column prose with a native vector figure, complete caption, methods, declarations, placeholder English references and final source fields. Ordinary journal and article-type lettering replace official marks. Commercial fonts are replaced by portable TeX Gyre and Noto/Fandol; Chinese title22/27bp, summary10/14bp, body9.1/12.6bp and caption7.6/9.2bp are explicit adaptations. Regular-page margins are normalized and multicol is used to interleave full-width modules. Manual pagination limits only this demonstration, not complete articles.",
+      "file": "med.tex",
+      "preview_pages": 3,
+      "preview_roles": {
+        "1": "Separate neutral graphical abstract, highlights and right information column",
+        "2": "Resource opening, context-and-significance box and structured summary",
+        "3": "Two-column prose, original vector figure with full caption, methods, declarations, English placeholder references and source information"
+      },
+      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to seventeen journals and nineteen templates."
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",
