@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from twenty verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from twenty-one verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -1182,7 +1182,7 @@
         "2": "Resource opening, context-and-significance box and structured summary",
         "3": "Two-column prose, original vector figure with full caption, methods, declarations, English placeholder references and source information"
       },
-      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to eighteen journals and twenty templates."
+      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to nineteen journals and twenty-one templates."
     },
     "developmental-cell": {
       "reference_edition": "Developmental Cell, inspected 2026 Technology article with a separate graphical-summary sheet, main article, STAR Methods and supplied supplemental information; no paper content retained",
@@ -1259,8 +1259,129 @@
         "2": "Technology opening with continuous full-width SUMMARY and same-page two-column body",
         "3": "Original vector figure, complete caption, resource table, methods, declarations, references and final source information"
       },
-      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to eighteen journals and twenty templates.",
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to nineteen journals and twenty-one templates.",
       "scope": "Original neutral text, fictional authors/affiliations and native diagrams; no real article title, authors, DOI, scientific data, figures, email, download metadata or official publisher marks.",
+      "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
+    },
+    "cardiovascular-research": {
+      "reference_edition": "Cardiovascular Research, inspected 2023 original research edition first published online in 2022; no source article text, authors, data or assets retained",
+      "file": "cardiovascular-research.tex",
+      "preview_pages": 3,
+      "paper_pt": [
+        595.276,
+        793.701
+      ],
+      "margins_pt": {
+        "left": 25.285,
+        "right": 29.991,
+        "top": 28,
+        "bottom": 42
+      },
+      "regular_margins_pt": {
+        "left": 30,
+        "right": 25.276,
+        "top": 52,
+        "bottom": 42
+      },
+      "column_gap_pt": 15.488,
+      "body_size_leading_pt": [
+        9.1,
+        12.1
+      ],
+      "body_family": "sans",
+      "citations": "Blue #0000FF numeric superscripts; independent cvr-ref bibliography targets.",
+      "colors": {
+        "theme_red_rgb": [
+          0.935,
+          0.28,
+          0.21
+        ],
+        "theme_red_nearest_hex": "#EE4736",
+        "summary_and_table_cream_rgb": [
+          0.995,
+          0.925,
+          0.895
+        ],
+        "translational_perspective_grey_rgb": [
+          0.9,
+          0.905,
+          0.905
+        ],
+        "citations_and_external_links": "#0000FF",
+        "title_and_body": "#000000"
+      },
+      "source_observations": {
+        "opening_text_left_x_pt": 25.285,
+        "opening_text_right_x_pt": 565.285,
+        "opening_red_rule_y_pt": 76.345,
+        "regular_body_left_x_pt": 30,
+        "regular_second_column_x_pt": 308.976,
+        "regular_body_right_x_pt": 570,
+        "regular_red_rule_y_pt": 35.745,
+        "rule_thickness_pt": 0.5,
+        "summary_label_left_x_pt": 25.285,
+        "summary_body_left_x_pt": 109.985,
+        "summary_background_bleeds_to_page_edges": true,
+        "source_fonts": {
+          "title": [
+            "GillSansNova-Bold",
+            23
+          ],
+          "authors": [
+            "GillSansNova-Bold",
+            13
+          ],
+          "body": [
+            "GillSansNova-Book",
+            9
+          ],
+          "primary_section": [
+            "GillSansNova-Bold",
+            15
+          ],
+          "subsection": [
+            "GillSansNova-Bold",
+            12.5
+          ],
+          "bibliography_heading": [
+            "GillSansNova-Bold",
+            12.5
+          ],
+          "bibliography_body": [
+            "GillSansNova-Book",
+            7
+          ],
+          "structured_summary_labels": [
+            "GillSansNova-Heavy",
+            9.5
+          ],
+          "translational_perspective_heading": [
+            "GillSansNova-Bold",
+            12.5
+          ]
+        },
+        "structured_summary_labels": [
+          "Aims",
+          "Methods and results",
+          "Conclusions",
+          "Keywords"
+        ],
+        "translational_perspective_location": "After the bibliography in the supplied edition; full-width grey panel with a 0.5bp black border and a red heading.",
+        "date_policy": "Record received, revised, accepted, first-online and issue dates independently; online and copyright years can precede the issue year."
+      },
+      "observed_design": "Black full-width title and bold authors, orange-red fine rules and main section headings, full-bleed cream structured-summary label/body rows, sans-serif two-column article, blue numeric superscripts, cream table title/foot areas and white data area, black subsection/bibliography headings, grey Translational perspective after references.",
+      "template_adaptation": "Three pages of original neutral prose, fictional authors/affiliations, a native vector diagram and a short table. Chinese title23/28bp, author12/15bp, body9.1/12.1bp and caption7.6/9.2bp are adaptations; portable TeX Gyre and Noto/Fandol replace Gill Sans Nova. Ordinary journal-name text replaces ESC and publisher marks. The summary background reaches the page edges; short rows use unbreakable minipages and must be replaced with breakable structures when needed for a full article. Manual page breaks limit only the demonstration. No separate graphical-abstract page is added.",
+      "dependencies": [
+        "common.tex",
+        "sample-body.tex"
+      ],
+      "preview_roles": {
+        "1": "Title/authors/dates, cream full-width structured abstract and same-page two-column introduction",
+        "2": "Two-column body, native figure with complete caption, cream table header/foot and white data area",
+        "3": "Discussion/declarations, linked English placeholder references, post-bibliography grey translational perspective and final source information"
+      },
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; update footer counts to nineteen journals and twenty-one templates.",
+      "scope": "Original neutral demonstration; no real article title, authors, DOI, experimental data, source figures, email, download notice or publisher logo.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     }
   },

@@ -1,0 +1,116 @@
+% Cardiovascular Research: neutral adaptation of an inspected 2023 article.
+% Original prose, fictional authors and native diagrams; no source-paper assets.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=793.701bp,left=25.285bp,right=29.991bp,top=28bp,bottom=42bp,headheight=22bp,headsep=16.255bp,footskip=22bp]{geometry}
+\newcommand{\JournalName}{Cardiovascular Research}
+\input{common.tex}
+\usepackage{multicol,tabularx,array,colortbl}
+\definecolor{CVRRed}{rgb}{.935,.28,.21}
+\definecolor{CVRCream}{rgb}{.995,.925,.895}
+\definecolor{CVRGrey}{rgb}{.9,.905,.905}
+\definecolor{CVRCiteBlue}{HTML}{0000FF}
+\setlength{\columnsep}{15.488bp}\raggedcolumns
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{12.1bp}\selectfont}
+\setlength{\parindent}{1em}\setlength{\parskip}{2bp}
+\ctexset{section={format=\sffamily\bfseries\color{CVRRed}\fontsize{15bp}{18bp}\selectfont,beforeskip=11bp,afterskip=5bp},
+ subsection={format=\sffamily\bfseries\color{black}\fontsize{12.5bp}{15bp}\selectfont,beforeskip=8bp,afterskip=4bp}}
+\hypersetup{colorlinks=true,linkcolor=CVRCiteBlue,urlcolor=CVRCiteBlue,
+ pdftitle={Cardiovascular Research风格：原创中性中文排版示例},pdfauthor={原创中性模板；非期刊官方模板},
+ pdfsubject={Original neutral example; no source-paper prose, figures or data}}
+\fancyhead[L]{\sffamily\fontsize{8.5bp}{10bp}\selectfont 资料组织与记录对应（原创中性演示）}
+\fancyhead[R]{\sffamily\bfseries\fontsize{10bp}{12bp}\selectfont\thepage}
+\renewcommand{\headrulewidth}{.5bp}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{CVRRed}\leaders\hrule height\headrulewidth\hfill}}
+\fancyfoot[L]{\sffamily\fontsize{6.8bp}{9bp}\selectfont Cardiovascular Research风格｜非官方中文样板}
+\fancyfoot[R]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 中文译页\thepage｜仅供学术交流}
+\newcommand{\CVRCite}[1]{\textsuperscript{\hyperlink{cvr-ref:#1}{#1}}}
+\newcommand{\CVRDotRule}{\par\vspace{3bp}\noindent\textcolor{CVRRed}{\leaders\hbox{\kern1bp.\kern1bp}\hfill\kern0pt}\par\vspace{4bp}}
+\newcommand{\CVRRow}[2]{\noindent\begin{minipage}[t]{76bp}\vspace{0pt}\bfseries\color{CVRRed}\raggedright #1\end{minipage}\hspace{9bp}\begin{minipage}[t]{\dimexpr\linewidth-85bp\relax}\vspace{0pt}#2\end{minipage}\par}
+\newsavebox{\CVRSummaryBox}
+\newenvironment{cvrsummary}{\par\begingroup\setlength{\fboxsep}{0pt}\begin{lrbox}{\CVRSummaryBox}\begin{minipage}{\textwidth}\vspace{7bp}\fontsize{9.1bp}{12.1bp}\selectfont}{\vspace{8bp}\end{minipage}\end{lrbox}\noindent\makebox[\textwidth][l]{\hspace*{-25.285bp}\colorbox{CVRCream}{\hspace*{25.285bp}\usebox{\CVRSummaryBox}\hspace*{29.991bp}}}\endgroup\par}
+\newcommand{\CVRBody}{本段为原创中性排版文字，不报告任何真实研究。资料整理应区分正文、方法、图表、书目和声明，先恢复跨栏与跨页的阅读顺序，再核对记录之间的对应关系。中文自然重排可以改变页数，不能改变比较对象、否定、单位或证据范围。图表是独立内容单元，完整图注及全部表脚注均须保留。}
+\begin{document}\sffamily\normalsize
+\fancypagestyle{cvrfirst}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{cvrfirst}
+\noindent{\bfseries\fontsize{17bp}{21bp}\selectfont Cardiovascular Research\par}
+{\fontsize{8bp}{10bp}\selectfont 原刊年份、卷期、页码、DOI及版本信息按目标来源填写\par}\vspace{10bp}
+{\color{CVRRed}\hrule height .5bp}\vspace{17bp}
+\noindent{\bfseries\fontsize{23bp}{28bp}\selectfont 从资料组织到证据对应：\\不同记录的整合与可追溯呈现\par}\vspace{12bp}
+\noindent{\bfseries\fontsize{12bp}{15bp}\selectfont Author Placeholder A\textsuperscript{1,*}, Author Placeholder B\textsuperscript{2}\par}\vspace{6bp}
+{\fontsize{7.5bp}{10bp}\selectfont\noindent\textsuperscript{1}原创中性作者单位一；\textsuperscript{2}原创中性作者单位二。通信信息按所给原文填写，此处没有真实作者、地址或邮箱。\par}
+\vspace{7bp}{\fontsize{8bp}{10bp}\selectfont 收稿、修回、接受及提前在线日期：按当前来源逐项核验。\par
+\textbf{首次审稿用时：}按原文填写，不等同于出版日期。\par}\vspace{13bp}
+\begin{cvrsummary}
+\CVRRow{Aims\newline 目的}{本段演示目的摘要，不报告真实研究。完整记录的整理需要明确来源范围，区分材料清单与解释性文字，并保留各项记录的上下文。本示例仅说明排版，不设置研究对象、样本量或科学结论。}
+\CVRDotRule
+\CVRRow{Methods and\newline results\newline 方法与结果}{本段演示合并的“方法与结果”标签及其正文。实际稿应保留原作者采用的方法、比较对象、结果方向、限定条件和不确定性；不把这一合并字段强改成其他期刊的结构。正文、图表、方法和声明分别建立对应关系。原文提供的参数、单位、统计信息和数据来源均应逐项核对，本例不包含真实实验流程或定量结果。}
+\CVRDotRule
+\CVRRow{Conclusions\newline 结论}{本段是结论结构占位。正式汉化应保持原文证据强度及适用范围；中文分页可以变化，结论尾句和限制条件仍须完整保留。}
+\CVRDotRule
+\CVRRow{Keywords\newline 关键词}{中性示例\enspace\textbullet\enspace 资料组织\enspace\textbullet\enspace 记录对应}
+\end{cvrsummary}\vspace{12bp}
+\begin{multicols}{2}
+\section*{1. 引言（原创示例）}
+资料可能分布在正文、图表及文末独立框文中。完整呈现首先需要确定实际提供的内容，再核对其阅读顺序和边界\CVRCite{1}。
+
+本页展示黑色通栏题名、粗体作者、浅米底结构化摘要及同页双栏开篇。普通刊名字样替代官方品牌标识，不使用源论文的全文、原图或个人下载信息。
+\end{multicols}
+\vfill\noindent\rule{\textwidth}{.4bp}\par
+{\fontsize{7bp}{9bp}\selectfont *通信作者、原刊版权和许可说明按所给版本填写；作者单位、下载机构标记和期刊版权不是同一信息。\par
+本文件为原创中性版式演示，不构成真实论文。仅供学术交流、出版物版权归原作者及出版商所有。\par}
+\clearpage
+\newgeometry{left=30bp,right=25.276bp,top=52bp,bottom=42bp,headheight=22bp,headsep=16.255bp,footskip=22bp}
+\begin{multicols}{2}
+\section*{2. 方法（结构示例）}
+\CVRBody
+\subsection*{2.1 记录与范围}
+原刊主文页码与PDF物理页分别记录；收稿、接受、提前在线和正式刊期是不同字段。补充材料仅被引用时，不能视为已经取得或完成翻译。
+\section*{3. 图文与表格对应}
+本页通过原创矢量示意图及中性资料表展示通栏模块。实际论文的主图应靠近相关讨论，并在书目之前排完\CVRCite{2}。
+\end{multicols}\vspace{5bp}
+\noindent\begin{minipage}{\textwidth}
+\begin{center}\begin{minipage}{.72\textwidth}\DemoVector\end{minipage}\end{center}
+{\fontsize{7.6bp}{9.2bp}\selectfont\textbf{图1。原创记录核对示意（中性占位，无实验数据）。}
+\textbf{A}，输入节点表示题名、摘要、正文与图表；\textbf{B}，处理节点表示范围、限定及单位的核对；\textbf{C}，输出节点表示正文、图注、书目及来源信息。箭头只表示本例的阅读顺序，不表示生物机制、因果关系或数量变化。图形由模板自行绘制，无真实数据、样本量、误差线或比例尺。实际原图保留英文时，应提供完整中文标签释义。\par}
+\end{minipage}\vspace{12bp}
+\begingroup\setlength{\fboxsep}{6bp}\noindent\colorbox{CVRCream}{\begin{minipage}{\dimexpr\textwidth-12bp\relax}
+{\bfseries\color{CVRRed}表1}\quad\textbf{资料记录字段（原创中性占位）}\par\vspace{6bp}
+{\fontsize{7.8bp}{10.2bp}\selectfont\arrayrulecolor{CVRRed}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.21\linewidth}XXX@{}}\hline
+\rowcolor{white}\textbf{记录} & \textbf{来源} & \textbf{对应内容} & \textbf{核对字段}\\\hline
+\rowcolor{white}文字记录（占位） & 来源字段待填 & 正文与方法 & 范围、段落与限定\\
+\rowcolor{white}图形记录（占位） & 来源字段待填 & 面板与图注 & 标签、单位与署名\\
+\rowcolor{white}文末记录（占位） & 来源字段待填 & 声明与出处 & 身份、编号与链接\\\hline
+\end{tabularx}\par\vspace{4bp}
+表中各项均为原创排版占位，无真实材料、参数或研究数据。正式长表须逐行保留信息及全部脚注，必要时使用可续页结构。\par}
+\end{minipage}}\endgroup\vspace{8bp}
+\begin{multicols}{2}
+\subsection*{3.1 通栏模块后的正文}
+图注与表格应恢复完整阅读顺序，不能为了控制页数删去尾句。红色主节、黑色次节、蓝色数字上标及紧凑无衬线图注为本刊核验版式的特征。
+\subsection*{3.2 证据与限定}
+正文数据与排版样式分别维护；只改版式时复用已核对内容并检查指纹。图表裁区应逐幅测量，不继承其他文章的裁剪坐标。
+\end{multicols}
+\clearpage
+\begin{multicols}{2}
+\section*{4. 讨论（原创示例）}
+\CVRBody
+\subsection*{4.1 解释边界}
+原文的相关、因果、假设及潜在用途具有不同强度，译文应保持这些区别。本例只演示版式，所有文字均不是实验结论或临床建议。
+\subsection*{声明（原创占位）}
+致谢、资助、作者贡献、利益冲突、数据与代码可用性及许可说明按来源分别核对。本示例没有真实作者、经费、数据或利益关系。
+\subsection*{参考文献（原创占位）}
+{\fontsize{7.6bp}{10bp}\selectfont\setlength{\parindent}{0pt}\interlinepenalty=10000
+\hypertarget{cvr-ref:1}{}1. Author Placeholder A. Complete record inventory. Original neutral reference example; no publication or DOI assigned.\par\smallskip
+\hypertarget{cvr-ref:2}{}2. Author Placeholder B. Correspondence between source and presentation. Original neutral reference example; no publication or DOI assigned.\par}
+\end{multicols}\vspace{14bp}
+\begingroup\setlength{\fboxsep}{8bp}\setlength{\fboxrule}{.5bp}\noindent\fcolorbox{black}{CVRGrey}{\begin{minipage}{\dimexpr\textwidth-17bp\relax}
+{\bfseries\color{CVRRed}\fontsize{12.5bp}{15bp}\selectfont Translational perspective\quad 转化展望（原创占位）\par}\vspace{4bp}
+本框展示位于参考文献之后的独立转化展望。正式译稿应完整翻译原作者对研究意义、后续验证和转化范围的阐述，并保留其中的不确定性与限定。不能用译者总结替代原框文，也不能因其位于书目之后而遗漏。本段不报告任何真实机制、效应或转化用途。灰底、黑框及红色框题根据所给版本核验；不将其他期刊的图形摘要结构套入本页。
+\end{minipage}}\endgroup\vspace{14bp}
+\section*{原文信息（占位字段）}
+作者；英文原题；期刊；年份；卷期；页码或文章号；DOI；明确提供的提前在线日期和正式刊期。所有字段按所给版本逐项填写，此处没有对应的真实论文，不从文件名或DOI年份推填缺项。\par
+本文件为Cardiovascular Research风格的非官方中性样板。普通刊名、字体回退及中文分页为有意适配，不代表该刊所有文体，也不承诺逐像素复刻。正文图位于书目前，独立转化展望保留在书目之后；最后以原文信息结束。\par
+仅供学术交流、出版物版权归原作者及出版商所有。
+\end{document}
