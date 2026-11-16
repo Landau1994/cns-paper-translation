@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from nineteen verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from twenty verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -1182,7 +1182,86 @@
         "2": "Resource opening, context-and-significance box and structured summary",
         "3": "Two-column prose, original vector figure with full caption, methods, declarations, English placeholder references and source information"
       },
-      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to seventeen journals and nineteen templates."
+      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to eighteen journals and twenty templates."
+    },
+    "developmental-cell": {
+      "reference_edition": "Developmental Cell, inspected 2026 Technology article with a separate graphical-summary sheet, main article, STAR Methods and supplied supplemental information; no paper content retained",
+      "paper_pt": [
+        602.986,
+        782.986
+      ],
+      "margins_pt": {
+        "left": 53.121,
+        "right": 59.754,
+        "top": 99,
+        "bottom": 50.186
+      },
+      "column_gap_pt": 13.2,
+      "body_size_leading_pt": [
+        9.1,
+        12.6
+      ],
+      "body_family": "sans",
+      "citations": "Blue numeric superscripts; independent devcell-ref targets in the neutral demonstration.",
+      "colors": {
+        "blue": "#0097D1",
+        "heading_red": "#AB4D4C",
+        "article_type_grey": "#B3B3B3",
+        "title": "#000000"
+      },
+      "source_observations": {
+        "opening_left_x_pt": 53.1212,
+        "graphical_summary_right_column_x_pt": 354.954,
+        "regular_body_columns_x_pt": [
+          59.754,
+          310.847
+        ],
+        "regular_body_right_x_pt_approx": 552.4,
+        "source_fonts": {
+          "title": [
+            "HelveticaNeue-Bold",
+            19.9252
+          ],
+          "graphical_sheet_title": [
+            "HelveticaNeue-Heavy",
+            18.929
+          ],
+          "article_type": [
+            "HelveticaNeue-Heavy",
+            13.9475
+          ],
+          "summary": [
+            "HelveticaNeue-Medium",
+            9.9626
+          ],
+          "body": [
+            "HelveticaNeue-Roman",
+            8.4682
+          ],
+          "captions": [
+            "HelveticaNeue-Roman",
+            6.9736
+          ]
+        },
+        "observed_design": "Separate graphical abstract and highlights with right authors/correspondence/in-brief; grey Technology marker; black full-width title, author/affiliation block and blue continuous SUMMARY; same-page sans two-column body with red headings; alternating blue journal name/grey type running heads, full-width figures and compact captions; STAR Methods has full-width three-column key resource table with continuation headers.",
+        "omitted_publisher_marks": "Cell Press emblem and page-edge publisher block are omitted; ordinary journal-name lettering is used."
+      },
+      "observed_design": "Grey Technology label, full-width continuous blue SUMMARY, sans-serif two-column article, separate graphical-summary sheet and STAR Methods resource table.",
+      "template_adaptation": "Three original neutral pages: graphical summary, Technology opening and same-page body, then full-width native vector figure/caption, short longtable, method/declaration prose, linked English placeholder references and final source fields. Chinese title22/27bp, summary10/14bp, body9.1/12.6bp and caption7.6/9.2bp are deliberate adaptations; TeX Gyre and Noto/Fandol replace commercial fonts. Manual page breaks apply only to this short demonstration. Ordinary journal lettering replaces publisher marks. No Med context box or structured summary labels are added.",
+      "file": "developmental-cell.tex",
+      "preview_pages": 3,
+      "dependencies": [
+        "common.tex",
+        "sample-body.tex"
+      ],
+      "preview_roles": {
+        "1": "Separate graphical abstract, highlights, authors/correspondence/in-brief",
+        "2": "Technology opening with continuous full-width SUMMARY and same-page two-column body",
+        "3": "Original vector figure, complete caption, resource table, methods, declarations, references and final source information"
+      },
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to eighteen journals and twenty templates.",
+      "scope": "Original neutral text, fictional authors/affiliations and native diagrams; no real article title, authors, DOI, scientific data, figures, email, download metadata or official publisher marks.",
+      "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     }
   },
   "shared_demo_content": "Original neutral prose and a newly drawn TikZ placeholder diagram. No copied article prose, figures, journal logos, patient counts, fixed real DOI, institution/IP/date download overlays, or claimed scientific results.",

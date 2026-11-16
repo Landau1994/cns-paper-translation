@@ -1,0 +1,126 @@
+% Developmental Cell: neutral adaptation of an inspected 2026 Technology article.
+% All prose, authors and diagrams below are original placeholders.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,twoside,scheme=plain]{ctexart}
+\usepackage[paperwidth=602.986bp,paperheight=782.986bp,left=53.121bp,right=59.754bp,top=99bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,longtable,booktabs,array}
+\newcommand{\JournalName}{Developmental Cell}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{DevCellBlue}{HTML}{0097D1}
+\definecolor{DevCellRed}{HTML}{AB4D4C}
+\setlength{\columnsep}{13.2bp}
+\renewcommand{\normalsize}{\fontsize{9.1bp}{12.6bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\color{DevCellRed}\fontsize{9.4bp}{12.6bp}\selectfont,beforeskip=8bp,afterskip=3bp},subsection={format=\sffamily\bfseries\color{DevCellRed}\fontsize{9.1bp}{12.6bp}\selectfont,beforeskip=6bp,afterskip=2bp}}
+\hypersetup{linkcolor=DevCellBlue,urlcolor=DevCellBlue,pdftitle={Developmental Cell风格：原创中性中文排版示例},pdfauthor={原创中性模板；非期刊官方模板},pdfsubject={Neutral source-inspired layout; no source-paper content or assets}}
+\fancyhead[LO,RE]{\sffamily\color{DevCellBlue}\bfseries\fontsize{20bp}{25bp}\selectfont Developmental Cell}
+\fancyhead[LE,RO]{\sffamily\color{black!35}\bfseries\fontsize{14bp}{18bp}\selectfont Technology}
+\fancyfoot[LO,RE]{\sffamily\fontsize{6.8bp}{9bp}\selectfont 非官方中文译稿样板\quad 仅供学术交流}
+\fancyfoot[LE,RO]{\sffamily\fontsize{7.5bp}{9bp}\selectfont Developmental Cell\quad 中文译页\ \thepage}
+\newcommand{\DevCellTitle}{从材料核对到完整呈现：\\记录之间的对应关系}
+\newcommand{\DevCellCite}[1]{\textsuperscript{\hyperlink{devcell-ref:#1}{#1}}}
+\newcommand{\DevCellLabel}[1]{{\color{DevCellBlue}\fontsize{12bp}{16bp}\selectfont #1}\par\vspace{5bp}}
+\newcommand{\DevCellBullet}[1]{\noindent\textcolor{DevCellBlue}{\textbullet}\quad #1\par\vspace{7bp}}
+\newcommand{\DevCellGraphical}{%
+ \resizebox{\linewidth}{!}{\begin{tikzpicture}[
+  font=\sffamily\fontsize{11bp}{15bp}\selectfont,
+  box/.style={draw=DevCellBlue!75,fill=DevCellBlue!6,rounded corners=2bp,minimum width=240bp,minimum height=65bp,align=center},
+  arr/.style={-{Stealth[length=2.5mm]},line width=.9bp}]
+  \node[box] (a) {\textbf{A\quad 来源材料}\\题名、正文、方法与完整图表};
+  \node[box,below=22bp of a] (b) {\textbf{B\quad 逐项核对}\\数值、限定、对应关系与声明};
+  \node[box,below=22bp of b] (c) {\textbf{C\quad 可追溯呈现}\\中文译稿、书目与原文信息};
+  \draw[arr] (a)--(b);\draw[arr] (b)--(c);
+ \end{tikzpicture}}%
+}
+\fancypagestyle{devcell-opening}{\fancyhead{}\fancyhead[L]{\sffamily\color{DevCellBlue}\bfseries\fontsize{20bp}{25bp}\selectfont Developmental Cell}}
+\begin{document}\normalsize
+% Page 1: separate graphical abstract, highlights and right-hand information.
+{\noindent\bfseries\fontsize{22bp}{27bp}\selectfont\DevCellTitle\par}\vspace{13bp}
+\noindent\begin{minipage}[t]{.59\textwidth}\vspace{0pt}
+\DevCellLabel{Graphical abstract\quad 图形摘要}
+\setlength{\fboxsep}{8bp}\setlength{\fboxrule}{.5bp}
+\noindent\fbox{\begin{minipage}{\dimexpr\linewidth-17bp\relax}\DevCellGraphical\end{minipage}}\par\vspace{13bp}
+\DevCellLabel{Highlights\quad 研究要点}
+\DevCellBullet{正文、图表和方法分别清点，保留独立覆盖项。}
+\DevCellBullet{比较方向、单位与不确定性按来源核对。}
+\DevCellBullet{中文自然重排，完整图注与原图对应。}
+\DevCellBullet{本页仅为原创中性示意，不报告研究结果。}
+\end{minipage}\hfill
+\begin{minipage}[t]{.385\textwidth}\vspace{0pt}
+\DevCellLabel{Authors\quad 作者}
+Author Placeholder A,\\Author Placeholder B\\（原创虚构作者占位）\par\vspace{17bp}
+\DevCellLabel{Correspondence\quad 通信信息}
+按目标来源填写通信作者。当前示例没有真实邮箱或联系方式。\par\vspace{17bp}
+\DevCellLabel{In brief\quad 简介}
+本例展示独立图形摘要页的左图与研究要点、右作者与简介结构。示意图中的节点仅表示本例的材料核对流程，不代表实验对象、数据、效应或因果关系。\par\vspace{17bp}
+{\fontsize{7.6bp}{10bp}\selectfont 图形摘要、研究要点与正文摘要各自保留，不因文字相近而合并。正式稿的出版字段逐项从来源填写。}
+\end{minipage}\par
+\vfill
+{\fontsize{7.6bp}{10bp}\selectfont 独立图形摘要页不替代正文摘要。出版身份以当前提供的原文件为依据。\par
+仅供学术交流、出版物版权归原作者及出版商所有。}
+\clearpage
+% Page 2: Technology opening, continuous full-width summary and same-page body.
+\thispagestyle{devcell-opening}
+{\noindent\color{black!35}\bfseries\fontsize{14bp}{18bp}\selectfont Technology\par}\vspace{3bp}
+{\noindent\bfseries\fontsize{22bp}{27bp}\selectfont\DevCellTitle\par}\vspace{10bp}
+{\noindent\bfseries\fontsize{9bp}{12bp}\selectfont Author Placeholder A\textsuperscript{1,*}, Author Placeholder B\textsuperscript{2}\par}\vspace{4bp}
+{\noindent\fontsize{7.5bp}{10.4bp}\selectfont\textsuperscript{1}原创中性作者单位一；\textsuperscript{2}原创中性作者单位二。\par *通信作者、DOI与出版日期按目标来源填写；此处无真实出版物对应信息。\par}\vspace{17bp}
+{\noindent\color{DevCellRed}\bfseries SUMMARY\quad 摘要\par}\vspace{9bp}
+{\fontsize{10bp}{14bp}\selectfont\color{DevCellBlue}
+本文以原创中性材料演示完整记录的整理与核对。来源材料可以包含多种独立内容，整理时应先区分正文、图表、方法和声明，再恢复它们的阅读顺序。示意流程仅表达材料之间的对应关系，不表示真实实验、科学机制、效应方向或定量结果。\par
+本例采用通栏题名、虚构作者单位及连续蓝色摘要，后接无衬线双栏正文。独立图形摘要、研究要点及简介在前页分别展示。这里不包含结构化摘要标签或独立背景意义框；正式稿应根据当前来源保留其实际结构。中文自然重排可以改变页数，数值、限定条件与引文关系仍须逐项核对。\par}
+\vspace{15bp}
+\begin{multicols}{2}
+\section*{引言（原创中性示例）}
+资料整理从区分独立记录开始。即使图形摘要、简介和正文摘要含有相近表述，它们也可能服务于不同的阅读顺序，应按原文分别呈现\DevCellCite{1}。
+
+题名、作者、单位和日期共同确定来源版本。文件名、文件生成日期和正式出版日期可能不同，应以可见页面的明确出版信息为依据。
+\section*{结果（版式示例）}
+本例的结果段落只展示红色层级、无衬线双栏及蓝色数字上标引文\DevCellCite{2}。文中没有真实样本、统计检验、研究结论或医学建议。
+
+完整呈现还包括方法细节、资源标识符、图注尾句及出版声明。这些内容不会因正文重排而省略；实际提供的补充材料须另行清点。
+\end{multicols}
+\vfill
+{\fontsize{7.6bp}{10bp}\selectfont 本页全部为原创中性文字。普通刊名替代官方字标；中文字体与分页为有意适配。\par
+仅供学术交流、出版物版权归原作者及出版商所有。}
+\clearpage
+% Page 3: full-width figure, complete caption and resource/method detail.
+\newgeometry{left=59.754bp,right=53.1bp,top=99bp,bottom=50.186bp,headheight=32bp,headsep=15bp,footskip=27.4bp}
+\section*{图文与方法（原创中性示例）}
+\noindent\begin{minipage}{\textwidth}
+\resizebox{\textwidth}{!}{\begin{tikzpicture}[
+ font=\sffamily\fontsize{11bp}{15bp}\selectfont,
+ box/.style={draw=DevCellBlue!75,fill=DevCellBlue!5,minimum width=125bp,minimum height=42bp,align=center},
+ arr/.style={-{Stealth[length=2.5mm]},line width=.8bp}]
+ \node[box] (a) {\textbf{A\quad 来源记录}\\正文、图表与方法};
+ \node[box,right=28bp of a] (b) {\textbf{B\quad 对应核对}\\段落、数值与限定};
+ \node[box,right=28bp of b] (c) {\textbf{C\quad 完整呈现}\\译文、资源与出处};
+ \draw[arr] (a)--(b);\draw[arr] (b)--(c);
+\end{tikzpicture}}\par\vspace{5bp}
+{\fontsize{7.6bp}{9.2bp}\selectfont\textcolor{DevCellRed}{\bfseries 图1。记录对应流程（原创中性示意）。}
+\textbf{A}，来源记录包含正文、图表与方法；\textbf{B}，核对段落、数值及其限定条件；\textbf{C}，呈现译文、资源和来源信息。箭头仅表示本例的阅读顺序，不表示因果、效应、数量关系或细胞分化。无真实数据、样本量、统计检验、误差线或比例尺。实际图注须完整保留全部面板、定义、单位及署名。\par}
+\end{minipage}\vspace{6bp}
+\section*{STAR方法：关键资源表（原创占位）}
+{\fontsize{7.6bp}{9.7bp}\selectfont\setlength{\tabcolsep}{4bp}
+\begin{longtable}{@{}p{.35\textwidth}p{.28\textwidth}p{\dimexpr.37\textwidth-16bp\relax}@{}}
+\toprule 试剂或资源 & 来源 & 标识符\\\midrule\endfirsthead
+\toprule 试剂或资源（续） & 来源 & 标识符\\\midrule\endhead
+\bottomrule\endfoot
+材料记录（原创占位） & 来源记录待填 & 货号／标识符待填\\
+分析工具（原创占位） & 软件来源待填 & 版本／资源标识待填\\
+数据记录（原创占位） & 数据存储位置待填 & 数据集编号待填\\
+\end{longtable}}
+\begin{multicols}{2}
+\subsection*{方法与统计（结构示例）}
+正式稿应分别保留实验模型、研究参与者详情、方法细节以及定量和统计分析。关键资源表逐行保留来源、货号及资源标识；长表采用可续页结构并重复列头。本例三行均为原创占位，不含真实试剂或实验参数。
+\subsection*{补充内容与声明}
+主文、STAR方法、补充图注、数据表与封面各自核对。源PDF中的原刊页码与物理页分别记录；被引用但未提供的独立附件不能视为已翻译。资助、作者贡献、利益冲突、数据和代码可用性及许可声明不得遗漏。
+\section*{参考文献（原创占位）}
+{\fontsize{7.6bp}{9.8bp}\selectfont\interlinepenalty=10000
+\noindent\hypertarget{devcell-ref:1}{1.} Author Placeholder A. Complete record inventory. Original neutral reference example; no publication or DOI assigned.\par\smallskip
+\noindent\hypertarget{devcell-ref:2}{2.} Author Placeholder B. Source and layout comparison. Original neutral reference example; no publication or DOI assigned.\par}
+\section*{原文信息（占位字段）}
+正式稿应按所给版本填写作者、英文原题、期刊、年份、卷期、页码或文章号、DOI及明确提供的日期。此处没有对应的真实论文，字段均待替换，不继承旧任务的出版身份。\par
+仅供学术交流、出版物版权归原作者及出版商所有。
+\end{multicols}
+\end{document}
