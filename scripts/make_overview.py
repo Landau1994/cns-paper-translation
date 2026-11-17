@@ -4,7 +4,8 @@
 Rows are Cell / Nature / Science; NEJM / The Lancet / JAMA; and
 The BMJ / Circulation / European Heart Journal. The other ten journals,
 article/review variants, guidelines and interior detail pages remain available
-in the individual template previews. All nineteen journals are retained.
+in the individual template previews. All nineteen journals and the separate
+preprint category are retained; preprints do not count as additional journals.
 No paper content or newly generated illustrations are introduced.
 """
 from pathlib import Path
@@ -44,7 +45,9 @@ def build(root, output):
     selected_count = len({p[0] for p in PANELS})
     assert selected_count == len(PANELS), 'Show each selected journal once.'
     profiles = json.loads((root / 'assets/templates/profiles.json').read_text(encoding='utf-8'))['profiles']
-    journal_count = len(profiles) - 2  # Two guideline variants share journal names.
+    preprint_count = sum(p.get('category') == 'preprint' for p in profiles.values())
+    journal_count = len(profiles) - 2 - preprint_count  # Guidelines share journal names.
+    demonstration_pages = sum(p['preview_pages'] for p in profiles.values())
     height = top + rows * card_h + (rows - 1) * gap + 110
     canvas = Image.new('RGB', (width, height), '#edf0f3')
     draw = ImageDraw.Draw(canvas)
@@ -70,12 +73,13 @@ def build(root, output):
         draw.rectangle((px - 1, py - 1, px + im.width, py + im.height), outline='#d7dce3', width=1)
         assert x < px and y < py and px + im.width < x + card_w and py + im.height < y + card_h
         page_boxes.append({'row': row + 1, 'column': column + 1, 'template': key, 'page': page, 'label': name, 'kind': kind})
-    draw.text((margin, height - 77), f'All {journal_count} journals and {len(profiles)} templates: see individual previews for full coverage.', font=font(23), fill='#33465a')
+    draw.text((margin, height - 77), f'{journal_count} journals + {preprint_count} preprint category / {len(profiles)} templates / {demonstration_pages} demo pages: see individual previews.', font=font(23), fill='#33465a')
     draw.text((margin, height - 41), 'Original neutral examples; not official publisher templates.', font=font(21), fill='#667585')
     output.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(output, optimize=True)
     return {'size': canvas.size, 'rows': rows, 'columns': 3,
-            'journal_count': journal_count, 'template_count': len(profiles),
+            'journal_count': journal_count, 'preprint_category_count': preprint_count,
+            'template_count': len(profiles), 'demonstration_pages': demonstration_pages,
             'represented_journal_count': selected_count,
             'represented_template_count': selected_count, 'detail_panels': 0,
             'guideline_variants': 2, 'panels': page_boxes}

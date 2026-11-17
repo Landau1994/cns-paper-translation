@@ -1,0 +1,115 @@
+% Neutral A4 single-column preprint adaptation; compile with XeLaTeX.
+% All prose, authors, affiliations, references, code and the figure are original placeholders.
+% No real source-paper content, results, figures, identifiers, dates or logos.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=841.89bp,left=62.36bp,right=60.876bp,top=49bp,bottom=48bp,headheight=12bp,headsep=9bp,footskip=22bp]{geometry}
+\input{common.tex}
+\usepackage{fvextra,booktabs}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\CJKfamilydefault}{\CJKsfdefault}
+\setCJKmonofont{FandolFang-Regular.otf}
+\renewcommand{\normalsize}{\fontsize{9.5bp}{13.5bp}\selectfont}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5bp}
+\definecolor{PreprintBlue}{HTML}{0000FF}
+\hypersetup{colorlinks=true,linkcolor=PreprintBlue,urlcolor=PreprintBlue,
+  pdftitle={A4单栏预印本中性中文样板},pdfauthor={原创中性版式演示},
+  pdfsubject={Neutral single-column preprint demonstration; no source research content}}
+\ctexset{section={format=\sffamily\bfseries\fontsize{12bp}{16bp}\selectfont,beforeskip=15bp,afterskip=6bp},
+  subsection={format=\sffamily\bfseries\fontsize{10.3bp}{14bp}\selectfont,beforeskip=11bp,afterskip=4bp}}
+\fancyhead{}\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{.35bp}
+\fancyfoot[L]{\sffamily\fontsize{7bp}{9bp}\selectfont 预印本样板｜非官方中文译稿}
+\fancyfoot[R]{\sffamily\fontsize{7bp}{9bp}\selectfont 中文译页\ \thepage}
+\fvset{fontsize=\footnotesize,breaklines=true,breakanywhere=true,frame=single,rulecolor=\color{black!15},framesep=5bp}
+\newcommand{\PreprintCite}[1]{\textsuperscript{\hyperlink{preprint-ref:#1}{#1}}}
+\newcommand{\PreprintCaption}[1]{\par\begingroup\fontsize{8.5bp}{11.5bp}\selectfont #1\par\endgroup}
+\begin{document}\normalsize
+{\bfseries\fontsize{20bp}{25bp}\selectfont 中文题名占位：完整内容的单栏呈现与复核\par}
+\vspace{4bp}
+示例作者甲\textsuperscript{1,*}、示例作者乙\textsuperscript{1}、示例作者丙\textsuperscript{2,*}\par
+{\fontsize{8.5bp}{11.5bp}\selectfont
+\textsuperscript{1}示例单位一（原创占位）。\quad\textsuperscript{2}示例单位二（原创占位）。\par
+*贡献及通信标记应按目标原文填写；本样板不提供真实邮箱。\par}
+\vspace{13bp}
+{\bfseries
+本段为连续摘要的原创中性占位，不报告真实研究结果。它展示预印本首页全宽题名、作者单位、加粗摘要和同页单栏正文之间的层级。完整译稿应忠实保留研究问题、方法、结果和限定，而不是用内容概括替代逐段翻译。预印本的服务器、版本、发布日期、标识符及许可，应分别以实际源文件所载内容为依据；文件属性中的生成时间不等同于公开发布日期。本样板不借用任何期刊标识，也不为缺失的 DOI、卷期或正式页码填入推测值。正文与补充材料的范围以用户提供文件为准，中文可依长度自然重新分页。\par}
+\vspace{9bp}
+\section*{引言}
+本页演示黑白无衬线单栏正文及蓝色数字上标\PreprintCite{1}。单栏预印本可能具有比期刊论文更长的方法和补充材料；内容清单应涵盖正文、完整图注、公式、伪代码、声明及各套参考文献。正文中的跨页续句需要先恢复完整，再转换为中文。原文没有节标题的段落不应为方便排版而任意改写其逻辑结构。
+
+可编辑内容与排版代码应分别维护。调整字号或图像位置时，应保留正文、数值、引用和公式的内容指纹；对已核对译文换版式，不应重新翻译造成内容漂移。本段仅用于展示连续段落之间的正常留白及首行不缩进，不是某一研究的背景或结论。
+
+\subsection*{范围与版本}
+预印本身份、正式出版状态和同行评审状态是不同信息。译稿应明确自己所依据的版本，不把后来发表版本的信息无说明地混入当前来源。若原文件未给出服务器或 DOI，应说明未载明，而不根据标题相似性补造。此处所有版本字段均为中性占位，不对应任何真实预印本。
+
+对图中保留的英文，完整中文释义应覆盖面板标题、坐标轴、图例及整句说明。基因名、模型名、数据标识和科学符号可按原样保留，但不能用零散术语表代替应译的说明句。每幅图的边界应单独核对，图注允许在必要时自然跨页\PreprintCite{2}。
+
+\subsection*{完整性记录}
+内容覆盖以源段和内容对象为单位，而非仅比较页数。正文、方法、补充说明和参考文献可采用各自稳定的标识；主文与补充书目重置编号时，还需要独立链接命名空间，避免同号误链。本页的引文仅指向末页两个明确标注的示例条目。
+
+\clearpage
+\section*{方法与图文示例}
+本页演示可续页的代码、独立编号公式及原创矢量图。真实伪代码中的变量、数组维度、运算符和缩进应逐项保留；公式需对照源页检查上下标、求和范围与分母。下面的代码和公式仅说明排版方法，不是从任何论文提取的算法。
+\subsection*{伪代码}
+\begin{Verbatim}
+def prepare_document(blocks, coverage):
+    output = []
+    for block in blocks:
+        assert block.source_id in coverage
+        output.append(block.verified_translation)
+    return output
+\end{Verbatim}
+代码使用可换行的等宽字体环境，真实长代码块允许跨页，不整体包入不可断页盒。源文件中的注释若表达方法含义，也需翻译或给出完整中文对应。本例变量仅代表文档对象，不含真实实验参数。
+
+\subsection*{公式与符号}
+若 $a_i$ 是第 $i$ 个演示段落的字符数，$n$ 为演示段落数，则算术平均字符数写为
+\begin{equation}
+\bar a=\frac{1}{n}\sum_{i=1}^{n}a_i.\tag{1}
+\end{equation}
+该式为原创基础排版示例，不报告数值或科研发现。真实公式编号应跟随原文；若源文有疑点，须与译者修正清楚区分。
+
+\vspace{8bp}
+\begin{center}\begin{minipage}{.94\textwidth}\DemoVector\end{minipage}\end{center}
+\PreprintCaption{\textbf{图1｜内容处理顺序（原创中性占位）。}
+\textbf{A}，输入节点表示题名、摘要、正文、图表及附录等源内容。
+\textbf{B}，处理节点表示恢复阅读顺序、逐段转换及核对限定条件。
+\textbf{C}，输出节点表示完整中文译稿、可编辑内容和覆盖记录。
+箭头仅指本示例的阅读顺序，不表示生物学因果关系、实验效应、统计差异或数值变化。图由模板自行绘制，无真实数据、原图或官方标识。图注与正文采用可正常断页的段落；真实长图应按其面板、长宽及图注长度单独安排。}
+
+\subsection*{版面检查}
+正文版心与宽图版心应分别测量。图可以按目标源稿适当伸入正文两侧留白，但不得截断坐标轴、面板字母或图例。图像应优先保留干净矢量素材；下载来源信息需实际移除，而非仅遮白或更改裁切框。
+
+\clearpage
+\section*{补充材料与覆盖示例}
+补充图、补充说明、补充表描述和补充参考文献应按提供文件独立清点。若源 PDF 只列出表格名称与说明，未包含所指外部表格数据，应翻译已经提供的描述，并如实注明数据表未随该文件给出。本段为内容范围示例，不表示本样板附带任何实验附件。
+
+\subsection*{补充说明（原创中性占位）}
+跨页续段只能合并一次。图中英文保留时，应在译稿中以按图或面板分组的方式提供中文标签对应；图注内容与标签释义分别保留，不因相似而省略。对包含多个独立参考文献列表的文件，应记录各列表的编号起点和引用对象，并逐条检查内部跳转。
+
+\subsection*{覆盖记录（原创中性占位）}
+\begin{tabular}{@{}p{.19\textwidth}p{.43\textwidth}p{.30\textwidth}@{}}
+\toprule
+内容对象 & 需要保留的边界 & 演示校核状态\\\midrule
+正文 & 段落、标题、引用、跨页续句 & 按源内容逐项记录\\[4bp]
+图与图注 & 全部面板及完整说明 & 单独核对裁区与文字\\[4bp]
+方法 & 参数、公式、伪代码和限定 & 对照源页逐项复核\\[4bp]
+补充材料 & 实际提供的附图、说明及表格 & 区分已提供与未提供\\[4bp]
+\bottomrule
+\end{tabular}
+\par\smallskip
+以上字段为原创文档检查示例，不是科学数据、统计结果或期刊报告标准。
+
+\section*{参考文献（中性占位）}
+{\fontsize{8.3bp}{11.3bp}\selectfont
+\hypertarget{preprint-ref:1}{}1. Example author. Example document title. Source and version details to be replaced from the supplied file.（原创占位，非真实文献。）\par
+\hypertarget{preprint-ref:2}{}2. Example author. Another example source title. Publication and identifier fields to be verified.（原创占位，非真实文献。）\par}
+
+\section*{声明（中性占位）}
+致谢、资助、作者贡献、利益冲突、数据可用性、代码可用性及许可均应按实际原稿逐项翻译。本文件不包含真实研究、资助、数据或作者贡献；此处只演示声明区的层级与位置。
+
+\section*{原文信息}
+作者、英文题名、预印本服务器、版本、明确载明的发布日期、DOI 或其他标识符、页数及许可信息，均须从目标来源核实并填写。原稿未列字段应说明未载明。预印本通常不具有期刊卷期；不能将文件生成日期当作发布日期。
+
+本文件为 A4 单栏预印本的非官方中性中文样板，不属于某期刊官方模板。全部文字、示意图、代码、表格、作者单位和书目均为原创占位，三页人工分页仅用于演示，不限制完整译稿长度。仅供学术交流、出版物版权归原作者及出版商所有。
+\end{document}

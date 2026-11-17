@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from twenty-one verified article and guideline configurations and their inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from twenty-two verified journal, guideline and preprint configurations and inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -181,7 +181,8 @@
       "citations": "Blue italic parenthetical numbers, not superscripts; internal bibliography links",
       "observed_design": "Independent research summary page with red summary band, red discipline label, serif title, four summary sections and overview illustration; main article starts on next page with left-column title/authors/sans abstract/red divider, then natural two-column text; RESEARCH ARTICLE with short underline; full-width figures and compact captions",
       "template_adaptation": "Discipline, author names and publication details explicitly marked as placeholders; no live DOI or fabricated QR code; three pages demonstrate summary, article opening, figure/backmatter",
-      "file": "science.tex"
+      "file": "science.tex",
+      "preview_pages": 3
     },
     "immunity": {
       "reference_edition": "Immunity (2025), Inflammation in atherosclerosis: Lessons and therapeutic implications, supplied corrected-proof edition",
@@ -204,7 +205,8 @@
       "citations": "Blue numeric superscripts, with internal bibliography links",
       "observed_design": "Cell-family blue journal heading and summary, grey Review label, dark red section hierarchy, full-width title/author/abstract area, double columns and compact full-width figure captions",
       "template_adaptation": "Plain Immunity lettering instead of logo; no proof citation box; independent Chinese page numbers and neutral placeholders",
-      "file": "immunity.tex"
+      "file": "immunity.tex",
+      "preview_pages": 2
     },
     "nature-reviews-cardiology": {
       "reference_edition": "Nature Reviews Cardiology 21 (2024), Efferocytosis in atherosclerosis, supplied published review edition",
@@ -228,7 +230,8 @@
       "citations": "Blue numeric superscripts, with internal bibliography links",
       "observed_design": "Purple top rule; separate opening page with full-width title and authors, roughly 3:1 abstract/section-contents panels divided by a vertical rule, affiliations at the abstract foot; later two-column serif body with sans headings and ruled key points; full-width multipage table with repeated heading and column labels; blue journal name in ruled footer",
       "template_adaptation": "Four neutral pages; plain journal lettering instead of logo; separate Chinese page numbers; placeholder metadata, abstract, vector diagram, references and source information; 20 original placeholder rows demonstrate a two-page table without copying article data; 108 bp body top is a Chinese layout adaptation",
-      "file": "nature-reviews-cardiology.tex"
+      "file": "nature-reviews-cardiology.tex",
+      "preview_pages": 4
     },
     "nature-reviews-neuroscience": {
       "file": "nature-reviews-neuroscience.tex",
@@ -1182,7 +1185,7 @@
         "2": "Resource opening, context-and-significance box and structured summary",
         "3": "Two-column prose, original vector figure with full caption, methods, declarations, English placeholder references and source information"
       },
-      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to nineteen journals and twenty-one templates."
+      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to nineteen journals plus one preprint category and twenty-two templates."
     },
     "developmental-cell": {
       "reference_edition": "Developmental Cell, inspected 2026 Technology article with a separate graphical-summary sheet, main article, STAR Methods and supplied supplemental information; no paper content retained",
@@ -1259,7 +1262,7 @@
         "2": "Technology opening with continuous full-width SUMMARY and same-page two-column body",
         "3": "Original vector figure, complete caption, resource table, methods, declarations, references and final source information"
       },
-      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to nineteen journals and twenty-one templates.",
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to nineteen journals plus one preprint category and twenty-two templates.",
       "scope": "Original neutral text, fictional authors/affiliations and native diagrams; no real article title, authors, DOI, scientific data, figures, email, download metadata or official publisher marks.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     },
@@ -1380,8 +1383,62 @@
         "2": "Two-column body, native figure with complete caption, cream table header/foot and white data area",
         "3": "Discussion/declarations, linked English placeholder references, post-bibliography grey translational perspective and final source information"
       },
-      "overview_policy": "Keep the existing nine-journal 3x3 panels; update footer counts to nineteen journals and twenty-one templates.",
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; update footer counts to nineteen journals plus one preprint category and twenty-two templates.",
       "scope": "Original neutral demonstration; no real article title, authors, DOI, experimental data, source figures, email, download notice or publisher logo.",
+      "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
+    },
+    "preprint": {
+      "reference_edition": "Inspected 2026 A4 single-column preprint edition; document category, not a journal or server-wide standard.",
+      "category": "preprint",
+      "paper_pt": [
+        595.276,
+        841.89
+      ],
+      "margins_pt": {
+        "left": 62.36,
+        "right": 60.876,
+        "top": 49,
+        "bottom": 48
+      },
+      "column_count": 1,
+      "body_size_leading_pt": [
+        9.5,
+        13.5
+      ],
+      "body_family": "sans",
+      "citations": "Blue numeric superscripts; use separate namespaces if supplementary references restart numbering.",
+      "file": "preprint.tex",
+      "preview_pages": 3,
+      "source_observations": {
+        "body_left_x_pt_approx": 62.36,
+        "body_right_x_pt_approx": 534.4,
+        "wide_figure_x_range_pt_approx": [
+          33,
+          555
+        ],
+        "title_size_pt_approx": 19.9,
+        "body_size_leading_pt_approx": [
+          9.45,
+          11.6
+        ],
+        "citation_blue_hex": "#0000FF"
+      },
+      "observed_design": "Black-and-white sans-serif single column; full-width title, compact authors and affiliations, bold continuous abstract and same-page introduction; long methods with pseudocode and numbered equations; figure captions and supplementary content.",
+      "template_adaptation": "Three original neutral pages with title20/25bp, body9.5/13.5bp and caption8.5/11.5bp. Portable TeX Gyre and Noto/Fandol replace source fonts. Breakable fvextra pseudocode and paragraph captions support long documents. Manual page breaks control only this short demo. No journal name, logo, real paper text, data or assets.",
+      "dependencies": [
+        "common.tex",
+        "sample-body.tex",
+        "fvextra",
+        "booktabs"
+      ],
+      "preview_roles": {
+        "1": "Full-width title/authors/affiliations, bold continuous abstract and same-page single-column body",
+        "2": "Breakable pseudocode, numbered equation, native vector figure and complete paragraph caption",
+        "3": "Supplementary scope and coverage table, linked neutral bibliography, declarations and final source information"
+      },
+      "metadata_policy": "Keep preprint identity. Verify server, version, explicit release date, DOI or other identifier and license independently; mark absent fields as not stated. PDF creation date is not a publication date. Do not invent journal volume/issue metadata.",
+      "overview_policy": "Keep the nine existing journal panels. Count 19 journals plus one preprint category and 22 templates; the preprint is not a twentieth journal.",
+      "scope": "Original neutral demonstration only; no real title, author, DOI, data, figure, email, download metadata or official logo.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     }
   },
