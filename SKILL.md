@@ -39,14 +39,14 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Nature Reviews Neuroscience | [nature-reviews-neuroscience.tex](assets/templates/nature-reviews-neuroscience.tex) | 每页绿色顶线、轻字重题名、独立摘要目录页、蓝色上标、汇总表/框文/术语表 |
 | Nature Biotechnology | [nature-biotechnology.tex](assets/templates/nature-biotechnology.tex) | 简讯首页黄色顶线、约1:2日期/摘要区、双栏数学正文、蓝色上标 |
 | Nature Methods | [nature-methods.tex](assets/templates/nature-methods.tex) | 橙色首页顶线、约1:2日期/摘要区、双栏正文、通栏表/框/图、蓝色上标 |
-| Nature Cardiovascular Research | [nature-cardiovascular-research.tex](assets/templates/nature-cardiovascular-research.tex) | 粉红色 Letter 首页顶线、约1:2日期/作者摘要区、首页双栏与通栏单位脚注、扩展数据及红色报告栏目 |
+| Nature Cardiovascular Research | [nature-cardiovascular-research.tex](assets/templates/nature-cardiovascular-research.tex) | 粉红首页顶线、Letter／提前在线 Article、约1:2日期/作者摘要区、同页双栏、Article 文末通栏单位 |
 | Cardiovascular Research | [cardiovascular-research.tex](assets/templates/cardiovascular-research.tex) | 橙红细线与层级、黑色通栏题名、通栏米底结构化摘要、无衬线双栏、书目后灰底转化展望 |
 | Circulation Research | [circulation-research.tex](assets/templates/circulation-research.tex) | 蓝色综述类型线、全宽摘要同页接双栏、长缩写框、通栏图注、黑色上标 |
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | A4 单栏预印本 | [preprint.tex](assets/templates/preprint.tex) | 黑白无衬线单栏、全宽题名作者与加粗连续摘要、蓝色数字上标、公式及可续页伪代码 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部20本期刊及1个预印本类别、23套样板和73页单独演示仍完整保留；其余11本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
+总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部20本期刊及1个预印本类别、23套样板和75页单独演示仍完整保留；其余11本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
 
 指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
@@ -54,7 +54,7 @@ Cell现有单独演示PDF扩为4页：原有Review两页保持，后接2026年Ar
 
 Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年提前在线Article结构的两页中性演示，展示研究首页、通栏作者单位脚注、图文和方法／扩展内容。Nature仍只计一套样板，总览继续仅采用原第1页。
 
-Nature Cardiovascular Research 新增[3页中性演示](assets/previews/nature-cardiovascular-research.pdf)，覆盖粉红顶线的 Letter 首页、日期窄栏与作者摘要宽栏、同页双栏及通栏首页脚注、原创跨栏图和完整图注、扩展数据表、红色报告栏目和文末原文信息。粉红顶线使用实测 RGB `(.9299916,.0649882,.3929961)`，数字上标引文为 `#0069A5`，报告强调色为 `#ED1C24`。本刊保留独立预览。
+Nature Cardiovascular Research 的[5页中性演示](assets/previews/nature-cardiovascular-research.pdf)含原有3页 Letter 和新增2页 Article。Article 展示三行长题名、日期与作者摘要的约1:2分栏、同页双栏开篇、首页脚注指向文末通栏作者单位，以及正文与原创跨栏图、完整图注的紧密衔接。提前在线文件若保留在线日期占位且无正式卷期或页码，译稿如实标明。粉红顶线采用实测 RGB `(.9299916,.0649882,.3929961)`，数字上标引文为 `#0069A5`，报告强调色为 `#ED1C24`。
 
 Cardiovascular Research新增3页原创中性演示：黑色通栏题名、米底Aims／Methods and results／Conclusions及Keywords摘要区和同页双栏开篇，后接图文与米底表格，以及书目后独立灰底Translational perspective和文末出处。源主题红原RGB`(.935,.28,.21)`（近似`#EE4736`）、上标引文蓝`#0000FF`，不沿用EHJ配色或图形摘要页。仅保留单独预览，不增加九刊总览格位。
 
@@ -86,6 +86,7 @@ A4单栏预印本新增[3页中性演示](assets/previews/preprint.pdf)：全宽
 - 采用原文的纸张比例、栏结构、题名层级、引文方式、图注位置与页眉页脚；按中文长度重新分页。页脚清楚区分原刊出版信息和独立“中文译页”，可加低调的“非官方中文译稿”。
 - 优先保留科学原图的矢量元素和分辨率，完整翻译图注；图内英文保留时附完整中文标签释义，并在交付中如实说明。用户要求直接替换图内文字时再做可核对的文字替换，不重画或改变数据。
 - 裁图逐幅核对真实边界与全部面板。图可能从页面中部开始；不能沿用上一幅的坐标。图和完整图注尽量同页，长图适配旁注或独立图页；长标签释义可放文末。正文图应在参考文献之前排完。
+- 从首轮按中文长度自然分页，优先让相邻正文和图注利用图页余量。逐页回看半空页、正文栏跳接和分节前的空白，调整浮动图、通栏图注或附录衔接，保持图表标记与字体可读。
 - 保留英文参考文献及原编号，中文评注单独排。引文链接指向对应条目；不同期刊可分别使用作者—年份、上标数字或括号数字，不能统一强改。避免单条书目尾部跨栏成为孤行，结束页适当平衡双栏。
 
 ## 下载信息与局部删改

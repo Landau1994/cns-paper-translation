@@ -370,7 +370,7 @@
       "preview_pages": 3
     },
     "nature-cardiovascular-research": {
-      "reference_edition": "Nature Cardiovascular Research, published 2024 Letter edition supplied with Extended Data and Reporting Summary",
+      "reference_edition": "Nature Cardiovascular Research, published 2024 Letter and 2026 advance-edition Article with unfilled online date, supplied with Extended Data and Reporting Summary",
       "paper_pt": [
         595.276,
         790.866
@@ -404,13 +404,14 @@
         "citation_doi_and_journal_footer": "#0069A5",
         "reporting_section_accent": "#ED1C24"
       },
-      "observed_design": "Pink opening rule and full-width black serif title; manuscript type at left and DOI at right; 1:2 date and author/abstract panels; two-column opening text with full-width affiliation footnote; ruled running heads and feet; full-width figures, captions and extended data; separate red-accented reporting form",
-      "template_adaptation": "Three original neutral pages show the Letter opening, figure and two-column text, a short extended-data table, reporting fields and final source information. Shared portable fonts and plain journal lettering replace proprietary fonts and marks. Actual long captions, tables and reporting entries may need continuation pages.",
-      "version_handling": "Retain separately recorded online date, issue date and printed pagination; distinguish the actual supplied extended data, reporting forms and external supplementary files.",
+      "observed_design": "Pink opening rule and full-width black serif title; manuscript type at left and DOI at right; 1:2 date and author/abstract panels; two-column opening text; Letter affiliations at first-page foot, Article affiliation pointer at first-page foot and full-width list in back matter; ruled running heads and feet; full-width figures, captions and extended data; separate red-accented reporting form",
+      "template_adaptation": "The first three original neutral pages show the Letter opening, figures, two-column text, reporting fields and source information. The last two show the Article opening, a three-line title, linked affiliation note, full-width diagram and caption, and full-width affiliations and source information at the end. Shared portable fonts and plain journal lettering replace proprietary fonts and marks. Actual long captions, tables and reporting entries may need continuation pages.",
+      "version_handling": "Retain separately recorded online date, issue date and printed pagination. Report unfilled online date and absent issue or page numbers as such. Distinguish the supplied extended data, reporting forms and external supplementary files.",
       "shared_file": "common.tex",
       "file": "nature-cardiovascular-research.tex",
-      "preview_pages": 3,
-      "overview_policy": "Retain this journal's three pages as a separate preview; include it only in the totals beneath the existing nine panels."
+      "article_variant_source": "nature-cardiovascular-research-article.tex",
+      "preview_pages": 5,
+      "overview_policy": "Retain this journal's five pages as a separate preview; include it only in the totals beneath the existing nine panels."
     },
     "nature-methods": {
       "reference_edition": "Nature Methods, supplied 2026 Perspective and supplied Analysis edition with unfilled online-publication date",
