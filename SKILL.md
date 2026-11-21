@@ -1,11 +1,11 @@
 ---
 name: cns-paper-translation
-description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Developmental Cell、Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、Cardiovascular Research、European Heart Journal扩展，另含Circulation及EHJ指南变体与A4单栏预印本；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
+description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户提供的英文研究论文、综述或指南完整译成中文，参照原刊版式制作可编辑稿与PDF。内置Cell、Nature、Science样板及Developmental Cell、Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Nature Cardiovascular Research、Circulation、Circulation Research、Cardiovascular Research、European Heart Journal扩展，另含Circulation及EHJ指南变体与A4单栏预印本；保留科学数据与引文，处理下载来源信息并附文末原文信息。用于全文汉化、期刊样式排版或已有译稿修订；仅摘要解读、文献检索或论文原创写作不需要此技能。
 ---
 
 # CNS 论文汉化
 
-把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Developmental Cell、Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Circulation、Circulation Research、Cardiovascular Research、European Heart Journal 扩展、两种指南变体及A4单栏预印本；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
+把论文译得完整，也把它排得像论文。以 **Cell / Nature / Science 三套可编译样板**作为入口，提供 Developmental Cell、Med、NEJM、The Lancet、JAMA、The BMJ、Nature Genetics、Immunity、Nature Reviews Cardiology、Nature Reviews Neuroscience、Nature Biotechnology、Nature Methods、Nature Cardiovascular Research、Circulation、Circulation Research、Cardiovascular Research、European Heart Journal 扩展、两种指南变体及A4单栏预印本；其他期刊先从原文提取版式再适配。样板是已完成中文译稿的可复用设计，不是期刊官方模板，也不承诺中文与英文逐页相同。
 
 ## 选择入口
 
@@ -39,19 +39,22 @@ description: CNS论文汉化（亦可称CNS汉化、论文汉化）：将用户�
 | Nature Reviews Neuroscience | [nature-reviews-neuroscience.tex](assets/templates/nature-reviews-neuroscience.tex) | 每页绿色顶线、轻字重题名、独立摘要目录页、蓝色上标、汇总表/框文/术语表 |
 | Nature Biotechnology | [nature-biotechnology.tex](assets/templates/nature-biotechnology.tex) | 简讯首页黄色顶线、约1:2日期/摘要区、双栏数学正文、蓝色上标 |
 | Nature Methods | [nature-methods.tex](assets/templates/nature-methods.tex) | 橙色首页顶线、约1:2日期/摘要区、双栏正文、通栏表/框/图、蓝色上标 |
+| Nature Cardiovascular Research | [nature-cardiovascular-research.tex](assets/templates/nature-cardiovascular-research.tex) | 粉红色 Letter 首页顶线、约1:2日期/作者摘要区、首页双栏与通栏单位脚注、扩展数据及红色报告栏目 |
 | Cardiovascular Research | [cardiovascular-research.tex](assets/templates/cardiovascular-research.tex) | 橙红细线与层级、黑色通栏题名、通栏米底结构化摘要、无衬线双栏、书目后灰底转化展望 |
 | Circulation Research | [circulation-research.tex](assets/templates/circulation-research.tex) | 蓝色综述类型线、全宽摘要同页接双栏、长缩写框、通栏图注、黑色上标 |
 | Circulation 指南 | [circulation-guideline.tex](assets/templates/circulation-guideline.tex) | 红色指南类型线、轻字重黑题名、委员会首页、独立COR/LOE色栏 |
 | A4 单栏预印本 | [preprint.tex](assets/templates/preprint.tex) | 黑白无衬线单栏、全宽题名作者与加粗连续摘要、蓝色数字上标、公式及可续页伪代码 |
 | EHJ／ESC 指南 | [european-heart-journal-guideline.tex](assets/templates/european-heart-journal-guideline.tex) | 黑色粗题名和任务组首页、深红层级、推荐内容/Class/LOE分列 |
 
-总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部19本期刊及1个预印本类别、22套样板和70页单独演示仍完整保留；其余10本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
+总览仅展示9本期刊各一张首页，采用3列×3行：第一行为Cell／Nature／Science，第二行为NEJM／The Lancet／JAMA，第三行为The BMJ／Circulation／European Heart Journal。全部20本期刊及1个预印本类别、23套样板和73页单独演示仍完整保留；其余11本期刊、其他首页、图文、长表及框文见各期刊PDF。使用 `scripts/make_overview.py` 从已核验首页重建总览，同步计数与说明。
 
 指南变体单独预览：[Circulation指南PDF](assets/previews/circulation-guideline.pdf) · [EHJ／ESC指南PDF](assets/previews/european-heart-journal-guideline.pdf)。两者属于文体扩展，不重复计为期刊，也不占总览格位。
 
 Cell现有单独演示PDF扩为4页：原有Review两页保持，后接2026年Article的独立图形摘要／研究要点页，以及通栏题名摘要与双栏正文页。Article采用数字上标引文；Review保留作者—年份引文。Cell仍只计一套样板，总览继续仅采用原第1页。新增内容均为原创中性占位，不含真实论文全文、数据、作者或原图。
 
 Nature现有单独演示PDF扩为4页：原有Review两页保持，后接2026年提前在线Article结构的两页中性演示，展示研究首页、通栏作者单位脚注、图文和方法／扩展内容。Nature仍只计一套样板，总览继续仅采用原第1页。
+
+Nature Cardiovascular Research 新增[3页中性演示](assets/previews/nature-cardiovascular-research.pdf)，覆盖粉红顶线的 Letter 首页、日期窄栏与作者摘要宽栏、同页双栏及通栏首页脚注、原创跨栏图和完整图注、扩展数据表、红色报告栏目和文末原文信息。粉红顶线使用实测 RGB `(.9299916,.0649882,.3929961)`，数字上标引文为 `#0069A5`，报告强调色为 `#ED1C24`。本刊保留独立预览。
 
 Cardiovascular Research新增3页原创中性演示：黑色通栏题名、米底Aims／Methods and results／Conclusions及Keywords摘要区和同页双栏开篇，后接图文与米底表格，以及书目后独立灰底Translational perspective和文末出处。源主题红原RGB`(.935,.28,.21)`（近似`#EE4736`）、上标引文蓝`#0000FF`，不沿用EHJ配色或图形摘要页。仅保留单独预览，不增加九刊总览格位。
 
@@ -61,7 +64,7 @@ Med新增3页原创中性演示：独立图形摘要／研究要点与右侧作�
 
 Nature Reviews Neuroscience的4页中性演示覆盖独立摘要目录、双栏图文、汇总表与框文、术语表及文末资料。绿色顶线采用核验的原RGB，每页均保留；轻字重衬线题名以常规字重中文字体适配，不直接套用Nature Reviews Cardiology的紫色主题或粗题名。图注字号与行距为7.6/9.2bp；完整译稿仍按实际图文自然重排。
 
-A4单栏预印本新增[3页中性演示](assets/previews/preprint.pdf)：全宽题名与作者单位、加粗连续摘要同页接正文，后续展示公式、可续页伪代码、原创图及完整图注、补充覆盖与独立出处。预印本是文档类别，不计为第20本期刊，不占九刊总览格位。未载明服务器、版本日期或DOI时如实说明；PDF生成时间不作为发布日期，期刊卷期不适用时不补造。
+A4单栏预印本新增[3页中性演示](assets/previews/preprint.pdf)：全宽题名与作者单位、加粗连续摘要同页接正文，后续展示公式、可续页伪代码、原创图及完整图注、补充覆盖与独立出处。预印本是文档类别，单独计数，不占九刊总览格位。未载明服务器、版本日期或DOI时如实说明；PDF生成时间不作为发布日期，期刊卷期不适用时不补造。
 
 复制整个 `assets/templates/` 到任务工作目录后再改，保留共享文件。样板中的题名、作者、示意图、文献和原文信息都是演示内容，必须替换；不要从旧论文继承 DOI、年份、机构、图号、文献数量或图像裁剪坐标。
 

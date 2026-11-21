@@ -2,9 +2,9 @@
 """Rebuild the selected nine-journal, three-column, three-row overview.
 
 Rows are Cell / Nature / Science; NEJM / The Lancet / JAMA; and
-The BMJ / Circulation / European Heart Journal. The other ten journals,
+The BMJ / Circulation / European Heart Journal. The other eleven journals,
 article/review variants, guidelines and interior detail pages remain available
-in the individual template previews. All nineteen journals and the separate
+in the individual template previews. All twenty journals and the separate
 preprint category are retained; preprints do not count as additional journals.
 No paper content or newly generated illustrations are introduced.
 """

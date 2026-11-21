@@ -1,5 +1,5 @@
 {
-  "scope": "Source-inspired profiles extracted from twenty-two verified journal, guideline and preprint configurations and inspected article editions; not universal publisher standards or pixel-accurate replicas.",
+  "scope": "Source-inspired profiles extracted from twenty-three verified journal, guideline and preprint configurations and inspected article editions; not universal publisher standards or pixel-accurate replicas.",
   "unit": "PDF points (bp in TeX; 1/72 inch)",
   "font_policy": {
     "latin_serif": "TeX Gyre Termes",
@@ -368,6 +368,49 @@
       "version_handling": "Keep online publication date, issue date and copyright year as distinct source fields; do not infer one from another.",
       "file": "nature-biotechnology.tex",
       "preview_pages": 3
+    },
+    "nature-cardiovascular-research": {
+      "reference_edition": "Nature Cardiovascular Research, published 2024 Letter edition supplied with Extended Data and Reporting Summary",
+      "paper_pt": [
+        595.276,
+        790.866
+      ],
+      "margins_pt": {
+        "left": 39.685,
+        "right": 34.016,
+        "top": 49,
+        "bottom": 40
+      },
+      "column_gap_pt": 12,
+      "source_body_size_pt_approx": 8.23,
+      "source_title_size_pt": 26,
+      "body_size_leading_pt": [
+        9.15,
+        12.4
+      ],
+      "body_family": "serif",
+      "citations": "Blue numeric superscripts with internal bibliography links",
+      "opening_rule_rgb": [
+        0.9299916,
+        0.0649882,
+        0.3929961
+      ],
+      "opening_rule_source_top_pt": 35.766,
+      "opening_rule_width_pt": 3.5,
+      "running_rule_source_top_pt": 38.036,
+      "running_rule_width_pt": 0.35,
+      "colors_html": {
+        "opening_rule_nearest_8_bit": "#ED1164",
+        "citation_doi_and_journal_footer": "#0069A5",
+        "reporting_section_accent": "#ED1C24"
+      },
+      "observed_design": "Pink opening rule and full-width black serif title; manuscript type at left and DOI at right; 1:2 date and author/abstract panels; two-column opening text with full-width affiliation footnote; ruled running heads and feet; full-width figures, captions and extended data; separate red-accented reporting form",
+      "template_adaptation": "Three original neutral pages show the Letter opening, figure and two-column text, a short extended-data table, reporting fields and final source information. Shared portable fonts and plain journal lettering replace proprietary fonts and marks. Actual long captions, tables and reporting entries may need continuation pages.",
+      "version_handling": "Retain separately recorded online date, issue date and printed pagination; distinguish the actual supplied extended data, reporting forms and external supplementary files.",
+      "shared_file": "common.tex",
+      "file": "nature-cardiovascular-research.tex",
+      "preview_pages": 3,
+      "overview_policy": "Retain this journal's three pages as a separate preview; include it only in the totals beneath the existing nine panels."
     },
     "nature-methods": {
       "reference_edition": "Nature Methods, supplied 2026 Perspective and supplied Analysis edition with unfilled online-publication date",
@@ -1185,7 +1228,7 @@
         "2": "Resource opening, context-and-significance box and structured summary",
         "3": "Two-column prose, original vector figure with full caption, methods, declarations, English placeholder references and source information"
       },
-      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to nineteen journals plus one preprint category and twenty-two templates."
+      "overview_policy": "Retain all three Med pages separately; do not add a repeated panel to the nine-journal 3x3 overview. Existing nine panel pixels and layout remain unchanged, while footer counts update to twenty journals plus one preprint category and twenty-three templates."
     },
     "developmental-cell": {
       "reference_edition": "Developmental Cell, inspected 2026 Technology article with a separate graphical-summary sheet, main article, STAR Methods and supplied supplemental information; no paper content retained",
@@ -1262,7 +1305,7 @@
         "2": "Technology opening with continuous full-width SUMMARY and same-page two-column body",
         "3": "Original vector figure, complete caption, resource table, methods, declarations, references and final source information"
       },
-      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to nineteen journals plus one preprint category and twenty-two templates.",
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; only update the footer to twenty journals plus one preprint category and twenty-three templates.",
       "scope": "Original neutral text, fictional authors/affiliations and native diagrams; no real article title, authors, DOI, scientific data, figures, email, download metadata or official publisher marks.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     },
@@ -1383,7 +1426,7 @@
         "2": "Two-column body, native figure with complete caption, cream table header/foot and white data area",
         "3": "Discussion/declarations, linked English placeholder references, post-bibliography grey translational perspective and final source information"
       },
-      "overview_policy": "Keep the existing nine-journal 3x3 panels; update footer counts to nineteen journals plus one preprint category and twenty-two templates.",
+      "overview_policy": "Keep the existing nine-journal 3x3 panels; update footer counts to twenty journals plus one preprint category and twenty-three templates.",
       "scope": "Original neutral demonstration; no real article title, authors, DOI, experimental data, source figures, email, download notice or publisher logo.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     },
@@ -1437,7 +1480,7 @@
         "3": "Supplementary scope and coverage table, linked neutral bibliography, declarations and final source information"
       },
       "metadata_policy": "Keep preprint identity. Verify server, version, explicit release date, DOI or other identifier and license independently; mark absent fields as not stated. PDF creation date is not a publication date. Do not invent journal volume/issue metadata.",
-      "overview_policy": "Keep the nine existing journal panels. Count 19 journals plus one preprint category and 22 templates; the preprint is not a twentieth journal.",
+      "overview_policy": "Keep the nine existing journal panels. Count 20 journals, one separate preprint category and 23 templates.",
       "scope": "Original neutral demonstration only; no real title, author, DOI, data, figure, email, download metadata or official logo.",
       "copyright_notice": "仅供学术交流、出版物版权归原作者及出版商所有"
     }

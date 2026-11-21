@@ -1,0 +1,156 @@
+% Nature Cardiovascular Research Letter: original neutral layout sample.
+% Source design measurements only. No source paper text, art or identifying metadata.
+\PassOptionsToPackage{no-math}{fontspec}
+\documentclass[UTF8,fontset=none,scheme=plain]{ctexart}
+\usepackage[paperwidth=595.276bp,paperheight=790.866bp,left=39.685bp,right=34.016bp,
+  top=49bp,bottom=40bp,headheight=15bp,headsep=10bp,footskip=15bp]{geometry}
+\input{common.tex}
+\usepackage{multicol,booktabs,tabularx}
+\definecolor{LetterPink}{rgb}{.9299916,.0649882,.3929961}
+\definecolor{LetterBlue}{HTML}{0069A5}
+\definecolor{ReportRed}{HTML}{ED1C24}
+\hypersetup{linkcolor=LetterBlue,urlcolor=LetterBlue,
+  pdftitle={Nature Cardiovascular Research：研究简报中性样板}}
+\setlength{\columnsep}{12bp}
+\setlength{\multicolsep}{5bp plus 2bp minus 2bp}
+\setlength{\parindent}{2em}
+\renewcommand{\normalsize}{\fontsize{9.15bp}{12.4bp}\selectfont}
+\ctexset{section={format=\sffamily\bfseries\fontsize{12bp}{15bp}\selectfont,beforeskip=10bp,afterskip=4bp},
+  subsection={format=\sffamily\bfseries\fontsize{9.6bp}{12.4bp}\selectfont,beforeskip=7bp,afterskip=2bp}}
+\newcommand{\LetterType}{\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont 研究简报\enspace Letter}
+\newcommand{\LetterIdentifier}{\sffamily\fontsize{8bp}{10bp}\selectfont\textcolor{LetterBlue}{DOI：按所给原稿填写}}
+\newcommand{\LetterCite}[1]{\textsuperscript{\hyperlink{ref:#1}{#1}}}
+\newcommand{\ReportHeading}[1]{\par\medskip\noindent{\sffamily\bfseries\textcolor{ReportRed}{#1}}\par
+  \vspace{2bp}{\color{ReportRed}\hrule height .5bp}\vspace{5bp}}
+\fancyhead[L]{\LetterType}
+\fancyhead[R]{\LetterIdentifier}
+\fancyfoot[L]{\sffamily\fontsize{7.2bp}{8.6bp}\selectfont
+  \textcolor{LetterBlue}{Nature Cardiovascular Research}\enspace｜\enspace 卷期及原刊页码待填}
+\fancyfoot[R]{\sffamily\fontsize{7.2bp}{8.6bp}\selectfont 非官方中文样板\enspace｜\enspace 中文译页\ \thepage}
+\renewcommand{\headrulewidth}{.35bp}
+\renewcommand{\footrulewidth}{.35bp}
+\fancypagestyle{letteropening}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\fancypagestyle{letterreport}{\fancyhead[L]{\sffamily\bfseries\fontsize{9bp}{11bp}\selectfont 报告摘要（中性演示）}}
+
+\begin{document}\normalsize
+\thispagestyle{letteropening}
+\vspace*{-25bp}
+{\color{LetterPink}\hrule height 3.5bp}\vspace{5bp}
+\noindent{\sffamily\bfseries\fontsize{17bp}{21bp}\selectfont Nature Cardiovascular Research\par}
+\vspace{37bp}
+\noindent{\LetterType}\hfill{\LetterIdentifier}\par
+\vspace{3bp}\hrule height .35bp\vspace{5bp}
+\noindent{\bfseries\fontsize{26bp}{32bp}\selectfont 资料索引中的记录关联、版本标记\par\noindent 与来源定位\par}
+\vspace{23bp}\hrule height .35bp\vspace{6bp}
+\noindent\begin{minipage}[t]{.317\textwidth}
+  \vspace{0pt}\sffamily\fontsize{8bp}{11.3bp}\selectfont
+  收稿日期\enspace 待填写\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+  接受日期\enspace 待填写\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+  在线发表\enspace 待填写\par\vspace{4bp}\hrule height .3bp\vspace{4bp}
+  非官方中文样板
+\end{minipage}\hfill
+\begin{minipage}[t]{.655\textwidth}
+  \vspace{0pt}\setlength{\parindent}{0pt}
+  {\sffamily\bfseries\fontsize{9bp}{12.1bp}\selectfont
+  示例作者甲\textsuperscript{1}、示例作者乙\textsuperscript{2}、示例作者丙\textsuperscript{1,2}、
+  示例作者丁\textsuperscript{1}、示例作者戊\textsuperscript{2}、示例作者己\textsuperscript{2}\par}
+  \vspace{6bp}\hrule height .35bp\vspace{7bp}
+  {\fontsize{11bp}{15.2bp}\selectfont 资料索引把条目名称、版本和来源定位信息汇集在一起。条目名称可以改动，索引仍需保留从每条记录返回相应原件的路径。编目时可把用于浏览的短名称与用于定位的完整题名分开，再在详页显示原件的版本说明。索引顺序调整后，读者仍可以沿用原来的定位方式。这里用原创的中性场景演示中文研究简报：图展示一条记录如何关联索引和详页，表将字段及其含义并列，附录演示报告栏目中的状态与说明。所有信息均为版式占位，正式译稿按所给原件填写。\par}
+\end{minipage}
+\par\vspace{13bp}
+
+\begin{multicols}{2}
+\noindent 索引记录可以由短名称、详细题名、版本标记与来源位置组成。短名称便于浏览，详细题名用于区分相似条目。若只保留短名称，两个材料可能呈现相同的索引词，却分别指向不同的原件。为避免混淆，每条记录都应在其详情中保留可核查的来源\LetterCite{1}。
+
+新版本可以沿用原来的名称。如果索引员确知记录之间存在版本关系，可以增加指向旧版的链接，同时保留两份材料各自的版本标记。只知道新旧先后时，索引仅记录可确定的先后顺序。若缺少发布日期，索引可直接记为待核实，之后有依据时再更新。
+
+同一条记录也可以出现在不同分类下。记录正文保留在一处，各分类入口各自使用指向详情的链接。图~1用可编辑的矢量线条表示这些关联。原始材料从索引中移除前，应核对仍指向它的分类入口，以及其中是否还有可用的版本说明。
+
+索引还可以附一份编目说明，交代名称、版本及来源位置的填写约定。遇到未确定的字段时，应保留待核实状态；后续填充时注明信息来自何处，便于使用者根据原件复核\LetterCite{2}。
+
+编目说明也可以列出字段次序。例如，若同一条记录有多个标题形式，索引显示读者通常检索的形式，详细名称仍在对应记录中。每种标题形式与详页的关联均可通过编辑视图查看。
+
+纸质索引页与电子索引可以共享记录的编号。若一条记录同时呈现两个版本，带卷页的正式版本应保留这些字段，其他版本则保留各自原件所载的出版状态。索引中的字段空缺以清楚的状态展示。
+\end{multicols}
+\vfill\hrule height .35bp\vspace{6bp}
+\noindent{\sffamily\fontsize{7.65bp}{10bp}\selectfont
+  \textsuperscript{1}第一示例单位（中性占位）。\enspace
+  \textsuperscript{2}第二示例单位（中性占位）。\enspace 作者贡献及通信信息按所给原稿填写。\par}
+
+\clearpage
+\begin{multicols}{2}
+从索引进入详页后，读者可以按记录的原顺序阅读字段。若某字段同时包含中文名称和原文标识，应让两部分可分别识别。对具有歧义的短语可在详页中增加说明，索引列表仍使用通常的简明名称。
+
+在纸面记录中，链接可用编号表示。编号要与详页现有标识配套，且不同组的编号应能区分。附表可作为资料的一部分，顺序位置另行记载。索引只存储必要的定位字段，附表中的完整内容留在详页。
+\end{multicols}
+\noindent\begin{minipage}{\textwidth}
+\centering
+\begin{tikzpicture}[font=\sffamily\small,>=Stealth,
+  entry/.style={draw=LetterBlue,fill=LetterBlue!7,rounded corners=2bp,align=center,
+    text width=88bp,minimum height=33bp,inner sep=8bp},
+  detail/.style={entry,draw=LetterPink!85!black,fill=LetterPink!6}]
+  \node[entry] (groupa) at (0,2.25) {按名称索引};
+  \node[entry] (groupb) at (0,-2.25) {按版本索引};
+  \node[entry] (record) at (5.5,0) {共同记录};
+  \node[detail] (sheet) at (11,0) {来源详页};
+  \draw[->,thick] (groupa.east)--(record.west);
+  \draw[->,thick] (groupb.east)--(record.west);
+  \draw[->,thick] (record.east)--(sheet.west);
+\end{tikzpicture}\par\vspace{6bp}
+\raggedright\sffamily\fontsize{7.8bp}{10.25bp}\selectfont
+\textbf{图~1｜索引与来源位置的关联。}两个索引入口分别按名称和版本组织，均指向同一记录。共同记录提供来源详页的定位信息。箭头表示索引跳转，节点、颜色和连线为原创版式占位。\par
+\end{minipage}\par\medskip
+\begin{multicols}{2}
+\section*{索引字段的维护}
+字段名称应与其详细说明对应。如果整个索引采用同一种日期格式，新条目也应采用该格式。记录同时保留原来的版本标识，方便核对原件的页次和版次。对格式有特殊要求的字段，可在附录中另行说明。
+
+修改索引顺序时，应复核记录对应的版本。目录可以按主题调整，来源定位应随记录保留。若多个条目被收入同一卷，索引还可列出卷内位置，便于在不同媒介之间查找对应条目。
+
+\subsection*{资料范围}
+有些附表仅出现在说明文字中，原件未随材料提供。索引可以保留这一关系，并说明目前可定位的材料范围。后来获得附表时，可更新访问说明并补充链接，同时保留最初的条目顺序。
+
+\subsection*{引用与回查}
+在索引正文中，数字上标可以链接本文件的占位文献。点击编号后，读者可以查看演示书目中的对应条目。正式稿替换占位书目时，需连同链接目标与引用编号一并替换。
+
+\subsection*{记录位置的变化}
+详页移动或重新编排后，应核对现有索引入口。若材料存在多个排版版本，可在详页同时标示数字页次、出版页码和相应版本，将定位从单一页数变为可复查的一组字段。
+
+核对记录时，可先按索引顺序逐条定位，再从详页回查对应入口。对于含附表或补充材料的记录，可依次核对正文引用、附表标题与附表所在位置。记录边界变化时应更新定位字段。
+\end{multicols}
+
+\clearpage\thispagestyle{letterreport}
+\section*{扩展数据与报告摘要}
+\noindent{\sffamily\bfseries 扩展数据表~1｜索引字段示例}\par\vspace{4bp}
+\begingroup\sffamily\fontsize{8bp}{11bp}\selectfont
+\renewcommand{\arraystretch}{1.35}
+\noindent\begin{tabularx}{\textwidth}{@{}p{.23\textwidth}p{.25\textwidth}X@{}}
+  \toprule 字段 & 状态 & 说明 \\\midrule
+  条目名称 & 示例条目 & 演示索引主名称与详页之间的对应。 \\
+  版本标记 & 待填写 & 保留原件所载的版本标记。 \\
+  来源位置 & 待填写 & 可填写卷内页码或材料已载明的标识。 \\
+  附表信息 & 待核实 & 记录实际随稿提供的材料及缺项。 \\\bottomrule
+\end{tabularx}\par
+\noindent 上表列举了四种版式占位字段。正式扩展表按原稿保留列名、各行、统计条件及完整脚注。\par
+\endgroup
+
+\medskip
+\ReportHeading{报告栏目与状态}
+\noindent{\sffamily\fontsize{8.5bp}{11.6bp}\selectfont
+  \(\square\) 来源字段待填写\qquad \(\checkmark\) 示例状态已标记\par
+  选择符号、作者已填写的内容、未填写的栏目提示和不适用状态，应逐项和原件对应。\par}
+\noindent\textbf{示例已填说明}\quad 参见本模板的索引字段示例，检查其中的名称、版本及来源位置三栏。\par
+\noindent\textbf{待填写栏目}\quad 正式稿在核对实际所给附表后填写访问位置。\par
+\ReportHeading{资料和声明}
+\noindent 这一栏演示如何紧跟栏目标题列出访问条件、作者贡献或利益冲突说明。正式译稿应按原文保留各独立声明及其主语，许可信息需核对所给版本。\par
+\noindent\textbf{材料范围}\quad 中性演示包括索引字段示例和链接图。实际译稿可在对应栏目列出原件提供的附件。\par
+\noindent\textbf{许可字段}\quad 按原件逐字核对许可证标识、第三方素材说明及适用范围。\par
+
+\begin{multicols}{2}
+\SampleBibliography
+\section*{原文信息}
+\noindent 作者与英文题名\quad 按所给原文填写。\par
+\noindent 卷期、页码和 DOI\quad 按所给原文填写。\par
+\noindent 样板中的书目、图、表和报告状态均为原创中性占位。\par
+\medskip\noindent 仅供学术交流、出版物版权归原作者及出版商所有。\par
+\end{multicols}
+\end{document}
